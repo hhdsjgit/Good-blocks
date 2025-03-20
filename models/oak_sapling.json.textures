@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {},
+      "name": "default"
+    },
+    "pale_tree": {
+      "map": {},
+      "name": "pale_tree"
+    }
+  }
+}

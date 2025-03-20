@@ -1,0 +1,52 @@
+{
+  "gnusmas_gm_soundfont_2.00": {
+    "category": "neutral",
+    "subtitle": "subtitles.gnusmas_gm_soundfont_2.00",
+    "sounds": [
+      {
+        "name": "goodblock:ssss",
+        "stream": false
+      }
+    ]
+  },
+  "anit_furry_music": {
+    "category": "neutral",
+    "subtitle": "subtitles.anit_furry_music",
+    "sounds": [
+      {
+        "name": "goodblock:anit_furry_music",
+        "stream": false
+      }
+    ]
+  },
+  "item.armor.equip_netherite": {
+    "category": "neutral",
+    "subtitle": "subtitles.item.armor.equip_netherite",
+    "sounds": [
+      {
+        "name": "goodblock:equip2",
+        "stream": false
+      }
+    ]
+  },
+  "no_stop": {
+    "category": "music",
+    "subtitle": "subtitles.no_stop",
+    "sounds": [
+      {
+        "name": "goodblock:jack_phase_1",
+        "stream": true
+      }
+    ]
+  },
+  "ink_sans": {
+    "category": "music",
+    "subtitle": "subtitles.ink_sans",
+    "sounds": [
+      {
+        "name": "goodblock:rgux5-tx8dz",
+        "stream": true
+      }
+    ]
+  }
+}

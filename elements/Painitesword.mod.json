@@ -1,0 +1,31 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "painite_sword_v2",
+    "customModelName": "Normal",
+    "name": "Painitesword",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Worldblock"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.3,
+    "enchantability": 2,
+    "damageVsEntity": 15.0,
+    "usageCount": 4325,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "Items.NETHERITE_INGOT"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

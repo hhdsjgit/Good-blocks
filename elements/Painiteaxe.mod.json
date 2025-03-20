@@ -1,0 +1,31 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "painite_axe_v2",
+    "customModelName": "Normal",
+    "name": "Painiteaxe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Worldblock"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 1,
+    "efficiency": 12.0,
+    "attackSpeed": 1.0,
+    "enchantability": 20,
+    "damageVsEntity": 8.0,
+    "usageCount": 4320,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "Items.NETHERITE_INGOT"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

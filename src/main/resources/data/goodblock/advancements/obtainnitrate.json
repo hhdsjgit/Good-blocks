@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "goodblock:nitricacid"
+    },
+    "title": {
+      "translate": "advancements.obtainnitrate.title"
+    },
+    "description": {
+      "translate": "advancements.obtainnitrate.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtainnitrate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "goodblock:nitricacid"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "goodblock:usethismod"
+}

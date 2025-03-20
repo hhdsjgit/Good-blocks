@@ -1,0 +1,6 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "texture": "goodblock:blocks/pale_wood_planks"
+  }
+}

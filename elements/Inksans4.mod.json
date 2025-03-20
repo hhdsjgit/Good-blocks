@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Inksans 4",
+    "texture": "music_ink",
+    "description": "ink Sans",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:ink_sans"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 13
+  }
+}

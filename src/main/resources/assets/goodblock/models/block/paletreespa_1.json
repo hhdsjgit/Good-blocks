@@ -1,0 +1,7 @@
+{
+  "parent": "goodblock:custom/oak_sapling",
+  "textures": {
+    "all": "goodblock:blocks/pale_tree",
+    "particle": "goodblock:blocks/pale_tree"
+  }
+}

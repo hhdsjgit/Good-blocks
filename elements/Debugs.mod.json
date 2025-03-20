@@ -1,0 +1,7 @@
+{
+  "_fv": 39,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"199\" y=\"59\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"entity_add_potion\"><field name=\"potion\">BLINDNESS</field><value name=\"level\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"duration\"><block type=\"math_number\"><field name=\"NUM\">60</field></block></value><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><next><block type=\"execute_command\"><value name=\"x\"><block type=\"coord_x\"></block></value><value name=\"y\"><block type=\"coord_y\"></block></value><value name=\"z\"><block type=\"coord_z\"></block></value><value name=\"command\"><block type=\"text\"><field name=\"TEXT\">tellraw @p [{\"text\":\"Sorry you did't use this.\"}]</field></block></value></block></next></block></next></block></xml>"
+  }
+}

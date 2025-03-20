@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="MIT License"
+
+[[mods]]
+modId="goodblock"
+version="0.6.0"
+displayName="goodblock"
+credits="好好的时间2 and You"
+displayURL="https://github.com/hhdsjgit/goodblock"
+logoFile="logo.png"
+authors="好好的时间2"
+description='''
+Some of the content additions to Changed addon plus
+'''
+
+[[dependencies.goodblock]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

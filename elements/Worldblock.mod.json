@@ -1,0 +1,11 @@
+{
+  "_fv": 39,
+  "_type": "tab",
+  "definition": {
+    "name": "Worldblock",
+    "icon": {
+      "value": "Items.KNOWLEDGE_BOOK"
+    },
+    "showSearch": false
+  }
+}

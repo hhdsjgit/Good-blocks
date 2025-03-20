@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "goodblock:blocks/pale_wood_planks",
+    "particle": "goodblock:blocks/pale_wood_planks"
+  }
+}

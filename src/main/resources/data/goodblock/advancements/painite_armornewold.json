@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "item": "goodblock:painite_armor_chestplate"
+    },
+    "title": {
+      "translate": "advancements.painite_armornewold.title"
+    },
+    "description": {
+      "translate": "advancements.painite_armornewold.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "painite_armornewold": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "goodblock:painite_armor_chestplate"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 30
+  },
+  "parent": "goodblock:usethismod"
+}

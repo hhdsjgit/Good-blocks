@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Notlistenthis",
+    "texture": "music_disc_cat",
+    "description": "This is a total loss of music. ",
+    "creativeTab": {
+      "value": "CUSTOM:Worldblock"
+    },
+    "specialInfo": [],
+    "hasGlow": true,
+    "music": {
+      "value": "CUSTOM:no_stop"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "goodblock:block/pale_wood_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "goodblock:block/pale_wood_log"
+    },
+    "axis=z": {
+      "model": "goodblock:block/pale_wood_log",
+      "x": 90
+    }
+  }
+}

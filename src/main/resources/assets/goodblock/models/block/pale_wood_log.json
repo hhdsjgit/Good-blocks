@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "goodblock:blocks/pale_wood_log_top",
+    "up": "goodblock:blocks/pale_wood_log_top",
+    "north": "goodblock:blocks/pale_wood_log_side",
+    "east": "goodblock:blocks/pale_wood_log_side",
+    "south": "goodblock:blocks/pale_wood_log_side",
+    "west": "goodblock:blocks/pale_wood_log_side",
+    "particle": "goodblock:blocks/pale_wood_log_top"
+  }
+}

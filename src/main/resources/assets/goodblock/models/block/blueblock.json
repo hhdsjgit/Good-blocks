@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "goodblock:blocks/tie_wan",
+    "up": "goodblock:blocks/tie_wan",
+    "north": "goodblock:blocks/tie_wan",
+    "east": "goodblock:blocks/tie_wan",
+    "south": "goodblock:blocks/tie_wan",
+    "west": "goodblock:blocks/tie_wan",
+    "particle": "goodblock:blocks/tie_wan"
+  }
+}

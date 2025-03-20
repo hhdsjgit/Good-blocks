@@ -1,0 +1,27 @@
+{
+  "_fv": 39,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:PainiteArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:PainiteArmor.body"
+      },
+      {
+        "value": "CUSTOM:PainiteArmor.legs"
+      },
+      {
+        "value": "CUSTOM:PainiteArmor.boots"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "cchengjiou",
+    "namespace": "forge"
+  }
+}

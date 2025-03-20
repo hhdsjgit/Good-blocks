@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "goodblock:impureuranium"
+    },
+    "1": {
+      "item": "goodblock:impureuranium"
+    },
+    "2": {
+      "item": "goodblock:impureuranium"
+    },
+    "3": {
+      "item": "goodblock:impureuranium"
+    },
+    "4": {
+      "item": "goodblock:impureuranium"
+    },
+    "5": {
+      "item": "goodblock:impureuranium"
+    },
+    "6": {
+      "item": "goodblock:impureuranium"
+    },
+    "7": {
+      "item": "goodblock:impureuranium"
+    },
+    "8": {
+      "item": "goodblock:impureuranium"
+    }
+  },
+  "result": {
+    "item": "goodblock:impureuraniumingot",
+    "count": 1
+  }
+}

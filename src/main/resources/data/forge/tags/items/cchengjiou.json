@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "goodblock:painite_armor_leggings",
+    "goodblock:painite_armor_helmet",
+    "goodblock:painite_armor_chestplate",
+    "goodblock:painite_armor_boots"
+  ]
+}

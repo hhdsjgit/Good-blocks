@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "goodblock:block/nitreblock",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "goodblock:block/nitreblock"
+    },
+    "axis=z": {
+      "model": "goodblock:block/nitreblock",
+      "x": 90
+    }
+  }
+}

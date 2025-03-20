@@ -1,0 +1,31 @@
+{
+  "_fv": 39,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "painite_shovel_v2",
+    "customModelName": "Normal",
+    "name": "Painiteshovel",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Worldblock"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 2,
+    "efficiency": 13.0,
+    "attackSpeed": 1.0,
+    "enchantability": 20,
+    "damageVsEntity": 1.0,
+    "usageCount": 4320,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "Items.NETHERITE_INGOT"
+      }
+    ],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

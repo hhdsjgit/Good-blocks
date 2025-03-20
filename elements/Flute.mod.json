@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Flute",
+    "texture": "music_disc_cat",
+    "description": "gnusmas_gm_soundfont_2.00",
+    "creativeTab": {
+      "value": "CUSTOM:Worldblock"
+    },
+    "specialInfo": [],
+    "hasGlow": true,
+    "music": {
+      "value": "CUSTOM:gnusmas_gm_soundfont_2.00"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

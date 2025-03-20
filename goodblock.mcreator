@@ -1,0 +1,1647 @@
+{
+  "mod_elements": [
+    {
+      "name": "Blackblock",
+      "type": "block",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blackblock",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/block/blackblock.json",
+          "src/main/resources/assets/goodblock/models/item/blackblock.json",
+          "src/main/java/net/hhdsj/goodblock/block/BlackblockBlock.java",
+          "src/main/resources/assets/goodblock/blockstates/blackblock.json"
+        ]
+      }
+    },
+    {
+      "name": "Worldblock",
+      "type": "tab",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "worldblock",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Sulphur",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sulphur",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/sulphur.json",
+          "src/main/java/net/hhdsj/goodblock/item/SulphurItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Nitricacid",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nitricacid",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/item/NitricacidItem.java",
+          "src/main/resources/assets/goodblock/models/item/nitricacid.json"
+        ]
+      }
+    },
+    {
+      "name": "Syntheticpowderformula",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "syntheticpowderformula",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/syntheticpowderformula.json"
+        ]
+      }
+    },
+    {
+      "name": "Notnamep",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "notnamep",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/notnamep.json"
+        ]
+      }
+    },
+    {
+      "name": "Sulphurblock",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sulphurblock",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/block/SulphurblockBlock.java",
+          "src/main/java/net/hhdsj/goodblock/world/features/ores/SulphurblockFeature.java",
+          "src/main/resources/assets/goodblock/models/item/sulphurblock.json",
+          "src/main/resources/assets/goodblock/models/block/sulphurblock.json",
+          "src/main/resources/assets/goodblock/blockstates/sulphurblock.json"
+        ]
+      }
+    },
+    {
+      "name": "Nitreblock",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nitreblock",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/nitreblock.json",
+          "src/main/resources/assets/goodblock/models/block/nitreblock.json",
+          "src/main/java/net/hhdsj/goodblock/block/NitreblockBlock.java",
+          "src/main/java/net/hhdsj/goodblock/world/features/ores/NitreblockFeature.java",
+          "src/main/resources/assets/goodblock/blockstates/nitreblock.json"
+        ]
+      }
+    },
+    {
+      "name": "NItreblockC",
+      "type": "loottable",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "n_itreblock_c",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/loot_tables/blocks/nitreblock.json"
+        ]
+      }
+    },
+    {
+      "name": "Sulphurblockc",
+      "type": "loottable",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sulphurblockc",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/loot_tables/blocks/sulphurblock.json"
+        ]
+      }
+    },
+    {
+      "name": "Notlistenthis",
+      "type": "musicdisc",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "notlistenthis",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/item/NotlistenthisItem.java",
+          "src/main/resources/assets/goodblock/models/item/notlistenthis.json"
+        ]
+      }
+    },
+    {
+      "name": "Blackblocks",
+      "type": "recipe",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blackblocks",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/blackblocks.json"
+        ]
+      }
+    },
+    {
+      "name": "Obtainnitrate",
+      "type": "achievement",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "obtainnitrate",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/advancements/obtainnitrate.json"
+        ]
+      }
+    },
+    {
+      "name": "Obtainsulfur",
+      "type": "achievement",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "obtainsulfur",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/advancements/obtainsulfur.json"
+        ]
+      }
+    },
+    {
+      "name": "Uraniummineral",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uraniummineral",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/block/UraniummineralBlock.java",
+          "src/main/java/net/hhdsj/goodblock/world/features/ores/UraniummineralFeature.java",
+          "src/main/resources/assets/goodblock/models/block/uraniummineral.json",
+          "src/main/resources/assets/goodblock/blockstates/uraniummineral.json",
+          "src/main/resources/assets/goodblock/models/item/uraniummineral.json"
+        ]
+      }
+    },
+    {
+      "name": "RadiationZaiXiaoGuoChiXuShiMeiKeFaSheng",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radiation_zai_xiao_guo_chi_xu_shi_mei_ke_fa_sheng",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/procedures/RadiationZaiXiaoGuoChiXuShiMeiKeFaShengProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Radiation",
+      "type": "potioneffect",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radiation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/potion/RadiationMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "ImpureuraniumDangWuPinZaiShouShangMeiKeFaSheng",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "impureuranium_dang_wu_pin_zai_shou_shang_mei_ke_fa_sheng",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/procedures/ImpureuraniumDangWuPinZaiShouShangMeiKeFaShengProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Impureuranium",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "impureuranium",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/item/ImpureuraniumItem.java",
+          "src/main/resources/assets/goodblock/models/item/impureuranium.json"
+        ]
+      }
+    },
+    {
+      "name": "RadiationC",
+      "type": "loottable",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "radiation_c",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/loot_tables/blocks/uraniummineral.json"
+        ]
+      }
+    },
+    {
+      "name": "Impureuraniumingot",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "impureuraniumingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/item/ImpureuraniumingotItem.java",
+          "src/main/resources/assets/goodblock/models/item/impureuraniumingot.json"
+        ]
+      }
+    },
+    {
+      "name": "XImpureuraniumingot",
+      "type": "recipe",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "x_impureuraniumingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/x_impureuraniumingot.json"
+        ]
+      }
+    },
+    {
+      "name": "Uranium",
+      "type": "villagertrade",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uranium",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Uraniumblock",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uraniumblock",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/blockstates/uraniumblock.json",
+          "src/main/java/net/hhdsj/goodblock/block/UraniumblockBlock.java",
+          "src/main/resources/assets/goodblock/models/item/uraniumblock.json",
+          "src/main/resources/assets/goodblock/models/block/uraniumblock.json"
+        ]
+      }
+    },
+    {
+      "name": "Uraniumblocks",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uraniumblocks",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/uraniumblocks.json"
+        ]
+      }
+    },
+    {
+      "name": "TESTGBK",
+      "type": "fluid",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testgbk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/blockstates/testgbk.json",
+          "src/main/resources/assets/goodblock/models/block/testgbk.json",
+          "src/main/java/net/hhdsj/goodblock/item/TESTGBKItem.java",
+          "src/main/resources/assets/goodblock/models/item/testgbk_bucket.json",
+          "src/main/java/net/hhdsj/goodblock/fluid/TESTGBKFluid.java",
+          "src/main/java/net/hhdsj/goodblock/block/TESTGBKBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "Debugs",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debugs",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/procedures/DebugsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Home",
+      "type": "painting",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "home",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Cityold",
+      "type": "painting",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cityold",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Blueblock",
+      "type": "block",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blueblock",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/block/BlueblockBlock.java",
+          "src/main/resources/assets/goodblock/models/item/blueblock.json",
+          "src/main/resources/assets/goodblock/blockstates/blueblock.json",
+          "src/main/resources/assets/goodblock/models/block/blueblock.json"
+        ]
+      }
+    },
+    {
+      "name": "TieblockTab",
+      "type": "recipe",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tieblock_tab",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/tieblock_tab.json"
+        ]
+      }
+    },
+    {
+      "name": "Ironhot",
+      "type": "block",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironhot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/blockstates/ironhot.json",
+          "src/main/resources/assets/goodblock/models/block/ironhot.json",
+          "src/main/java/net/hhdsj/goodblock/block/IronhotBlock.java",
+          "src/main/resources/assets/goodblock/models/item/ironhot.json"
+        ]
+      }
+    },
+    {
+      "name": "Flute",
+      "type": "musicdisc",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flute",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/item/FluteItem.java",
+          "src/main/resources/assets/goodblock/models/item/flute.json"
+        ]
+      }
+    },
+    {
+      "name": "Anitfrrymusic",
+      "type": "musicdisc",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anitfrrymusic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/item/AnitfrrymusicItem.java",
+          "src/main/resources/assets/goodblock/models/item/anitfrrymusic.json"
+        ]
+      }
+    },
+    {
+      "name": "PainiteArmor",
+      "type": "armor",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painite_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/painite_armor_leggings.json",
+          "src/main/resources/assets/goodblock/models/item/painite_armor_boots.json",
+          "src/main/resources/assets/goodblock/models/item/painite_armor_chestplate.json",
+          "src/main/resources/assets/goodblock/models/item/painite_armor_helmet.json",
+          "src/main/java/net/hhdsj/goodblock/item/PainiteArmorItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Painitemanuscript",
+      "type": "tool",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painitemanuscript",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/item/PainitemanuscriptItem.java",
+          "src/main/resources/assets/goodblock/models/item/painitemanuscript.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitesword",
+      "type": "tool",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painitesword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/painitesword.json",
+          "src/main/java/net/hhdsj/goodblock/item/PainiteswordItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Painiteaxe",
+      "type": "tool",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painiteaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/painiteaxe.json",
+          "src/main/java/net/hhdsj/goodblock/item/PainiteaxeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "PainiteArmornewold",
+      "type": "achievement",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painite_armornewold",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/advancements/painite_armornewold.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitehoe",
+      "type": "tool",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painitehoe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/painitehoe.json",
+          "src/main/java/net/hhdsj/goodblock/item/PainitehoeItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Painiteshovel",
+      "type": "tool",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painiteshovel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/item/PainiteshovelItem.java",
+          "src/main/resources/assets/goodblock/models/item/painiteshovel.json"
+        ]
+      }
+    },
+    {
+      "name": "USETHISMOD",
+      "type": "achievement",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "usethismod",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/advancements/usethismod.json"
+        ]
+      }
+    },
+    {
+      "name": "TESTOMLS",
+      "type": "recipe",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testomls",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/testomls.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitepickaxe",
+      "type": "recipe",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "painitepickaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painitepickaxe.json"
+        ]
+      }
+    },
+    {
+      "name": "Painiteaxepeifang1",
+      "type": "recipe",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "painiteaxepeifang_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painiteaxepeifang_1.json"
+        ]
+      }
+    },
+    {
+      "name": "PainiteswordPEIFANG",
+      "type": "recipe",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "painitesword_peifang",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painitesword_peifang.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitehoepeifang",
+      "type": "recipe",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "painitehoepeifang",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painitehoepeifang.json"
+        ]
+      }
+    },
+    {
+      "name": "Painiteshovelpeifang",
+      "type": "recipe",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "painiteshovelpeifang",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painiteshovelpeifang.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitearmorhelmetpeifang",
+      "type": "recipe",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "painitearmorhelmetpeifang",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painitearmorhelmetpeifang.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitearmorchestplatepeifang",
+      "type": "recipe",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "painitearmorchestplatepeifang",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painitearmorchestplatepeifang.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitearmorleggingspeifang",
+      "type": "recipe",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "painitearmorleggingspeifang",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painitearmorleggingspeifang.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitearmorbootspeifang",
+      "type": "recipe",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "painitearmorbootspeifang",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painitearmorbootspeifang.json"
+        ]
+      }
+    },
+    {
+      "name": "Pale_woodWood",
+      "type": "block",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_wood",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/pale_wood_wood.json",
+          "src/main/java/net/hhdsj/goodblock/block/Pale_woodWoodBlock.java",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_wood.json",
+          "src/main/resources/assets/goodblock/blockstates/pale_wood_wood.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodLog",
+      "type": "block",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_log",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/blockstates/pale_wood_log.json",
+          "src/main/resources/assets/goodblock/models/item/pale_wood_log.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_log.json",
+          "src/main/java/net/hhdsj/goodblock/block/Pale_woodLogBlock.java"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodPlanks",
+      "type": "block",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_planks",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/pale_wood_planks.json",
+          "src/main/java/net/hhdsj/goodblock/block/Pale_woodPlanksBlock.java",
+          "src/main/resources/assets/goodblock/blockstates/pale_wood_planks.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_planks.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodLeaves",
+      "type": "block",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_leaves",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/block/pale_wood_leaves.json",
+          "src/main/resources/assets/goodblock/models/item/pale_wood_leaves.json",
+          "src/main/resources/assets/goodblock/blockstates/pale_wood_leaves.json",
+          "src/main/java/net/hhdsj/goodblock/block/Pale_woodLeavesBlock.java"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodStairs",
+      "type": "block",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/block/pale_wood_stairs.json",
+          "src/main/java/net/hhdsj/goodblock/block/Pale_woodStairsBlock.java",
+          "src/main/resources/assets/goodblock/models/item/pale_wood_stairs.json",
+          "src/main/resources/assets/goodblock/blockstates/pale_wood_stairs.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_stairs_inner.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_stairs_outer.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodSlab",
+      "type": "block",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_slab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/blockstates/pale_wood_slab.json",
+          "src/main/resources/assets/goodblock/models/item/pale_wood_slab.json",
+          "src/main/java/net/hhdsj/goodblock/block/Pale_woodSlabBlock.java",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_slab_full.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_slab_top.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_slab.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodFence",
+      "type": "block",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_fence",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/block/pale_wood_fence_inventory.json",
+          "src/main/resources/assets/goodblock/models/item/pale_wood_fence.json",
+          "src/main/resources/assets/goodblock/blockstates/pale_wood_fence.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_fence_post.json",
+          "src/main/java/net/hhdsj/goodblock/block/Pale_woodFenceBlock.java",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_fence.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodFenceGate",
+      "type": "block",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_fence_gate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/pale_wood_fence_gate.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_fence_gate_wall.json",
+          "src/main/resources/assets/goodblock/blockstates/pale_wood_fence_gate.json",
+          "src/main/java/net/hhdsj/goodblock/block/Pale_woodFenceGateBlock.java",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_fence_gate_open.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_fence_gate_wall_open.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_fence_gate.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodPressurePlate",
+      "type": "block",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_pressure_plate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/pale_wood_pressure_plate.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_pressure_plate.json",
+          "src/main/resources/assets/goodblock/blockstates/pale_wood_pressure_plate.json",
+          "src/main/java/net/hhdsj/goodblock/block/Pale_woodPressurePlateBlock.java",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_pressure_plate_down.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodButton",
+      "type": "block",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_button",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/blockstates/pale_wood_button.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_button_pressed.json",
+          "src/main/java/net/hhdsj/goodblock/block/Pale_woodButtonBlock.java",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_button.json",
+          "src/main/resources/assets/goodblock/models/block/pale_wood_button_inventory.json",
+          "src/main/resources/assets/goodblock/models/item/pale_wood_button.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodItemsTag",
+      "type": "tag",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_items_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/items/pale_wood_log.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodWoodRecipe",
+      "type": "recipe",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_wood_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/pale_wood_wood_recipe.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodPlanksRecipe",
+      "type": "recipe",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_planks_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/pale_wood_planks_recipe.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodStairsRecipe",
+      "type": "recipe",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_stairs_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/pale_wood_stairs_recipe.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodSlabRecipe",
+      "type": "recipe",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_slab_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/pale_wood_slab_recipe.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodFenceRecipe",
+      "type": "recipe",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_fence_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/pale_wood_fence_recipe.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodFenceGateRecipe",
+      "type": "recipe",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_fence_gate_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/pale_wood_fence_gate_recipe.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodPressurePlateRecipe",
+      "type": "recipe",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_pressure_plate_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/pale_wood_pressure_plate_recipe.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodButtonRecipe",
+      "type": "recipe",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_button_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/pale_wood_button_recipe.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Pale_woodStickRecipe",
+      "type": "recipe",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pale_wood_stick_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/pale_wood_stick_recipe.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Paletreespa1",
+      "type": "block",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paletreespa_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/block/Paletreespa1Block.java",
+          "src/main/resources/assets/goodblock/models/item/paletreespa_1.json",
+          "src/main/resources/assets/goodblock/blockstates/paletreespa_1.json",
+          "src/main/resources/assets/goodblock/models/block/paletreespa_1.json"
+        ]
+      },
+      "path": "~/plae_tree"
+    },
+    {
+      "name": "PaletreeDangYouJianDianJiFangKuaiShiFangKuaiDeWeiZhi",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paletree_dang_you_jian_dian_ji_fang_kuai_shi_fang_kuai_de_wei_zhi",
+      "metadata": {
+        "return_type": "actionresulttype",
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/procedures/PaletreeDangYouJianDianJiFangKuaiShiFangKuaiDeWeiZhiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/plae_tree"
+    },
+    {
+      "name": "Paletree",
+      "type": "item",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paletree",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/paletree.json",
+          "src/main/java/net/hhdsj/goodblock/item/PaletreeItem.java"
+        ]
+      },
+      "path": "~/plae_tree"
+    },
+    {
+      "name": "Paletreespa1GengXinYouXiKe",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paletreespa_1_geng_xin_you_xi_ke",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/procedures/Paletreespa1GengXinYouXiKeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/plae_tree"
+    },
+    {
+      "name": "Palelaeves",
+      "type": "loottable",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palelaeves",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/loot_tables/blocks/pale_wood_leaves.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "LogBlocks",
+      "type": "tag",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "log_blocks",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/blocks/log.json"
+        ]
+      },
+      "path": "~/plae_tree"
+    },
+    {
+      "name": "Cchengjiou",
+      "type": "tag",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cchengjiou",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/items/cchengjiou.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitearmorhelmetchange",
+      "type": "recipe",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painitearmorhelmetchange",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painitearmorhelmetchange.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitearmorchanged2",
+      "type": "recipe",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painitearmorchanged_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painitearmorchanged_2.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitearmorchanged3",
+      "type": "recipe",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painitearmorchanged_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painitearmorchanged_3.json"
+        ]
+      }
+    },
+    {
+      "name": "Painitearmorchanged4",
+      "type": "recipe",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painitearmorchanged_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/painitearmorchanged_4.json"
+        ]
+      }
+    },
+    {
+      "name": "FINDGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "findgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/world/inventory/FINDGUIMenu.java",
+          "src/main/java/net/hhdsj/goodblock/network/FINDGUIButtonMessage.java",
+          "src/main/java/net/hhdsj/goodblock/client/gui/FINDGUIScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "USEMOD",
+      "type": "achievement",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "usemod",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/advancements/usemod.json"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "LOOKGUI",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lookgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/procedures/LOOKGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "Find",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "find",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/command/FindCommand.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "Inksans4",
+      "type": "musicdisc",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inksans_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/item/Inksans4Item.java",
+          "src/main/resources/assets/goodblock/models/item/inksans_4.json"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "DIE",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "die",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/procedures/DIEProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "PalewoodleaveA",
+      "type": "loottable",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "palewoodleave_a",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/loot_tables/blocks/pale_wood_leave.json"
+        ]
+      },
+      "path": "~/formulation"
+    },
+    {
+      "name": "Testanimals",
+      "type": "livingentity",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testanimals",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/client/renderer/TestanimalsRenderer.java",
+          "src/main/resources/assets/goodblock/models/item/testanimals_spawn_egg.json",
+          "src/main/java/net/hhdsj/goodblock/entity/TestanimalsEntity.java"
+        ]
+      },
+      "path": "~/animals"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "gnusmas_gm_soundfont_2.00",
+      "files": [
+        "ssss"
+      ],
+      "category": "neutral",
+      "subtitle": "gnusmas_gm_soundfont"
+    },
+    {
+      "name": "anit_furry_music",
+      "files": [
+        "anit_furry_music"
+      ],
+      "category": "neutral",
+      "subtitle": "auit furry music!"
+    },
+    {
+      "name": "item.armor.equip_netherite",
+      "files": [
+        "equip2"
+      ],
+      "category": "neutral",
+      "subtitle": "穿上盔甲"
+    },
+    {
+      "name": "no_stop",
+      "files": [
+        "jack_phase_1"
+      ],
+      "category": "music",
+      "subtitle": "no_stop!"
+    },
+    {
+      "name": "ink_sans",
+      "files": [
+        "rgux5-tx8dz"
+      ],
+      "category": "music",
+      "subtitle": "A music"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "block.goodblock.pale_wood_stairs": "Pale_wood Stairs",
+      "subtitles.no_stop": "no_stop!",
+      "item.goodblock.painiteaxe": "Painiteaxe",
+      "item.goodblock.impureuranium": "Impureuranium",
+      "itemGroup.tabworldblock": "Worldblock",
+      "advancements.usethismod.descr": "Thank you for using this mod!!!",
+      "entity.goodblock.testanimals": "Testanimals",
+      "block.goodblock.black_stripes_block": "Black Stripes Block",
+      "item.goodblock.painitemanuscript": "Painitemanuscript",
+      "item.goodblock.testgbk_bucket": "TESTGBK Bucket",
+      "item.goodblock.notlistenthis": "Notlistenthis",
+      "advancements.usethismod.title": "USETHISMOD",
+      "item.goodblock.painite_armor_chestplate": "Painite Armor 胸甲",
+      "block.goodblock.blueblock": "tieblock",
+      "block.goodblock.nitreblock": "Nitreblock",
+      "item.goodblock.painite_armor_boots": "Painite Armor 靴子",
+      "item.goodblock.inksans_4": "Inksans 4",
+      "subtitles.gnusmas_gm_soundfont_2.00": "gnusmas_gm_soundfont",
+      "block.goodblock.pale_wood_log": "Pale_wood Log",
+      "gui.goodblock.findgui.button_dian_wo": "Here",
+      "effect.goodblock.radiation": "radiation",
+      "block.goodblock.pale_wood_fence": "Pale_wood Fence",
+      "advancements.painite_armornewold.descr": "painiteArmor???",
+      "block.goodblock.sulphurblock": "Sulphurblock",
+      "item.goodblock.painitehoe": "Painitehoe",
+      "gui.goodblock.findgui.GUI_A": "GUI in the upper left corner",
+      "advancements.obtainnitrate.title": "Obtainnitrate",
+      "item.goodblock.anitfrrymusic": "Flute",
+      "block.goodblock.pale_wood_fence_gate": "Pale_wood Fence Gate",
+      "advancements.obtainsulfur.descr": "Isn\u0027t this gold? ",
+      "advancements.usemod.descr": "You found this",
+      "item.goodblock.painite_armor_leggings": "Painite Armor 护腿",
+      "advancements.painite_armornewold.title": "Painite Armornewold",
+      "block.goodblock.uraniummineral": "Uraniummineral",
+      "item.goodblock.painiteshovel": "Painiteshovel",
+      "block.goodblock.paletreespa_1": "Paletreespa 1",
+      "item.goodblock.notlistenthis.desc": "This is a total loss of music. ",
+      "advancements.obtainsulfur.title": "Obtainsulfur",
+      "advancements.usemod.title": "oh you find this!!!",
+      "item.goodblock.sulphur": "Sulphur",
+      "block.goodblock.pale_wood_pressure_plate": "Pale_wood Pressure Plate",
+      "item.goodblock.paletree": "Paletree",
+      "item.goodblock.anitfrrymusic.desc": "gnusmas_gm_soundfont_2.00",
+      "item.goodblock.painite_armor_helmet": "Painite Armor 头盔",
+      "gui.goodblock.findgui.label_goodblock_06_beta": "GOODBLOCK 0.6 - BETA",
+      "item.goodblock.impureuraniumingot": "Impureuraniumingot",
+      "subtitles.anit_furry_music": "auit furry music!",
+      "subtitles.item.armor.equip_netherite": "穿上盔甲",
+      "block.goodblock.uraniumblock": "Uraniumblock",
+      "item.goodblock.testanimals_spawn_egg": "Testanimals Spawn Egg",
+      "item.goodblock.flute": "Flute",
+      "block.goodblock.pale_wood_leaves": "Pale_wood Leaves",
+      "item.goodblock.nitricacid": "Nitricacid",
+      "block.goodblock.pale_wood_wood": "Pale_wood Wood",
+      "block.goodblock.blackblock": "Blackblock",
+      "block.goodblock.testgbk": "TESTGBK",
+      "gui.goodblock.findgui.label_make_hhdsj2": "make : hhdsj2",
+      "item.goodblock.inksans_4.desc": "ink Sans",
+      "advancements.obtainnitrate.descr": "White powder",
+      "subtitles.ink_sans": "A music",
+      "fluid.goodblock.testgbk": "TESTGBK",
+      "item.goodblock.flute.desc": "gnusmas_gm_soundfont_2.00",
+      "item.goodblock.painitesword": "Painitesword",
+      "block.goodblock.ironhot": "tieblock",
+      "block.goodblock.pale_wood_button": "Pale_wood Button",
+      "block.goodblock.pale_wood_slab": "Pale_wood Slab",
+      "block.goodblock.pale_wood_planks": "Pale_wood Planks"
+    },
+    "zh_cn": {
+      "block.goodblock.pale_wood_stairs": "苍白木楼梯",
+      "subtitles.no_stop": "不停下",
+      "item.goodblock.painiteaxe": "Painiteaxe",
+      "item.goodblock.impureuranium": "不纯的铀粉",
+      "itemGroup.tabworldblock": "世界方块",
+      "advancements.usethismod.descr": "谢谢你使用这个MOD!!!",
+      "entity.goodblock.testanimals": "Testanimals",
+      "block.goodblock.black_stripes_block": "Black Stripes Block",
+      "item.goodblock.painitemanuscript": "Painitemanuscript",
+      "item.goodblock.testgbk_bucket": "测试液体桶",
+      "item.goodblock.notlistenthis": "你不要听这个",
+      "advancements.usethismod.title": "USETHISMOD",
+      "item.goodblock.painite_armor_chestplate": "Painite Chestplate",
+      "block.goodblock.blueblock": "铁网",
+      "block.goodblock.nitreblock": "硝矿石",
+      "item.goodblock.painite_armor_boots": "Painite Boots",
+      "item.goodblock.inksans_4": "Inksans 4",
+      "subtitles.gnusmas_gm_soundfont_2.00": "gnusmas_gm_soundfont",
+      "block.goodblock.pale_wood_log": "苍白原木",
+      "gui.goodblock.findgui.button_dian_wo": "HERE",
+      "effect.goodblock.radiation": "辐射",
+      "block.goodblock.pale_wood_fence": "苍白木栅栏",
+      "advancements.painite_armornewold.descr": "painiteArmor???",
+      "block.goodblock.sulphurblock": "硫磺矿石",
+      "item.goodblock.painitehoe": "Painitehoe",
+      "gui.goodblock.findgui.GUI_A": "GUI in the upper left corner",
+      "advancements.obtainnitrate.title": "硝!",
+      "item.goodblock.anitfrrymusic": "Flute",
+      "block.goodblock.pale_wood_fence_gate": "Pale_wood Fence Gate",
+      "advancements.obtainsulfur.descr": "这不是金子吗???",
+      "advancements.usemod.descr": "你找到这个!",
+      "item.goodblock.painite_armor_leggings": "Painite Leggings",
+      "advancements.painite_armornewold.title": "Painite Armornewold",
+      "block.goodblock.uraniummineral": "铀矿石",
+      "item.goodblock.painiteshovel": "Painiteshovel",
+      "block.goodblock.paletreespa_1": "Paletreespa 1",
+      "item.goodblock.notlistenthis.desc": "不要听这个",
+      "advancements.obtainsulfur.title": "硫磺",
+      "advancements.usemod.title": "WDF你找到了这个",
+      "item.goodblock.sulphur": "硫磺",
+      "block.goodblock.pale_wood_pressure_plate": "Pale_wood Pressure Plate",
+      "item.goodblock.paletree": "Paletree",
+      "item.goodblock.anitfrrymusic.desc": "gnusmas_gm_soundfont_2.00",
+      "item.goodblock.painite_armor_helmet": "Painite Helmet",
+      "gui.goodblock.findgui.label_goodblock_06_beta": "GOODBLOCK 0.6 - BETA",
+      "item.goodblock.impureuraniumingot": "不纯的铀锭",
+      "subtitles.anit_furry_music": "反furry音乐！！！",
+      "subtitles.item.armor.equip_netherite": "穿上盔甲",
+      "block.goodblock.uraniumblock": "不纯的铀块",
+      "item.goodblock.testanimals_spawn_egg": "Testanimals Spawn Egg",
+      "item.goodblock.flute": "Flute",
+      "block.goodblock.pale_wood_leaves": "Pale_wood Leaves",
+      "item.goodblock.nitricacid": "硝",
+      "block.goodblock.pale_wood_wood": "Pale_wood Wood",
+      "block.goodblock.blackblock": "这是个测试方块",
+      "block.goodblock.testgbk": "测试",
+      "gui.goodblock.findgui.label_make_hhdsj2": "make : hhdsj2",
+      "item.goodblock.inksans_4.desc": "ink Sans",
+      "advancements.obtainnitrate.descr": "白色的粉末",
+      "subtitles.ink_sans": "一个音乐",
+      "fluid.goodblock.testgbk": "测试液体",
+      "item.goodblock.flute.desc": "gnusmas_gm_soundfont_2.00",
+      "item.goodblock.painitesword": "Painitesword",
+      "block.goodblock.ironhot": "高硬度铁网块",
+      "block.goodblock.pale_wood_button": "Pale_wood Button",
+      "block.goodblock.pale_wood_slab": "Pale_wood Slab",
+      "block.goodblock.pale_wood_planks": "Pale_wood Planks"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "formulation",
+        "children": []
+      },
+      {
+        "name": "plae_tree",
+        "children": []
+      },
+      {
+        "name": "GUI",
+        "children": []
+      },
+      {
+        "name": "AI",
+        "children": []
+      },
+      {
+        "name": "animals",
+        "children": []
+      },
+      {
+        "name": "TSD",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "goodblock",
+    "modName": "goodblock",
+    "version": "0.6.0",
+    "description": "Some of the content additions to Changed addon plus",
+    "author": "好好的时间2",
+    "websiteURL": "https://github.com/hhdsjgit/goodblock",
+    "license": "MIT License",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "print_home",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.18.2",
+    "credits": "好好的时间2 and You",
+    "modElementsPackage": "net.hhdsj.goodblock",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300110610
+}

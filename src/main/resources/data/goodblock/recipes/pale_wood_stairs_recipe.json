@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "goodblock:pale_wood_planks"
+    },
+    "3": {
+      "item": "goodblock:pale_wood_planks"
+    },
+    "4": {
+      "item": "goodblock:pale_wood_planks"
+    },
+    "6": {
+      "item": "goodblock:pale_wood_planks"
+    },
+    "7": {
+      "item": "goodblock:pale_wood_planks"
+    },
+    "8": {
+      "item": "goodblock:pale_wood_planks"
+    }
+  },
+  "result": {
+    "item": "goodblock:pale_wood_stairs",
+    "count": 4
+  }
+}
