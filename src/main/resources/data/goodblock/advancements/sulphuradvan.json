@@ -1,31 +1,31 @@
 {
   "display": {
     "icon": {
-      "item": "goodblock:painite_armor_chestplate"
+      "item": "goodblock:sulphur"
     },
     "title": {
-      "translate": "advancements.painite_armornewold.title"
+      "translate": "advancements.sulphuradvan.title"
     },
     "description": {
-      "translate": "advancements.painite_armornewold.descr"
+      "translate": "advancements.sulphuradvan.descr"
     },
-    "frame": "challenge",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
-    "painite_armornewold": {
+    "sulphuradvan": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "goodblock:painite_armor_chestplate"
+              "goodblock:sulphur"
             ],
             "count": {
               "min": 1,
-              "max": 1
+              "max": 64
             }
           }
         ]
@@ -33,7 +33,7 @@
     }
   },
   "rewards": {
-    "experience": 30
+    "experience": 1
   },
-  "parent": "goodblock:usethismod"
+  "parent": "goodblock:goodblockuse"
 }

@@ -71,8 +71,7 @@ public class GoodblockModItems {
 	public static final RegistryObject<Item> PALETREESPA_1 = block(GoodblockModBlocks.PALETREESPA_1, null);
 	public static final RegistryObject<Item> PALETREE = REGISTRY.register("paletree", () -> new PaletreeItem());
 	public static final RegistryObject<Item> INKSANS_4 = REGISTRY.register("inksans_4", () -> new Inksans4Item());
-	public static final RegistryObject<Item> TESTANIMALS_SPAWN_EGG = REGISTRY.register("testanimals_spawn_egg",
-			() -> new ForgeSpawnEggItem(GoodblockModEntities.TESTANIMALS, -16777216, -16711681, new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK)));
+	public static final RegistryObject<Item> LATEXTEST_SPAWN_EGG = REGISTRY.register("latextest_spawn_egg", () -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXTEST, -16724788, -16751002, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

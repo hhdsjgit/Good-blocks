@@ -9,12 +9,12 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.hhdsj.goodblock.client.renderer.TestanimalsRenderer;
+import net.hhdsj.goodblock.client.renderer.LatextestRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class GoodblockModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(GoodblockModEntities.TESTANIMALS.get(), TestanimalsRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.LATEXTEST.get(), LatextestRenderer::new);
 	}
 }

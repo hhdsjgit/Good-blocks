@@ -16,14 +16,14 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
-import net.hhdsj.goodblock.entity.TestanimalsEntity;
+import net.hhdsj.goodblock.entity.LatextestEntity;
 import net.hhdsj.goodblock.GoodblockMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GoodblockModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, GoodblockMod.MODID);
-	public static final RegistryObject<EntityType<TestanimalsEntity>> TESTANIMALS = register("testanimals",
-			EntityType.Builder.<TestanimalsEntity>of(TestanimalsEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TestanimalsEntity::new)
+	public static final RegistryObject<EntityType<LatextestEntity>> LATEXTEST = register("latextest",
+			EntityType.Builder.<LatextestEntity>of(LatextestEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatextestEntity::new)
 
 					.sized(0.6f, 1.8f));
 
@@ -34,12 +34,12 @@ public class GoodblockModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
-			TestanimalsEntity.init();
+			LatextestEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
-		event.put(TESTANIMALS.get(), TestanimalsEntity.createAttributes().build());
+		event.put(LATEXTEST.get(), LatextestEntity.createAttributes().build());
 	}
 }

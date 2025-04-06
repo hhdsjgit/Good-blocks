@@ -169,32 +169,6 @@
       }
     },
     {
-      "name": "Obtainnitrate",
-      "type": "achievement",
-      "sortid": 18,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "obtainnitrate",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/goodblock/advancements/obtainnitrate.json"
-        ]
-      }
-    },
-    {
-      "name": "Obtainsulfur",
-      "type": "achievement",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "obtainsulfur",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/goodblock/advancements/obtainsulfur.json"
-        ]
-      }
-    },
-    {
       "name": "Uraniummineral",
       "type": "block",
       "sortid": 6,
@@ -564,19 +538,6 @@
       }
     },
     {
-      "name": "PainiteArmornewold",
-      "type": "achievement",
-      "sortid": 52,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "painite_armornewold",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/goodblock/advancements/painite_armornewold.json"
-        ]
-      }
-    },
-    {
       "name": "Painitehoe",
       "type": "tool",
       "sortid": 53,
@@ -601,19 +562,6 @@
         "files": [
           "src/main/java/net/hhdsj/goodblock/item/PainiteshovelItem.java",
           "src/main/resources/assets/goodblock/models/item/painiteshovel.json"
-        ]
-      }
-    },
-    {
-      "name": "USETHISMOD",
-      "type": "achievement",
-      "sortid": 57,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "usethismod",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/goodblock/advancements/usethismod.json"
         ]
       }
     },
@@ -1270,6 +1218,7 @@
     {
       "name": "FINDGUI",
       "type": "gui",
+      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "registry_name": "findgui",
@@ -1335,6 +1284,7 @@
     {
       "name": "Find",
       "type": "command",
+      "sortid": 122,
       "compiles": true,
       "locked_code": false,
       "registry_name": "find",
@@ -1395,20 +1345,62 @@
       "path": "~/formulation"
     },
     {
-      "name": "Testanimals",
+      "name": "Latextest",
       "type": "livingentity",
-      "sortid": 116,
+      "sortid": 120,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "testanimals",
+      "registry_name": "latextest",
       "metadata": {
         "files": [
-          "src/main/java/net/hhdsj/goodblock/client/renderer/TestanimalsRenderer.java",
-          "src/main/resources/assets/goodblock/models/item/testanimals_spawn_egg.json",
-          "src/main/java/net/hhdsj/goodblock/entity/TestanimalsEntity.java"
+          "src/main/resources/assets/goodblock/models/item/latextest_spawn_egg.json",
+          "src/main/java/net/hhdsj/goodblock/entity/LatextestEntity.java",
+          "src/main/java/net/hhdsj/goodblock/client/renderer/LatextestRenderer.java"
         ]
       },
       "path": "~/animals"
+    },
+    {
+      "name": "Goodblockuse",
+      "type": "achievement",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goodblockuse",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/advancements/goodblockuse.json"
+        ]
+      },
+      "path": "~/advancements"
+    },
+    {
+      "name": "Sulphuradvan",
+      "type": "achievement",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sulphuradvan",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/advancements/sulphuradvan.json"
+        ]
+      },
+      "path": "~/advancements"
+    },
+    {
+      "name": "Nitricacidadvan",
+      "type": "achievement",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nitricacidadvan",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/advancements/nitricacidadvan.json"
+        ]
+      },
+      "path": "~/advancements"
     }
   ],
   "variable_elements": [],
@@ -1456,44 +1448,42 @@
   ],
   "language_map": {
     "en_us": {
+      "advancements.nitricacidadvan.descr": "Find nitricacids",
       "block.goodblock.pale_wood_stairs": "Pale_wood Stairs",
       "subtitles.no_stop": "no_stop!",
       "item.goodblock.painiteaxe": "Painiteaxe",
       "item.goodblock.impureuranium": "Impureuranium",
       "itemGroup.tabworldblock": "Worldblock",
-      "advancements.usethismod.descr": "Thank you for using this mod!!!",
-      "entity.goodblock.testanimals": "Testanimals",
       "block.goodblock.black_stripes_block": "Black Stripes Block",
+      "item.goodblock.latextest_spawn_egg": "Latextest Spawn Egg",
       "item.goodblock.painitemanuscript": "Painitemanuscript",
+      "advancements.goodblockuse.title": "Goodblock",
       "item.goodblock.testgbk_bucket": "TESTGBK Bucket",
       "item.goodblock.notlistenthis": "Notlistenthis",
-      "advancements.usethismod.title": "USETHISMOD",
       "item.goodblock.painite_armor_chestplate": "Painite Armor 胸甲",
       "block.goodblock.blueblock": "tieblock",
       "block.goodblock.nitreblock": "Nitreblock",
       "item.goodblock.painite_armor_boots": "Painite Armor 靴子",
+      "advancements.goodblockuse.descr": "Goodblocks",
       "item.goodblock.inksans_4": "Inksans 4",
+      "advancements.sulphuradvan.descr": "Find sulphurs",
       "subtitles.gnusmas_gm_soundfont_2.00": "gnusmas_gm_soundfont",
       "block.goodblock.pale_wood_log": "Pale_wood Log",
       "gui.goodblock.findgui.button_dian_wo": "Here",
       "effect.goodblock.radiation": "radiation",
       "block.goodblock.pale_wood_fence": "Pale_wood Fence",
-      "advancements.painite_armornewold.descr": "painiteArmor???",
+      "advancements.nitricacidadvan.title": "Nitricacids",
       "block.goodblock.sulphurblock": "Sulphurblock",
       "item.goodblock.painitehoe": "Painitehoe",
       "gui.goodblock.findgui.GUI_A": "GUI in the upper left corner",
-      "advancements.obtainnitrate.title": "Obtainnitrate",
       "item.goodblock.anitfrrymusic": "Flute",
       "block.goodblock.pale_wood_fence_gate": "Pale_wood Fence Gate",
-      "advancements.obtainsulfur.descr": "Isn\u0027t this gold? ",
       "advancements.usemod.descr": "You found this",
       "item.goodblock.painite_armor_leggings": "Painite Armor 护腿",
-      "advancements.painite_armornewold.title": "Painite Armornewold",
       "block.goodblock.uraniummineral": "Uraniummineral",
       "item.goodblock.painiteshovel": "Painiteshovel",
       "block.goodblock.paletreespa_1": "Paletreespa 1",
       "item.goodblock.notlistenthis.desc": "This is a total loss of music. ",
-      "advancements.obtainsulfur.title": "Obtainsulfur",
       "advancements.usemod.title": "oh you find this!!!",
       "item.goodblock.sulphur": "Sulphur",
       "block.goodblock.pale_wood_pressure_plate": "Pale_wood Pressure Plate",
@@ -1505,16 +1495,16 @@
       "subtitles.anit_furry_music": "auit furry music!",
       "subtitles.item.armor.equip_netherite": "穿上盔甲",
       "block.goodblock.uraniumblock": "Uraniumblock",
-      "item.goodblock.testanimals_spawn_egg": "Testanimals Spawn Egg",
       "item.goodblock.flute": "Flute",
       "block.goodblock.pale_wood_leaves": "Pale_wood Leaves",
-      "item.goodblock.nitricacid": "Nitricacid",
+      "entity.goodblock.latextest": "Latextest",
       "block.goodblock.pale_wood_wood": "Pale_wood Wood",
+      "item.goodblock.nitricacid": "Nitricacid",
+      "advancements.sulphuradvan.title": "Sulphurs",
       "block.goodblock.blackblock": "Blackblock",
       "block.goodblock.testgbk": "TESTGBK",
       "gui.goodblock.findgui.label_make_hhdsj2": "make : hhdsj2",
       "item.goodblock.inksans_4.desc": "ink Sans",
-      "advancements.obtainnitrate.descr": "White powder",
       "subtitles.ink_sans": "A music",
       "fluid.goodblock.testgbk": "TESTGBK",
       "item.goodblock.flute.desc": "gnusmas_gm_soundfont_2.00",
@@ -1525,44 +1515,42 @@
       "block.goodblock.pale_wood_planks": "Pale_wood Planks"
     },
     "zh_cn": {
+      "advancements.nitricacidadvan.descr": "Find nitricacids",
       "block.goodblock.pale_wood_stairs": "苍白木楼梯",
       "subtitles.no_stop": "不停下",
       "item.goodblock.painiteaxe": "Painiteaxe",
       "item.goodblock.impureuranium": "不纯的铀粉",
       "itemGroup.tabworldblock": "世界方块",
-      "advancements.usethismod.descr": "谢谢你使用这个MOD!!!",
-      "entity.goodblock.testanimals": "Testanimals",
       "block.goodblock.black_stripes_block": "Black Stripes Block",
+      "item.goodblock.latextest_spawn_egg": "Latextest Spawn Egg",
       "item.goodblock.painitemanuscript": "Painitemanuscript",
-      "item.goodblock.testgbk_bucket": "测试液体桶",
+      "advancements.goodblockuse.title": "Goodblockuse",
       "item.goodblock.notlistenthis": "你不要听这个",
-      "advancements.usethismod.title": "USETHISMOD",
+      "item.goodblock.testgbk_bucket": "测试液体桶",
       "item.goodblock.painite_armor_chestplate": "Painite Chestplate",
       "block.goodblock.blueblock": "铁网",
       "block.goodblock.nitreblock": "硝矿石",
       "item.goodblock.painite_armor_boots": "Painite Boots",
+      "advancements.goodblockuse.descr": "ASDSA",
       "item.goodblock.inksans_4": "Inksans 4",
+      "advancements.sulphuradvan.descr": "Find sulphurs",
       "subtitles.gnusmas_gm_soundfont_2.00": "gnusmas_gm_soundfont",
       "block.goodblock.pale_wood_log": "苍白原木",
       "gui.goodblock.findgui.button_dian_wo": "HERE",
       "effect.goodblock.radiation": "辐射",
       "block.goodblock.pale_wood_fence": "苍白木栅栏",
-      "advancements.painite_armornewold.descr": "painiteArmor???",
+      "advancements.nitricacidadvan.title": "Nitricacids",
       "block.goodblock.sulphurblock": "硫磺矿石",
       "item.goodblock.painitehoe": "Painitehoe",
       "gui.goodblock.findgui.GUI_A": "GUI in the upper left corner",
-      "advancements.obtainnitrate.title": "硝!",
       "item.goodblock.anitfrrymusic": "Flute",
       "block.goodblock.pale_wood_fence_gate": "Pale_wood Fence Gate",
-      "advancements.obtainsulfur.descr": "这不是金子吗???",
       "advancements.usemod.descr": "你找到这个!",
       "item.goodblock.painite_armor_leggings": "Painite Leggings",
-      "advancements.painite_armornewold.title": "Painite Armornewold",
       "block.goodblock.uraniummineral": "铀矿石",
       "item.goodblock.painiteshovel": "Painiteshovel",
       "block.goodblock.paletreespa_1": "Paletreespa 1",
       "item.goodblock.notlistenthis.desc": "不要听这个",
-      "advancements.obtainsulfur.title": "硫磺",
       "advancements.usemod.title": "WDF你找到了这个",
       "item.goodblock.sulphur": "硫磺",
       "block.goodblock.pale_wood_pressure_plate": "Pale_wood Pressure Plate",
@@ -1574,16 +1562,16 @@
       "subtitles.anit_furry_music": "反furry音乐！！！",
       "subtitles.item.armor.equip_netherite": "穿上盔甲",
       "block.goodblock.uraniumblock": "不纯的铀块",
-      "item.goodblock.testanimals_spawn_egg": "Testanimals Spawn Egg",
       "item.goodblock.flute": "Flute",
       "block.goodblock.pale_wood_leaves": "Pale_wood Leaves",
-      "item.goodblock.nitricacid": "硝",
+      "entity.goodblock.latextest": "Latextest",
       "block.goodblock.pale_wood_wood": "Pale_wood Wood",
+      "item.goodblock.nitricacid": "Nitricacid",
+      "advancements.sulphuradvan.title": "Sulphurs",
       "block.goodblock.blackblock": "这是个测试方块",
       "block.goodblock.testgbk": "测试",
       "gui.goodblock.findgui.label_make_hhdsj2": "make : hhdsj2",
       "item.goodblock.inksans_4.desc": "ink Sans",
-      "advancements.obtainnitrate.descr": "白色的粉末",
       "subtitles.ink_sans": "一个音乐",
       "fluid.goodblock.testgbk": "测试液体",
       "item.goodblock.flute.desc": "gnusmas_gm_soundfont_2.00",
@@ -1618,7 +1606,7 @@
         "children": []
       },
       {
-        "name": "TSD",
+        "name": "advancements",
         "children": []
       }
     ]

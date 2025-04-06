@@ -1,27 +1,27 @@
 {
   "display": {
     "icon": {
-      "item": "goodblock:sulphur"
+      "item": "goodblock:nitricacid"
     },
     "title": {
-      "translate": "advancements.obtainsulfur.title"
+      "translate": "advancements.nitricacidadvan.title"
     },
     "description": {
-      "translate": "advancements.obtainsulfur.descr"
+      "translate": "advancements.nitricacidadvan.descr"
     },
     "frame": "task",
     "show_toast": true,
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
-    "obtainsulfur": {
+    "nitricacidadvan": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "goodblock:sulphur"
+              "goodblock:nitricacid"
             ],
             "count": {
               "min": 1,
@@ -32,5 +32,8 @@
       }
     }
   },
-  "parent": "goodblock:usethismod"
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "goodblock:goodblockuse"
 }
