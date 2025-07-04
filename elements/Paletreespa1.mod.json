@@ -120,6 +120,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onNeighbourBlockChanges": {
+      "name": "Paletreespa1GengXinYouXiKe"
+    },
     "onTickUpdate": {
       "name": "Paletreespa1GengXinYouXiKe"
     },

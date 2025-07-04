@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "goodblock:pale_wood_log",
     "goodblock:pale_wood_wood"
   ]
 }

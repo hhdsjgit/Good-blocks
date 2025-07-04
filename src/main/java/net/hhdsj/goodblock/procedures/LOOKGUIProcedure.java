@@ -56,7 +56,7 @@ public class LOOKGUIProcedure {
 					_player.getAdvancements().award(_adv, (String) _iterator.next());
 			}
 		}
-		if (!(entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel ? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("goodblock:usemod"))).isDone() : false)) {
+		if (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel ? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("goodblock:usemod"))).isDone() : false) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(GoodblockModItems.INKSANS_4.get());
 				_setstack.setCount(1);

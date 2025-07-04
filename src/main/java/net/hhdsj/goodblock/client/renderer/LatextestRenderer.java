@@ -17,4 +17,5 @@ public class LatextestRenderer extends MobRenderer<LatextestEntity, ModelNoNameM
 	public ResourceLocation getTextureLocation(LatextestEntity entity) {
 		return new ResourceLocation("goodblock:textures/entities/dark_latex_yufeng.png");
 	}
+	
 }

@@ -2,7 +2,6 @@
 package net.hhdsj.goodblock.fluid;
 
 import net.minecraftforge.fluids.ForgeFlowingFluid;
-import net.minecraftforge.fluids.FluidAttributes;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.material.FluidState;
@@ -10,18 +9,23 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.BlockPos;
 
 import net.hhdsj.goodblock.init.GoodblockModItems;
 import net.hhdsj.goodblock.init.GoodblockModFluids;
 import net.hhdsj.goodblock.init.GoodblockModBlocks;
+import net.hhdsj.goodblock.fluid.attributes.TESTGBKFluidAttributes;
 
 public abstract class TESTGBKFluid extends ForgeFlowingFluid {
 	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(GoodblockModFluids.TESTGBK, GoodblockModFluids.FLOWING_TESTGBK,
-			FluidAttributes.builder(new ResourceLocation("goodblock:blocks/black_block"), new ResourceLocation("goodblock:blocks/black_block"))
+			TESTGBKFluidAttributes.builder(new ResourceLocation("goodblock:blocks/black_block"), new ResourceLocation("goodblock:blocks/black_block"))
 
-	).explosionResistance(100f)
+					.rarity(Rarity.EPIC).color(-13083194))
+			.explosionResistance(100f)
 
 			.tickRate(1)
 
@@ -29,6 +33,11 @@ public abstract class TESTGBKFluid extends ForgeFlowingFluid {
 
 	private TESTGBKFluid() {
 		super(PROPERTIES);
+	}
+
+	@Override
+	public ParticleOptions getDripParticle() {
+		return ParticleTypes.EXPLOSION;
 	}
 
 	@Override

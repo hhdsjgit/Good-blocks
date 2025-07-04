@@ -6,12 +6,12 @@
     "bucketName": "TESTGBK Bucket",
     "textureStill": "black_block",
     "textureFlowing": "black_block",
-    "tintType": "No tint",
+    "tintType": "Water",
     "canMultiply": false,
     "flowRate": 1,
     "levelDecrease": 1,
     "slopeFindDistance": 4,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "dripParticle": {
       "value": "EXPLOSION_NORMAL"
     },
@@ -24,12 +24,12 @@
     "generateBucket": true,
     "textureBucket": "",
     "creativeTab": {
-      "value": "CUSTOM:Worldblock"
+      "value": "No creative tab entry"
     },
     "emptySound": {
       "value": ""
     },
-    "rarity": "COMMON",
+    "rarity": "EPIC",
     "specialInfo": [],
     "resistance": 100.0,
     "luminance": 0,

@@ -11,6 +11,6 @@ public class ImpureuraniumDangWuPinZaiShouShangMeiKeFaShengProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(GoodblockModMobEffects.RADIATION.get(), 5, 1));
+			_entity.addEffect(new MobEffectInstance(GoodblockModMobEffects.RADIATION.get(), 60, 1));
 	}
 }
