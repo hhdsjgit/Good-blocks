@@ -1,5 +1,5 @@
 package net.hhdsj.goodblock.client.model.renderer;
-
+/*
 import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.layers.CustomEyesLayer;
 import net.ltxprogrammer.changed.client.renderer.layers.GasMaskLayer;
@@ -27,4 +27,4 @@ public class DragonLatexEntityRenderer extends AdvancedHumanoidRenderer<LatexRed
     public ResourceLocation getTextureLocation(DragonLatexEntity p_114482_) {
         return Changed.modResource("textures/DragonLatexEntity.png");
     }
-}
+}*/

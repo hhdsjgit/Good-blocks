@@ -40,7 +40,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:Worldblock"
     },
     "destroyTool": "Not specified",
     "customDrop": {
@@ -121,7 +121,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onNeighbourBlockChanges": {
-      "name": "Paletreespa1GengXinYouXiKe"
+      "name": "Paletreespa1DangPiLinFangKuaiGengXinShi"
     },
     "onTickUpdate": {
       "name": "Paletreespa1GengXinYouXiKe"

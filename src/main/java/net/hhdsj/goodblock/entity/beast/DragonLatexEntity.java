@@ -8,7 +8,7 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-
+/*
 
 public class DragonLatexEntity extends ChangedEntity implements PatronOC {
     public DragonLatexEntity(EntityType<? extends DragonLatexEntity> p_19870_, Level p_19871_) {
@@ -51,4 +51,4 @@ public class DragonLatexEntity extends ChangedEntity implements PatronOC {
     public Color3 getTransfurColor(TransfurCause cause) {
         return Color3.getColor("#d496a2");
     }
-}
+}*/

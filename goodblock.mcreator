@@ -1405,15 +1405,15 @@
       }
     },
     {
-      "name": "Paletreespa1DangPiLinFangKuaiGengXinShi",
+      "name": "Paletreespa1DangPiLinFangKuaiGengXinchagned",
       "type": "procedure",
-      "sortid": 126,
+      "sortid": 127,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "paletreespa_1_dang_pi_lin_fang_kuai_geng_xin_shi",
+      "registry_name": "paletreespa_1_dang_pi_lin_fang_kuai_geng_xinchagned",
       "metadata": {
         "files": [
-          "src/main/java/net/hhdsj/goodblock/procedures/Paletreespa1DangPiLinFangKuaiGengXinShiProcedure.java"
+          "src/main/java/net/hhdsj/goodblock/procedures/Paletreespa1DangPiLinFangKuaiGengXinchagnedProcedure.java"
         ],
         "dependencies": [
           {
@@ -1433,18 +1433,34 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/plae_tree"
     },
     {
-      "name": "Paletreespa1DangPiLinFangKuaiGengXinchagned",
+      "name": "Paletreespa1GengXinYouXiKe2",
       "type": "procedure",
-      "sortid": 127,
+      "sortid": 129,
       "compiles": true,
-      "locked_code": false,
-      "registry_name": "paletreespa_1_dang_pi_lin_fang_kuai_geng_xinchagned",
+      "locked_code": true,
+      "registry_name": "paletreespa_1_geng_xin_you_xi_ke_2",
       "metadata": {
         "files": [
-          "src/main/java/net/hhdsj/goodblock/procedures/Paletreespa1DangPiLinFangKuaiGengXinchagnedProcedure.java"
+          "src/main/java/net/hhdsj/goodblock/procedures/Paletreespa1GengXinYouXiKe2Procedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/plae_tree"
+    },
+    {
+      "name": "Paletreespa1DangPiLinFangKuaiGengXinShi",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paletreespa_1_dang_pi_lin_fang_kuai_geng_xin_shi",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/procedures/Paletreespa1DangPiLinFangKuaiGengXinShiProcedure.java"
         ],
         "dependencies": [
           {
@@ -1523,8 +1539,8 @@
       "item.goodblock.latextest_spawn_egg": "Latextest Spawn Egg",
       "item.goodblock.painitemanuscript": "Painitemanuscript",
       "advancements.goodblockuse.title": "Goodblock",
-      "item.goodblock.testgbk_bucket": "TESTGBK Bucket",
       "item.goodblock.notlistenthis": "Notlistenthis",
+      "item.goodblock.testgbk_bucket": "TESTGBK Bucket",
       "item.goodblock.painite_armor_chestplate": "Painite Armor 胸甲",
       "block.goodblock.blueblock": "tieblock",
       "block.goodblock.nitreblock": "Nitreblock",
@@ -1590,8 +1606,8 @@
       "item.goodblock.latextest_spawn_egg": "Latextest Spawn Egg",
       "item.goodblock.painitemanuscript": "Painitemanuscript",
       "advancements.goodblockuse.title": "Goodblockuse",
-      "item.goodblock.testgbk_bucket": "测试液体桶",
       "item.goodblock.notlistenthis": "你不要听这个",
+      "item.goodblock.testgbk_bucket": "测试液体桶",
       "item.goodblock.painite_armor_chestplate": "Painite Chestplate",
       "block.goodblock.blueblock": "铁网",
       "block.goodblock.nitreblock": "硝矿石",

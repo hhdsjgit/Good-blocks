@@ -24,6 +24,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
 import net.hhdsj.goodblock.procedures.Paletreespa1GengXinYouXiKeProcedure;
+import net.hhdsj.goodblock.procedures.Paletreespa1DangPiLinFangKuaiGengXinShiProcedure;
 import net.hhdsj.goodblock.init.GoodblockModItems;
 import net.hhdsj.goodblock.init.GoodblockModBlocks;
 
@@ -62,7 +63,7 @@ public class Paletreespa1Block extends Block implements BonemealableBlock {
 	@Override
 	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
 		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
-		Paletreespa1GengXinYouXiKeProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		Paletreespa1DangPiLinFangKuaiGengXinShiProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override
