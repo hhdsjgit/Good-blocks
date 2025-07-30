@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.hhdsj.goodblock.client.model.ModelProtoTypeMob;
 import net.hhdsj.goodblock.client.model.ModelNoNameMob;
+import net.hhdsj.goodblock.client.model.ModelLatexPurpleFoxUnified;
 import net.hhdsj.goodblock.client.model.ModelDarkLatexYufengUnified;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -20,5 +21,6 @@ public class GoodblockModModels {
 		event.registerLayerDefinition(ModelDarkLatexYufengUnified.LAYER_LOCATION, ModelDarkLatexYufengUnified::createBodyLayer);
 		event.registerLayerDefinition(ModelProtoTypeMob.LAYER_LOCATION, ModelProtoTypeMob::createBodyLayer);
 		event.registerLayerDefinition(ModelNoNameMob.LAYER_LOCATION, ModelNoNameMob::createBodyLayer);
+		event.registerLayerDefinition(ModelLatexPurpleFoxUnified.LAYER_LOCATION, ModelLatexPurpleFoxUnified::createBodyLayer);
 	}
 }

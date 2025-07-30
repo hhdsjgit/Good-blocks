@@ -23,7 +23,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 
-import net.hhdsj.goodblock.procedures.Paletreespa1GengXinYouXiKeProcedure;
+import net.hhdsj.goodblock.procedures.Paletreespa1GengXintreeProcedure;
 import net.hhdsj.goodblock.procedures.Paletreespa1DangPiLinFangKuaiGengXinShiProcedure;
 import net.hhdsj.goodblock.init.GoodblockModItems;
 import net.hhdsj.goodblock.init.GoodblockModBlocks;
@@ -72,7 +72,7 @@ public class Paletreespa1Block extends Block implements BonemealableBlock {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		Paletreespa1GengXinYouXiKeProcedure.execute(world, x, y, z);
+		Paletreespa1GengXintreeProcedure.execute(world, x, y, z, blockstate);
 	}
 
 	@Override
@@ -87,7 +87,7 @@ public class Paletreespa1Block extends Block implements BonemealableBlock {
 
 	@Override
 	public void performBonemeal(ServerLevel world, Random random, BlockPos pos, BlockState blockstate) {
-		Paletreespa1GengXinYouXiKeProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		Paletreespa1GengXintreeProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
 	}
 
 	@OnlyIn(Dist.CLIENT)

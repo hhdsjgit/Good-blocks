@@ -11,6 +11,7 @@
  *    will be REGENERATED on each build.
  *
  */
+
 package net.hhdsj.goodblock;
 
 import org.apache.logging.log4j.Logger;
@@ -33,6 +34,9 @@ import net.hhdsj.goodblock.init.GoodblockModFluids;
 import net.hhdsj.goodblock.init.GoodblockModFeatures;
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.hhdsj.goodblock.init.GoodblockModBlocks;
+//java add
+import net.hhdsj.goodblock.init.GoodblockModTransfurVariants;
+
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -57,6 +61,8 @@ public class GoodblockMod {
 		GoodblockModFluids.REGISTRY.register(bus);
 
 		GoodblockModMobEffects.REGISTRY.register(bus);
+		//latex java register
+		GoodblockModTransfurVariants.REGISTRY.register(bus);
 
 	}
 

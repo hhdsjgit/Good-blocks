@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Flutemusica 1records",
+    "texture": "music_disc_cat",
+    "description": "flutemusica_1records",
+    "creativeTab": {
+      "value": "CUSTOM:Worldblock"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:flutemusica_1records"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

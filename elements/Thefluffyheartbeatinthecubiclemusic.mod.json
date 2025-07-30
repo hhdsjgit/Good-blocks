@@ -1,0 +1,19 @@
+{
+  "_fv": 39,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "The fluffy heart beat in the cubicle music",
+    "texture": "music_disc_cat",
+    "description": "furry music",
+    "creativeTab": {
+      "value": "CUSTOM:Worldblock"
+    },
+    "specialInfo": [],
+    "hasGlow": false,
+    "music": {
+      "value": "CUSTOM:the_fluffy_heartbeat_in_the_cubicle"
+    },
+    "lengthInTicks": 100,
+    "analogOutput": 0
+  }
+}

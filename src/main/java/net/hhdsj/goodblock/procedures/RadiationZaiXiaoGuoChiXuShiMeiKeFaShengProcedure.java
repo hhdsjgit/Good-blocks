@@ -7,6 +7,6 @@ public class RadiationZaiXiaoGuoChiXuShiMeiKeFaShengProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		entity.hurt(DamageSource.ON_FIRE, (float) 0.5);
+		entity.hurt(DamageSource.ON_FIRE, 3);
 	}
 }

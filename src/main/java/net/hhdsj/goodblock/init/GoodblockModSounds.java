@@ -18,11 +18,15 @@ import java.util.HashMap;
 public class GoodblockModSounds {
 	public static Map<ResourceLocation, SoundEvent> REGISTRY = new HashMap<>();
 	static {
-		REGISTRY.put(new ResourceLocation("goodblock", "gnusmas_gm_soundfont_2.00"), new SoundEvent(new ResourceLocation("goodblock", "gnusmas_gm_soundfont_2.00")));
-		REGISTRY.put(new ResourceLocation("goodblock", "anit_furry_music"), new SoundEvent(new ResourceLocation("goodblock", "anit_furry_music")));
-		REGISTRY.put(new ResourceLocation("goodblock", "item.armor.equip_netherite"), new SoundEvent(new ResourceLocation("goodblock", "item.armor.equip_netherite")));
-		REGISTRY.put(new ResourceLocation("goodblock", "no_stop"), new SoundEvent(new ResourceLocation("goodblock", "no_stop")));
 		REGISTRY.put(new ResourceLocation("goodblock", "ink_sans"), new SoundEvent(new ResourceLocation("goodblock", "ink_sans")));
+		REGISTRY.put(new ResourceLocation("goodblock", "item.armor.equip_netherite"), new SoundEvent(new ResourceLocation("goodblock", "item.armor.equip_netherite")));
+		REGISTRY.put(new ResourceLocation("goodblock", "gnusmas_gm_soundfont_2.00"), new SoundEvent(new ResourceLocation("goodblock", "gnusmas_gm_soundfont_2.00")));
+		REGISTRY.put(new ResourceLocation("goodblock", "no_stop"), new SoundEvent(new ResourceLocation("goodblock", "no_stop")));
+		REGISTRY.put(new ResourceLocation("goodblock", "the_fluffy_heartbeat_in_the_cubicle"), new SoundEvent(new ResourceLocation("goodblock", "the_fluffy_heartbeat_in_the_cubicle")));
+		REGISTRY.put(new ResourceLocation("goodblock", "anit_furry_music"), new SoundEvent(new ResourceLocation("goodblock", "anit_furry_music")));
+		REGISTRY.put(new ResourceLocation("goodblock", "srening_ogg1"), new SoundEvent(new ResourceLocation("goodblock", "srening_ogg1")));
+		REGISTRY.put(new ResourceLocation("goodblock", "the_fluffy_heartbeatinthe_cubiclemusic"), new SoundEvent(new ResourceLocation("goodblock", "the_fluffy_heartbeatinthe_cubiclemusic")));
+		REGISTRY.put(new ResourceLocation("goodblock", "flutemusica_1records"), new SoundEvent(new ResourceLocation("goodblock", "flutemusica_1records")));
 	}
 
 	@SubscribeEvent

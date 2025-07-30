@@ -101,7 +101,7 @@
     "breakHarvestLevel": 1,
     "isBonemealable": true,
     "onBonemealSuccess": {
-      "name": "Paletreespa1GengXinYouXiKe"
+      "name": "Paletreespa1GengXintree"
     },
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
@@ -124,7 +124,7 @@
       "name": "Paletreespa1DangPiLinFangKuaiGengXinShi"
     },
     "onTickUpdate": {
-      "name": "Paletreespa1GengXinYouXiKe"
+      "name": "Paletreespa1GengXintree"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

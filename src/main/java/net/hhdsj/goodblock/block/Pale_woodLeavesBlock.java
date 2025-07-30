@@ -12,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class Pale_woodLeavesBlock extends LeavesBlock {
 	public Pale_woodLeavesBlock() {
-		super(BlockBehaviour.Properties.of(Material.LEAVES).sound(SoundType.GRASS).strength(0.2f).noOcclusion().noDrops());
+		super(BlockBehaviour.Properties.of(Material.LEAVES).sound(SoundType.GRASS).strength(0.2f).noOcclusion());
 	}
 
 	@Override

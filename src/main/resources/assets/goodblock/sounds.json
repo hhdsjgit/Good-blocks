@@ -1,20 +1,10 @@
 {
-  "gnusmas_gm_soundfont_2.00": {
+  "ink_sans": {
     "category": "neutral",
-    "subtitle": "subtitles.gnusmas_gm_soundfont_2.00",
+    "subtitle": "subtitles.ink_sans",
     "sounds": [
       {
-        "name": "goodblock:ssss",
-        "stream": false
-      }
-    ]
-  },
-  "anit_furry_music": {
-    "category": "neutral",
-    "subtitle": "subtitles.anit_furry_music",
-    "sounds": [
-      {
-        "name": "goodblock:anit_furry_music",
+        "name": "goodblock:rgux5-tx8dz",
         "stream": false
       }
     ]
@@ -29,22 +19,76 @@
       }
     ]
   },
+  "gnusmas_gm_soundfont_2.00": {
+    "category": "neutral",
+    "subtitle": "subtitles.gnusmas_gm_soundfont_2.00",
+    "sounds": [
+      {
+        "name": "goodblock:ssss",
+        "stream": false
+      }
+    ]
+  },
   "no_stop": {
-    "category": "music",
+    "category": "neutral",
     "subtitle": "subtitles.no_stop",
     "sounds": [
       {
         "name": "goodblock:jack_phase_1",
+        "stream": false
+      }
+    ]
+  },
+  "the_fluffy_heartbeat_in_the_cubicle": {
+    "category": "neutral",
+    "subtitle": "subtitles.the_fluffy_heartbeat_in_the_cubicle",
+    "sounds": [
+      {
+        "name": "goodblock:ge_zi_jian_li_de_mao_rong_rong_xin_tiao__",
+        "stream": false
+      }
+    ]
+  },
+  "anit_furry_music": {
+    "category": "neutral",
+    "subtitle": "subtitles.anit_furry_music",
+    "sounds": [
+      {
+        "name": "goodblock:anit_furry_music",
+        "stream": false
+      }
+    ]
+  },
+  "srening_ogg1": {
+    "category": "music",
+    "subtitle": "subtitles.srening_ogg1",
+    "sounds": [
+      {
+        "name": "goodblock:output",
+        "stream": true
+      },
+      {
+        "name": "goodblock:compress",
         "stream": true
       }
     ]
   },
-  "ink_sans": {
+  "the_fluffy_heartbeatinthe_cubiclemusic": {
     "category": "music",
-    "subtitle": "subtitles.ink_sans",
+    "subtitle": "subtitles.the_fluffy_heartbeatinthe_cubiclemusic",
     "sounds": [
       {
-        "name": "goodblock:rgux5-tx8dz",
+        "name": "goodblock:ge_zi_jian_li_de_mao_rong_rong_xin_tiao__",
+        "stream": true
+      }
+    ]
+  },
+  "flutemusica_1records": {
+    "category": "music",
+    "subtitle": "subtitles.flutemusica_1records",
+    "sounds": [
+      {
+        "name": "goodblock:output",
         "stream": true
       }
     ]

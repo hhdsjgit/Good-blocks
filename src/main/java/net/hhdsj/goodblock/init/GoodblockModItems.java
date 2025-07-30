@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.hhdsj.goodblock.item.ThefluffyheartbeatinthecubiclemusicItem;
 import net.hhdsj.goodblock.item.TESTGBKItem;
 import net.hhdsj.goodblock.item.SulphurItem;
 import net.hhdsj.goodblock.item.PaletreeItem;
@@ -28,7 +29,9 @@ import net.hhdsj.goodblock.item.NitricacidItem;
 import net.hhdsj.goodblock.item.Inksans4Item;
 import net.hhdsj.goodblock.item.ImpureuraniumingotItem;
 import net.hhdsj.goodblock.item.ImpureuraniumItem;
+import net.hhdsj.goodblock.item.Flutemusica1recordsItem;
 import net.hhdsj.goodblock.item.FluteItem;
+import net.hhdsj.goodblock.item.Armora1ArmorItem;
 import net.hhdsj.goodblock.item.AnitfrrymusicItem;
 import net.hhdsj.goodblock.GoodblockMod;
 
@@ -72,6 +75,15 @@ public class GoodblockModItems {
 	public static final RegistryObject<Item> PALETREE = REGISTRY.register("paletree", () -> new PaletreeItem());
 	public static final RegistryObject<Item> INKSANS_4 = REGISTRY.register("inksans_4", () -> new Inksans4Item());
 	public static final RegistryObject<Item> LATEXTEST_SPAWN_EGG = REGISTRY.register("latextest_spawn_egg", () -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXTEST, -16724788, -16751002, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> THEFLUFFYHEARTBEATINTHECUBICLEMUSIC = REGISTRY.register("thefluffyheartbeatinthecubiclemusic", () -> new ThefluffyheartbeatinthecubiclemusicItem());
+	public static final RegistryObject<Item> FLUTEMUSICA_1RECORDS = REGISTRY.register("flutemusica_1records", () -> new Flutemusica1recordsItem());
+	public static final RegistryObject<Item> ARMORA_1_ARMOR_HELMET = REGISTRY.register("armora_1_armor_helmet", () -> new Armora1ArmorItem.Helmet());
+	public static final RegistryObject<Item> ARMORA_1_ARMOR_CHESTPLATE = REGISTRY.register("armora_1_armor_chestplate", () -> new Armora1ArmorItem.Chestplate());
+	public static final RegistryObject<Item> ARMORA_1_ARMOR_LEGGINGS = REGISTRY.register("armora_1_armor_leggings", () -> new Armora1ArmorItem.Leggings());
+	public static final RegistryObject<Item> ARMORA_1_ARMOR_BOOTS = REGISTRY.register("armora_1_armor_boots", () -> new Armora1ArmorItem.Boots());
+	public static final RegistryObject<Item> LATEXFOX_SPAWN_EGG = REGISTRY.register("latexfox_spawn_egg", () -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXFOX, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> LATEX_ORANGE_FOX_SPAWN_EGG = REGISTRY.register("latex_orange_fox_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEX_ORANGE_FOX, -39373, -39424, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
