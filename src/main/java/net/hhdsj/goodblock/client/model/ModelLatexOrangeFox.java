@@ -40,7 +40,8 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 import org.jetbrains.annotations.NotNull;
-import java.util.List;
+
+import java.util.List;
 
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
@@ -190,7 +191,8 @@ public class ModelLatexOrangeFox extends AdvancedHumanoidModel<LatexOrangeFoxEnt
 		this.Head.xRot = headPitch / (180F / (float) Math.PI);
 		this.RightLeg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 		this.LeftArm.xRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
-	}*/
+	}
+*/
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {

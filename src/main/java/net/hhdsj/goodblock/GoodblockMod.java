@@ -36,6 +36,7 @@ import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.hhdsj.goodblock.init.GoodblockModBlocks;
 //java add
 import net.hhdsj.goodblock.init.GoodblockModTransfurVariants;
+import net.hhdsj.goodblock.registers.GoodblocksModels;
 
 
 import java.util.function.Supplier;
@@ -62,6 +63,7 @@ public class GoodblockMod {
 
 		GoodblockModMobEffects.REGISTRY.register(bus);
 		//latex java register
+
 		GoodblockModTransfurVariants.REGISTRY.register(bus);
 
 	}

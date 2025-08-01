@@ -27,7 +27,9 @@ public class Paletreespa1GengXintreeProcedure {
 				a = a + 1;
 			}
 		}
+		tree_y_now = 0;
 		if (Mth.nextDouble(new Random(), -3, 12) >= 7 && a >= tree_higt) {
+			world.setBlock(new BlockPos(x, y, z), GoodblockModBlocks.PALE_WOOD_LOG.get().defaultBlockState(), 3);
 			for (int index1 = 0; index1 < (int) (tree_higt); index1++) {
 				if (world.isEmptyBlock(new BlockPos(x, y + tree_y_now, z)) || blockstate.getMaterial() == net.minecraft.world.level.material.Material.LEAVES) {
 					world.setBlock(new BlockPos(x, y + tree_y_now, z), GoodblockModBlocks.PALE_WOOD_LOG.get().defaultBlockState(), 3);
