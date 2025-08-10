@@ -66,6 +66,7 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.2.27'
 //    implementation files('/Changed-m1.18.2-v0.14b.jar')
 	implementation fg.deobf("curse.maven:slashblade-661527:5947685")
+	implementation fg.deobf("curse.maven:slashblade-711303:6788915")
 }
 
 tasks.withType(JavaCompile).configureEach {

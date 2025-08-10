@@ -3,7 +3,7 @@
     {
       "name": "Blackblock",
       "type": "block",
-      "sortid": 11,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blackblock",
@@ -20,7 +20,7 @@
     {
       "name": "Worldblock",
       "type": "tab",
-      "sortid": 12,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "registry_name": "worldblock",
@@ -31,7 +31,7 @@
     {
       "name": "Sulphur",
       "type": "item",
-      "sortid": 1,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sulphur",
@@ -46,7 +46,7 @@
     {
       "name": "Nitricacid",
       "type": "item",
-      "sortid": 2,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nitricacid",
@@ -61,7 +61,7 @@
     {
       "name": "Syntheticpowderformula",
       "type": "recipe",
-      "sortid": 13,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "syntheticpowderformula",
@@ -75,7 +75,7 @@
     {
       "name": "Notnamep",
       "type": "recipe",
-      "sortid": 14,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "notnamep",
@@ -89,7 +89,7 @@
     {
       "name": "Sulphurblock",
       "type": "block",
-      "sortid": 4,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sulphurblock",
@@ -107,7 +107,7 @@
     {
       "name": "Nitreblock",
       "type": "block",
-      "sortid": 5,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nitreblock",
@@ -125,7 +125,7 @@
     {
       "name": "NItreblockC",
       "type": "loottable",
-      "sortid": 15,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "n_itreblock_c",
@@ -138,7 +138,7 @@
     {
       "name": "Sulphurblockc",
       "type": "loottable",
-      "sortid": 16,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sulphurblockc",
@@ -151,7 +151,7 @@
     {
       "name": "Notlistenthis",
       "type": "musicdisc",
-      "sortid": 10,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "notlistenthis",
@@ -166,7 +166,7 @@
     {
       "name": "Blackblocks",
       "type": "recipe",
-      "sortid": 17,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blackblocks",
@@ -180,7 +180,7 @@
     {
       "name": "Uraniummineral",
       "type": "block",
-      "sortid": 6,
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "registry_name": "uraniummineral",
@@ -198,7 +198,7 @@
     {
       "name": "RadiationZaiXiaoGuoChiXuShiMeiKeFaSheng",
       "type": "procedure",
-      "sortid": 20,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "registry_name": "radiation_zai_xiao_guo_chi_xu_shi_mei_ke_fa_sheng",
@@ -217,7 +217,7 @@
     {
       "name": "Radiation",
       "type": "potioneffect",
-      "sortid": 21,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "radiation",
@@ -230,7 +230,7 @@
     {
       "name": "ImpureuraniumDangWuPinZaiShouShangMeiKeFaSheng",
       "type": "procedure",
-      "sortid": 22,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "impureuranium_dang_wu_pin_zai_shou_shang_mei_ke_fa_sheng",
@@ -249,7 +249,7 @@
     {
       "name": "Impureuranium",
       "type": "item",
-      "sortid": 3,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "registry_name": "impureuranium",
@@ -264,7 +264,7 @@
     {
       "name": "RadiationC",
       "type": "loottable",
-      "sortid": 23,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "radiation_c",
@@ -277,7 +277,7 @@
     {
       "name": "Impureuraniumingot",
       "type": "item",
-      "sortid": 7,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "impureuraniumingot",
@@ -292,7 +292,7 @@
     {
       "name": "XImpureuraniumingot",
       "type": "recipe",
-      "sortid": 24,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "x_impureuraniumingot",
@@ -323,7 +323,7 @@
     {
       "name": "Uraniumblocks",
       "type": "recipe",
-      "sortid": 26,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "uraniumblocks",
@@ -337,7 +337,7 @@
     {
       "name": "TESTGBK",
       "type": "fluid",
-      "sortid": 9,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "testgbk",
@@ -356,7 +356,7 @@
     {
       "name": "Debugs",
       "type": "procedure",
-      "sortid": 27,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "debugs",
@@ -365,6 +365,10 @@
           "src/main/java/net/hhdsj/goodblock/procedures/DebugsProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -387,7 +391,7 @@
     {
       "name": "Home",
       "type": "painting",
-      "sortid": 29,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "home",
@@ -399,7 +403,7 @@
     {
       "name": "Cityold",
       "type": "painting",
-      "sortid": 28,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cityold",
@@ -411,7 +415,7 @@
     {
       "name": "Blueblock",
       "type": "block",
-      "sortid": 30,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blueblock",
@@ -428,7 +432,7 @@
     {
       "name": "TieblockTab",
       "type": "recipe",
-      "sortid": 31,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tieblock_tab",
@@ -442,7 +446,7 @@
     {
       "name": "Ironhot",
       "type": "block",
-      "sortid": 32,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ironhot",
@@ -459,7 +463,7 @@
     {
       "name": "Flute",
       "type": "musicdisc",
-      "sortid": 33,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flute",
@@ -474,7 +478,7 @@
     {
       "name": "Anitfrrymusic",
       "type": "musicdisc",
-      "sortid": 35,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "anitfrrymusic",
@@ -489,7 +493,7 @@
     {
       "name": "PainiteArmor",
       "type": "armor",
-      "sortid": 47,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "registry_name": "painite_armor",
@@ -507,7 +511,7 @@
     {
       "name": "Painitemanuscript",
       "type": "tool",
-      "sortid": 48,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "registry_name": "painitemanuscript",
@@ -522,7 +526,7 @@
     {
       "name": "Painitesword",
       "type": "tool",
-      "sortid": 49,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "registry_name": "painitesword",
@@ -537,7 +541,7 @@
     {
       "name": "Painiteaxe",
       "type": "tool",
-      "sortid": 50,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "painiteaxe",
@@ -552,7 +556,7 @@
     {
       "name": "Painitehoe",
       "type": "tool",
-      "sortid": 53,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "painitehoe",
@@ -567,7 +571,7 @@
     {
       "name": "Painiteshovel",
       "type": "tool",
-      "sortid": 54,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "registry_name": "painiteshovel",
@@ -582,7 +586,7 @@
     {
       "name": "TESTOMLS",
       "type": "recipe",
-      "sortid": 58,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "testomls",
@@ -596,7 +600,7 @@
     {
       "name": "Painitepickaxe",
       "type": "recipe",
-      "sortid": 59,
+      "sortid": 58,
       "compiles": true,
       "locked_code": true,
       "registry_name": "painitepickaxe",
@@ -610,7 +614,7 @@
     {
       "name": "Painiteaxepeifang1",
       "type": "recipe",
-      "sortid": 60,
+      "sortid": 59,
       "compiles": true,
       "locked_code": true,
       "registry_name": "painiteaxepeifang_1",
@@ -624,7 +628,7 @@
     {
       "name": "PainiteswordPEIFANG",
       "type": "recipe",
-      "sortid": 61,
+      "sortid": 60,
       "compiles": true,
       "locked_code": true,
       "registry_name": "painitesword_peifang",
@@ -638,7 +642,7 @@
     {
       "name": "Painitehoepeifang",
       "type": "recipe",
-      "sortid": 62,
+      "sortid": 61,
       "compiles": true,
       "locked_code": true,
       "registry_name": "painitehoepeifang",
@@ -652,7 +656,7 @@
     {
       "name": "Painiteshovelpeifang",
       "type": "recipe",
-      "sortid": 63,
+      "sortid": 62,
       "compiles": true,
       "locked_code": true,
       "registry_name": "painiteshovelpeifang",
@@ -666,7 +670,7 @@
     {
       "name": "Painitearmorhelmetpeifang",
       "type": "recipe",
-      "sortid": 64,
+      "sortid": 63,
       "compiles": true,
       "locked_code": true,
       "registry_name": "painitearmorhelmetpeifang",
@@ -680,7 +684,7 @@
     {
       "name": "Painitearmorchestplatepeifang",
       "type": "recipe",
-      "sortid": 65,
+      "sortid": 64,
       "compiles": true,
       "locked_code": true,
       "registry_name": "painitearmorchestplatepeifang",
@@ -694,7 +698,7 @@
     {
       "name": "Painitearmorleggingspeifang",
       "type": "recipe",
-      "sortid": 66,
+      "sortid": 65,
       "compiles": true,
       "locked_code": true,
       "registry_name": "painitearmorleggingspeifang",
@@ -708,7 +712,7 @@
     {
       "name": "Painitearmorbootspeifang",
       "type": "recipe",
-      "sortid": 77,
+      "sortid": 66,
       "compiles": true,
       "locked_code": true,
       "registry_name": "painitearmorbootspeifang",
@@ -722,7 +726,7 @@
     {
       "name": "Pale_woodWood",
       "type": "block",
-      "sortid": 67,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_wood",
@@ -739,7 +743,7 @@
     {
       "name": "Pale_woodLog",
       "type": "block",
-      "sortid": 68,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_log",
@@ -756,7 +760,7 @@
     {
       "name": "Pale_woodPlanks",
       "type": "block",
-      "sortid": 69,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_planks",
@@ -773,7 +777,7 @@
     {
       "name": "Pale_woodLeaves",
       "type": "block",
-      "sortid": 70,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_leaves",
@@ -790,7 +794,7 @@
     {
       "name": "Pale_woodStairs",
       "type": "block",
-      "sortid": 71,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_stairs",
@@ -809,7 +813,7 @@
     {
       "name": "Pale_woodSlab",
       "type": "block",
-      "sortid": 72,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_slab",
@@ -828,7 +832,7 @@
     {
       "name": "Pale_woodFence",
       "type": "block",
-      "sortid": 73,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_fence",
@@ -847,7 +851,7 @@
     {
       "name": "Pale_woodFenceGate",
       "type": "block",
-      "sortid": 74,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_fence_gate",
@@ -867,7 +871,7 @@
     {
       "name": "Pale_woodPressurePlate",
       "type": "block",
-      "sortid": 75,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_pressure_plate",
@@ -885,7 +889,7 @@
     {
       "name": "Pale_woodButton",
       "type": "block",
-      "sortid": 76,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_button",
@@ -904,7 +908,7 @@
     {
       "name": "Pale_woodItemsTag",
       "type": "tag",
-      "sortid": 104,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_items_tag",
@@ -918,7 +922,7 @@
     {
       "name": "Pale_woodWoodRecipe",
       "type": "recipe",
-      "sortid": 78,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_wood_recipe",
@@ -932,7 +936,7 @@
     {
       "name": "Pale_woodPlanksRecipe",
       "type": "recipe",
-      "sortid": 79,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_planks_recipe",
@@ -946,7 +950,7 @@
     {
       "name": "Pale_woodStairsRecipe",
       "type": "recipe",
-      "sortid": 80,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_stairs_recipe",
@@ -960,7 +964,7 @@
     {
       "name": "Pale_woodSlabRecipe",
       "type": "recipe",
-      "sortid": 81,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_slab_recipe",
@@ -974,7 +978,7 @@
     {
       "name": "Pale_woodFenceRecipe",
       "type": "recipe",
-      "sortid": 82,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_fence_recipe",
@@ -988,7 +992,7 @@
     {
       "name": "Pale_woodFenceGateRecipe",
       "type": "recipe",
-      "sortid": 83,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_fence_gate_recipe",
@@ -1002,7 +1006,7 @@
     {
       "name": "Pale_woodPressurePlateRecipe",
       "type": "recipe",
-      "sortid": 84,
+      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_pressure_plate_recipe",
@@ -1016,7 +1020,7 @@
     {
       "name": "Pale_woodButtonRecipe",
       "type": "recipe",
-      "sortid": 85,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_button_recipe",
@@ -1030,7 +1034,7 @@
     {
       "name": "Pale_woodStickRecipe",
       "type": "recipe",
-      "sortid": 86,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pale_wood_stick_recipe",
@@ -1044,7 +1048,7 @@
     {
       "name": "Paletreespa1",
       "type": "block",
-      "sortid": 97,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "paletreespa_1",
@@ -1061,7 +1065,7 @@
     {
       "name": "PaletreeDangYouJianDianJiFangKuaiShiFangKuaiDeWeiZhi",
       "type": "procedure",
-      "sortid": 99,
+      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "registry_name": "paletree_dang_you_jian_dian_ji_fang_kuai_shi_fang_kuai_de_wei_zhi",
@@ -1102,7 +1106,7 @@
     {
       "name": "Paletree",
       "type": "item",
-      "sortid": 100,
+      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "registry_name": "paletree",
@@ -1117,7 +1121,7 @@
     {
       "name": "Paletreespa1GengXinYouXiKe",
       "type": "procedure",
-      "sortid": 101,
+      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "registry_name": "paletreespa_1_geng_xin_you_xi_ke",
@@ -1149,7 +1153,7 @@
     {
       "name": "Palelaeves",
       "type": "loottable",
-      "sortid": 102,
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "registry_name": "palelaeves",
@@ -1163,7 +1167,7 @@
     {
       "name": "LogBlocks",
       "type": "tag",
-      "sortid": 103,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "registry_name": "log_blocks",
@@ -1177,7 +1181,7 @@
     {
       "name": "Cchengjiou",
       "type": "tag",
-      "sortid": 105,
+      "sortid": 82,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cchengjiou",
@@ -1190,7 +1194,7 @@
     {
       "name": "Painitearmorhelmetchange",
       "type": "recipe",
-      "sortid": 106,
+      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "registry_name": "painitearmorhelmetchange",
@@ -1204,7 +1208,7 @@
     {
       "name": "Painitearmorchanged2",
       "type": "recipe",
-      "sortid": 107,
+      "sortid": 84,
       "compiles": true,
       "locked_code": false,
       "registry_name": "painitearmorchanged_2",
@@ -1218,7 +1222,7 @@
     {
       "name": "Painitearmorchanged3",
       "type": "recipe",
-      "sortid": 108,
+      "sortid": 85,
       "compiles": true,
       "locked_code": false,
       "registry_name": "painitearmorchanged_3",
@@ -1232,7 +1236,7 @@
     {
       "name": "Painitearmorchanged4",
       "type": "recipe",
-      "sortid": 109,
+      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "registry_name": "painitearmorchanged_4",
@@ -1246,7 +1250,7 @@
     {
       "name": "FINDGUI",
       "type": "gui",
-      "sortid": 121,
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "registry_name": "findgui",
@@ -1262,7 +1266,7 @@
     {
       "name": "USEMOD",
       "type": "achievement",
-      "sortid": 110,
+      "sortid": 88,
       "compiles": true,
       "locked_code": false,
       "registry_name": "usemod",
@@ -1276,7 +1280,7 @@
     {
       "name": "LOOKGUI",
       "type": "procedure",
-      "sortid": 111,
+      "sortid": 89,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lookgui",
@@ -1312,7 +1316,7 @@
     {
       "name": "Find",
       "type": "command",
-      "sortid": 122,
+      "sortid": 90,
       "compiles": true,
       "locked_code": false,
       "registry_name": "find",
@@ -1326,7 +1330,7 @@
     {
       "name": "Inksans4",
       "type": "musicdisc",
-      "sortid": 112,
+      "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inksans_4",
@@ -1341,7 +1345,7 @@
     {
       "name": "DIE",
       "type": "procedure",
-      "sortid": 113,
+      "sortid": 92,
       "compiles": true,
       "locked_code": false,
       "registry_name": "die",
@@ -1361,7 +1365,7 @@
     {
       "name": "PalewoodleaveA",
       "type": "loottable",
-      "sortid": 115,
+      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "registry_name": "palewoodleave_a",
@@ -1373,25 +1377,9 @@
       "path": "~/formulation"
     },
     {
-      "name": "Latextest",
-      "type": "livingentity",
-      "sortid": 120,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "latextest",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/goodblock/models/item/latextest_spawn_egg.json",
-          "src/main/java/net/hhdsj/goodblock/entity/LatextestEntity.java",
-          "src/main/java/net/hhdsj/goodblock/client/renderer/LatextestRenderer.java"
-        ]
-      },
-      "path": "~/Entity"
-    },
-    {
       "name": "Goodblockuse",
       "type": "achievement",
-      "sortid": 123,
+      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goodblockuse",
@@ -1405,7 +1393,7 @@
     {
       "name": "Sulphuradvan",
       "type": "achievement",
-      "sortid": 124,
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sulphuradvan",
@@ -1419,7 +1407,7 @@
     {
       "name": "Nitricacidadvan",
       "type": "achievement",
-      "sortid": 125,
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nitricacidadvan",
@@ -1433,7 +1421,7 @@
     {
       "name": "Paletreepa1genxin",
       "type": "code",
-      "sortid": 132,
+      "sortid": 97,
       "compiles": true,
       "locked_code": true,
       "registry_name": "paletreepa_1genxin",
@@ -1446,7 +1434,7 @@
     {
       "name": "Paletreespa1DangPiLinFangKuaiGengXinchagned",
       "type": "procedure",
-      "sortid": 127,
+      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "registry_name": "paletreespa_1_dang_pi_lin_fang_kuai_geng_xinchagned",
@@ -1478,7 +1466,7 @@
     {
       "name": "Paletreespa1DangPiLinFangKuaiGengXinShi",
       "type": "procedure",
-      "sortid": 130,
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "registry_name": "paletreespa_1_dang_pi_lin_fang_kuai_geng_xin_shi",
@@ -1510,7 +1498,7 @@
     {
       "name": "Paletreespa1GengXin",
       "type": "procedure",
-      "sortid": 131,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "registry_name": "paletreespa_1_geng_xin",
@@ -1546,7 +1534,7 @@
     {
       "name": "InitiateAchievements",
       "type": "gamerule",
-      "sortid": 136,
+      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "registry_name": "initiateAchievements",
@@ -1558,7 +1546,7 @@
     {
       "name": "ObtainPainitearmorProcess",
       "type": "procedure",
-      "sortid": 134,
+      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "registry_name": "obtain_painitearmor_process",
@@ -1572,7 +1560,7 @@
     {
       "name": "GUISettings",
       "type": "gui",
-      "sortid": 146,
+      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gui_settings",
@@ -1588,7 +1576,7 @@
     {
       "name": "CardReaderZaiFangKuaiShangYouJian",
       "type": "procedure",
-      "sortid": 147,
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "registry_name": "card_reader_zai_fang_kuai_shang_you_jian",
@@ -1631,7 +1619,7 @@
     {
       "name": "Test",
       "type": "command",
-      "sortid": 149,
+      "sortid": 105,
       "compiles": true,
       "locked_code": false,
       "registry_name": "test",
@@ -1644,7 +1632,7 @@
     {
       "name": "Gguibuttle",
       "type": "procedure",
-      "sortid": 152,
+      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gguibuttle",
@@ -1676,7 +1664,7 @@
     {
       "name": "Thefluffyheartbeatinthecubiclemusic",
       "type": "musicdisc",
-      "sortid": 165,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "thefluffyheartbeatinthecubiclemusic",
@@ -1691,7 +1679,7 @@
     {
       "name": "Flutemusica1records",
       "type": "musicdisc",
-      "sortid": 166,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flutemusica_1records",
@@ -1706,7 +1694,7 @@
     {
       "name": "GHA1",
       "type": "achievement",
-      "sortid": 167,
+      "sortid": 107,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_1",
@@ -1720,7 +1708,7 @@
     {
       "name": "GHA2",
       "type": "achievement",
-      "sortid": 168,
+      "sortid": 108,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_2",
@@ -1734,7 +1722,7 @@
     {
       "name": "GHA3",
       "type": "achievement",
-      "sortid": 169,
+      "sortid": 109,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_3",
@@ -1748,7 +1736,7 @@
     {
       "name": "GHA4",
       "type": "achievement",
-      "sortid": 170,
+      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_4",
@@ -1762,7 +1750,7 @@
     {
       "name": "GHA5",
       "type": "achievement",
-      "sortid": 171,
+      "sortid": 111,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_5",
@@ -1776,7 +1764,7 @@
     {
       "name": "GHA6",
       "type": "achievement",
-      "sortid": 172,
+      "sortid": 112,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_6",
@@ -1790,7 +1778,7 @@
     {
       "name": "GHA7",
       "type": "achievement",
-      "sortid": 173,
+      "sortid": 113,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_7",
@@ -1804,7 +1792,7 @@
     {
       "name": "GHA8",
       "type": "achievement",
-      "sortid": 174,
+      "sortid": 114,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_8",
@@ -1818,7 +1806,7 @@
     {
       "name": "GHA9",
       "type": "achievement",
-      "sortid": 175,
+      "sortid": 115,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_9",
@@ -1832,7 +1820,7 @@
     {
       "name": "GHA10",
       "type": "achievement",
-      "sortid": 176,
+      "sortid": 116,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_10",
@@ -1846,7 +1834,7 @@
     {
       "name": "GHA11",
       "type": "achievement",
-      "sortid": 177,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_11",
@@ -1860,7 +1848,7 @@
     {
       "name": "GHA12",
       "type": "achievement",
-      "sortid": 178,
+      "sortid": 118,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_12",
@@ -1874,7 +1862,7 @@
     {
       "name": "GHA13",
       "type": "achievement",
-      "sortid": 179,
+      "sortid": 119,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gha_13",
@@ -1888,7 +1876,7 @@
     {
       "name": "Advcode",
       "type": "procedure",
-      "sortid": 180,
+      "sortid": 120,
       "compiles": true,
       "locked_code": false,
       "registry_name": "advcode",
@@ -1908,7 +1896,7 @@
     {
       "name": "Advcode1",
       "type": "procedure",
-      "sortid": 181,
+      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "registry_name": "advcode_1",
@@ -1944,7 +1932,7 @@
     {
       "name": "Paletreespa1GengXintree",
       "type": "procedure",
-      "sortid": 182,
+      "sortid": 122,
       "compiles": true,
       "locked_code": false,
       "registry_name": "paletreespa_1_geng_xintree",
@@ -1980,7 +1968,7 @@
     {
       "name": "Armora1Armor",
       "type": "armor",
-      "sortid": 183,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "registry_name": "armora_1_armor",
@@ -1998,7 +1986,7 @@
     {
       "name": "Armora1ArmorHelmetRecipe",
       "type": "recipe",
-      "sortid": 184,
+      "sortid": 123,
       "compiles": true,
       "locked_code": false,
       "registry_name": "armora_1_armor_helmet_recipe",
@@ -2012,7 +2000,7 @@
     {
       "name": "Armora1ArmorBodyRecipe",
       "type": "recipe",
-      "sortid": 185,
+      "sortid": 124,
       "compiles": true,
       "locked_code": false,
       "registry_name": "armora_1_armor_body_recipe",
@@ -2026,7 +2014,7 @@
     {
       "name": "Armora1ArmorLeggingsRecipe",
       "type": "recipe",
-      "sortid": 186,
+      "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "registry_name": "armora_1_armor_leggings_recipe",
@@ -2040,7 +2028,7 @@
     {
       "name": "Armora1ArmorBootsRecipe",
       "type": "recipe",
-      "sortid": 187,
+      "sortid": 126,
       "compiles": true,
       "locked_code": false,
       "registry_name": "armora_1_armor_boots_recipe",
@@ -2054,7 +2042,7 @@
     {
       "name": "Latexfox",
       "type": "livingentity",
-      "sortid": 188,
+      "sortid": 36,
       "compiles": true,
       "locked_code": true,
       "registry_name": "latexfox",
@@ -2070,7 +2058,7 @@
     {
       "name": "LatexOrangeFox",
       "type": "livingentity",
-      "sortid": 189,
+      "sortid": 37,
       "compiles": true,
       "locked_code": true,
       "registry_name": "latex_orange_fox",
@@ -2082,9 +2070,80 @@
         ]
       },
       "path": "~/Entity"
+    },
+    {
+      "name": "LatexKcahraShark",
+      "type": "livingentity",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "latex_kcahra_shark",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/client/renderer/LatexKcahraSharkRenderer.java",
+          "src/main/resources/assets/goodblock/models/item/latex_kcahra_shark_spawn_egg.json",
+          "src/main/java/net/hhdsj/goodblock/entity/LatexKcahraSharkEntity.java"
+        ]
+      },
+      "path": "~/Entity"
+    },
+    {
+      "name": "Latexgreendragon",
+      "type": "livingentity",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "latexgreendragon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/latexgreendragon_spawn_egg.json",
+          "src/main/java/net/hhdsj/goodblock/entity/LatexgreendragonEntity.java",
+          "src/main/java/net/hhdsj/goodblock/client/renderer/LatexgreendragonRenderer.java"
+        ]
+      },
+      "path": "~/Entity"
+    },
+    {
+      "name": "DarkfuLatexWolfMale",
+      "type": "livingentity",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "darkfu_latex_wolf_male",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/entity/DarkfuLatexWolfMaleEntity.java",
+          "src/main/java/net/hhdsj/goodblock/client/renderer/DarkfuLatexWolfMaleRenderer.java",
+          "src/main/resources/assets/goodblock/models/item/darkfu_latex_wolf_male_spawn_egg.json"
+        ]
+      },
+      "path": "~/Entity"
+    },
+    {
+      "name": "LatexiceDragon",
+      "type": "livingentity",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "latexice_dragon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/entity/LatexiceDragonEntity.java",
+          "src/main/java/net/hhdsj/goodblock/client/renderer/LatexiceDragonRenderer.java",
+          "src/main/resources/assets/goodblock/models/item/latexice_dragon_spawn_egg.json"
+        ]
+      },
+      "path": "~/Entity"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "Player_die",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    }
+  ],
   "sound_elements": [
     {
       "name": "ink_sans",
@@ -2164,15 +2223,15 @@
     "en_us": {
       "subtitles.srening_ogg1": "Music",
       "advancements.obtain_painitearmor.title": "硅硼钙铝石护甲",
-      "advancements.nitricacidadvan.descr": "找到硝",
+      "advancements.nitricacidadvan.descr": "Find nitricacids",
       "item.goodblock.armora_1_armor_chestplate": "Armora1 Chestplate",
+      "entity.goodblock.latexgreendragon": "Latexgreendragon",
       "subtitles.no_stop": "不停下",
       "advancements.gha_4.descr": "放置红石粉",
       "item.goodblock.thefluffyheartbeatinthecubiclemusic": "The fluffy heart beat in the cubicle music",
       "itemGroup.tabworldblock": "Worldblock",
       "advancements.gha_12.descr": "放置箱子",
       "block.goodblock.black_stripes_block": "Black Stripes Block",
-      "item.goodblock.latextest_spawn_egg": "Latextest Spawn Egg",
       "item.goodblock.the_fluffy_heartbeatinthe_cubiclemusic": "The Fluffy Heartbeatinthe Cubiclemusic",
       "item.goodblock.armora_1_armor_boots": "Armora1 Boots",
       "item.goodblock.flutemusica_1records": "Flutemusica 1records",
@@ -2180,7 +2239,7 @@
       "block.goodblock.card_reader": "Card Reader",
       "item.goodblock.testgbk_bucket": "TESTGBK Bucket",
       "item.goodblock.latex_orange_fox_spawn_egg": "橙色狐狸胶兽刷怪蛋",
-      "item.goodblock.painite_armor_chestplate": "硅硼钙铝石胸甲",
+      "item.goodblock.painite_armor_chestplate": "Painite Armor 胸甲",
       "block.goodblock.blueblock": "tieblock",
       "advancements.gha_3.title": "不一样的金属",
       "advancements.goodblockuse.descr": "Goodblocks",
@@ -2190,52 +2249,53 @@
       "item.goodblock.inksans_4": "Inksans 4",
       "subtitles.gnusmas_gm_soundfont_2.00": "gnusmas_gm_soundfont",
       "block.goodblock.card_readeropen": "Card Reader",
-      "block.goodblock.pale_wood_log": "苍白木",
-      "gui.goodblock.findgui.button_dian_wo": "这里",
+      "block.goodblock.pale_wood_log": "Pale_wood Log",
+      "gui.goodblock.findgui.button_dian_wo": "Here",
       "entity.goodblock.ea_1_boss": "EA 1 Boss",
-      "effect.goodblock.radiation": "辐射",
-      "block.goodblock.pale_wood_fence": "苍白木栅栏",
+      "effect.goodblock.radiation": "radiation",
+      "block.goodblock.pale_wood_fence": "Pale_wood Fence",
       "item.goodblock.ea_1_boss_spawn_egg": "EA 1 Boss Spawn Egg",
       "item.goodblock.thefluffyheartbeatinthecubiclemusic.desc": "furry music",
       "item.goodblock.anitfrrymusic": "Flute",
       "advancements.gha_9.title": "附魔金苹果收集家",
-      "block.goodblock.uraniummineral": "铀矿",
+      "block.goodblock.uraniummineral": "Uraniummineral",
       "item.goodblock.painiteshovel": "Painiteshovel",
       "entity.goodblock.latex_orange_fox": "橙色狐狸胶兽",
       "advancements.gha_13.descr": "死亡100次",
-      "advancements.usemod.title": "你竟然找到这!!!",
+      "advancements.usemod.title": "oh you find this!!!",
       "item.goodblock.fleececlothingtest_leggings": "Fleececlothingtest 护腿",
       "item.goodblock.flutemusica_1records.desc": "flutemusica_1records",
-      "block.goodblock.pale_wood_pressure_plate": "苍白木压力板",
+      "block.goodblock.pale_wood_pressure_plate": "Pale_wood Pressure Plate",
       "item.goodblock.paletree": "Paletree",
       "item.goodblock.anitfrrymusic.desc": "gnusmas_gm_soundfont_2.00",
       "advancements.gha_9.descr": "收集10个附魔金苹果",
       "advancements.gha_10.title": "游戏的终结???",
       "item.goodblock.impureuraniumingot": "Impureuraniumingot",
       "subtitles.item.armor.equip_netherite": "穿上盔甲",
-      "block.goodblock.uraniumblock": "又矿",
-      "block.goodblock.pale_wood_leaves": "苍白树叶",
-      "entity.goodblock.latextest": "测试胶兽",
+      "block.goodblock.uraniumblock": "Uraniumblock",
+      "block.goodblock.pale_wood_leaves": "Pale_wood Leaves",
+      "item.goodblock.latexice_dragon_spawn_egg": "Latexice Dragon Spawn Egg",
       "advancements.gha_8.title": "更高级的金苹果!",
       "advancements.gha_3.descr": "获得铜锭",
       "item.goodblock.latexfox_spawn_egg": "Latexfox Spawn Egg",
       "item.goodblock.armora_1_armor_helmet": "Armora1 Helmet",
-      "fluid.goodblock.testgbk": "测试流体",
+      "fluid.goodblock.testgbk": "TESTGBK",
       "item.goodblock.flute.desc": "gnusmas_gm_soundfont_2.00",
       "item.goodblock.fleececlothingtest_chestplate": "Fleececlothingtest 胸甲",
       "entity.goodblock.latexfox": "胶液狐狸",
-      "item.goodblock.painitesword": "硅硼钙铝石剑",
+      "item.goodblock.painitesword": "Painitesword",
       "subtitles.flutemusica_1records": "flutemusica_1records",
       "block.goodblock.ironhot": "tieblock",
       "block.goodblock.pale_wood_slab": "Pale_wood Slab",
-      "block.goodblock.pale_wood_planks": "苍白木木板",
-      "advancements.gha_11.title": "这不是钻石吗？？？",
+      "block.goodblock.pale_wood_planks": "Pale_wood Planks",
+      "item.goodblock.darkfu_latex_wolf_male_spawn_egg": "Darkfu Latex Wolf Male Spawn Egg",
+      "advancements.gha_11.title": "这不是钻石吗???",
       "advancements.gha_2.title": "这有什么用?",
       "gui.goodblock.gui_settings.button_a2": "a2",
       "gui.goodblock.gui_settings.button_a3": "a3",
       "block.goodblock.pale_wood_stairs": "Pale_wood Stairs",
       "item.goodblock.latextextdragon_spawn_egg": "Latextextdragon Spawn Egg",
-      "item.goodblock.painiteaxe": "硅硼钙铝石斧头",
+      "item.goodblock.painiteaxe": "Painiteaxe",
       "item.goodblock.impureuranium": "Impureuranium",
       "advancements.gha_4.title": "红色的粉末",
       "advancements.gha_8.descr": "获得附魔金苹果",
@@ -2244,65 +2304,70 @@
       "item.goodblock.painitemanuscript": "Painitemanuscript",
       "advancements.goodblockuse.title": "Goodblock",
       "advancements.gha_1.title": "更多的成就（临时修复）",
+      "item.goodblock.latexgreendragon_spawn_egg": "Latexgreendragon Spawn Egg",
       "item.goodblock.notlistenthis": "Notlistenthis",
-      "block.goodblock.nitreblock": "硝矿",
-      "item.goodblock.painite_armor_boots": "硅硼钙铝石靴子",
+      "block.goodblock.nitreblock": "Nitreblock",
+      "entity.goodblock.latexice_dragon": "Latexice Dragon",
+      "item.goodblock.painite_armor_boots": "Painite Armor 靴子",
       "item.goodblock.fleececlothingtest_helmet": "Fleececlothingtest 头盔",
       "advancements.gha_5.descr": "放置侦测器",
-      "advancements.sulphuradvan.descr": "找到硫磺",
+      "advancements.sulphuradvan.descr": "Find sulphurs",
       "advancements.gha_12.title": "更大的容器",
-      "advancements.nitricacidadvan.title": "硝",
+      "advancements.nitricacidadvan.title": "Nitricacids",
       "advancements.gha_2.descr": "获得粗铜",
-      "block.goodblock.sulphurblock": "Sulphurblock硫磺矿",
+      "block.goodblock.sulphurblock": "Sulphurblock",
       "item.goodblock.painitehoe": "Painitehoe",
       "advancements.gha_11.descr": "获得类似钻石的苔藓",
       "advancements.gha_7.title": "爆炸就是艺术",
+      "entity.goodblock.darkfu_latex_wolf_male": "Darkfu Latex Wolf Male",
       "gui.goodblock.findgui.GUI_A": "GUI in the upper left corner",
-      "block.goodblock.pale_wood_fence_gate": "苍白木栅栏门",
+      "block.goodblock.pale_wood_fence_gate": "Pale_wood Fence Gate",
       "item.goodblock.the_fluffy_heartbeatinthe_cubiclemusic.desc": "The Fluffy Heartbeat in the Cubicle",
+      "entity.goodblock.latex_kcahra_shark": "Latex Kcahra Shark",
       "advancements.gha_13.title": "死亡传奇",
-      "advancements.usemod.descr": "你找到这",
-      "item.goodblock.painite_armor_leggings": "硅硼钙铝石护腿",
-      "block.goodblock.paletreespa_1": "苍白树苗方块",
+      "advancements.usemod.descr": "You found this",
+      "item.goodblock.painite_armor_leggings": "Painite Armor 护腿",
+      "block.goodblock.paletreespa_1": "Paletreespa 1",
       "item.goodblock.notlistenthis.desc": "This is a total loss of music. ",
       "item.goodblock.sulphur": "Sulphur",
       "advancements.gha_6.title": "末地的终结",
       "gamerule.initiateAchievements.description": "设置是否启用良好区块的成就功能。",
       "item.goodblock.item_screwdriver": "Item Screwdriver",
-      "item.goodblock.painite_armor_helmet": "硅硼钙铝石头盔",
+      "item.goodblock.painite_armor_helmet": "Painite Armor 头盔",
       "gui.goodblock.findgui.label_goodblock_06_beta": "GOODBLOCK 0.6 - BETA",
       "item.goodblock.idcard": "Idcard",
       "subtitles.anit_furry_music": "auit furry music!",
       "advancements.gha_6.descr": "获得水晶",
       "advancements.gha_10.descr": "获得龙首",
       "item.goodblock.flute": "Flute",
-      "block.goodblock.pale_wood_wood": "苍白木",
+      "block.goodblock.pale_wood_wood": "Pale_wood Wood",
       "item.goodblock.nitricacid": "Nitricacid",
-      "advancements.sulphuradvan.title": "硫磺",
+      "advancements.sulphuradvan.title": "Sulphurs",
       "advancements.gha_7.descr": "放置并点燃TNT",
       "advancements.gha_5.title": "我看到你了",
-      "block.goodblock.blackblock": "黑色方块??",
-      "block.goodblock.testgbk": "测试流体",
+      "block.goodblock.blackblock": "Blackblock",
+      "item.goodblock.latex_kcahra_shark_spawn_egg": "Latex Kcahra Shark Spawn Egg",
+      "block.goodblock.testgbk": "TESTGBK",
       "gui.goodblock.findgui.label_make_hhdsj2": "make : hhdsj2",
       "advancements.obtain_painitearmor.descr": "不同的盔甲",
       "subtitles.the_fluffy_heartbeat_in_the_cubicle": "Play The Fluffy Heartbeat in the Cubicle music",
       "item.goodblock.armora_1_armor_leggings": "Armora1 Leggings",
       "item.goodblock.inksans_4.desc": "ink Sans",
       "subtitles.ink_sans": "A music",
-      "block.goodblock.pale_wood_button": "苍白木按钮"
+      "block.goodblock.pale_wood_button": "Pale_wood Button"
     },
     "zh_cn": {
       "subtitles.srening_ogg1": "音乐",
       "advancements.obtain_painitearmor.title": "硅硼钙铝石护甲",
       "advancements.nitricacidadvan.descr": "Find nitricacids",
       "item.goodblock.armora_1_armor_chestplate": "Armora1 Chestplate",
+      "entity.goodblock.latexgreendragon": "Latexgreendragon",
       "subtitles.no_stop": "不停下",
-      "advancements.gha_4.descr": "获得紫水晶",
+      "advancements.gha_4.descr": "放置红石粉",
       "item.goodblock.thefluffyheartbeatinthecubiclemusic": "The fluffy heart beat in the cubicle music",
       "itemGroup.tabworldblock": "世界方块",
       "advancements.gha_12.descr": "放置箱子",
       "block.goodblock.black_stripes_block": "Black Stripes Block",
-      "item.goodblock.latextest_spawn_egg": "Latextest Spawn Egg",
       "item.goodblock.the_fluffy_heartbeatinthe_cubiclemusic": "The Fluffy Heartbeatinthe Cubiclemusic",
       "item.goodblock.armora_1_armor_boots": "Armora1 Boots",
       "item.goodblock.flutemusica_1records": "The Fluffy Heartbeatinthe Cubiclemusic",
@@ -2312,9 +2377,9 @@
       "item.goodblock.latex_orange_fox_spawn_egg": "Latex Orange Fox Spawn Egg",
       "item.goodblock.painite_armor_chestplate": "Painite Chestplate",
       "block.goodblock.blueblock": "铁网",
-      "advancements.gha_3.title": "小小的铁粒",
+      "advancements.gha_3.title": "不一样的金属",
       "subtitles.the_fluffy_heartbeatinthe_cubiclemusic": "the_fluffy_heartbeatinthe_cubiclemusic",
-      "advancements.goodblockuse.descr": "ASDSA",
+      "advancements.goodblockuse.descr": "Goodblocks",
       "item.goodblock.fleececlothingtest_boots": "Fleececlothingtest 靴子",
       "gamerule.initiateAchievements": "Good Blocks Achievements",
       "item.goodblock.inksans_4": "Inksans 4",
@@ -2328,7 +2393,7 @@
       "item.goodblock.ea_1_boss_spawn_egg": "EA 1 Boss Spawn Egg",
       "item.goodblock.thefluffyheartbeatinthecubiclemusic.desc": "furry music",
       "item.goodblock.anitfrrymusic": "Flute",
-      "advancements.gha_9.title": "末地的终结 !",
+      "advancements.gha_9.title": "附魔金苹果收集家",
       "block.goodblock.uraniummineral": "铀矿石",
       "item.goodblock.painiteshovel": "Painiteshovel",
       "entity.goodblock.latex_orange_fox": "Latex Orange Fox",
@@ -2339,15 +2404,15 @@
       "block.goodblock.pale_wood_pressure_plate": "Pale_wood Pressure Plate",
       "item.goodblock.paletree": "苍白树苗",
       "item.goodblock.anitfrrymusic.desc": "gnusmas_gm_soundfont_2.00",
-      "advancements.gha_9.descr": "在末影城获得龙首",
-      "advancements.gha_10.title": "这不是金苹果吗???",
+      "advancements.gha_9.descr": "收集10个附魔金苹果",
+      "advancements.gha_10.title": "游戏的终结???",
       "item.goodblock.impureuraniumingot": "不纯的铀锭",
       "subtitles.item.armor.equip_netherite": "穿上盔甲",
       "block.goodblock.uraniumblock": "不纯的铀块",
       "block.goodblock.pale_wood_leaves": "Pale_wood Leaves",
-      "entity.goodblock.latextest": "Latextest",
-      "advancements.gha_8.title": "未知的水晶",
-      "advancements.gha_3.descr": "获得铁粒",
+      "item.goodblock.latexice_dragon_spawn_egg": "Latexice Dragon Spawn Egg",
+      "advancements.gha_8.title": "更高级的金苹果!",
+      "advancements.gha_3.descr": "获得铜锭",
       "item.goodblock.latexfox_spawn_egg": "Latexfox Spawn Egg",
       "item.goodblock.armora_1_armor_helmet": "Armora1 Helmet",
       "fluid.goodblock.testgbk": "测试液体",
@@ -2359,59 +2424,65 @@
       "block.goodblock.ironhot": "高硬度铁网块",
       "block.goodblock.pale_wood_slab": "Pale_wood Slab",
       "block.goodblock.pale_wood_planks": "Pale_wood Planks",
-      "advancements.gha_11.title": "东西南北",
-      "advancements.gha_2.title": "这不是铁吗? ? ?",
+      "item.goodblock.darkfu_latex_wolf_male_spawn_egg": "Darkfu Latex Wolf Male Spawn Egg",
+      "advancements.gha_11.title": "这不是钻石吗???",
+      "advancements.gha_2.title": "这有什么用?",
       "gui.goodblock.gui_settings.button_a2": "a2",
       "gui.goodblock.gui_settings.button_a3": "a3",
       "block.goodblock.pale_wood_stairs": "苍白木楼梯",
       "item.goodblock.latextextdragon_spawn_egg": "Latextextdragon Spawn Egg",
       "item.goodblock.painiteaxe": "Painiteaxe",
       "item.goodblock.impureuranium": "不纯的铀粉",
-      "advancements.gha_4.title": "闪亮的紫色",
-      "advancements.gha_8.descr": "获得水晶",
+      "advancements.gha_4.title": "红色的粉末",
+      "advancements.gha_8.descr": "获得附魔金苹果",
       "gui.goodblock.gui_settings.button_a1": "a1",
       "entity.goodblock.latextextdragon": "Latextextdragon",
       "item.goodblock.painitemanuscript": "Painitemanuscript",
       "advancements.goodblockuse.title": "使用goodblock mod",
       "advancements.gha_1.title": "闪闪发光的金属",
+      "item.goodblock.latexgreendragon_spawn_egg": "Latexgreendragon Spawn Egg",
       "item.goodblock.notlistenthis": "你不要听这个",
       "block.goodblock.nitreblock": "硝矿石",
+      "entity.goodblock.latexice_dragon": "Latexice Dragon",
       "item.goodblock.painite_armor_boots": "Painite Boots",
       "item.goodblock.fleececlothingtest_helmet": "Fleececlothingtest 头盔",
-      "advancements.gha_5.descr": "获得火把",
+      "advancements.gha_5.descr": "放置侦测器",
       "advancements.sulphuradvan.descr": "Find sulphurs",
       "advancements.gha_12.title": "更大的容器",
       "advancements.nitricacidadvan.title": "Nitricacids",
       "advancements.gha_2.descr": "获得粗铜",
       "block.goodblock.sulphurblock": "硫磺矿石",
       "item.goodblock.painitehoe": "Painitehoe",
-      "advancements.gha_11.descr": "获得指南针",
-      "advancements.gha_7.title": "红石的粉末",
+      "advancements.gha_11.descr": "获得类似钻石的苔藓",
+      "advancements.gha_7.title": "爆炸就是艺术",
+      "entity.goodblock.darkfu_latex_wolf_male": "Darkfu Latex Wolf Male",
       "gui.goodblock.findgui.GUI_A": "没用的GUI",
       "block.goodblock.pale_wood_fence_gate": "Pale_wood Fence Gate",
       "item.goodblock.the_fluffy_heartbeatinthe_cubiclemusic.desc": "The Fluffy Heartbeat in the Cubicle",
+      "entity.goodblock.latex_kcahra_shark": "Latex Kcahra Shark",
       "advancements.gha_13.title": "死亡传奇",
       "advancements.usemod.descr": "你找到这个!",
       "item.goodblock.painite_armor_leggings": "Painite Leggings",
       "block.goodblock.paletreespa_1": "Paletreespa 1",
       "item.goodblock.notlistenthis.desc": "不要听这个",
       "item.goodblock.sulphur": "硫磺",
-      "advancements.gha_6.title": "爆炸就是艺术",
+      "advancements.gha_6.title": "末地的终结",
       "gamerule.initiateAchievements.description": "Set whether to enable achievements for Good Blocks.",
       "item.goodblock.item_screwdriver": "Item Screwdriver",
       "item.goodblock.painite_armor_helmet": "Painite Helmet",
       "gui.goodblock.findgui.label_goodblock_06_beta": "GOODBLOCK 0.6 - BETA",
       "item.goodblock.idcard": "Idcard",
       "subtitles.anit_furry_music": "反furry音乐！！！",
-      "advancements.gha_6.descr": "放置一个TNT",
-      "advancements.gha_10.descr": "获得附魔金苹果",
+      "advancements.gha_6.descr": "获得水晶",
+      "advancements.gha_10.descr": "获得龙首",
       "item.goodblock.flute": "Flute",
       "block.goodblock.pale_wood_wood": "Pale_wood Wood",
       "item.goodblock.nitricacid": "Nitricacid",
       "advancements.sulphuradvan.title": "Sulphurs",
-      "advancements.gha_7.descr": "放置红石粉",
-      "advancements.gha_5.title": "光明！！！",
+      "advancements.gha_7.descr": "放置并点燃TNT",
+      "advancements.gha_5.title": "我看到你了",
       "block.goodblock.blackblock": "这是个测试方块",
+      "item.goodblock.latex_kcahra_shark_spawn_egg": "Latex Kcahra Shark Spawn Egg",
       "block.goodblock.testgbk": "测试",
       "gui.goodblock.findgui.label_make_hhdsj2": "制作 : hhdsj2",
       "advancements.obtain_painitearmor.descr": "Different Armors",

@@ -4,8 +4,8 @@
     "goodblock:sulphurblock",
     "goodblock:nitreblock",
     "goodblock:uraniummineral",
-    "goodblock:blackblock",
     "goodblock:blueblock",
-    "goodblock:ironhot"
+    "goodblock:ironhot",
+    "goodblock:blackblock"
   ]
 }

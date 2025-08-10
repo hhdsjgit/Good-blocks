@@ -19,5 +19,5 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "goodblock:usethismod"
+  "parent": "goodblock:deleted_mod_element"
 }

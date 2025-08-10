@@ -14,7 +14,7 @@ import net.minecraft.world.entity.decoration.Motive;
 public class GoodblockModPaintings {
 	@SubscribeEvent
 	public static void registerMotives(RegistryEvent.Register<Motive> event) {
-		event.getRegistry().register(new Motive(32, 32).setRegistryName("cityold"));
 		event.getRegistry().register(new Motive(64, 64).setRegistryName("home"));
+		event.getRegistry().register(new Motive(32, 32).setRegistryName("cityold"));
 	}
 }

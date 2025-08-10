@@ -8,6 +8,10 @@ import net.ltxprogrammer.changed.util.Color3;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.Monster;
