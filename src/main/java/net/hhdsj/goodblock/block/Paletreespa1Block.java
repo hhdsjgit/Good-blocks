@@ -34,7 +34,7 @@ import java.util.Collections;
 
 public class Paletreespa1Block extends Block implements BonemealableBlock {
 	public Paletreespa1Block() {
-		super(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.GRASS).sound(SoundType.VINE).strength(1f).noCollission().noOcclusion().randomTicks().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.GRASS).sound(SoundType.GRASS).strength(1f).noCollission().noOcclusion().randomTicks().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override

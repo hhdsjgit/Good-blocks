@@ -21,6 +21,7 @@ import net.hhdsj.goodblock.entity.LatexgreendragonEntity;
 import net.hhdsj.goodblock.entity.LatexfoxEntity;
 import net.hhdsj.goodblock.entity.LatexOrangeFoxEntity;
 import net.hhdsj.goodblock.entity.LatexKcahraSharkEntity;
+import net.hhdsj.goodblock.entity.InksugerEntity;
 import net.hhdsj.goodblock.entity.DarkfuLatexWolfMaleEntity;
 import net.hhdsj.goodblock.GoodblockMod;
 
@@ -51,6 +52,10 @@ public class GoodblockModEntities {
 			EntityType.Builder.<LatexiceDragonEntity>of(LatexiceDragonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexiceDragonEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<InksugerEntity>> INKSUGER = register("inksuger",
+			EntityType.Builder.<InksugerEntity>of(InksugerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InksugerEntity::new)
+
+					.sized(0.6f, 0.6f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -65,6 +70,7 @@ public class GoodblockModEntities {
 			LatexgreendragonEntity.init();
 			DarkfuLatexWolfMaleEntity.init();
 			LatexiceDragonEntity.init();
+			InksugerEntity.init();
 		});
 	}
 
@@ -76,5 +82,6 @@ public class GoodblockModEntities {
 		event.put(LATEXGREENDRAGON.get(), LatexgreendragonEntity.createAttributes().build());
 		event.put(DARKFU_LATEX_WOLF_MALE.get(), DarkfuLatexWolfMaleEntity.createAttributes().build());
 		event.put(LATEXICE_DRAGON.get(), LatexiceDragonEntity.createAttributes().build());
+		event.put(INKSUGER.get(), InksugerEntity.createAttributes().build());
 	}
 }

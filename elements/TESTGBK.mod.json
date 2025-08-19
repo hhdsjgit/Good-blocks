@@ -2,11 +2,11 @@
   "_fv": 39,
   "_type": "fluid",
   "definition": {
-    "name": "TESTGBK",
+    "name": "gas_fox",
     "bucketName": "TESTGBK Bucket",
     "textureStill": "black_block",
     "textureFlowing": "black_block",
-    "tintType": "Water",
+    "tintType": "Fog",
     "canMultiply": false,
     "flowRate": 1,
     "levelDecrease": 1,
@@ -17,14 +17,14 @@
     },
     "flowStrength": 4.0,
     "luminosity": 0,
-    "density": 1000,
+    "density": -1000,
     "viscosity": 1000,
     "temperature": 300,
     "type": "WATER",
     "generateBucket": true,
     "textureBucket": "",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:Worldblock"
     },
     "emptySound": {
       "value": ""

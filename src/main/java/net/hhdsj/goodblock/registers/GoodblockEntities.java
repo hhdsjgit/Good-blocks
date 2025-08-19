@@ -1,5 +1,5 @@
 package net.hhdsj.goodblock.registers;
-/*
+
 import net.ltxprogrammer.changed.init.ChangedMobCategories;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -24,7 +24,6 @@ import net.minecraft.world.entity.monster.Creeper;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.entity.ai.behavior.GoOutsideToCelebrate;
-import net.hhdsj.goodblock.registers.GoodblockEntities;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 import com.mojang.datafixers.util.Pair;
@@ -65,35 +64,118 @@ import java.util.*;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-import net.hhdsj.goodblock.entity.LatexfoxEntity;
+import net.hhdsj.goodblock.entity.*;
 import net.hhdsj.goodblock.GoodblockMod;
-*/
+
 
 import static net.ltxprogrammer.changed.entity.variant.TransfurVariant.getNextEntId;
 
-/* 代码废弃
+
+
+
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+public class GoodblockEntities {
+	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, GoodblockMod.MODID);
+	/*
+	 RegistryObject<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = register("latexkamona_h_sguydragonwolf",
+            EntityType.Builder.<LatexfoxEntity>of(LatexkamonaHSguydragonwolfEntity::new, ChangedMobCategories.CHANGED)
+            .clientTrackingRange(10),   
+            GoodblockEntities::overworldOnly, SpawnPlacements.Type.ON_GROUND, LatexPurpleFox::checkEntitySpawnRules),
+            .sized(0.7F, 1.93F));
+	 */
+	public static final RegistryObject<EntityType<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = register("latex_kamona_hsguy_dragon_wolf",
+			EntityType.Builder.<LatexkamonaHSguydragonwolfEntity>of(LatexkamonaHSguydragonwolfEntity::new, ChangedMobCategories.CHANGED)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(LatexkamonaHSguydragonwolfEntity::new)
+					.sized(0.7f, 1.93f));
+
+
+	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
+		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
+	}
+
+	@SubscribeEvent
+	public static void init(FMLCommonSetupEvent event) {
+		event.enqueueWork(() -> {
+			LatexkamonaHSguydragonwolfEntity.init();
+		});
+	}
+
+	@SubscribeEvent
+	public static void registerAttributes(EntityAttributeCreationEvent event) {
+		event.put(LATEXKAMONA_H_SGUYDRAGONWOLF.get(), LatexkamonaHSguydragonwolfEntity.createAttributes().build());
+	}
+}
+/*
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+public class GoodblockEntities extends GoodblockModEntities {
+    public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, GoodblockMod.MODID);
+
+
+    public static final RegistryObject<EntityType<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = 
+        register("latexkamona_h_sguydragonwolf",
+            EntityType.Builder.of(LatexkamonaHSguydragonwolfEntity::new, ChangedMobCategories.CHANGED)
+                .sized(0.7F, 1.93F)
+                .clientTrackingRange(10),GoodblockEntities::overworldOnly,SpawnPlacements.Type.ON_GROUND,Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,LatexkamonaHSguydragonwolfEntity::checkEntitySpawnRules);
+
+
+
+
+
+
+
+
+
+
+
+
+    private static <T extends Entity> RegistryObject<EntityType<T>> register(
+        String registryname, 
+        EntityType.Builder<T> entityTypeBuilder,
+        BiConsumer<EntityType<T>, ForgeEventBus> spawnConfig,
+        SpawnPlacements.Type placementType,
+        Heightmap.Types heightmapType,
+        SpawnPlacements.SpawnPredicate<T> spawnPredicate) {
+        
+        RegistryObject<EntityType<T>> registryObject = REGISTRY.register(registryname, 
+            () -> entityTypeBuilder.build(registryname));
+        
+        FMLJavaModLoadingContext.get().getModEventBus().addListener((FMLCommonSetupEvent event) -> {
+            event.enqueueWork(() -> {
+                spawnConfig.accept(registryObject.get(), FMLJavaModLoadingContext.get().getModEventBus());
+                SpawnPlacements.register(registryObject.get(), placementType, heightmapType, spawnPredicate);
+            });
+        });
+        
+        return registryObject;
+    }
+}*/
+
+/*
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 
 public class GoodblockEntities extends GoodblockModEntities{
-//Spawning
-	//public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, GoodblockMod.MODID);
+
+	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, GoodblockMod.MODID);
 
 
         
-	public static final RegistryObject<EntityType<LatexfoxEntity>> LATEX_FOX_ENTITY = register("from_latex_fox",
-            EntityType.Builder.<LatexfoxEntity>of(LatexfoxEntity::new, ChangedMobCategories.CHANGED)
-            .clientTrackingRange(10)
-            .sized(0.7F, 1.93F));//,
-            //GoodblockEntities::overworldOnly, SpawnPlacements.Type.ON_GROUND, LatexPurpleFox::checkEntitySpawnRules);
+	public static final RegistryObject<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = register("latexkamona_h_sguydragonwolf",
+            EntityType.Builder.<LatexfoxEntity>of(LatexkamonaHSguydragonwolfEntity::new, ChangedMobCategories.CHANGED)
+            .clientTrackingRange(10),   
+            GoodblockEntities::overworldOnly, SpawnPlacements.Type.ON_GROUND, LatexPurpleFox::checkEntitySpawnRules),
+            .sized(0.7F, 1.93F));
 
     private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
         return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
     }
-}*/
+}
 
 
 
-
+*/
 
 
 

@@ -24,7 +24,9 @@ public abstract class TESTGBKFluid extends ForgeFlowingFluid {
 	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(GoodblockModFluids.TESTGBK, GoodblockModFluids.FLOWING_TESTGBK,
 			TESTGBKFluidAttributes.builder(new ResourceLocation("goodblock:blocks/black_block"), new ResourceLocation("goodblock:blocks/black_block"))
 
-					.rarity(Rarity.EPIC).color(-13083194))
+					.density(-1000)
+
+					.gaseous().rarity(Rarity.EPIC).color(-4138753))
 			.explosionResistance(100f)
 
 			.tickRate(1)

@@ -1,0 +1,12 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "P",
+    "keyBindingName": "Keya",
+    "keyBindingCategoryKey": "ui",
+    "onKeyPressed": {
+      "name": "LOOKGUI"
+    }
+  }
+}

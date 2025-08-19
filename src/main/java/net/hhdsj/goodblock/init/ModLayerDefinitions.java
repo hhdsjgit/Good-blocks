@@ -1,4 +1,5 @@
 package net.hhdsj.goodblock.init;
+/*
 import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.blockentity.LatexContainerRenderer;
 import net.ltxprogrammer.changed.client.renderer.blockentity.PillowRenderer;
@@ -22,4 +23,4 @@ public class ModLayerDefinitions {
         //event.registerLayerDefinition(TestEntityModel.LAYER_LOCATION, ModEntityModel::createBodyLayer);
         event.registerLayerDefinition(TestEntityModel.LAYER_LOCATION, TestEntityModel::createBodyLayer);
     }
-}
+}*/

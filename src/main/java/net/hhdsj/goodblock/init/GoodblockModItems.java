@@ -91,6 +91,8 @@ public class GoodblockModItems {
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.DARKFU_LATEX_WOLF_MALE, -10066330, -13421773, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> LATEXICE_DRAGON_SPAWN_EGG = REGISTRY.register("latexice_dragon_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXICE_DRAGON, -16724788, -16711681, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> INKSUGER_SPAWN_EGG = REGISTRY.register("inksuger_spawn_egg", () -> new ForgeSpawnEggItem(GoodblockModEntities.INKSUGER, -1, -13108, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> BLOCKBW_1 = block(GoodblockModBlocks.BLOCKBW_1, GoodblockModTabs.TAB_WORLDBLOCK);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

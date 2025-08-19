@@ -25,7 +25,9 @@ import net.ltxprogrammer.changed.client.renderer.layers.*;
 public class LatexiceDragonRenderer extends AdvancedHumanoidRenderer<LatexiceDragonEntity, ModelLatexicedragon, ArmorLatexBigTailDragonModel<LatexiceDragonEntity>> {
 	public LatexiceDragonRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelLatexicedragon(context.bakeLayer(ModelLatexicedragon.LAYER_LOCATION)),
-			ArmorLatexBigTailDragonModel::new, ArmorLatexBigTailDragonModel.INNER_ARMOR, ArmorLatexBigTailDragonModel.OUTER_ARMOR, 0.5f);
+			//ArmorLatexBigTailDragonModel::new,
+			ArmorLatexBigTailDragonModel.MODEL_SET,
+			0.5f);
 		this.addLayer(new LatexParticlesLayer<>(this, this.model));
 		this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
 		this.addLayer(CustomEyesLayer.builder(this, context.getModelSet())

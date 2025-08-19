@@ -24,9 +24,8 @@ import net.hhdsj.goodblock.client.model.ModelLatexKcahraShark;
 public class LatexKcahraSharkRenderer extends AdvancedHumanoidRenderer<LatexKcahraSharkEntity, ModelLatexKcahraShark, ArmorLatexMaleSharkModel<LatexKcahraSharkEntity>>{
 	public LatexKcahraSharkRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelLatexKcahraShark(context.bakeLayer(ModelLatexKcahraShark.LAYER_LOCATION)),
-		ArmorLatexMaleSharkModel::new, 
-            ArmorLatexMaleSharkModel.INNER_ARMOR, 
-            ArmorLatexMaleSharkModel.OUTER_ARMOR, 
+			//ArmorLatexMaleSharkModel::new, 
+            ArmorLatexMaleSharkModel.MODEL_SET,
             0.5f);	
 		this.addLayer(new LatexParticlesLayer<>(this, this.getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));

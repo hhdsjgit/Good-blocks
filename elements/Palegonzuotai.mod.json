@@ -1,0 +1,46 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Pale_woodPlanks"
+      },
+      {
+        "value": "CUSTOM:Pale_woodPlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Pale_woodPlanks"
+      },
+      {
+        "value": "CUSTOM:Pale_woodPlanks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "Blocks.CRAFTING_TABLE"
+    },
+    "name": "palegonzuotai",
+    "namespace": "mod"
+  }
+}

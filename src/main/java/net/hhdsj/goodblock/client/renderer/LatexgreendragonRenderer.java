@@ -23,7 +23,9 @@ import net.hhdsj.goodblock.entity.LatexgreendragonEntity;
 public class LatexgreendragonRenderer extends AdvancedHumanoidRenderer<LatexgreendragonEntity, ModelgreendragonUnified, ArmorLatexMaleWingedDragonModel<LatexgreendragonEntity>> {
 	public LatexgreendragonRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelgreendragonUnified(context.bakeLayer(ModelgreendragonUnified.LAYER_LOCATION)),
-		ArmorLatexMaleWingedDragonModel::new, ArmorLatexMaleWingedDragonModel.INNER_ARMOR, ArmorLatexMaleWingedDragonModel.OUTER_ARMOR, 0.5f);
+		//ArmorLatexMaleWingedDragonModel::new,
+		ArmorLatexMaleWingedDragonModel.MODEL_SET, 
+		0.5f);
         this.addLayer(new LatexParticlesLayer<>(this, getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
         this.addLayer(CustomEyesLayer.builder(this, context.getModelSet())

@@ -165,7 +165,7 @@ public class ModelLatexicedragon extends AdvancedHumanoidModel<LatexiceDragonEnt
         this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
-    public void setupHand() {
+    public void setupHand(LatexiceDragonEntity entity) {
         animator.setupHand();
     }
 
@@ -202,7 +202,7 @@ public class ModelLatexicedragon extends AdvancedHumanoidModel<LatexiceDragonEnt
     }
 
     @Override
-    public HumanoidAnimator<LatexiceDragonEntity, ModelLatexicedragon> getAnimator() {
+    public HumanoidAnimator<LatexiceDragonEntity, ModelLatexicedragon> getAnimator(LatexiceDragonEntity entity) {
         return animator;
     }
 }

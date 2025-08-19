@@ -47,6 +47,13 @@ public class LOOKGUIProcedure {
 				}, _bpos);
 			}
 		}
+		if (!(entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel ? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("goodblock:usemod"))).isDone() : false)) {
+			if (entity instanceof Player _player) {
+				ItemStack _setstack = new ItemStack(GoodblockModItems.INKSANS_4.get());
+				_setstack.setCount(1);
+				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+			}
+		}
 		if (entity instanceof ServerPlayer _player) {
 			Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("goodblock:usemod"));
 			AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
@@ -54,13 +61,6 @@ public class LOOKGUIProcedure {
 				Iterator _iterator = _ap.getRemainingCriteria().iterator();
 				while (_iterator.hasNext())
 					_player.getAdvancements().award(_adv, (String) _iterator.next());
-			}
-		}
-		if (entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel ? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("goodblock:usemod"))).isDone() : false) {
-			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(GoodblockModItems.INKSANS_4.get());
-				_setstack.setCount(1);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		}
 	}

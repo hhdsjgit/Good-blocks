@@ -29,7 +29,13 @@ import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInte
 
 import org.jetbrains.annotations.NotNull;
 import java.util.List;
+
 import net.hhdsj.goodblock.entity.*;
+
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+@OnlyIn(Dist.CLIENT)
+//extends AdvancedHumanoidModel<LatexHuman> implements AdvancedHumanoidModelInterface<LatexHuman, LatexHumanModel> 
 public class DarkfuLatexWolfMale extends AdvancedHumanoidModel<DarkfuLatexWolfMaleEntity> implements AdvancedHumanoidModelInterface<DarkfuLatexWolfMaleEntity, DarkfuLatexWolfMale> {
 public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "darkfulatexwolfmaleunified"), "main");
 
@@ -41,6 +47,7 @@ public final ModelPart RightArm;
 public final ModelPart LeftArm;
 public final ModelPart Tail;
 public final HumanoidAnimator <DarkfuLatexWolfMaleEntity, DarkfuLatexWolfMale> animator;
+
 
 public DarkfuLatexWolfMale(ModelPart root) {
 		super(root);
@@ -160,12 +167,12 @@ public DarkfuLatexWolfMale(ModelPart root) {
     public void prepareMobModel(DarkfuLatexWolfMaleEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
         this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
     }
-
-    public HumanoidAnimator<DarkfuLatexWolfMaleEntity, DarkfuLatexWolfMale> getAnimator() {
+	@Override
+    public HumanoidAnimator<DarkfuLatexWolfMaleEntity, DarkfuLatexWolfMale> getAnimator(DarkfuLatexWolfMaleEntity entity) {
         return this.animator;
 	}
-
-    public void setupHand() {
+	
+    public void setupHand(DarkfuLatexWolfMaleEntity entity) {
         animator.setupHand();
     }
 

@@ -152,7 +152,7 @@ public class ModelLatexOrangeFox extends AdvancedHumanoidModel<LatexOrangeFoxEnt
         this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
-    public void setupHand() {
+    public void setupHand(LatexOrangeFoxEntity entity) {
         animator.setupHand();
     }
 
@@ -174,7 +174,7 @@ public class ModelLatexOrangeFox extends AdvancedHumanoidModel<LatexOrangeFoxEnt
     }
 
 	 @Override
-    public HumanoidAnimator<LatexOrangeFoxEntity, ModelLatexOrangeFox> getAnimator() {
+    public HumanoidAnimator<LatexOrangeFoxEntity, ModelLatexOrangeFox> getAnimator(LatexOrangeFoxEntity entity) {
         return this.animator;
     }
 

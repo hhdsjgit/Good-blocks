@@ -4,9 +4,9 @@ license="MIT License"
 
 [[mods]]
 modId="goodblock"
-version="0.6.1"
+version="0.6.3"
 displayName="goodblock"
-credits="逸云 , 缘来007"
+credits="逸云 , 缘来007 ,"
 displayURL="https://github.com/hhdsjgit/Good-blocks"
 logoFile="logo.png"
 authors="好好的时间2"
@@ -22,5 +22,11 @@ Some of the content additions to Changed addon plus
     side="BOTH"
 
 
+[[dependencies.goodblock]]
+    modId="changed"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 

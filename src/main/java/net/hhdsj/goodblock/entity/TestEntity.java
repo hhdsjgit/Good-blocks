@@ -22,9 +22,10 @@ public class TestEntity extends ChangedEntity {
     public TransfurMode getTransfurMode() {
         return TransfurMode.REPLICATION;
     }
+    /*
     @Override
     public Color3 getDripColor() {
         return Color3.getColor("#FFFFFF"); // 使用适合的颜色
-    }
+    }*/
 
 }

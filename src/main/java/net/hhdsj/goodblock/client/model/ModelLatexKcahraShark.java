@@ -189,7 +189,7 @@ public class ModelLatexKcahraShark extends AdvancedHumanoidModel<LatexKcahraShar
     }
 
 
-    public void setupHand() {
+    public void setupHand(LatexKcahraSharkEntity entity) {
         animator.setupHand();
     }
 
@@ -211,7 +211,7 @@ public class ModelLatexKcahraShark extends AdvancedHumanoidModel<LatexKcahraShar
     }
 
 	 @Override
-    public HumanoidAnimator<LatexKcahraSharkEntity, ModelLatexKcahraShark> getAnimator() {
+    public HumanoidAnimator<LatexKcahraSharkEntity, ModelLatexKcahraShark> getAnimator(LatexKcahraSharkEntity entity) {
         return this.animator;
     }
 

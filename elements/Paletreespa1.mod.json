@@ -79,7 +79,7 @@
     "isNotColidable": true,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "VINE"
+      "value": "PLANT"
     },
     "breakSound": {
       "value": ""

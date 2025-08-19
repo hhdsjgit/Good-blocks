@@ -59,9 +59,10 @@ public class LatexOrangeFoxEntity extends ChangedEntity {
     public TransfurMode getTransfurMode() {
         return TransfurMode.REPLICATION;
     }
+    /*
     public Color3 getDripColor() {
         return Color3.getColor("#FF8001");
-    }
+    }*/
 
 	@Override
     public HairStyle getDefaultHairStyle() {

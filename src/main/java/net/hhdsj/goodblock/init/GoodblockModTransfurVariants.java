@@ -42,14 +42,14 @@ import net.ltxprogrammer.changed.util.*;
 import net.ltxprogrammer.changed.entity.variant.*;
 
 import net.foxyas.changedaddon.ChangedAddonMod;
-import net.foxyas.changedaddon.abilities.ChangedAddonAbilities;
-import net.foxyas.changedaddon.entity.*;
+import net.foxyas.changedaddon.init.ChangedAddonAbilities;
+//import net.foxyas.changedaddon.entity.*;
 import net.foxyas.changedaddon.entity.advanced.AvaliEntity;
 import net.foxyas.changedaddon.entity.advanced.LatexKitsuneFemaleEntity;
 import net.foxyas.changedaddon.entity.advanced.LatexKitsuneMaleEntity;
 import net.foxyas.changedaddon.entity.simple.LatexCalicoCatEntity;
-import net.foxyas.changedaddon.init.ChangedAddonModEntities;
-import net.foxyas.changedaddon.registers.ChangedAddonEntities;
+import net.foxyas.changedaddon.init.ChangedAddonEntities;
+//import net.foxyas.changedaddon.registers.ChangedAddonEntities;
 
 import com.mojang.datafixers.util.Pair;
 import org.jetbrains.annotations.NotNull;
@@ -67,7 +67,7 @@ import java.util.stream.Stream;
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.hhdsj.goodblock.GoodblockMod;
 import net.hhdsj.goodblock.entity.*;
-
+import net.hhdsj.goodblock.registers.GoodblockEntities;
 
 
 public class GoodblockModTransfurVariants {
@@ -91,7 +91,8 @@ public class GoodblockModTransfurVariants {
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEX_KCAHRA_SHARK)
 	    .stepSize(0.7f)
 	    .gills()
-	    .breatheMode(TransfurVariant.BreatheMode.NORMAL)
+	    .breatheMode(TransfurVariant.BreatheMode.ANY)
+	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .replicating()
 	    .build());
 
@@ -101,6 +102,7 @@ public class GoodblockModTransfurVariants {
 	    .glide()
 	    .addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 	    .breatheMode(TransfurVariant.BreatheMode.NORMAL)
+	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .replicating()
 	    .build());
 
@@ -109,6 +111,7 @@ public class GoodblockModTransfurVariants {
 	    .stepSize(0.7f)
 	    .faction(LatexType.DARK_LATEX)
 	    .breatheMode(TransfurVariant.BreatheMode.NORMAL)
+	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .replicating()
 	    .build());
 
@@ -117,9 +120,28 @@ public class GoodblockModTransfurVariants {
 	    .stepSize(0.7f)
 	    .nightVision()
 	    .breatheMode(TransfurVariant.BreatheMode.NORMAL)
+	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .replicating()
 	    .build());
 
+	public static final RegistryObject<TransfurVariant<InksugerEntity>> INKSUGER = REGISTRY.register("from_ink_suger",
+    () -> TransfurVariant.Builder.of(GoodblockModEntities.INKSUGER)
+	    .stepSize(0.7f)
+	    .nightVision()
+	    .transfurMode(TransfurMode.NONE)
+	    .holdItemsInMouth()
+	    .reducedFall()
+	    .build());
+	
+	public static final RegistryObject<TransfurVariant<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = REGISTRY.register("from_latex_kamona_hsguy_dragon_wolf",
+    () -> TransfurVariant.Builder.of(GoodblockEntities.LATEXKAMONA_H_SGUYDRAGONWOLF)
+	    .stepSize(0.7f)
+	    .nightVision()
+	    .breatheMode(TransfurVariant.BreatheMode.NORMAL)
+	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
+	    .replicating()
+	    .build());	
+	
 		
 	public static void register(IEventBus bus) {
         REGISTRY.register(bus);

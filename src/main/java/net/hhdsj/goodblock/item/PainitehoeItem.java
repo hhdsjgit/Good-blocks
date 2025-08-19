@@ -18,7 +18,7 @@ public class PainitehoeItem extends HoeItem {
 			}
 
 			public float getSpeed() {
-				return 10f;
+				return 13f;
 			}
 
 			public float getAttackDamageBonus() {

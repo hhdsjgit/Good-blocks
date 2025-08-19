@@ -26,9 +26,8 @@ public class LatexOrangeFoxRenderer extends AdvancedHumanoidRenderer<LatexOrange
 	public LatexOrangeFoxRenderer(EntityRendererProvider.Context context) {
 	
 		super(context, new ModelLatexOrangeFox(context.bakeLayer(ModelLatexOrangeFox.LAYER_LOCATION)),
-			ArmorLatexMaleWolfModel::new, 
-            ArmorLatexMaleWolfModel.INNER_ARMOR, 
-            ArmorLatexMaleWolfModel.OUTER_ARMOR, 
+			//ArmorLatexMaleWolfModel::new, 
+            ArmorLatexMaleWolfModel.MODEL_SET,
             0.5f);	
 		this.addLayer(new LatexParticlesLayer<>(this, this.getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));

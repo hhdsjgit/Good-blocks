@@ -23,10 +23,10 @@ import net.ltxprogrammer.changed.client.renderer.layers.*;
 
 public class DarkfuLatexWolfMaleRenderer extends AdvancedHumanoidRenderer<DarkfuLatexWolfMaleEntity ,DarkfuLatexWolfMale , ArmorLatexMaleWolfModel<DarkfuLatexWolfMaleEntity>>{
 	public DarkfuLatexWolfMaleRenderer(EntityRendererProvider.Context context) {
+	  //super(context, new LatexBeifengModel(context.bakeLayer(LatexBeifengModel.LAYER_LOCATION)), ArmorLatexMaleDragonModel.MODEL_SET, 0.5f);
 		super(context, new DarkfuLatexWolfMale(context.bakeLayer(DarkfuLatexWolfMale.LAYER_LOCATION)),
-			ArmorLatexMaleWolfModel::new, 
-            ArmorLatexMaleWolfModel.INNER_ARMOR, 
-            ArmorLatexMaleWolfModel.OUTER_ARMOR, 
+		//	ArmorLatexMaleWolfModel::new, 
+            ArmorLatexMaleWolfModel.MODEL_SET, 
             0.5f);	
 		this.addLayer(new LatexParticlesLayer<>(this, this.getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));

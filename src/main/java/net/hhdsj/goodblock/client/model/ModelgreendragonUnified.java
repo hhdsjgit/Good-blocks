@@ -243,7 +243,7 @@ public class ModelgreendragonUnified extends AdvancedHumanoidModel<Latexgreendra
         this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
-    public void setupHand() {
+    public void setupHand(LatexgreendragonEntity entity) {
         animator.setupHand();
     }
 
@@ -264,8 +264,8 @@ public class ModelgreendragonUnified extends AdvancedHumanoidModel<Latexgreendra
         return Torso;
     }
 
-	 @Override
-    public HumanoidAnimator<LatexgreendragonEntity, ModelgreendragonUnified> getAnimator() {
+	@Override
+    public HumanoidAnimator<LatexgreendragonEntity, ModelgreendragonUnified> getAnimator(LatexgreendragonEntity entity) {
         return this.animator;
     }
 

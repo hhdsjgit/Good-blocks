@@ -1,0 +1,11 @@
+{
+  "_fv": 39,
+  "_type": "tab",
+  "definition": {
+    "name": "Goodblock Entity",
+    "icon": {
+      "value": "CUSTOM:Blockbw1"
+    },
+    "showSearch": false
+  }
+}

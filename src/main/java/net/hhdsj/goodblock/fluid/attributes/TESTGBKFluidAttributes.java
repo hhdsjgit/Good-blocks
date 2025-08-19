@@ -7,7 +7,7 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.BiomeColors;
+import net.minecraft.client.Minecraft;
 
 import java.util.function.BiFunction;
 
@@ -28,6 +28,6 @@ public class TESTGBKFluidAttributes extends FluidAttributes {
 
 	@Override
 	public int getColor(BlockAndTintGetter world, BlockPos pos) {
-		return BiomeColors.getAverageWaterColor(world, pos) | 0xFF000000;
+		return Minecraft.getInstance().level.getBiome(pos).value().getFogColor() | 0xFF000000;
 	}
 }

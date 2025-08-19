@@ -85,11 +85,11 @@ public class DarkfuLatexWolfMaleEntity extends AbstractDarkLatexEntity {
     public LatexType getLatexType() {
         return LatexType.DARK_LATEX;
     }
-    
+    /*
     @Override
     public Color3 getDripColor() {
         return level.random.nextInt(10) > 3 ? Color3.DARK : Color3.GRAY;
-    }
+    }*/
 	public DarkfuLatexWolfMaleEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(GoodblockModEntities.DARKFU_LATEX_WOLF_MALE.get(), world);
 	}

@@ -14,6 +14,7 @@ import net.hhdsj.goodblock.client.renderer.LatexgreendragonRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexfoxRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexOrangeFoxRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexKcahraSharkRenderer;
+import net.hhdsj.goodblock.client.renderer.InksugerRenderer;
 import net.hhdsj.goodblock.client.renderer.DarkfuLatexWolfMaleRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -26,5 +27,6 @@ public class GoodblockModEntityRenderers {
 		event.registerEntityRenderer(GoodblockModEntities.LATEXGREENDRAGON.get(), LatexgreendragonRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.DARKFU_LATEX_WOLF_MALE.get(), DarkfuLatexWolfMaleRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXICE_DRAGON.get(), LatexiceDragonRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.INKSUGER.get(), InksugerRenderer::new);
 	}
 }

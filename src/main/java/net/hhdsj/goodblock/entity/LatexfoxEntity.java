@@ -41,9 +41,10 @@ public class LatexfoxEntity extends ChangedEntity {
     public TransfurMode getTransfurMode() {
         return TransfurMode.REPLICATION;
     }
+    /*
     public Color3 getDripColor() {
         return Color3.getColor("#cebbe8");
-    }
+    }*/
     
 	public LatexfoxEntity(EntityType<LatexfoxEntity> type, Level world) {
 		super(type, world);

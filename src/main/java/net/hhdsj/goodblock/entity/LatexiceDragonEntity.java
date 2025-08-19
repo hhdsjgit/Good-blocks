@@ -84,11 +84,11 @@ public class LatexiceDragonEntity extends AbstractCaveEntity {
     public Color3 getHairColor(int layer) {
         return Color3.getColor("#ffd201");
     }
-
+	/*
     @Override
     public Color3 getDripColor() {
         return Color3.YELLOW;
-    }
+    }*/
 
     public Color3 getTransfurColor(TransfurCause cause) {
         return Color3.getColor("#ffd201");
