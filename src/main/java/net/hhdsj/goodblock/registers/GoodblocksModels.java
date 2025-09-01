@@ -17,6 +17,7 @@ import net.hhdsj.goodblock.client.model.Modelwhitebluepup;
 import net.hhdsj.goodblock.client.model.Modelblackpupmale;
 import net.hhdsj.goodblock.client.model.ModelLatexpurplewswolf;
 import net.hhdsj.goodblock.client.model.Modellatexyunxqhotdragon;
+import net.hhdsj.goodblock.client.model.ModelLatexthreemonthwolf;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class GoodblocksModels {
@@ -33,5 +34,6 @@ public class GoodblocksModels {
 		event.registerLayerDefinition(Modelblackpupmale.LAYER_LOCATION, Modelblackpupmale::createBodyLayer);
 		event.registerLayerDefinition(ModelLatexpurplewswolf.LAYER_LOCATION, ModelLatexpurplewswolf::createBodyLayer);
 		event.registerLayerDefinition(Modellatexyunxqhotdragon.LAYER_LOCATION, Modellatexyunxqhotdragon::createBodyLayer);
+		event.registerLayerDefinition(ModelLatexthreemonthwolf.LAYER_LOCATION, ModelLatexthreemonthwolf::createBodyLayer);
 	}
 }

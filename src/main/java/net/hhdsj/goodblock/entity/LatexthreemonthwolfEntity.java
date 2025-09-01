@@ -41,10 +41,40 @@ import net.hhdsj.goodblock.init.GoodblockModEntities;
 
 import java.util.Set;
 
+
+import java.util.Set;
+import net.ltxprogrammer.changed.entity.*;
+import net.ltxprogrammer.changed.util.Color3;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraftforge.common.ForgeMod;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
+import java.util.Random;
+import net.ltxprogrammer.changed.entity.Gender;
+import net.ltxprogrammer.changed.entity.HairStyle;
+import net.ltxprogrammer.changed.entity.TransfurMode;
+import net.ltxprogrammer.changed.entity.beast.*;
+
 @Mod.EventBusSubscriber
-public class LatexthreemonthwolfEntity extends Monster implements RangedAttackMob {
+public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAttackMob {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("windswept_hills"), new ResourceLocation("snowy_plains"), new ResourceLocation("snowy_beach"));
 
+    @Override
+    public TransfurMode getTransfurMode() {
+        return TransfurMode.REPLICATION;
+    }
+
+	@Override
+    public LatexType getLatexType() {
+        return LatexType.NEUTRAL;
+    }
+	
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
