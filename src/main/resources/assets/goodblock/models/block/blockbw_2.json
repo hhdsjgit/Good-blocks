@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "goodblock:blocks/blockbw2_te",
+    "up": "goodblock:blocks/blockbw2_te",
+    "north": "goodblock:blocks/blockbw2_te",
+    "east": "goodblock:blocks/blockbw2_te",
+    "south": "goodblock:blocks/blockbw2_te",
+    "west": "goodblock:blocks/blockbw2_te",
+    "particle": "goodblock:blocks/blockbw2_te"
+  }
+}

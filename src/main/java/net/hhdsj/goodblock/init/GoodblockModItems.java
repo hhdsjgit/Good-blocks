@@ -93,6 +93,17 @@ public class GoodblockModItems {
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXICE_DRAGON, -16724788, -16711681, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> INKSUGER_SPAWN_EGG = REGISTRY.register("inksuger_spawn_egg", () -> new ForgeSpawnEggItem(GoodblockModEntities.INKSUGER, -1, -13108, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> BLOCKBW_1 = block(GoodblockModBlocks.BLOCKBW_1, GoodblockModTabs.TAB_WORLDBLOCK);
+	public static final RegistryObject<Item> BLACKPUPMALE_SPAWN_EGG = REGISTRY.register("blackpupmale_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.BLACKPUPMALE, -16777216, -13421773, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
+	public static final RegistryObject<Item> WHITEBLUEPUP_SPAWN_EGG = REGISTRY.register("whitebluepup_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.WHITEBLUEPUP, -1, -16711681, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
+	public static final RegistryObject<Item> BLOCKBW_2 = block(GoodblockModBlocks.BLOCKBW_2, GoodblockModTabs.TAB_WORLDBLOCK);
+	public static final RegistryObject<Item> LATEXPURPLEWSWOLF_SPAWN_EGG = REGISTRY.register("latexpurplewswolf_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXPURPLEWSWOLF, -52276, -6684673, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
+	public static final RegistryObject<Item> LATEXTHREEMONTHWOLF_SPAWN_EGG = REGISTRY.register("latexthreemonthwolf_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXTHREEMONTHWOLF, -52225, -1, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
+	public static final RegistryObject<Item> LATEXYUNXQHOTDRAGON_SPAWN_EGG = REGISTRY.register("latexyunxqhotdragon_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXYUNXQHOTDRAGON, -5758720, -49408, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

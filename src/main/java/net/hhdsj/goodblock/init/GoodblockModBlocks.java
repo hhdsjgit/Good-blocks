@@ -32,6 +32,7 @@ import net.hhdsj.goodblock.block.Pale_woodButtonBlock;
 import net.hhdsj.goodblock.block.NitreblockBlock;
 import net.hhdsj.goodblock.block.IronhotBlock;
 import net.hhdsj.goodblock.block.BlueblockBlock;
+import net.hhdsj.goodblock.block.Blockbw2Block;
 import net.hhdsj.goodblock.block.Blockbw1Block;
 import net.hhdsj.goodblock.block.BlackblockBlock;
 import net.hhdsj.goodblock.GoodblockMod;
@@ -58,6 +59,7 @@ public class GoodblockModBlocks {
 	public static final RegistryObject<Block> PALE_WOOD_PRESSURE_PLATE = REGISTRY.register("pale_wood_pressure_plate", () -> new Pale_woodPressurePlateBlock());
 	public static final RegistryObject<Block> TESTGBK = REGISTRY.register("testgbk", () -> new TESTGBKBlock());
 	public static final RegistryObject<Block> BLOCKBW_1 = REGISTRY.register("blockbw_1", () -> new Blockbw1Block());
+	public static final RegistryObject<Block> BLOCKBW_2 = REGISTRY.register("blockbw_2", () -> new Blockbw2Block());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {

@@ -57,7 +57,7 @@ minecraft {
         }
     }
 }
-repositories {
+repositories {
 	maven {
 		url "https://cursemaven.com"
 	}
@@ -74,4 +74,3 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 apply from: 'mcreator.gradle'
-

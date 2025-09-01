@@ -66,6 +66,7 @@ import java.util.function.Supplier;
 
 import net.hhdsj.goodblock.entity.*;
 import net.hhdsj.goodblock.GoodblockMod;
+import net.hhdsj.goodblock.entity.LatexthreemonthwolfEntityProjectile;
 
 
 import static net.ltxprogrammer.changed.entity.variant.TransfurVariant.getNextEntId;
@@ -90,6 +91,10 @@ public class GoodblockEntities {
 					.setUpdateInterval(3)
 					.setCustomClientFactory(LatexkamonaHSguydragonwolfEntity::new)
 					.sized(0.7f, 1.93f));
+
+	public static final RegistryObject<EntityType<LatexthreemonthwolfEntityProjectile>> LATEXTHREEMONTHWOLF_PROJECTILE = register("projectile_latexthreemonthwolf",
+			EntityType.Builder.<LatexthreemonthwolfEntityProjectile>of(LatexthreemonthwolfEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1)
+					.setCustomClientFactory(LatexthreemonthwolfEntityProjectile::new).sized(0.5f, 0.5f));
 
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {

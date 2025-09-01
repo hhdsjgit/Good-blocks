@@ -85,6 +85,8 @@ public class GoodblockModTransfurVariants {
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEX_ORANGE_FOX)
 	    .stepSize(0.7f)
 	    .nightVision()
+	    .transfurMode(TransfurMode.ABSORPTION)
+	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 	    .build());
 
 	public static final RegistryObject<TransfurVariant<LatexKcahraSharkEntity>> LATEX_KCAHRA_SHARK = REGISTRY.register("from_latex_kcahra_shark",
@@ -92,7 +94,7 @@ public class GoodblockModTransfurVariants {
 	    .stepSize(0.7f)
 	    .gills()
 	    .breatheMode(TransfurVariant.BreatheMode.ANY)
-	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
+	    .transfurMode(TransfurMode.ABSORPTION)
 	    .replicating()
 	    .build());
 
@@ -101,9 +103,12 @@ public class GoodblockModTransfurVariants {
 	    .stepSize(0.7f)
 	    .glide()
 	    .addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
-	    .breatheMode(TransfurVariant.BreatheMode.NORMAL)
+	    //.breatheMode(TransfurVariant.BreatheMode.NORMAL)
 	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
+	    .transfurMode(TransfurMode.ABSORPTION)
 	    .replicating()
+	    .nightVision()
+	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 	    .build());
 
 	public static final RegistryObject<TransfurVariant<DarkfuLatexWolfMaleEntity>> DARKFU_LATEX_WOLF_MALE = REGISTRY.register("from_darkfu_latex_wolf_male",
@@ -111,6 +116,7 @@ public class GoodblockModTransfurVariants {
 	    .stepSize(0.7f)
 	    .faction(LatexType.DARK_LATEX)
 	    .breatheMode(TransfurVariant.BreatheMode.NORMAL)
+	    .transfurMode(TransfurMode.ABSORPTION)
 	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .replicating()
 	    .build());
@@ -119,7 +125,7 @@ public class GoodblockModTransfurVariants {
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXICE_DRAGON)
 	    .stepSize(0.7f)
 	    .nightVision()
-	    .breatheMode(TransfurVariant.BreatheMode.NORMAL)
+	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .replicating()
 	    .build());
@@ -128,7 +134,8 @@ public class GoodblockModTransfurVariants {
     () -> TransfurVariant.Builder.of(GoodblockModEntities.INKSUGER)
 	    .stepSize(0.7f)
 	    .nightVision()
-	    .transfurMode(TransfurMode.NONE)
+	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+	    .transfurMode(TransfurMode.ABSORPTION)
 	    .holdItemsInMouth()
 	    .reducedFall()
 	    .build());
@@ -137,12 +144,55 @@ public class GoodblockModTransfurVariants {
     () -> TransfurVariant.Builder.of(GoodblockEntities.LATEXKAMONA_H_SGUYDRAGONWOLF)
 	    .stepSize(0.7f)
 	    .nightVision()
-	    .breatheMode(TransfurVariant.BreatheMode.NORMAL)
+	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+	    .transfurMode(TransfurMode.ABSORPTION)
 	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .replicating()
 	    .build());	
-	
-		
+
+	public static final RegistryObject<TransfurVariant<BlackpupmaleEntity>> BLACKPUPMALE = REGISTRY.register("from_black_pup",
+    () -> TransfurVariant.Builder.of(GoodblockModEntities.BLACKPUPMALE)
+	    .stepSize(0.7f)
+	    .nightVision()
+	    .transfurMode(TransfurMode.NONE)
+	    .holdItemsInMouth()
+	    .reducedFall()
+	    .build());
+
+	public static final RegistryObject<TransfurVariant<WhitebluepupEntity>> WHITEBLUEPUP = REGISTRY.register("from_white_blue_pup",
+    () -> TransfurVariant.Builder.of(GoodblockModEntities.WHITEBLUEPUP)
+	    .stepSize(0.7f)
+	    .nightVision()
+	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+	    .transfurMode(TransfurMode.NONE)
+	    .holdItemsInMouth()
+	    .reducedFall()
+	    .build());
+
+	public static final RegistryObject<TransfurVariant<LatexpurplewswolfEntity>> LATEXPURPLEWSWOLF = REGISTRY.register("from_latex_purplews_wolf",
+    () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXPURPLEWSWOLF)
+	    .stepSize(0.7f)
+		.breatheMode(TransfurVariant.BreatheMode.WEAK)
+		.reducedFall()
+		.scares(Creeper.class)
+		.nightVision()
+		.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+		.jumpStrength(2f)
+	    .build());
+	    //LATEXYUNXQHOTDRAGON
+
+	public static final RegistryObject<TransfurVariant<LatexyunxqhotdragonEntity>> LATEXYUNXQHOTDRAGON = REGISTRY.register("from_latex_yunxq_hot_dragon",
+    () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNXQHOTDRAGON)
+	    .stepSize(0.7f)
+	    .glide()
+	    .addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
+	    .transfurMode(TransfurMode.ABSORPTION)
+	    .replicating()
+	    .nightVision()
+	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+	    .build());
+	    
 	public static void register(IEventBus bus) {
         REGISTRY.register(bus);
     }

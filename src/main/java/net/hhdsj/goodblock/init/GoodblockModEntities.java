@@ -16,6 +16,10 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.hhdsj.goodblock.entity.WhitebluepupEntity;
+import net.hhdsj.goodblock.entity.LatexyunxqhotdragonEntity;
+import net.hhdsj.goodblock.entity.LatexthreemonthwolfEntity;
+import net.hhdsj.goodblock.entity.LatexpurplewswolfEntity;
 import net.hhdsj.goodblock.entity.LatexiceDragonEntity;
 import net.hhdsj.goodblock.entity.LatexgreendragonEntity;
 import net.hhdsj.goodblock.entity.LatexfoxEntity;
@@ -23,6 +27,7 @@ import net.hhdsj.goodblock.entity.LatexOrangeFoxEntity;
 import net.hhdsj.goodblock.entity.LatexKcahraSharkEntity;
 import net.hhdsj.goodblock.entity.InksugerEntity;
 import net.hhdsj.goodblock.entity.DarkfuLatexWolfMaleEntity;
+import net.hhdsj.goodblock.entity.BlackpupmaleEntity;
 import net.hhdsj.goodblock.GoodblockMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -56,6 +61,24 @@ public class GoodblockModEntities {
 			EntityType.Builder.<InksugerEntity>of(InksugerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InksugerEntity::new)
 
 					.sized(0.6f, 0.6f));
+	public static final RegistryObject<EntityType<BlackpupmaleEntity>> BLACKPUPMALE = register("blackpupmale",
+			EntityType.Builder.<BlackpupmaleEntity>of(BlackpupmaleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlackpupmaleEntity::new)
+
+					.sized(0.4f, 0.7f));
+	public static final RegistryObject<EntityType<WhitebluepupEntity>> WHITEBLUEPUP = register("whitebluepup",
+			EntityType.Builder.<WhitebluepupEntity>of(WhitebluepupEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WhitebluepupEntity::new)
+
+					.sized(0.6f, 0.6f));
+	public static final RegistryObject<EntityType<LatexpurplewswolfEntity>> LATEXPURPLEWSWOLF = register("latexpurplewswolf",
+			EntityType.Builder.<LatexpurplewswolfEntity>of(LatexpurplewswolfEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexpurplewswolfEntity::new)
+
+					.sized(0.6f, 1.9f));
+	public static final RegistryObject<EntityType<LatexthreemonthwolfEntity>> LATEXTHREEMONTHWOLF = register("latexthreemonthwolf",
+			EntityType.Builder.<LatexthreemonthwolfEntity>of(LatexthreemonthwolfEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexthreemonthwolfEntity::new)
+
+					.sized(0.6f, 1.95f));
+	public static final RegistryObject<EntityType<LatexyunxqhotdragonEntity>> LATEXYUNXQHOTDRAGON = register("latexyunxqhotdragon", EntityType.Builder.<LatexyunxqhotdragonEntity>of(LatexyunxqhotdragonEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexyunxqhotdragonEntity::new).fireImmune().sized(0.6f, 1.9f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -71,6 +94,11 @@ public class GoodblockModEntities {
 			DarkfuLatexWolfMaleEntity.init();
 			LatexiceDragonEntity.init();
 			InksugerEntity.init();
+			BlackpupmaleEntity.init();
+			WhitebluepupEntity.init();
+			LatexpurplewswolfEntity.init();
+			LatexthreemonthwolfEntity.init();
+			LatexyunxqhotdragonEntity.init();
 		});
 	}
 
@@ -83,5 +111,10 @@ public class GoodblockModEntities {
 		event.put(DARKFU_LATEX_WOLF_MALE.get(), DarkfuLatexWolfMaleEntity.createAttributes().build());
 		event.put(LATEXICE_DRAGON.get(), LatexiceDragonEntity.createAttributes().build());
 		event.put(INKSUGER.get(), InksugerEntity.createAttributes().build());
+		event.put(BLACKPUPMALE.get(), BlackpupmaleEntity.createAttributes().build());
+		event.put(WHITEBLUEPUP.get(), WhitebluepupEntity.createAttributes().build());
+		event.put(LATEXPURPLEWSWOLF.get(), LatexpurplewswolfEntity.createAttributes().build());
+		event.put(LATEXTHREEMONTHWOLF.get(), LatexthreemonthwolfEntity.createAttributes().build());
+		event.put(LATEXYUNXQHOTDRAGON.get(), LatexyunxqhotdragonEntity.createAttributes().build());
 	}
 }

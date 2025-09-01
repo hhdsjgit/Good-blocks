@@ -2231,6 +2231,138 @@
       "metadata": {
         "files": []
       }
+    },
+    {
+      "name": "Blackpupmale",
+      "type": "livingentity",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blackpupmale",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/client/renderer/BlackpupmaleRenderer.java",
+          "src/main/resources/assets/goodblock/models/item/blackpupmale_spawn_egg.json",
+          "src/main/java/net/hhdsj/goodblock/entity/BlackpupmaleEntity.java"
+        ]
+      },
+      "path": "~/Entity"
+    },
+    {
+      "name": "Whitebluepup",
+      "type": "livingentity",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "whitebluepup",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/whitebluepup_spawn_egg.json",
+          "src/main/java/net/hhdsj/goodblock/entity/WhitebluepupEntity.java",
+          "src/main/java/net/hhdsj/goodblock/client/renderer/WhitebluepupRenderer.java"
+        ]
+      },
+      "path": "~/Entity"
+    },
+    {
+      "name": "Blockbw2",
+      "type": "block",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blockbw_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/block/blockbw_2.json",
+          "src/main/java/net/hhdsj/goodblock/block/Blockbw2Block.java",
+          "src/main/resources/assets/goodblock/blockstates/blockbw_2.json",
+          "src/main/resources/assets/goodblock/models/item/blockbw_2.json"
+        ]
+      },
+      "path": "~/Block"
+    },
+    {
+      "name": "Peiblockbw2",
+      "type": "recipe",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "peiblockbw_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/goodblock/recipes/peiblockbw_2.json"
+        ]
+      },
+      "path": "~/Formula"
+    },
+    {
+      "name": "Latexpurplewswolf",
+      "type": "livingentity",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "latexpurplewswolf",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/latexpurplewswolf_spawn_egg.json",
+          "src/main/java/net/hhdsj/goodblock/entity/LatexpurplewswolfEntity.java",
+          "src/main/java/net/hhdsj/goodblock/client/renderer/LatexpurplewswolfRenderer.java"
+        ]
+      },
+      "path": "~/Entity"
+    },
+    {
+      "name": "LatexthreemonthwolfZhanDouShiTiTiaoJian",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "latexthreemonthwolf_zhan_dou_shi_ti_tiao_jian",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/procedures/LatexthreemonthwolfZhanDouShiTiTiaoJianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Entity/code"
+    },
+    {
+      "name": "Latexthreemonthwolf",
+      "type": "livingentity",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "latexthreemonthwolf",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/goodblock/models/item/latexthreemonthwolf_spawn_egg.json",
+          "src/main/java/net/hhdsj/goodblock/client/renderer/LatexthreemonthwolfRenderer.java",
+          "src/main/java/net/hhdsj/goodblock/entity/LatexthreemonthwolfEntity.java"
+        ]
+      },
+      "path": "~/Entity"
+    },
+    {
+      "name": "Latexyunxqhotdragon",
+      "type": "livingentity",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "latexyunxqhotdragon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/hhdsj/goodblock/client/renderer/LatexyunxqhotdragonRenderer.java",
+          "src/main/java/net/hhdsj/goodblock/entity/LatexyunxqhotdragonEntity.java",
+          "src/main/resources/assets/goodblock/models/item/latexyunxqhotdragon_spawn_egg.json"
+        ]
+      },
+      "path": "~/Entity"
     }
   ],
   "variable_elements": [
@@ -2319,10 +2451,11 @@
   "language_map": {
     "en_us": {
       "subtitles.srening_ogg1": "Music",
+      "entity.goodblock.latexthreemonthwolf": "Latex three month wolf",
       "advancements.obtain_painitearmor.title": "硅硼钙铝石护甲",
       "advancements.nitricacidadvan.descr": "Find nitricacids",
-      "item.goodblock.armora_1_armor_chestplate": "Armora1 Chestplate",
       "entity.goodblock.latexgreendragon": "Latexgreendragon",
+      "item.goodblock.armora_1_armor_chestplate": "Armora1 Chestplate",
       "subtitles.no_stop": "不停下",
       "advancements.gha_4.descr": "放置红石粉",
       "item.goodblock.thefluffyheartbeatinthecubiclemusic": "The fluffy heart beat in the cubicle music",
@@ -2332,18 +2465,19 @@
       "item.goodblock.the_fluffy_heartbeatinthe_cubiclemusic": "The Fluffy Heartbeatinthe Cubiclemusic",
       "item.goodblock.armora_1_armor_boots": "Armora1 Boots",
       "item.goodblock.flutemusica_1records": "Flutemusica 1records",
-      "advancements.gha_1.descr": "因为MOD文件丢失临时制作",
-      "block.goodblock.card_reader": "Card Reader",
       "item.goodblock.testgbk_bucket": "TESTGBK Bucket",
+      "block.goodblock.card_reader": "Card Reader",
+      "advancements.gha_1.descr": "因为MOD文件丢失临时制作",
       "item.goodblock.latex_orange_fox_spawn_egg": "橙色狐狸胶兽刷怪蛋",
       "item.goodblock.painite_armor_chestplate": "Painite Armor 胸甲",
       "block.goodblock.blueblock": "tieblock",
       "advancements.gha_3.title": "不一样的金属",
-      "advancements.goodblockuse.descr": "Goodblocks",
       "subtitles.the_fluffy_heartbeatinthe_cubiclemusic": "the_fluffy_heartbeatinthe_cubiclemusic",
+      "advancements.goodblockuse.descr": "Goodblocks",
       "item.goodblock.fleececlothingtest_boots": "Fleececlothingtest 靴子",
       "gamerule.initiateAchievements": "好方块成就",
       "item.goodblock.inksans_4": "Inksans 4",
+      "entity.goodblock.whitebluepup": "White blue pup",
       "subtitles.gnusmas_gm_soundfont_2.00": "gnusmas_gm_soundfont",
       "block.goodblock.card_readeropen": "Card Reader",
       "block.goodblock.pale_wood_log": "Pale_wood Log",
@@ -2379,6 +2513,8 @@
       "advancements.gha_3.descr": "获得铜锭",
       "item.goodblock.latexfox_spawn_egg": "Latexfox Spawn Egg",
       "item.goodblock.armora_1_armor_helmet": "Armora1 Helmet",
+      "entity.goodblock.latex_kamona_hsguy_dragon_wolf": "latex kamona hsguy dragon wolf",
+      "entity.goodblock.blackpupmale": "Blackpupmale",
       "fluid.goodblock.testgbk": "gas_fox",
       "item.goodblock.flute.desc": "gnusmas_gm_soundfont_2.00",
       "item.goodblock.fleececlothingtest_chestplate": "Fleececlothingtest 胸甲",
@@ -2401,6 +2537,7 @@
       "advancements.gha_8.descr": "获得附魔金苹果",
       "gui.goodblock.gui_settings.button_a1": "a1",
       "entity.goodblock.latextextdragon": "Latextextdragon",
+      "entity.goodblock.latexpurplewswolf": "Latex purple ws wolf",
       "item.goodblock.painitemanuscript": "Painitemanuscript",
       "advancements.goodblockuse.title": "Goodblock",
       "advancements.gha_1.title": "更多的成就（临时修复）",
@@ -2408,6 +2545,7 @@
       "item.goodblock.notlistenthis": "Notlistenthis",
       "block.goodblock.nitreblock": "Nitreblock",
       "entity.goodblock.latexice_dragon": "Latexice Dragon",
+      "item.goodblock.latexyunxqhotdragon_spawn_egg": "Latex yunxq hot dragon Spawn Egg",
       "item.goodblock.painite_armor_boots": "Painite Armor 靴子",
       "item.goodblock.fleececlothingtest_helmet": "Fleececlothingtest 头盔",
       "advancements.gha_5.descr": "放置侦测器",
@@ -2416,6 +2554,7 @@
       "advancements.nitricacidadvan.title": "Nitricacids",
       "advancements.gha_2.descr": "获得粗铜",
       "block.goodblock.sulphurblock": "Sulphurblock",
+      "item.goodblock.latexthreemonthwolf_spawn_egg": "Latex three month wolf Spawn Egg",
       "itemGroup.tabgoodblock_entity": "Goodblock Entity",
       "item.goodblock.painitehoe": "Painitehoe",
       "advancements.gha_11.descr": "获得类似钻石的苔藓",
@@ -2428,6 +2567,7 @@
       "entity.goodblock.latex_kcahra_shark": "Latex Kcahra Shark",
       "advancements.gha_13.title": "死亡传奇",
       "block.goodblock.blockbw_1": "Blockbw 1",
+      "block.goodblock.blockbw_2": "Blockbw 2",
       "advancements.usemod.descr": "You found this",
       "item.goodblock.painite_armor_leggings": "Painite Armor 护腿",
       "block.goodblock.paletreespa_1": "Paletreespa 1",
@@ -2443,6 +2583,8 @@
       "subtitles.anit_furry_music": "auit furry music!",
       "advancements.gha_6.descr": "获得水晶",
       "advancements.gha_10.descr": "获得龙首",
+      "item.goodblock.blackpupmale_spawn_egg": "Blackpupmale Spawn Egg",
+      "entity.goodblock.latexyunxqhotdragon": "Latex yunxq hot dragon",
       "item.goodblock.flute": "Flute",
       "block.goodblock.pale_wood_wood": "Pale_wood Wood",
       "item.goodblock.nitricacid": "Nitricacid",
@@ -2451,6 +2593,7 @@
       "advancements.gha_5.title": "我看到你了",
       "block.goodblock.blackblock": "Blackblock",
       "item.goodblock.latex_kcahra_shark_spawn_egg": "Latex Kcahra Shark Spawn Egg",
+      "item.goodblock.whitebluepup_spawn_egg": "White blue pup Spawn Egg",
       "block.goodblock.testgbk": "gas_fox",
       "gui.goodblock.findgui.label_make_hhdsj2": "make : hhdsj2",
       "advancements.obtain_painitearmor.descr": "不同的盔甲",
@@ -2458,10 +2601,12 @@
       "item.goodblock.armora_1_armor_leggings": "Armora1 Leggings",
       "item.goodblock.inksans_4.desc": "ink Sans",
       "subtitles.ink_sans": "A music",
-      "block.goodblock.pale_wood_button": "Pale_wood Button"
+      "block.goodblock.pale_wood_button": "Pale_wood Button",
+      "item.goodblock.latexpurplewswolf_spawn_egg": "Latex purple ws wolf Spawn Egg"
     },
     "zh_cn": {
       "subtitles.srening_ogg1": "音乐",
+      "entity.goodblock.latexthreemonthwolf": "Latex three month wolf",
       "advancements.obtain_painitearmor.title": "硅硼钙铝石护甲",
       "advancements.nitricacidadvan.descr": "Find nitricacids",
       "item.goodblock.armora_1_armor_chestplate": "Armora1 Chestplate",
@@ -2482,11 +2627,12 @@
       "item.goodblock.painite_armor_chestplate": "Painite Chestplate",
       "block.goodblock.blueblock": "铁网",
       "advancements.gha_3.title": "不一样的金属",
-      "subtitles.the_fluffy_heartbeatinthe_cubiclemusic": "the_fluffy_heartbeatinthe_cubiclemusic",
       "advancements.goodblockuse.descr": "Goodblocks",
+      "subtitles.the_fluffy_heartbeatinthe_cubiclemusic": "the_fluffy_heartbeatinthe_cubiclemusic",
       "item.goodblock.fleececlothingtest_boots": "Fleececlothingtest 靴子",
       "gamerule.initiateAchievements": "Good Blocks Achievements",
       "item.goodblock.inksans_4": "Inksans 4",
+      "entity.goodblock.whitebluepup": "White blue pup",
       "subtitles.gnusmas_gm_soundfont_2.00": "gnusmas_gm_soundfont",
       "block.goodblock.card_readeropen": "Card Reader",
       "block.goodblock.pale_wood_log": "苍白原木",
@@ -2516,12 +2662,14 @@
       "subtitles.item.armor.equip_netherite": "穿上盔甲",
       "block.goodblock.uraniumblock": "不纯的铀块",
       "entity.goodblock.inksuger": "Ink suger",
-      "block.goodblock.pale_wood_leaves": "Pale_wood Leaves",
+      "block.goodblock.pale_wood_leaves": "Pale wood Leaves",
       "item.goodblock.latexice_dragon_spawn_egg": "Latexice Dragon Spawn Egg",
       "advancements.gha_8.title": "更高级的金苹果!",
       "advancements.gha_3.descr": "获得铜锭",
       "item.goodblock.latexfox_spawn_egg": "Latexfox Spawn Egg",
       "item.goodblock.armora_1_armor_helmet": "Armora1 Helmet",
+      "entity.goodblock.latex_kamona_hsguy_dragon_wolf": "",
+      "entity.goodblock.blackpupmale": "Blackpupmale",
       "fluid.goodblock.testgbk": "测试液体",
       "item.goodblock.flute.desc": "gnusmas_gm_soundfont_2.00",
       "item.goodblock.fleececlothingtest_chestplate": "Fleececlothingtest 胸甲",
@@ -2537,20 +2685,22 @@
       "gui.goodblock.gui_settings.button_a2": "a2",
       "gui.goodblock.gui_settings.button_a3": "a3",
       "block.goodblock.pale_wood_stairs": "苍白木楼梯",
-      "item.goodblock.latextextdragon_spawn_egg": "Latextextdragon Spawn Egg",
+      "item.goodblock.latextextdragon_spawn_egg": "Latex text dragon Spawn Egg",
       "item.goodblock.painiteaxe": "Painiteaxe",
       "item.goodblock.impureuranium": "不纯的铀粉",
       "advancements.gha_4.title": "红色的粉末",
       "advancements.gha_8.descr": "获得附魔金苹果",
       "gui.goodblock.gui_settings.button_a1": "a1",
-      "entity.goodblock.latextextdragon": "Latextextdragon",
+      "entity.goodblock.latextextdragon": "Latex text dragon",
+      "entity.goodblock.latexpurplewswolf": "Latex purple ws wolf",
       "item.goodblock.painitemanuscript": "Painitemanuscript",
       "advancements.goodblockuse.title": "使用goodblock mod",
       "advancements.gha_1.title": "闪闪发光的金属",
-      "item.goodblock.latexgreendragon_spawn_egg": "Latexgreendragon Spawn Egg",
+      "item.goodblock.latexgreendragon_spawn_egg": "Latex green dragon Spawn Egg",
       "item.goodblock.notlistenthis": "你不要听这个",
       "block.goodblock.nitreblock": "硝矿石",
-      "entity.goodblock.latexice_dragon": "Latexice Dragon",
+      "entity.goodblock.latexice_dragon": "Latex ice Dragon",
+      "item.goodblock.latexyunxqhotdragon_spawn_egg": "Latex yunxq hot dragon Spawn Egg",
       "item.goodblock.painite_armor_boots": "Painite Boots",
       "item.goodblock.fleececlothingtest_helmet": "Fleececlothingtest 头盔",
       "advancements.gha_5.descr": "放置侦测器",
@@ -2559,8 +2709,9 @@
       "advancements.nitricacidadvan.title": "Nitricacids",
       "advancements.gha_2.descr": "获得粗铜",
       "block.goodblock.sulphurblock": "硫磺矿石",
+      "item.goodblock.latexthreemonthwolf_spawn_egg": "Latex three month wolf Spawn Egg",
       "itemGroup.tabgoodblock_entity": "Goodblock Entity",
-      "item.goodblock.painitehoe": "Painitehoe",
+      "item.goodblock.painitehoe": "Painite hoe",
       "advancements.gha_11.descr": "获得类似钻石的苔藓",
       "advancements.gha_7.title": "爆炸就是艺术",
       "entity.goodblock.darkfu_latex_wolf_male": "Darkfu Latex Wolf Male",
@@ -2571,6 +2722,7 @@
       "entity.goodblock.latex_kcahra_shark": "Latex Kcahra Shark",
       "advancements.gha_13.title": "死亡传奇",
       "block.goodblock.blockbw_1": "Blockbw 1",
+      "block.goodblock.blockbw_2": "Blockbw 2",
       "advancements.usemod.descr": "你找到这个!",
       "item.goodblock.painite_armor_leggings": "Painite Leggings",
       "block.goodblock.paletreespa_1": "Paletreespa 1",
@@ -2586,22 +2738,26 @@
       "subtitles.anit_furry_music": "反furry音乐！！！",
       "advancements.gha_6.descr": "获得水晶",
       "advancements.gha_10.descr": "获得龙首",
+      "item.goodblock.blackpupmale_spawn_egg": "Black pup male Spawn Egg",
+      "entity.goodblock.latexyunxqhotdragon": "Latex yunxq hot dragon",
       "item.goodblock.flute": "Flute",
-      "block.goodblock.pale_wood_wood": "Pale_wood Wood",
+      "block.goodblock.pale_wood_wood": "Pale wood Wood",
       "item.goodblock.nitricacid": "Nitricacid",
       "advancements.sulphuradvan.title": "Sulphurs",
       "advancements.gha_7.descr": "放置并点燃TNT",
       "advancements.gha_5.title": "我看到你了",
       "block.goodblock.blackblock": "这是个测试方块",
       "item.goodblock.latex_kcahra_shark_spawn_egg": "Latex Kcahra Shark Spawn Egg",
+      "item.goodblock.whitebluepup_spawn_egg": "White blue pup Spawn Egg",
       "block.goodblock.testgbk": "测试",
       "gui.goodblock.findgui.label_make_hhdsj2": "制作 : hhdsj2",
       "advancements.obtain_painitearmor.descr": "Different Armors",
       "subtitles.the_fluffy_heartbeat_in_the_cubicle": "Play The Fluffy Heartbeat in the Cubicle music",
-      "item.goodblock.armora_1_armor_leggings": "Armora1 Leggings",
+      "item.goodblock.armora_1_armor_leggings": "Armora Leggings",
       "item.goodblock.inksans_4.desc": "ink Sans",
       "subtitles.ink_sans": "一个音乐",
-      "block.goodblock.pale_wood_button": "Pale_wood Button"
+      "block.goodblock.pale_wood_button": "Pale_wood Button",
+      "item.goodblock.latexpurplewswolf_spawn_egg": "Latex purple ws wolf Spawn Egg"
     }
   },
   "foldersRoot": {
@@ -2625,7 +2781,12 @@
       },
       {
         "name": "Entity",
-        "children": []
+        "children": [
+          {
+            "name": "code",
+            "children": []
+          }
+        ]
       },
       {
         "name": "advancements",
