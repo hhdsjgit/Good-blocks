@@ -2829,6 +2829,10 @@
       {
         "name": "Paints",
         "children": []
+      },
+      {
+        "name": "Fluid",
+        "children": []
       }
     ]
   },
