@@ -181,6 +181,17 @@ public class GoodblockModTransfurVariants {
 	    .build());
 	    //LATEXYUNXQHOTDRAGON
 
+	public static final RegistryObject<TransfurVariant<LatexthreemonthwolfEntity>> LATEXTHREEMONTHWOLF = REGISTRY.register("from_latex_three_month_wolf",
+    () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXTHREEMONTHWOLF)
+	    .stepSize(0.7f)
+		.breatheMode(TransfurVariant.BreatheMode.WEAK)
+		.reducedFall()
+		.scares(Creeper.class)
+		.nightVision()
+		.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+		.jumpStrength(2f)
+	    .build());
+
 	public static final RegistryObject<TransfurVariant<LatexyunxqhotdragonEntity>> LATEXYUNXQHOTDRAGON = REGISTRY.register("from_latex_yunxq_hot_dragon",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNXQHOTDRAGON)
 	    .stepSize(0.7f)
