@@ -1,6 +1,7 @@
 package net.hhdsj.goodblock.mixin;
 
-
+import net.ltxprogrammer.changed.data.DeferredStateProvider;
+import net.ltxprogrammer.changed.data.MixedStateProvider;
 import net.hhdsj.goodblock.init.GoodblockModBlocks;
 import net.minecraft.data.worldgen.features.TreeFeatures;
 import net.minecraft.util.valueproviders.ConstantInt;
@@ -16,10 +17,17 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(TreeFeatures.class)
+@Mixin({TreeFeatures.class})
 public abstract class TestMixin {
-    @Inject(method = "createStraightBlobTree", at = @At("HEAD"), cancellable = true)
+    public TestMixin() {
+    }
+
+    @Inject(
+            method = {"createStraightBlobTree"},
+            at = {@At("HEAD")}
+    )
+
     private static void createStraightBlobTree(Block log, Block leaf, int p_195149_, int p_195150_, int p_195151_, int p_195152_, CallbackInfoReturnable<TreeConfiguration.TreeConfigurationBuilder> callbackInfoReturnable) {
-       
+
     }
 }

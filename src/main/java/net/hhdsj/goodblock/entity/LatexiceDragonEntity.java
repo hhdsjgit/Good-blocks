@@ -30,28 +30,21 @@ import net.hhdsj.goodblock.init.GoodblockModEntities;
 import java.util.Set;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraftforge.common.ForgeMod;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-import java.util.Random;
-import net.ltxprogrammer.changed.entity.Gender;
 import net.ltxprogrammer.changed.entity.HairStyle;
 import net.ltxprogrammer.changed.entity.TransfurMode;
-import net.ltxprogrammer.changed.entity.beast.*;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 
 @Mod.EventBusSubscriber
 public class LatexiceDragonEntity extends ChangedEntity {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("snowy_plains"));
 	/////////////////////////////////////////
-	public LatexiceDragonEntity(EntityType<? extends LatexiceDragonEntity> p_19870_, Level p_19871_) {
+
+	public LatexiceDragonEntity(EntityType<? extends LatexiceDragonEntity> p_19870_, Level p_19871_) {
         super(p_19870_, p_19871_);
     }
 
