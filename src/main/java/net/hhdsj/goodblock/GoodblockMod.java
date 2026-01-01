@@ -41,6 +41,7 @@ import net.hhdsj.goodblock.init.GoodblockModParticleTypes;
 import net.hhdsj.goodblock.registers.GoodblocksModels;
 import net.hhdsj.goodblock.registers.GoodblockEntities;
 import net.hhdsj.goodblock.registers.GoodblockModRegisterItems;
+import net.hhdsj.goodblock.init.GoodblockModAbilities;
 //import net.hhdsj.goodblock.registers.GoodblockEntityRenderers;
 
 import java.util.function.Supplier;
@@ -74,7 +75,7 @@ public class GoodblockMod {
 
 		GoodblockModMobEffects.REGISTRY.register(bus);
 		//latex java register
-
+        GoodblockModAbilities.REGISTRY.register(bus);
 		GoodblockModTransfurVariants.REGISTRY.register(bus);
 
 	}

@@ -135,7 +135,6 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 
 	@Override
 	public void performRangedAttack(LivingEntity target, float flval) {
-		//LatexthreemonthwolfEntityProjectile entityarrow = new LatexthreemonthwolfEntityProjectile(GoodblockModEntities.LATEXTHREEMONTHWOLF_PROJECTILE.get(), this, this.level);
 		LatexthreemonthwolfEntityProjectile entityarrow = new LatexthreemonthwolfEntityProjectile(this.level, this);
 		double d0 = target.getY() + target.getEyeHeight() - 1.1;
 		double d1 = target.getX() - this.getX();
