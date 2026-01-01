@@ -98,7 +98,7 @@ public class LatexkamonaHSguydragonwolfEntity extends ChangedEntity {
 
 	
 	public LatexkamonaHSguydragonwolfEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(GoodblockEntities.LATEXKAMONA_H_SGUYDRAGONWOLF.get(), world);
+		this(GoodblockEntities.LATEX_KAMONA_HSGUY_DRAGON_WOLF.get(), world);
 	}
 
 

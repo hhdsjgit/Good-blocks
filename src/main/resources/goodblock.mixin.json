@@ -1,16 +1,13 @@
 {
   "required": true,
-  "minVersion": "0.8.5",
+  "minVersion": "0.8",
   "package": "net.hhdsj.goodblock.mixin",
   "compatibilityLevel": "JAVA_17",
   "refmap": "goodblock.refmap.json",
-  "mixins": [
-	"TestMixin"
-  ],
+  "mixins": [],
   "client": [],
   "server": [],
   "injectors": {
     "defaultRequire": 1
-  },
-  "plugin": "net.hhdsj.goodblock.mixin.GoodBlockMixinPlugin"
+  }
 }

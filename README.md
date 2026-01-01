@@ -1,2 +1,3 @@
 # good_blocks
-There are some my idea,This mod is my server addon mod,fix some errors.
+These are some of my ideas. This mod is my server addon mod. please report the errors you find.
+

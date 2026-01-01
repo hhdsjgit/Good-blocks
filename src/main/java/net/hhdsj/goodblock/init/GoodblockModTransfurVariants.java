@@ -74,7 +74,8 @@ public class GoodblockModTransfurVariants {
     public static final DeferredRegister<TransfurVariant<?>> REGISTRY = ChangedRegistry.TRANSFUR_VARIANT.createDeferred("goodblock");
 
     
-	/* Test latex
+
+	/* Test latex
     public static final RegistryObject<TransfurVariant<LatexfoxEntity>> LATEXFOX = REGISTRY.register("form_latex_fox",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXFOX)
 	    .stepSize(0.7f)
@@ -140,8 +141,8 @@ public class GoodblockModTransfurVariants {
 	    .reducedFall()
 	    .build());
 	
-	public static final RegistryObject<TransfurVariant<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = REGISTRY.register("form_latex_kamona_hsguy_dragon_wolf",
-    () -> TransfurVariant.Builder.of(GoodblockEntities.LATEXKAMONA_H_SGUYDRAGONWOLF)
+	public static final RegistryObject<TransfurVariant<LatexkamonaHSguydragonwolfEntity>> LATEX_KAMONA_HSGUY_DRAGON_WOLF = REGISTRY.register("form_latex_kamona_hsguy_dragon_wolf",
+    () -> TransfurVariant.Builder.of(GoodblockEntities.LATEX_KAMONA_HSGUY_DRAGON_WOLF)
 	    .stepSize(0.7f)
 	    .nightVision()
 	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)

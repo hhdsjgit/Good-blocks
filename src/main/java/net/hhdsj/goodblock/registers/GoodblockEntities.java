@@ -19,7 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.hhdsj.goodblock.entity.*;
 import net.hhdsj.goodblock.GoodblockMod;
 import net.hhdsj.goodblock.entity.LatexthreemonthwolfEntityProjectile;
-
+import net.hhdsj.goodblock.entity.LatexDragonFruitWolfEntity;
 
 import static net.ltxprogrammer.changed.entity.variant.TransfurVariant.getNextEntId;
 
@@ -29,14 +29,8 @@ import static net.ltxprogrammer.changed.entity.variant.TransfurVariant.getNextEn
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GoodblockEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, GoodblockMod.MODID);
-	/*
-	 RegistryObject<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = register("latexkamona_h_sguydragonwolf",
-            EntityType.Builder.<LatexfoxEntity>of(LatexkamonaHSguydragonwolfEntity::new, ChangedMobCategories.CHANGED)
-            .clientTrackingRange(10),   
-            GoodblockEntities::overworldOnly, SpawnPlacements.Type.ON_GROUND, LatexPurpleFox::checkEntitySpawnRules),
-            .sized(0.7F, 1.93F));
-	 */
-	public static final RegistryObject<EntityType<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = register("latex_kamona_hsguy_dragon_wolf",
+
+	public static final RegistryObject<EntityType<LatexkamonaHSguydragonwolfEntity>> LATEX_KAMONA_HSGUY_DRAGON_WOLF = register("latex_kamona_hsguy_dragon_wolf",
 			EntityType.Builder.<LatexkamonaHSguydragonwolfEntity>of(LatexkamonaHSguydragonwolfEntity::new, ChangedMobCategories.CHANGED)
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64)
@@ -44,6 +38,15 @@ public class GoodblockEntities {
 					.setCustomClientFactory(LatexkamonaHSguydragonwolfEntity::new)
 					.sized(0.7f, 1.93f));
 
+	public static final RegistryObject<EntityType<LatexDragonFruitWolfEntity>> LATEXDRAGONFRUITWOLF = register("latex_dragon_fruit_wolf",
+			EntityType.Builder.<LatexDragonFruitWolfEntity>of(LatexDragonFruitWolfEntity::new, ChangedMobCategories.CHANGED)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(LatexDragonFruitWolfEntity::new)
+					.sized(0.7f, 1.93f));
+
+	//////////////////else///////////////////
 	public static final RegistryObject<EntityType<LatexthreemonthwolfEntityProjectile>> LATEXTHREEMONTHWOLF_PROJECTILE = register("projectile_latexthreemonthwolf",
 			EntityType.Builder.<LatexthreemonthwolfEntityProjectile>of(LatexthreemonthwolfEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1)
 					.setCustomClientFactory(LatexthreemonthwolfEntityProjectile::new).sized(0.5f, 0.5f));
@@ -57,12 +60,14 @@ public class GoodblockEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			LatexkamonaHSguydragonwolfEntity.init();
+			LatexDragonFruitWolfEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
-		event.put(LATEXKAMONA_H_SGUYDRAGONWOLF.get(), LatexkamonaHSguydragonwolfEntity.createAttributes().build());
+		event.put(LATEX_KAMONA_HSGUY_DRAGON_WOLF.get(), LatexkamonaHSguydragonwolfEntity.createAttributes().build());
+		event.put(LATEXDRAGONFRUITWOLF.get(), LatexDragonFruitWolfEntity.createAttributes().build());
 	}
 }
 /*
@@ -71,8 +76,8 @@ public class GoodblockEntities extends GoodblockModEntities {
     public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, GoodblockMod.MODID);
 
 
-    public static final RegistryObject<EntityType<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = 
-        register("latexkamona_h_sguydragonwolf",
+    public static final RegistryObject<EntityType<LatexkamonaHSguydragonwolfEntity>> LATEX_KAMONA_HSGUY_DRAGON_WOLF = 
+        register("LATEX_KAMONA_HSGUY_DRAGON_WOLF",
             EntityType.Builder.of(LatexkamonaHSguydragonwolfEntity::new, ChangedMobCategories.CHANGED)
                 .sized(0.7F, 1.93F)
                 .clientTrackingRange(10),GoodblockEntities::overworldOnly,SpawnPlacements.Type.ON_GROUND,Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,LatexkamonaHSguydragonwolfEntity::checkEntitySpawnRules);
@@ -119,7 +124,7 @@ public class GoodblockEntities extends GoodblockModEntities{
 
 
         
-	public static final RegistryObject<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = register("latexkamona_h_sguydragonwolf",
+	public static final RegistryObject<LatexkamonaHSguydragonwolfEntity>> LATEX_KAMONA_HSGUY_DRAGON_WOLF = register("LATEX_KAMONA_HSGUY_DRAGON_WOLF",
             EntityType.Builder.<LatexfoxEntity>of(LatexkamonaHSguydragonwolfEntity::new, ChangedMobCategories.CHANGED)
             .clientTrackingRange(10),   
             GoodblockEntities::overworldOnly, SpawnPlacements.Type.ON_GROUND, LatexPurpleFox::checkEntitySpawnRules),
