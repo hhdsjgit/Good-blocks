@@ -1,0 +1,1 @@
+gradlew build -Dcom.sun.net.ssl.checkRevocation=false -Dnet.minecraftforge.gradle.check.certs=false

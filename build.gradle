@@ -35,7 +35,7 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-
+            arg '-mixin.config=goodblock.mixin.json'
             mods {
                 examplemod {
                     source sourceSets.main
@@ -64,9 +64,18 @@ repositories {
 }
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.2.27'//mc-forege!
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 //    implementation files('/Changed-m1.18.2-v0.14b.jar')
 	implementation fg.deobf("curse.maven:slashblade-661527:6885809")//Changed-mc
 	implementation fg.deobf("curse.maven:slashblade-711303:7377803")//Changed-addon
+}
+
+jar {
+    manifest {
+        attributes([
+                "MixinConfigs": "goodblock.mixin.json"
+        ])
+    }
 }
 
 tasks.withType(JavaCompile).configureEach {
