@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "goodblock:blocks/ord_sapphire",
+    "up": "goodblock:blocks/ord_sapphire",
+    "north": "goodblock:blocks/ord_sapphire",
+    "east": "goodblock:blocks/ord_sapphire",
+    "south": "goodblock:blocks/ord_sapphire",
+    "west": "goodblock:blocks/ord_sapphire",
+    "particle": "goodblock:blocks/ord_sapphire"
+  }
+}

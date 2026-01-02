@@ -4,9 +4,9 @@ license="MIT License"
 
 [[mods]]
 modId="goodblock"
-version="0.6.3"
+version="0.7.1"
 displayName="goodblock"
-credits="逸云 , 缘来007 ,"
+credits="逸云 , 缘来007 ,好好的时间2"
 displayURL="https://github.com/hhdsjgit/Good-blocks"
 logoFile="logo.png"
 authors="好好的时间2"

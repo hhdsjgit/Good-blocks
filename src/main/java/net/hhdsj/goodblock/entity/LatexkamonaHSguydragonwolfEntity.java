@@ -45,21 +45,19 @@ import net.ltxprogrammer.changed.entity.Gender;
 import net.ltxprogrammer.changed.entity.HairStyle;
 import net.ltxprogrammer.changed.entity.TransfurMode;
 import net.ltxprogrammer.changed.entity.beast.*;
+import net.ltxprogrammer.changed.init.ChangedAttributes;
 
 public class LatexkamonaHSguydragonwolfEntity extends ChangedEntity {
 
-	public LatexkamonaHSguydragonwolfEntity(EntityType<? extends LatexkamonaHSguydragonwolfEntity> p_19870_, Level p_19871_) {
-        super(p_19870_, p_19871_);
-    }
-
-    @Override
+	@Override
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
-        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.1);
-        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(1);
+        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.2);
+        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.98);
+        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(30.0);
     }
-
-    @Override
+    
+	@Override
     public LatexType getLatexType() {
         return LatexType.NEUTRAL;
     }
@@ -68,10 +66,25 @@ public class LatexkamonaHSguydragonwolfEntity extends ChangedEntity {
     public TransfurMode getTransfurMode() {
         return TransfurMode.REPLICATION;
     }
+    /*
+    public Color3 getDripColor() {
+        return Color3.getColor("#0793f7");
+    }*/
+
+	@Override
+    public HairStyle getDefaultHairStyle() {
+        return HairStyle.SHORT_MESSY.get();
+    }
 
     public Color3 getTransfurColor(TransfurCause cause) {
-        return Color3.getColor("#eef9ff");
+        return Color3.getColor("#0095ff");
     }
+
+	
+	public LatexkamonaHSguydragonwolfEntity(EntityType<? extends LatexkamonaHSguydragonwolfEntity> p_19870_, Level p_19871_) {
+        super(p_19870_, p_19871_);
+    }
+
 	@Override
     public int getTicksRequiredToFreeze() { return 480; }
 
@@ -120,6 +133,7 @@ public class LatexkamonaHSguydragonwolfEntity extends ChangedEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
+		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 20);
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 12);
 		builder = builder.add(Attributes.ARMOR, 2);

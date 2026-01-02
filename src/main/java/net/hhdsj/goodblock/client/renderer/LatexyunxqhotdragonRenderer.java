@@ -35,8 +35,7 @@ public class LatexyunxqhotdragonRenderer extends AdvancedHumanoidRenderer<Latexy
 		});
         this.addLayer(new LatexParticlesLayer<>(this, getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
-        this.addLayer(CustomEyesLayer.builder(this, context.getModelSet())
-                .withSclera(Color3.WHITE).withIris(Color3.fromInt(0x7889f3)).build());
+        //this.addLayer(CustomEyesLayer.builder(this, context.getModelSet())
         this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
 		
 	}

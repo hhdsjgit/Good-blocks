@@ -36,7 +36,7 @@ public class LatexkamonaHSguydragonwolfRenderer extends AdvancedHumanoidRenderer
 		this.addLayer(new LatexParticlesLayer<>(this, this.model));
 		this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
 		this.addLayer(CustomEyesLayer.builder(this, context.getModelSet())
-				.withSclera(Color3.fromInt(0xffea86)).withIris(Color3.BLACK).build());
+				.withSclera(Color3.WHITE).withIris(Color3.fromInt(0x43b44e)).build());
 		this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
 		
 		this.addLayer(new EyesLayer<LatexkamonaHSguydragonwolfEntity, ModelLatexkamonaHSguydragonwolf>(this) {

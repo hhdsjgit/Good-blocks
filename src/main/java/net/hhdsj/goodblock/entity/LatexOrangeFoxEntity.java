@@ -5,6 +5,7 @@ package net.hhdsj.goodblock.entity;
 import net.ltxprogrammer.changed.*;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
+import net.ltxprogrammer.changed.init.ChangedAttributes;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
@@ -122,6 +123,7 @@ public class LatexOrangeFoxEntity extends ChangedEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
+		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 20);
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 11);
 		builder = builder.add(Attributes.ARMOR, 2);

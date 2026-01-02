@@ -104,7 +104,7 @@ public class GoodblockModTransfurVariants {
 	    .glide()
 	    .addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 	    //.breatheMode(TransfurVariant.BreatheMode.NORMAL)
-	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
+	    //.addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .transfurMode(TransfurMode.ABSORPTION)
 	    .replicating()
 	    .nightVision()
@@ -117,7 +117,7 @@ public class GoodblockModTransfurVariants {
 	    .faction(LatexType.DARK_LATEX)
 	    .breatheMode(TransfurVariant.BreatheMode.NORMAL)
 	    .transfurMode(TransfurMode.ABSORPTION)
-	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
+	    //.addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .replicating()
 	    .build());
 
@@ -126,7 +126,7 @@ public class GoodblockModTransfurVariants {
 	    .stepSize(0.7f)
 	    .nightVision()
 	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
-	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
+	    //.addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .replicating()
 	    .build());
 
@@ -146,7 +146,7 @@ public class GoodblockModTransfurVariants {
 	    .nightVision()
 	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 	    .transfurMode(TransfurMode.ABSORPTION)
-	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
+	    //.addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .replicating()
 	    .build());	
 
@@ -164,7 +164,6 @@ public class GoodblockModTransfurVariants {
 	    .stepSize(0.7f)
 	    .nightVision()
 	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
-	    .transfurMode(TransfurMode.NONE)
 	    .holdItemsInMouth()
 	    .reducedFall()
 	    .build());
@@ -197,7 +196,19 @@ public class GoodblockModTransfurVariants {
 	    .stepSize(0.7f)
 	    .glide()
 	    .addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
-	    .addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
+	    //.addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
+	    .transfurMode(TransfurMode.ABSORPTION)
+	    .replicating()
+	    .nightVision()
+	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+	    .build());
+
+	public static final RegistryObject<TransfurVariant<LatexyunxqicedragonEntity>> LATEXYUNXQICEDRAGON = REGISTRY.register("from_latex_yun_xq_ice_dragon",
+    () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNXQICEDRAGON)
+	    .stepSize(0.7f)
+	    .glide()
+	    .addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+	    //.addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .transfurMode(TransfurMode.ABSORPTION)
 	    .replicating()
 	    .nightVision()

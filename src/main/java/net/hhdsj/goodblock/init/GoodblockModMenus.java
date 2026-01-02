@@ -13,6 +13,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 
 import net.hhdsj.goodblock.world.inventory.FINDGUIMenu;
+import net.hhdsj.goodblock.world.inventory.CatalyzerguiMenu;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 public class GoodblockModMenus {
 	private static final List<MenuType<?>> REGISTRY = new ArrayList<>();
 	public static final MenuType<FINDGUIMenu> FINDGUI = register("findgui", (id, inv, extraData) -> new FINDGUIMenu(id, inv, extraData));
+	public static final MenuType<CatalyzerguiMenu> CATALYZERGUI = register("catalyzergui", (id, inv, extraData) -> new CatalyzerguiMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

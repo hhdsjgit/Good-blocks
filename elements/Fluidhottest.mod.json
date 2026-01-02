@@ -1,0 +1,46 @@
+{
+  "_fv": 39,
+  "_type": "fluid",
+  "definition": {
+    "name": "test item",
+    "bucketName": "Fluidhottest Bucket",
+    "textureStill": "hot_fluid_0",
+    "textureFlowing": "hot_fluid_1",
+    "tintType": "No tint",
+    "canMultiply": false,
+    "flowRate": 50,
+    "levelDecrease": 1,
+    "slopeFindDistance": 4,
+    "spawnParticles": true,
+    "dripParticle": {
+      "value": "CUSTOM:Parhotx"
+    },
+    "flowStrength": -0.5,
+    "luminosity": 15,
+    "density": 1000,
+    "viscosity": 1000,
+    "temperature": 300,
+    "type": "WATER",
+    "generateBucket": true,
+    "textureBucket": "",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "emptySound": {
+      "value": ""
+    },
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "resistance": 100.0,
+    "luminance": 0,
+    "lightOpacity": 1,
+    "emissiveRendering": true,
+    "tickRate": 10,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "colorOnMap": "DEFAULT",
+    "onEntityCollides": {
+      "name": "FluidhottestDangShengWuWanJiaPengZhuangFangKuaiShi"
+    }
+  }
+}

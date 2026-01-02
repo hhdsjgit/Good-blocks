@@ -63,10 +63,10 @@ repositories {
 	}
 }
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.2.27'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.2.27'//mc-forege!
 //    implementation files('/Changed-m1.18.2-v0.14b.jar')
-	implementation fg.deobf("curse.maven:slashblade-661527:6885809")
-	implementation fg.deobf("curse.maven:slashblade-711303:6898953")
+	implementation fg.deobf("curse.maven:slashblade-661527:6885809")//Changed-mc
+	implementation fg.deobf("curse.maven:slashblade-711303:7377803")//Changed-addon
 }
 
 tasks.withType(JavaCompile).configureEach {

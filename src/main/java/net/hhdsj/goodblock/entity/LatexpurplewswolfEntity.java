@@ -50,6 +50,8 @@ import net.ltxprogrammer.changed.entity.Gender;
 import net.ltxprogrammer.changed.entity.HairStyle;
 import net.ltxprogrammer.changed.entity.TransfurMode;
 import net.ltxprogrammer.changed.entity.beast.*;
+import net.ltxprogrammer.changed.init.ChangedAttributes;
+import net.ltxprogrammer.changed.init.ChangedAttributes;
 
 @Mod.EventBusSubscriber
 public class LatexpurplewswolfEntity extends AbstractSnowLeopard {
@@ -109,6 +111,7 @@ public class LatexpurplewswolfEntity extends AbstractSnowLeopard {
 	
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
+		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 20);
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 20);
 		builder = builder.add(Attributes.ARMOR, 0);

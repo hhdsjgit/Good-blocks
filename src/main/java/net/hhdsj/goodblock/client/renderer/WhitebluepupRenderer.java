@@ -61,8 +61,8 @@ public class WhitebluepupRenderer extends AdvancedHumanoidRenderer<WhitebluepupE
 		this.addLayer(new LatexParticlesLayer<>(this, this.model));
 		this.addLayer(CustomEyesLayer.builder(this, context.getModelSet())
 				.withSclera(Color3.fromInt(0x242424))
-				.withIris(CustomEyesLayer.fixedIfNotDarkLatexOverrideLeft(Color3.BLACK),
-						CustomEyesLayer.fixedIfNotDarkLatexOverrideRight(Color3.BLACK))
+				.withIris(CustomEyesLayer.fixedIfNotDarkLatexOverrideLeft(Color3.WHITE),
+						CustomEyesLayer.fixedIfNotDarkLatexOverrideRight(Color3.WHITE))
 				.build().setHeadShape(CustomEyesLayer.HeadShape.PUP));
 	}
 

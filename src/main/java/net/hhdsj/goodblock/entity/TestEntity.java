@@ -7,6 +7,7 @@ import net.ltxprogrammer.changed.entity.TransfurMode;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
 import net.ltxprogrammer.changed.util.Color3;
+import net.ltxprogrammer.changed.init.ChangedAttributes;
 
 public class TestEntity extends ChangedEntity {
     public TestEntity(EntityType<? extends ChangedEntity> type, Level level) {

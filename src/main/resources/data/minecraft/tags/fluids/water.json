@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "goodblock:testgbk",
-    "goodblock:flowing_testgbk"
+    "goodblock:flowing_testgbk",
+    "goodblock:a",
+    "goodblock:flowing_a",
+    "goodblock:fluidhottest",
+    "goodblock:flowing_fluidhottest"
   ]
 }

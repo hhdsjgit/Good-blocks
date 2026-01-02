@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.hhdsj.goodblock.entity.WhitebluepupEntity;
+import net.hhdsj.goodblock.entity.LatexyunxqicedragonEntity;
 import net.hhdsj.goodblock.entity.LatexyunxqhotdragonEntity;
 import net.hhdsj.goodblock.entity.LatexthreemonthwolfEntity;
 import net.hhdsj.goodblock.entity.LatexpurplewswolfEntity;
@@ -79,6 +80,10 @@ public class GoodblockModEntities {
 					.sized(0.6f, 1.95f));
 	public static final RegistryObject<EntityType<LatexyunxqhotdragonEntity>> LATEXYUNXQHOTDRAGON = register("latexyunxqhotdragon", EntityType.Builder.<LatexyunxqhotdragonEntity>of(LatexyunxqhotdragonEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexyunxqhotdragonEntity::new).fireImmune().sized(0.6f, 1.9f));
+	public static final RegistryObject<EntityType<LatexyunxqicedragonEntity>> LATEXYUNXQICEDRAGON = register("latexyunxqicedragon",
+			EntityType.Builder.<LatexyunxqicedragonEntity>of(LatexyunxqicedragonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexyunxqicedragonEntity::new)
+
+					.sized(0.6f, 2f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -99,6 +104,7 @@ public class GoodblockModEntities {
 			LatexpurplewswolfEntity.init();
 			LatexthreemonthwolfEntity.init();
 			LatexyunxqhotdragonEntity.init();
+			LatexyunxqicedragonEntity.init();
 		});
 	}
 
@@ -116,5 +122,6 @@ public class GoodblockModEntities {
 		event.put(LATEXPURPLEWSWOLF.get(), LatexpurplewswolfEntity.createAttributes().build());
 		event.put(LATEXTHREEMONTHWOLF.get(), LatexthreemonthwolfEntity.createAttributes().build());
 		event.put(LATEXYUNXQHOTDRAGON.get(), LatexyunxqhotdragonEntity.createAttributes().build());
+		event.put(LATEXYUNXQICEDRAGON.get(), LatexyunxqicedragonEntity.createAttributes().build());
 	}
 }

@@ -5,6 +5,7 @@ package net.hhdsj.goodblock.entity;
 import net.ltxprogrammer.changed.*;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
+import net.ltxprogrammer.changed.init.ChangedAttributes;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;

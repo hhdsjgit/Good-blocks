@@ -38,7 +38,7 @@ public class AdvcodeProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		if ((entity.getCapability(GoodblockModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new GoodblockModVariables.PlayerVariables())).Player_die >= 20) {
+		if ((entity.getCapability(GoodblockModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new GoodblockModVariables.PlayerVariables())).Player_die >= 100) {
 			if (entity instanceof ServerPlayer _player) {
 				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("goodblock:gha_13"));
 				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);

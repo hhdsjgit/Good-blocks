@@ -71,7 +71,7 @@ ModelLatexthreemonthwolf, ArmorLatexMaleCatModel<LatexthreemonthwolfEntity>> {
 
 	@Override
 	public ResourceLocation getTextureLocation(LatexthreemonthwolfEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/latex_purple_ws_wolf.png");
+		return new ResourceLocation("goodblock:textures/entities/latex_purple_ws_wolf1.png");
 	}
 
 	@Override

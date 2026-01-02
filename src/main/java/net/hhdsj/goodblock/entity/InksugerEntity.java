@@ -19,6 +19,7 @@ import net.minecraft.network.protocol.Packet;
 
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 
+import net.ltxprogrammer.changed.init.ChangedAttributes;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.init.ChangedSounds;
 import net.ltxprogrammer.changed.init.ChangedTransfurVariants;
@@ -127,6 +128,7 @@ public class InksugerEntity extends ChangedEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
+		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 20);
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 2);

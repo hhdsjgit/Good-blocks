@@ -31,8 +31,10 @@ import net.hhdsj.goodblock.item.ImpureuraniumingotItem;
 import net.hhdsj.goodblock.item.ImpureuraniumItem;
 import net.hhdsj.goodblock.item.Flutemusica1recordsItem;
 import net.hhdsj.goodblock.item.FluteItem;
+import net.hhdsj.goodblock.item.FluidhottestItem;
 import net.hhdsj.goodblock.item.Armora1ArmorItem;
 import net.hhdsj.goodblock.item.AnitfrrymusicItem;
+import net.hhdsj.goodblock.item.AItem;
 import net.hhdsj.goodblock.GoodblockMod;
 
 public class GoodblockModItems {
@@ -104,6 +106,12 @@ public class GoodblockModItems {
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXTHREEMONTHWOLF, -52225, -1, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
 	public static final RegistryObject<Item> LATEXYUNXQHOTDRAGON_SPAWN_EGG = REGISTRY.register("latexyunxqhotdragon_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXYUNXQHOTDRAGON, -5758720, -49408, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
+	public static final RegistryObject<Item> BLUE_CRYSTALORE = block(GoodblockModBlocks.BLUE_CRYSTALORE, null);
+	public static final RegistryObject<Item> LATEXYUNXQICEDRAGON_SPAWN_EGG = REGISTRY.register("latexyunxqicedragon_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXYUNXQICEDRAGON, -16711681, -13369345, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
+	public static final RegistryObject<Item> CATALYZER = block(GoodblockModBlocks.CATALYZER, null);
+	public static final RegistryObject<Item> A_BUCKET = REGISTRY.register("a_bucket", () -> new AItem());
+	public static final RegistryObject<Item> FLUIDHOTTEST_BUCKET = REGISTRY.register("fluidhottest_bucket", () -> new FluidhottestItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

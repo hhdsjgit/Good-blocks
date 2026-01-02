@@ -92,7 +92,7 @@ public class LatexthreemonthwolfEntityProjectile extends Arrow {
             final var variant = ChangedRegistry.TRANSFUR_VARIANT.get().getValue(this.formVariant);
             
             if (variant != null) {
-                ProcessTransfur.progressTransfur(livingEntity, 8.0f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
+                ProcessTransfur.progressTransfur(livingEntity, 10.0f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
             } else {
                 System.err.println("Could not find TransfurVariant for: " + this.formVariant);
             }

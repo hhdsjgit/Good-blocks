@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "goodblock:block/catalyzer"
+    },
+    "facing=east": {
+      "model": "goodblock:block/catalyzer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "goodblock:block/catalyzer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "goodblock:block/catalyzer",
+      "y": 270
+    }
+  }
+}

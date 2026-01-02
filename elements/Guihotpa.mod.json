@@ -1,0 +1,36 @@
+{
+  "_fv": 39,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGH",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_test_gui",
+          "text": {
+            "fixedValue": "test_gui"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 24,
+          "y": 17
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "GuihotpaXianShiYouXiNeiDieJiaCeng"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

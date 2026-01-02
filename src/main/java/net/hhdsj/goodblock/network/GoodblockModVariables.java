@@ -31,6 +31,8 @@ import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GoodblockModVariables {
+	public static double _Progress = 0;
+
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		GoodblockMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);

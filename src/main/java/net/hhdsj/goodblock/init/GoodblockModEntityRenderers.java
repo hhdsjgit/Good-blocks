@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.hhdsj.goodblock.client.renderer.WhitebluepupRenderer;
+import net.hhdsj.goodblock.client.renderer.LatexyunxqicedragonRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexyunxqhotdragonRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexthreemonthwolfRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexpurplewswolfRenderer;
@@ -38,5 +39,6 @@ public class GoodblockModEntityRenderers {
 		event.registerEntityRenderer(GoodblockModEntities.LATEXPURPLEWSWOLF.get(), LatexpurplewswolfRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXTHREEMONTHWOLF.get(), LatexthreemonthwolfRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXYUNXQHOTDRAGON.get(), LatexyunxqhotdragonRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.LATEXYUNXQICEDRAGON.get(), LatexyunxqicedragonRenderer::new);
 	}
 }

@@ -5,6 +5,7 @@ package net.hhdsj.goodblock.entity;
 import net.ltxprogrammer.changed.*;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
+import net.ltxprogrammer.changed.init.ChangedAttributes;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
@@ -68,7 +69,7 @@ public class LatexgreendragonEntity extends ChangedEntity {
     }
 
     public Color3 getTransfurColor(TransfurCause cause) {
-        return Color3.getColor("#0793f7");
+        return Color3.getColor("#0095ff");
     }
     
 	@SubscribeEvent
@@ -127,6 +128,7 @@ public class LatexgreendragonEntity extends ChangedEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
+		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 20);
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
