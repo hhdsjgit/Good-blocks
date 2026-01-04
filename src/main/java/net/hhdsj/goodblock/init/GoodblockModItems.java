@@ -79,7 +79,6 @@ public class GoodblockModItems {
 	public static final RegistryObject<Item> PALE_WOOD_FENCE = block(GoodblockModBlocks.PALE_WOOD_FENCE, CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Item> PALE_WOOD_FENCE_GATE = block(GoodblockModBlocks.PALE_WOOD_FENCE_GATE, CreativeModeTab.TAB_REDSTONE);
 	public static final RegistryObject<Item> PALE_WOOD_PRESSURE_PLATE = block(GoodblockModBlocks.PALE_WOOD_PRESSURE_PLATE, CreativeModeTab.TAB_REDSTONE);
-	public static final RegistryObject<Item> LATEXFOX_SPAWN_EGG = REGISTRY.register("latexfox_spawn_egg", () -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXFOX, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> LATEX_ORANGE_FOX_SPAWN_EGG = REGISTRY.register("latex_orange_fox_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEX_ORANGE_FOX, -39373, -39424, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> LATEX_KCAHRA_SHARK_SPAWN_EGG = REGISTRY.register("latex_kcahra_shark_spawn_egg",

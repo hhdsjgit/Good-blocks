@@ -23,7 +23,6 @@ import net.hhdsj.goodblock.entity.LatexthreemonthwolfEntity;
 import net.hhdsj.goodblock.entity.LatexpurplewswolfEntity;
 import net.hhdsj.goodblock.entity.LatexiceDragonEntity;
 import net.hhdsj.goodblock.entity.LatexgreendragonEntity;
-import net.hhdsj.goodblock.entity.LatexfoxEntity;
 import net.hhdsj.goodblock.entity.LatexOrangeFoxEntity;
 import net.hhdsj.goodblock.entity.LatexKcahraSharkEntity;
 import net.hhdsj.goodblock.entity.InksugerEntity;
@@ -34,10 +33,6 @@ import net.hhdsj.goodblock.GoodblockMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GoodblockModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, GoodblockMod.MODID);
-	public static final RegistryObject<EntityType<LatexfoxEntity>> LATEXFOX = register("latexfox",
-			EntityType.Builder.<LatexfoxEntity>of(LatexfoxEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexfoxEntity::new)
-
-					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<LatexOrangeFoxEntity>> LATEX_ORANGE_FOX = register("latex_orange_fox",
 			EntityType.Builder.<LatexOrangeFoxEntity>of(LatexOrangeFoxEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexOrangeFoxEntity::new)
 
@@ -92,7 +87,6 @@ public class GoodblockModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
-			LatexfoxEntity.init();
 			LatexOrangeFoxEntity.init();
 			LatexKcahraSharkEntity.init();
 			LatexgreendragonEntity.init();
@@ -110,7 +104,6 @@ public class GoodblockModEntities {
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
-		event.put(LATEXFOX.get(), LatexfoxEntity.createAttributes().build());
 		event.put(LATEX_ORANGE_FOX.get(), LatexOrangeFoxEntity.createAttributes().build());
 		event.put(LATEX_KCAHRA_SHARK.get(), LatexKcahraSharkEntity.createAttributes().build());
 		event.put(LATEXGREENDRAGON.get(), LatexgreendragonEntity.createAttributes().build());

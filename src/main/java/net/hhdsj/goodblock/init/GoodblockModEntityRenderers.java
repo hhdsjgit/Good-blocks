@@ -16,7 +16,6 @@ import net.hhdsj.goodblock.client.renderer.LatexthreemonthwolfRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexpurplewswolfRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexiceDragonRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexgreendragonRenderer;
-import net.hhdsj.goodblock.client.renderer.LatexfoxRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexOrangeFoxRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexKcahraSharkRenderer;
 import net.hhdsj.goodblock.client.renderer.InksugerRenderer;
@@ -27,7 +26,6 @@ import net.hhdsj.goodblock.client.renderer.BlackpupmaleRenderer;
 public class GoodblockModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(GoodblockModEntities.LATEXFOX.get(), LatexfoxRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEX_ORANGE_FOX.get(), LatexOrangeFoxRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEX_KCAHRA_SHARK.get(), LatexKcahraSharkRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXGREENDRAGON.get(), LatexgreendragonRenderer::new);

@@ -123,7 +123,7 @@ public class LatexOrangeFoxEntity extends ChangedEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 20);
+		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 5);
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 11);
 		builder = builder.add(Attributes.ARMOR, 2);
