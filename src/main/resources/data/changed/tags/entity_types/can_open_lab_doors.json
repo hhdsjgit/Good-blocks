@@ -1,4 +1,18 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+	"goodblock:latex_orange_fox",
+    "goodblock:latex_kcahra_shark",
+    "goodblock:latexgreendragon",
+    "goodblock:darkfu_latex_wolf_male",
+    "goodblock:latexice_dragon",
+    "goodblock:inksuger",
+    "goodblock:blackpupmale",
+    "goodblock:whitebluepup",
+    "goodblock:latexpurplewswolf",
+    "goodblock:latexthreemonthwolf",
+    "goodblock:latexyunxqhotdragon",
+    "goodblock:latexyunxqicedragon",
+    "goodblock:latex_kamona_hsguy_dragon_wolf"
+  	]
 }

@@ -15,13 +15,13 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 24,
-          "y": 17
+          "x": 375,
+          "y": 8
         }
       }
     ],
     "baseTexture": "",
-    "overlayTarget": "Ingame",
+    "overlayTarget": "MainMenu",
     "displayCondition": {
       "name": "GuihotpaXianShiYouXiNeiDieJiaCeng"
     },

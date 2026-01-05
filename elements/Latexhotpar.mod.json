@@ -2,8 +2,8 @@
   "_fv": 39,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "test",
-    "icon": "dark_latex_goo.png",
+    "effectName": "orange_latex",
+    "icon": "latexhotpar.png",
     "color": {
       "value": -52480,
       "falpha": 0.0
