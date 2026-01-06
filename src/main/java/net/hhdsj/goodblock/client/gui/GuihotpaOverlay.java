@@ -6,7 +6,7 @@ import org.checkerframework.checker.units.qual.h;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.client.event.ScreenEvent;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
@@ -14,7 +14,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.client.renderer.GameRenderer;
-import net.minecraft.client.gui.screens.PauseScreen;
 import net.minecraft.client.Minecraft;
 
 import net.hhdsj.goodblock.procedures.GuihotpaXianShiYouXiNeiDieJiaCengProcedure;
@@ -25,10 +24,10 @@ import com.mojang.blaze3d.platform.GlStateManager;
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class GuihotpaOverlay {
 	@SubscribeEvent(priority = EventPriority.HIGH)
-	public static void eventHandler(ScreenEvent.DrawScreenEvent.Post event) {
-		if (event.getScreen() instanceof PauseScreen) {
-			int w = event.getScreen().width;
-			int h = event.getScreen().height;
+	public static void eventHandler(RenderGameOverlayEvent.Pre event) {
+		if (event.getType() == RenderGameOverlayEvent.ElementType.ALL) {
+			int w = event.getWindow().getGuiScaledWidth();
+			int h = event.getWindow().getGuiScaledHeight();
 			int posX = w / 2;
 			int posY = h / 2;
 			Level world = null;
@@ -50,8 +49,8 @@ public class GuihotpaOverlay {
 			RenderSystem.setShaderColor(1, 1, 1, 1);
 			if (GuihotpaXianShiYouXiNeiDieJiaCengProcedure.execute(entity)) {
 				RenderSystem.setShaderTexture(0, new ResourceLocation("goodblock:textures/screens/hot_png.png"));
-				Minecraft.getInstance().gui.blit(event.getPoseStack(), 0, 0, 0, 0, w, h, w, h);
-				Minecraft.getInstance().font.draw(event.getPoseStack(), new TranslatableComponent("gui.goodblock.guihotpa.label_test_gui"), posX + -180, posY + -94, -1);
+				Minecraft.getInstance().gui.blit(event.getMatrixStack(), 0, 0, 0, 0, w, h, w, h);
+				Minecraft.getInstance().font.draw(event.getMatrixStack(), new TranslatableComponent("gui.goodblock.guihotpa.label_test_gui"), posX + -180, posY + -94, -1);
 			}
 			RenderSystem.depthMask(true);
 			RenderSystem.defaultBlendFunc();
