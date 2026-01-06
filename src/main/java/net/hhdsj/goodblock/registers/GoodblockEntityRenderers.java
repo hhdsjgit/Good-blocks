@@ -30,7 +30,6 @@ import net.hhdsj.goodblock.client.renderer.WhitebluepupRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexthreemonthwolfRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexpurplewswolfRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexiceDragonRenderer;
-import net.hhdsj.goodblock.client.renderer.LatexgreendragonRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexOrangeFoxRenderer;
 import net.hhdsj.goodblock.client.renderer.LatexKcahraSharkRenderer;
 import net.hhdsj.goodblock.client.renderer.InksugerRenderer;

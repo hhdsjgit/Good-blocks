@@ -9,19 +9,19 @@
         "data": {
           "name": "label_test_gui",
           "text": {
-            "fixedValue": "test_gui"
+            "fixedValue": "你收到感染"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 375,
-          "y": 8
+          "x": 33,
+          "y": 26
         }
       }
     ],
-    "baseTexture": "",
-    "overlayTarget": "MainMenu",
+    "baseTexture": "hot_png.png",
+    "overlayTarget": "IngameMenu",
     "displayCondition": {
       "name": "GuihotpaXianShiYouXiNeiDieJiaCeng"
     },

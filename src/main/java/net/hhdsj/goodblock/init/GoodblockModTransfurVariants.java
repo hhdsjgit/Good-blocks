@@ -75,13 +75,13 @@ public class GoodblockModTransfurVariants {
 
     
 	/* Test latex
-    public static final RegistryObject<TransfurVariant<LatexfoxEntity>> LATEXFOX = REGISTRY.register("from_latex_fox",
+    public static final RegistryObject<TransfurVariant<LatexfoxEntity>> LATEXFOX = REGISTRY.register("form_latex_fox",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXFOX)
 	    .stepSize(0.7f)
 	    .build());
 	*/
 
-    public static final RegistryObject<TransfurVariant<LatexOrangeFoxEntity>> LATEX_ORANGE_FOX = REGISTRY.register("from_orange_fox",
+    public static final RegistryObject<TransfurVariant<LatexOrangeFoxEntity>> LATEX_ORANGE_FOX = REGISTRY.register("form_orange_fox",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEX_ORANGE_FOX)
 	    .stepSize(0.7f)
 	    .nightVision()
@@ -89,7 +89,7 @@ public class GoodblockModTransfurVariants {
 	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 	    .build());
 
-	public static final RegistryObject<TransfurVariant<LatexKcahraSharkEntity>> LATEX_KCAHRA_SHARK = REGISTRY.register("from_latex_kcahra_shark",
+	public static final RegistryObject<TransfurVariant<LatexKcahraSharkEntity>> LATEX_KCAHRA_SHARK = REGISTRY.register("form_latex_kcahra_shark",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEX_KCAHRA_SHARK)
 	    .stepSize(0.7f)
 	    .gills()
@@ -98,8 +98,8 @@ public class GoodblockModTransfurVariants {
 	    .replicating()
 	    .build());
 
-	public static final RegistryObject<TransfurVariant<LatexgreendragonEntity>> LATEXGREENDRAGON = REGISTRY.register("from_green_dragon",
-    () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXGREENDRAGON)
+	public static final RegistryObject<TransfurVariant<LatexbluedragonEntity>> LATEXBLUEDRAGON = REGISTRY.register("form_blue_dragon",
+    () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXBLUEDRAGON)
 	    .stepSize(0.7f)
 	    .glide()
 	    .addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
@@ -111,7 +111,7 @@ public class GoodblockModTransfurVariants {
 	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 	    .build());
 
-	public static final RegistryObject<TransfurVariant<DarkfuLatexWolfMaleEntity>> DARKFU_LATEX_WOLF_MALE = REGISTRY.register("from_darkfu_latex_wolf_male",
+	public static final RegistryObject<TransfurVariant<DarkfuLatexWolfMaleEntity>> DARKFU_LATEX_WOLF_MALE = REGISTRY.register("form_darkfu_latex_wolf_male",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.DARKFU_LATEX_WOLF_MALE)
 	    .stepSize(0.7f)
 	    .faction(LatexType.DARK_LATEX)
@@ -121,7 +121,7 @@ public class GoodblockModTransfurVariants {
 	    .replicating()
 	    .build());
 
-	public static final RegistryObject<TransfurVariant<LatexiceDragonEntity>> LATEXICE_DRAGON = REGISTRY.register("from_latex_ice_dragon",
+	public static final RegistryObject<TransfurVariant<LatexiceDragonEntity>> LATEXICE_DRAGON = REGISTRY.register("form_latex_ice_dragon",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXICE_DRAGON)
 	    .stepSize(0.7f)
 	    .nightVision()
@@ -130,7 +130,7 @@ public class GoodblockModTransfurVariants {
 	    .replicating()
 	    .build());
 
-	public static final RegistryObject<TransfurVariant<InksugerEntity>> INKSUGER = REGISTRY.register("from_ink_suger",
+	public static final RegistryObject<TransfurVariant<InksugerEntity>> INKSUGER = REGISTRY.register("form_ink_suger",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.INKSUGER)
 	    .stepSize(0.7f)
 	    .nightVision()
@@ -140,17 +140,16 @@ public class GoodblockModTransfurVariants {
 	    .reducedFall()
 	    .build());
 	
-	public static final RegistryObject<TransfurVariant<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = REGISTRY.register("from_latex_kamona_hsguy_dragon_wolf",
+	public static final RegistryObject<TransfurVariant<LatexkamonaHSguydragonwolfEntity>> LATEXKAMONA_H_SGUYDRAGONWOLF = REGISTRY.register("form_latex_kamona_hsguy_dragon_wolf",
     () -> TransfurVariant.Builder.of(GoodblockEntities.LATEXKAMONA_H_SGUYDRAGONWOLF)
 	    .stepSize(0.7f)
 	    .nightVision()
 	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 	    .transfurMode(TransfurMode.ABSORPTION)
-	    //.addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .replicating()
 	    .build());	
 
-	public static final RegistryObject<TransfurVariant<BlackpupmaleEntity>> BLACKPUPMALE = REGISTRY.register("from_black_pup",
+	public static final RegistryObject<TransfurVariant<BlackpupmaleEntity>> BLACKPUPMALE = REGISTRY.register("form_black_pup",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.BLACKPUPMALE)
 	    .stepSize(0.7f)
 	    .nightVision()
@@ -159,7 +158,7 @@ public class GoodblockModTransfurVariants {
 	    .reducedFall()
 	    .build());
 
-	public static final RegistryObject<TransfurVariant<WhitebluepupEntity>> WHITEBLUEPUP = REGISTRY.register("from_white_blue_pup",
+	public static final RegistryObject<TransfurVariant<WhitebluepupEntity>> WHITEBLUEPUP = REGISTRY.register("form_white_blue_pup",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.WHITEBLUEPUP)
 	    .stepSize(0.7f)
 	    .nightVision()
@@ -168,7 +167,7 @@ public class GoodblockModTransfurVariants {
 	    .reducedFall()
 	    .build());
 
-	public static final RegistryObject<TransfurVariant<LatexpurplewswolfEntity>> LATEXPURPLEWSWOLF = REGISTRY.register("from_latex_purplews_wolf",
+	public static final RegistryObject<TransfurVariant<LatexpurplewswolfEntity>> LATEXPURPLEWSWOLF = REGISTRY.register("form_latex_purplews_wolf",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXPURPLEWSWOLF)
 	    .stepSize(0.7f)
 		.breatheMode(TransfurVariant.BreatheMode.WEAK)
@@ -178,9 +177,8 @@ public class GoodblockModTransfurVariants {
 		.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 		.jumpStrength(2f)
 	    .build());
-	    //LATEXYUNXQHOTDRAGON
-
-	public static final RegistryObject<TransfurVariant<LatexthreemonthwolfEntity>> LATEXTHREEMONTHWOLF = REGISTRY.register("from_latex_three_month_wolf",
+	
+	public static final RegistryObject<TransfurVariant<LatexthreemonthwolfEntity>> LATEXTHREEMONTHWOLF = REGISTRY.register("form_latex_three_month_wolf",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXTHREEMONTHWOLF)
 	    .stepSize(0.7f)
 		.breatheMode(TransfurVariant.BreatheMode.WEAK)
@@ -191,24 +189,22 @@ public class GoodblockModTransfurVariants {
 		.jumpStrength(2f)
 	    .build());
 
-	public static final RegistryObject<TransfurVariant<LatexyunxqhotdragonEntity>> LATEXYUNXQHOTDRAGON = REGISTRY.register("from_latex_yunxq_hot_dragon",
+	public static final RegistryObject<TransfurVariant<LatexyunxqhotdragonEntity>> LATEXYUNXQHOTDRAGON = REGISTRY.register("form_latex_yunxq_hot_dragon",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNXQHOTDRAGON)
 	    .stepSize(0.7f)
 	    .glide()
 	    .addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
-	    //.addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .transfurMode(TransfurMode.ABSORPTION)
 	    .replicating()
 	    .nightVision()
 	    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 	    .build());
 
-	public static final RegistryObject<TransfurVariant<LatexyunxqicedragonEntity>> LATEXYUNXQICEDRAGON = REGISTRY.register("from_latex_yun_xq_ice_dragon",
+	public static final RegistryObject<TransfurVariant<LatexyunxqicedragonEntity>> LATEXYUNXQICEDRAGON = REGISTRY.register("form_latex_yun_xq_ice_dragon",
     () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNXQICEDRAGON)
 	    .stepSize(0.7f)
 	    .glide()
 	    .addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
-	    //.addAbility(() -> ChangedAbilities.SWITCH_TRANSFUR_MODE.get())
 	    .transfurMode(TransfurMode.ABSORPTION)
 	    .replicating()
 	    .nightVision()

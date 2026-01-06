@@ -22,7 +22,7 @@ import net.hhdsj.goodblock.entity.LatexyunxqhotdragonEntity;
 import net.hhdsj.goodblock.entity.LatexthreemonthwolfEntity;
 import net.hhdsj.goodblock.entity.LatexpurplewswolfEntity;
 import net.hhdsj.goodblock.entity.LatexiceDragonEntity;
-import net.hhdsj.goodblock.entity.LatexgreendragonEntity;
+import net.hhdsj.goodblock.entity.LatexbluedragonEntity;
 import net.hhdsj.goodblock.entity.LatexOrangeFoxEntity;
 import net.hhdsj.goodblock.entity.LatexKcahraSharkEntity;
 import net.hhdsj.goodblock.entity.InksugerEntity;
@@ -41,10 +41,6 @@ public class GoodblockModEntities {
 			EntityType.Builder.<LatexKcahraSharkEntity>of(LatexKcahraSharkEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexKcahraSharkEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<LatexgreendragonEntity>> LATEXGREENDRAGON = register("latexgreendragon",
-			EntityType.Builder.<LatexgreendragonEntity>of(LatexgreendragonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexgreendragonEntity::new)
-
-					.sized(0.6f, 1.95f));
 	public static final RegistryObject<EntityType<DarkfuLatexWolfMaleEntity>> DARKFU_LATEX_WOLF_MALE = register("darkfu_latex_wolf_male",
 			EntityType.Builder.<DarkfuLatexWolfMaleEntity>of(DarkfuLatexWolfMaleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DarkfuLatexWolfMaleEntity::new)
 
@@ -79,6 +75,10 @@ public class GoodblockModEntities {
 			EntityType.Builder.<LatexyunxqicedragonEntity>of(LatexyunxqicedragonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexyunxqicedragonEntity::new)
 
 					.sized(0.6f, 2f));
+	public static final RegistryObject<EntityType<LatexbluedragonEntity>> LATEXBLUEDRAGON = register("latexbluedragon",
+			EntityType.Builder.<LatexbluedragonEntity>of(LatexbluedragonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexbluedragonEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -89,7 +89,6 @@ public class GoodblockModEntities {
 		event.enqueueWork(() -> {
 			LatexOrangeFoxEntity.init();
 			LatexKcahraSharkEntity.init();
-			LatexgreendragonEntity.init();
 			DarkfuLatexWolfMaleEntity.init();
 			LatexiceDragonEntity.init();
 			InksugerEntity.init();
@@ -99,6 +98,7 @@ public class GoodblockModEntities {
 			LatexthreemonthwolfEntity.init();
 			LatexyunxqhotdragonEntity.init();
 			LatexyunxqicedragonEntity.init();
+			LatexbluedragonEntity.init();
 		});
 	}
 
@@ -106,7 +106,6 @@ public class GoodblockModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(LATEX_ORANGE_FOX.get(), LatexOrangeFoxEntity.createAttributes().build());
 		event.put(LATEX_KCAHRA_SHARK.get(), LatexKcahraSharkEntity.createAttributes().build());
-		event.put(LATEXGREENDRAGON.get(), LatexgreendragonEntity.createAttributes().build());
 		event.put(DARKFU_LATEX_WOLF_MALE.get(), DarkfuLatexWolfMaleEntity.createAttributes().build());
 		event.put(LATEXICE_DRAGON.get(), LatexiceDragonEntity.createAttributes().build());
 		event.put(INKSUGER.get(), InksugerEntity.createAttributes().build());
@@ -116,5 +115,6 @@ public class GoodblockModEntities {
 		event.put(LATEXTHREEMONTHWOLF.get(), LatexthreemonthwolfEntity.createAttributes().build());
 		event.put(LATEXYUNXQHOTDRAGON.get(), LatexyunxqhotdragonEntity.createAttributes().build());
 		event.put(LATEXYUNXQICEDRAGON.get(), LatexyunxqicedragonEntity.createAttributes().build());
+		event.put(LATEXBLUEDRAGON.get(), LatexbluedragonEntity.createAttributes().build());
 	}
 }

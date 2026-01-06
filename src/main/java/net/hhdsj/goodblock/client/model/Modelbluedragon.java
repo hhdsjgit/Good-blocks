@@ -46,7 +46,7 @@ import java.util.List;
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class ModelgreendragonUnified extends AdvancedHumanoidModel<LatexgreendragonEntity> implements AdvancedHumanoidModelInterface<LatexgreendragonEntity, ModelgreendragonUnified> {//<T extends Entity> extends EntityModel<T> {
+public class Modelbluedragon extends AdvancedHumanoidModel<LatexbluedragonEntity> implements AdvancedHumanoidModelInterface<LatexbluedragonEntity, Modelbluedragon> {//<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_green_dragon"), "main");
@@ -59,9 +59,9 @@ public class ModelgreendragonUnified extends AdvancedHumanoidModel<Latexgreendra
 	public final ModelPart Tail;
 	public final ModelPart RightWing;
     public final ModelPart LeftWing;
-	public final HumanoidAnimator<LatexgreendragonEntity, ModelgreendragonUnified> animator;
+	public final HumanoidAnimator<LatexbluedragonEntity, Modelbluedragon> animator;
 
-	public ModelgreendragonUnified(ModelPart root) {
+	public Modelbluedragon(ModelPart root) {
 		super(root);
         this.RightLeg = root.getChild("RightLeg");
         this.LeftLeg = root.getChild("LeftLeg");
@@ -247,11 +247,11 @@ public class ModelgreendragonUnified extends AdvancedHumanoidModel<Latexgreendra
 	}
 
 	@Override
-    public void prepareMobModel(LatexgreendragonEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
+    public void prepareMobModel(LatexbluedragonEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
         this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
-    public void setupHand(LatexgreendragonEntity entity) {
+    public void setupHand(LatexbluedragonEntity entity) {
         animator.setupHand();
     }
 
@@ -273,11 +273,11 @@ public class ModelgreendragonUnified extends AdvancedHumanoidModel<Latexgreendra
     }
 
 	@Override
-    public HumanoidAnimator<LatexgreendragonEntity, ModelgreendragonUnified> getAnimator(LatexgreendragonEntity entity) {
+    public HumanoidAnimator<LatexbluedragonEntity, Modelbluedragon> getAnimator(LatexbluedragonEntity entity) {
         return this.animator;
     }
 
-    public void setupAnim(@NotNull LatexgreendragonEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void setupAnim(@NotNull LatexbluedragonEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.animator.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
     }

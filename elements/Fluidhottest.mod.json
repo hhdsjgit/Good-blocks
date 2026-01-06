@@ -9,7 +9,7 @@
     "tintType": "No tint",
     "canMultiply": false,
     "flowRate": 50,
-    "levelDecrease": 1,
+    "levelDecrease": 2,
     "slopeFindDistance": 4,
     "spawnParticles": true,
     "dripParticle": {
@@ -20,11 +20,11 @@
     "density": 1000,
     "viscosity": 1000,
     "temperature": 300,
-    "type": "WATER",
+    "type": "LAVA",
     "generateBucket": true,
     "textureBucket": "",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:Worldblock"
     },
     "emptySound": {
       "value": ""
@@ -32,13 +32,13 @@
     "rarity": "COMMON",
     "specialInfo": [],
     "resistance": 100.0,
-    "luminance": 0,
+    "luminance": 15,
     "lightOpacity": 1,
     "emissiveRendering": true,
     "tickRate": 10,
     "flammability": 0,
     "fireSpreadSpeed": 0,
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "ORANGE_TERRACOTTA",
     "onEntityCollides": {
       "name": "FluidhottestDangShengWuWanJiaPengZhuangFangKuaiShi"
     }

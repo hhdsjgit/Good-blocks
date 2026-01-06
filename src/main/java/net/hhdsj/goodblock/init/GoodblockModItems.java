@@ -83,8 +83,6 @@ public class GoodblockModItems {
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEX_ORANGE_FOX, -39373, -39424, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> LATEX_KCAHRA_SHARK_SPAWN_EGG = REGISTRY.register("latex_kcahra_shark_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEX_KCAHRA_SHARK, -16711681, -16737793, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> LATEXGREENDRAGON_SPAWN_EGG = REGISTRY.register("latexgreendragon_spawn_egg",
-			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXGREENDRAGON, -16711936, -16711681, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> TESTGBK_BUCKET = REGISTRY.register("testgbk_bucket", () -> new TESTGBKItem());
 	public static final RegistryObject<Item> PALETREE = REGISTRY.register("paletree", () -> new PaletreeItem());
 	public static final RegistryObject<Item> INKSANS_4 = REGISTRY.register("inksans_4", () -> new Inksans4Item());
@@ -111,6 +109,8 @@ public class GoodblockModItems {
 	public static final RegistryObject<Item> CATALYZER = block(GoodblockModBlocks.CATALYZER, null);
 	public static final RegistryObject<Item> A_BUCKET = REGISTRY.register("a_bucket", () -> new AItem());
 	public static final RegistryObject<Item> FLUIDHOTTEST_BUCKET = REGISTRY.register("fluidhottest_bucket", () -> new FluidhottestItem());
+	public static final RegistryObject<Item> LATEXBLUEDRAGON_SPAWN_EGG = REGISTRY.register("latexbluedragon_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXBLUEDRAGON, -16750849, -16776961, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

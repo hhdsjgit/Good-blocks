@@ -1,6 +1,7 @@
 
 package net.hhdsj.goodblock.entity;
 
+
 import net.ltxprogrammer.changed.*;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
@@ -13,8 +14,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
@@ -40,16 +39,14 @@ import net.minecraftforge.common.ForgeMod;
 
 import java.util.Set;
 
-
 @Mod.EventBusSubscriber
-public class LatexyunxqhotdragonEntity extends ChangedEntity {
-
+public class LatexbluedragonEntity extends ChangedEntity {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("desert"));
 
 	@Override
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
-        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.12);
+        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.1);
         attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.93);
     }
     
@@ -62,19 +59,31 @@ public class LatexyunxqhotdragonEntity extends ChangedEntity {
     public TransfurMode getTransfurMode() {
         return TransfurMode.REPLICATION;
     }
+    /*
+    public Color3 getDripColor() {
+        return Color3.getColor("#0793f7");
+    }*/
+
+	@Override
+    public HairStyle getDefaultHairStyle() {
+        return HairStyle.SHORT_MESSY.get();
+    }
+
+    public Color3 getTransfurColor(TransfurCause cause) {
+        return Color3.getColor("#0095ff");
+    }
     
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXYUNXQHOTDRAGON.get(), 20, 1, 2));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXBLUEDRAGON.get(), 20, 1, 2));
 	}
 
-
-	public LatexyunxqhotdragonEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(GoodblockModEntities.LATEXYUNXQHOTDRAGON.get(), world);
+	public LatexbluedragonEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(GoodblockModEntities.LATEXBLUEDRAGON.get(), world);
 	}
 
-	public LatexyunxqhotdragonEntity(EntityType<LatexyunxqhotdragonEntity> type, Level world) {
+	public LatexbluedragonEntity(EntityType<LatexbluedragonEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
@@ -96,11 +105,6 @@ public class LatexyunxqhotdragonEntity extends ChangedEntity {
 		return MobType.UNDEFINED;
 	}
 
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(Items.BLAZE_ROD));
-	}
-
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
@@ -111,8 +115,15 @@ public class LatexyunxqhotdragonEntity extends ChangedEntity {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 	}
 
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		if (source == DamageSource.FALL)
+			return false;
+		return super.hurt(source, amount);
+	}
+
 	public static void init() {
-		SpawnPlacements.register(GoodblockModEntities.LATEXYUNXQHOTDRAGON.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(GoodblockModEntities.LATEXBLUEDRAGON.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
@@ -120,7 +131,7 @@ public class LatexyunxqhotdragonEntity extends ChangedEntity {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 20);
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 12);
+		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);

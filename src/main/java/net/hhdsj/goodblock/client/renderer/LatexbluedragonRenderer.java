@@ -17,12 +17,12 @@ import net.ltxprogrammer.changed.util.Color3;
 import net.ltxprogrammer.changed.client.renderer.AdvancedHumanoidRenderer;
 import net.ltxprogrammer.changed.client.renderer.layers.*;
 
-import net.hhdsj.goodblock.client.model.ModelgreendragonUnified;
-import net.hhdsj.goodblock.entity.LatexgreendragonEntity;
+import net.hhdsj.goodblock.client.model.Modelbluedragon;
+import net.hhdsj.goodblock.entity.LatexbluedragonEntity;
 
-public class LatexgreendragonRenderer extends AdvancedHumanoidRenderer<LatexgreendragonEntity, ModelgreendragonUnified, ArmorLatexMaleWingedDragonModel<LatexgreendragonEntity>> {
-	public LatexgreendragonRenderer(EntityRendererProvider.Context context) {
-		super(context, new ModelgreendragonUnified(context.bakeLayer(ModelgreendragonUnified.LAYER_LOCATION)),
+public class LatexbluedragonRenderer extends AdvancedHumanoidRenderer<LatexbluedragonEntity, Modelbluedragon, ArmorLatexMaleWingedDragonModel<LatexbluedragonEntity>> {
+	public LatexbluedragonRenderer(EntityRendererProvider.Context context) {
+		super(context, new Modelbluedragon(context.bakeLayer(Modelbluedragon.LAYER_LOCATION)),
 		//ArmorLatexMaleWingedDragonModel::new,
 		ArmorLatexMaleWingedDragonModel.MODEL_SET, 
 		0.5f);
@@ -35,7 +35,7 @@ public class LatexgreendragonRenderer extends AdvancedHumanoidRenderer<Latexgree
 
 
 	@Override
-	public ResourceLocation getTextureLocation(LatexgreendragonEntity entity) {
+	public ResourceLocation getTextureLocation(LatexbluedragonEntity entity) {
 		return new ResourceLocation("goodblock:textures/entities/latex_bluegreen_texture_new1.png");
 	}
 }

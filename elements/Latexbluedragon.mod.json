@@ -2,29 +2,29 @@
   "_fv": 39,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Latexgreendragon",
+    "mobName": "Latexbluedragon",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "latex_bluegreen_texture.png",
+    "mobModelTexture": "latex_bluegreen_texture_new1.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
     },
     "modelWidth": 0.6,
-    "modelHeight": 1.95,
+    "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16711936,
+      "value": -16750849,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -16711681,
+      "value": -16776961,
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:GoodblockEntity"
     },
     "isBoss": false,
     "bossBarColor": "PINK",
@@ -56,7 +56,7 @@
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 10,
+    "health": 12,
     "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
@@ -69,7 +69,7 @@
     "canControlStrafe": false,
     "immuneToFire": false,
     "immuneToArrows": false,
-    "immuneToFallDamage": true,
+    "immuneToFallDamage": false,
     "immuneToCactus": false,
     "immuneToDrowning": false,
     "immuneToLightning": false,
@@ -97,7 +97,7 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"140\" y=\"60\"></block><block type=\"attack_on_collide\" x=\"193\" y=\"131\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block><block type=\"attack_on_collide\" x=\"391\" y=\"145\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -112,13 +112,9 @@
     "doesDespawnWhenIdle": true,
     "spawningProbability": 20,
     "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 2,
-    "restrictionBiomes": [
-      {
-        "value": "desert"
-      }
-    ],
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [],
     "spawnInDungeons": false
   }
 }

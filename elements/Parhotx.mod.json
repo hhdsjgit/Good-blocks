@@ -2,7 +2,7 @@
   "_fv": 39,
   "_type": "particle",
   "definition": {
-    "texture": "oip-c_1.png",
+    "texture": "par_hot.png",
     "animate": false,
     "frameDuration": 1,
     "width": 0.15,
