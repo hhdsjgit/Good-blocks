@@ -57,7 +57,7 @@ import net.ltxprogrammer.changed.item.LatexTippedArrowItem; // 根据实际路�
 //@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class LatexthreemonthwolfEntityProjectile extends Arrow {
     
-    private ResourceLocation formVariant = new ResourceLocation("goodblock", "from_latex_purplews_wolf");
+    private ResourceLocation formVariant = new ResourceLocation("goodblock", "form_latex_purplews_wolf");
     
     public LatexthreemonthwolfEntityProjectile(PlayMessages.SpawnEntity packet, Level world) {
         super(GoodblockEntities.LATEXTHREEMONTHWOLF_PROJECTILE.get(), world);

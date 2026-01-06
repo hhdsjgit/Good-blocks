@@ -12,6 +12,9 @@
     "isBad": true,
     "isBenefitical": false,
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "LatexhotparZaiXiaoGuoChiXuShiMeiKeFaSheng"
+    }
   }
 }

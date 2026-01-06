@@ -15,7 +15,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
 import net.hhdsj.goodblock.item.ThefluffyheartbeatinthecubiclemusicItem;
-import net.hhdsj.goodblock.item.TESTGBKItem;
 import net.hhdsj.goodblock.item.SulphurItem;
 import net.hhdsj.goodblock.item.PaletreeItem;
 import net.hhdsj.goodblock.item.PainiteswordItem;
@@ -34,7 +33,6 @@ import net.hhdsj.goodblock.item.FluteItem;
 import net.hhdsj.goodblock.item.FluidhottestItem;
 import net.hhdsj.goodblock.item.Armora1ArmorItem;
 import net.hhdsj.goodblock.item.AnitfrrymusicItem;
-import net.hhdsj.goodblock.item.AItem;
 import net.hhdsj.goodblock.GoodblockMod;
 
 public class GoodblockModItems {
@@ -83,7 +81,6 @@ public class GoodblockModItems {
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEX_ORANGE_FOX, -39373, -39424, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> LATEX_KCAHRA_SHARK_SPAWN_EGG = REGISTRY.register("latex_kcahra_shark_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEX_KCAHRA_SHARK, -16711681, -16737793, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> TESTGBK_BUCKET = REGISTRY.register("testgbk_bucket", () -> new TESTGBKItem());
 	public static final RegistryObject<Item> PALETREE = REGISTRY.register("paletree", () -> new PaletreeItem());
 	public static final RegistryObject<Item> INKSANS_4 = REGISTRY.register("inksans_4", () -> new Inksans4Item());
 	public static final RegistryObject<Item> DARKFU_LATEX_WOLF_MALE_SPAWN_EGG = REGISTRY.register("darkfu_latex_wolf_male_spawn_egg",
@@ -107,7 +104,6 @@ public class GoodblockModItems {
 	public static final RegistryObject<Item> LATEXYUNXQICEDRAGON_SPAWN_EGG = REGISTRY.register("latexyunxqicedragon_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXYUNXQICEDRAGON, -16711681, -13369345, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
 	public static final RegistryObject<Item> CATALYZER = block(GoodblockModBlocks.CATALYZER, null);
-	public static final RegistryObject<Item> A_BUCKET = REGISTRY.register("a_bucket", () -> new AItem());
 	public static final RegistryObject<Item> FLUIDHOTTEST_BUCKET = REGISTRY.register("fluidhottest_bucket", () -> new FluidhottestItem());
 	public static final RegistryObject<Item> LATEXBLUEDRAGON_SPAWN_EGG = REGISTRY.register("latexbluedragon_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXBLUEDRAGON, -16750849, -16776961, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));

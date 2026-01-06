@@ -4,8 +4,6 @@
  */
 package net.hhdsj.goodblock.init;
 
-import org.checkerframework.checker.units.qual.A;
-
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,7 +16,6 @@ import net.minecraft.world.level.block.Block;
 
 import net.hhdsj.goodblock.block.UraniummineralBlock;
 import net.hhdsj.goodblock.block.UraniumblockBlock;
-import net.hhdsj.goodblock.block.TESTGBKBlock;
 import net.hhdsj.goodblock.block.SulphurblockBlock;
 import net.hhdsj.goodblock.block.Paletreespa1Block;
 import net.hhdsj.goodblock.block.Pale_woodWoodBlock;
@@ -40,7 +37,6 @@ import net.hhdsj.goodblock.block.BlueCrystaloreBlock;
 import net.hhdsj.goodblock.block.Blockbw2Block;
 import net.hhdsj.goodblock.block.Blockbw1Block;
 import net.hhdsj.goodblock.block.BlackblockBlock;
-import net.hhdsj.goodblock.block.ABlock;
 import net.hhdsj.goodblock.GoodblockMod;
 
 public class GoodblockModBlocks {
@@ -63,12 +59,10 @@ public class GoodblockModBlocks {
 	public static final RegistryObject<Block> PALE_WOOD_FENCE = REGISTRY.register("pale_wood_fence", () -> new Pale_woodFenceBlock());
 	public static final RegistryObject<Block> PALE_WOOD_FENCE_GATE = REGISTRY.register("pale_wood_fence_gate", () -> new Pale_woodFenceGateBlock());
 	public static final RegistryObject<Block> PALE_WOOD_PRESSURE_PLATE = REGISTRY.register("pale_wood_pressure_plate", () -> new Pale_woodPressurePlateBlock());
-	public static final RegistryObject<Block> TESTGBK = REGISTRY.register("testgbk", () -> new TESTGBKBlock());
 	public static final RegistryObject<Block> BLOCKBW_1 = REGISTRY.register("blockbw_1", () -> new Blockbw1Block());
 	public static final RegistryObject<Block> BLOCKBW_2 = REGISTRY.register("blockbw_2", () -> new Blockbw2Block());
 	public static final RegistryObject<Block> BLUE_CRYSTALORE = REGISTRY.register("blue_crystalore", () -> new BlueCrystaloreBlock());
 	public static final RegistryObject<Block> CATALYZER = REGISTRY.register("catalyzer", () -> new CatalyzerBlock());
-	public static final RegistryObject<Block> A = REGISTRY.register("a", () -> new ABlock());
 	public static final RegistryObject<Block> FLUIDHOTTEST = REGISTRY.register("fluidhottest", () -> new FluidhottestBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
