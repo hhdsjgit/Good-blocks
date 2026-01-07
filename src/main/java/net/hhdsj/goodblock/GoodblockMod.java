@@ -55,8 +55,10 @@ public class GoodblockMod {
 	private static int messageID = 0;
 
 	public GoodblockMod() {
+		
 		GoodblockModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		
 		GoodblockModBlocks.REGISTRY.register(bus);
 		GoodblockModItems.REGISTRY.register(bus);
 		GoodblockModEntities.REGISTRY.register(bus);

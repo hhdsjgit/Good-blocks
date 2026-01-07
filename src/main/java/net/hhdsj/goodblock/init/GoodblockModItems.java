@@ -31,6 +31,7 @@ import net.hhdsj.goodblock.item.ImpureuraniumItem;
 import net.hhdsj.goodblock.item.Flutemusica1recordsItem;
 import net.hhdsj.goodblock.item.FluteItem;
 import net.hhdsj.goodblock.item.FluidhottestItem;
+import net.hhdsj.goodblock.item.DragonfruitItem;
 import net.hhdsj.goodblock.item.Armora1ArmorItem;
 import net.hhdsj.goodblock.item.AnitfrrymusicItem;
 import net.hhdsj.goodblock.GoodblockMod;
@@ -107,6 +108,7 @@ public class GoodblockModItems {
 	public static final RegistryObject<Item> FLUIDHOTTEST_BUCKET = REGISTRY.register("fluidhottest_bucket", () -> new FluidhottestItem());
 	public static final RegistryObject<Item> LATEXBLUEDRAGON_SPAWN_EGG = REGISTRY.register("latexbluedragon_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXBLUEDRAGON, -16750849, -16776961, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
+	public static final RegistryObject<Item> DRAGONFRUIT = REGISTRY.register("dragonfruit", () -> new DragonfruitItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

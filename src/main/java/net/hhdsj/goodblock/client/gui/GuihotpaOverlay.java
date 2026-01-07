@@ -12,7 +12,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.Minecraft;
 
@@ -48,9 +47,8 @@ public class GuihotpaOverlay {
 			RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 			RenderSystem.setShaderColor(1, 1, 1, 1);
 			if (GuihotpaXianShiYouXiNeiDieJiaCengProcedure.execute(entity)) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("goodblock:textures/screens/hot_png.png"));
+				RenderSystem.setShaderTexture(0, new ResourceLocation("goodblock:textures/screens/goo_outline.png"));
 				Minecraft.getInstance().gui.blit(event.getMatrixStack(), 0, 0, 0, 0, w, h, w, h);
-				Minecraft.getInstance().font.draw(event.getMatrixStack(), new TranslatableComponent("gui.goodblock.guihotpa.label_test_gui"), posX + -180, posY + -94, -1);
 			}
 			RenderSystem.depthMask(true);
 			RenderSystem.defaultBlendFunc();

@@ -1,12 +1,13 @@
 LatexbluedragonEntity
 
+#5
 是的，我是在吹毛求疵，我知道英语不是你的母语，或者你用的翻译器不太稳定。所以我可以原谅你的拼写错误，但我只是想提醒你一下翻译上的几个问题。具体如下：
 
 关于XQ冰火龙，有两个不一致的地方：名字是“云XQ热（应该是火或热，另一个是冷）乳胶龙”，而“乳胶云XQ冰龙”则是“乳胶云XQ冰龙”（对于热（或火）龙来说，乳胶放在冰前面并不合适）。
 （完成）
 
 黑色雄性幼犬不应该带有“雄性”字样，因为没有雌性版本。我建议给它起个新名字，以免与深色乳胶幼犬冲突，除非你打算添加雌性版本。如果你打算添加雌性版本，也请重命名；目前的冲突仍然有点奇怪。
-（未完成）
+（完成>?）
 
 绿色龙不是绿色的，而是蓝色的。要么把绿色龙的颜色改成绿色，要么直接把它的名字改成蓝色。
 使用 /transfur 或任何其他显示形态的命令时，目前显示的是“from”，而不是“form”。
@@ -22,3 +23,39 @@ LatexbluedragonEntity
 
 我就像飞蛾扑火般总是忍不住回来，顺便提一下，由于最近Changed Addon+的更新，你可以通过给实体添加#changed_addon:can_grab属性来让它们抓住你，引用如下：“新能力：#changed_addon:can_grab中的实体现在可以抓住玩家。” 我不确定这是否是它的运作方式，如果你打算添加这个功能，请尽量让它难以实现。
 （未完成）
+
+
+#6
+我已经说过我有一些关于角色转换的建议，这是我的第一个建议。
+
+这是一个很复杂的想法，但如果你能实现它，我觉得会很酷。
+
+我的想法是：吃火龙果后可以变身成一只紫色的狼，类似白狼。如果可能的话，它还有一个专属的特殊效果，叫做“缓慢感染”。受到这个效果影响后，你的手臂会在初始时间的六分之一后变成纯正的亮粉色，然后躯干也会变成这种颜色，如此循环往复直到头部。当头部也变成这种颜色时，变身就完成了，所有图案都会显现出来。如果是被实体或其他玩家变身，则变身方式与普通变身相同。“缓慢感染”的解药可以是任何符合其效果的解药。
+
+能力：它可以正常进行传送，但冷却时间大约1分钟，可以额外生长出2个火龙果供玩家食用。也可以将果实交给其他玩家进行传送，任何非玩家控制的人形生物都可以拾取果实并食用。
+
+变形的粗略设计：一个火龙果（我会先制作没有尾巴和耳朵的模型，因为我不知道怎么做动画），有着高高的、会发光的绿色眼睛、嘴巴和花瓣，底色是亮粉色和绿色。
+
+获取方式：大多数设施内的箱子里都有，或者可以通过食用橡树上的果实获得，橡树会在所有生物群系中生成，但在橡树林中最常见。
+
+这可能会很费工夫，你不一定要按这种方式添加，但这只是一个基本思路。之后我会提出更简单的方案。
+
+我觉得你最好先搞清楚英语语法，这稍微重要一些。
+再次抱歉，如果这工作量太大，我也不知道该怎么修改玩家角色。
+
+So I already said I have a couple of suggestions for transfurs so this is my first one.
+
+This is a complex idea but if you can pull it off, I think it would be cool.
+
+So my idea is: a transfur that you become by eating a dragonfruit. So it is a wolf like purple WS wolf, and if possible it has a unique effect exclusive for it called : slow infection so, upon getting the effect it will turn your arm into a pure hot pink-like color after 1/6 of the starting time, your torso will turn this pure hot pink color, then it will repeat until your head, then after getting to the head the transfur is complete then all the patterns will come out. If transfurred by an entity or another player, it’s just the base transfur method. the slow infection has a cure that is anything you can think of that fits it.
+
+Ability: it can transfur normally, however it can grow 2 more dragon fruits with like a 1 minuite cooldown that you can eat. Or give to other players to transfur them, any non-player humanoid can grab the fruit then they will eat it.
+
+Rough design of the transfur: a dragonfruit (I will make the model without the tail or ears cause I have no idea how to animate that) with tall green emissive eyes, mouth and petals and the base 2 colors are hot pink and green
+
+Obtainment: most chests inside of facilities have it or you can be transfurred by eating the fruit off a oak tree, and spawns in all biomes, but the most common in oak forests
+
+This will probably be a lot of work, you don’t have to add it in this way, however this is just a base idea for it. I’m going to be suggesting more simple ones later.
+
+I’d suggest working on the English grammar stuff first in my opinion that is a tad bit more important.
+Again sorry if this is a ton of work, idk how you even change the character of the player

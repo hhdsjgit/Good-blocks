@@ -3,24 +3,8 @@
   "_type": "overlay",
   "definition": {
     "priority": "HIGH",
-    "components": [
-      {
-        "type": "label",
-        "data": {
-          "name": "label_test_gui",
-          "text": {
-            "fixedValue": "你收到感染"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 33,
-          "y": 26
-        }
-      }
-    ],
-    "baseTexture": "hot_png.png",
+    "components": [],
+    "baseTexture": "goo_outline.png",
     "overlayTarget": "Ingame",
     "displayCondition": {
       "name": "GuihotpaXianShiYouXiNeiDieJiaCeng"
