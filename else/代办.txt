@@ -59,3 +59,14 @@ This will probably be a lot of work, you don’t have to add it in this way, how
 
 I’d suggest working on the English grammar stuff first in my opinion that is a tad bit more important.
 Again sorry if this is a ton of work, idk how you even change the character of the player
+
+
+
+
+
+
+
+F:\Good-blocks\src\main\java\net\hhdsj\goodblock\mixin\PlayerEntityMixin.java:15: 错误: PlayerEntityMixin不是抽象的, 并且未覆盖PlayerEntityMixin中的抽象方法isJumping() 
+public class PlayerEntityMixin { 
+       ^ 
+1 个错误

@@ -23,6 +23,12 @@ Some of the content additions to Changed addon plus
 
 
 [[dependencies.goodblock]]
+    modId="changed_addon"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.goodblock]]
     modId="changed"
     mandatory=true
     versionRange="[0,)"
