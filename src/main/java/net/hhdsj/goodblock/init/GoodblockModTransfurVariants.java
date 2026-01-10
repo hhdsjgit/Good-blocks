@@ -213,7 +213,7 @@ public class GoodblockModTransfurVariants {
 	    .build());
 
 	//火龙果狼>?
-	public static final RegistryObject<TransfurVariant<LatexDragonFruitWolfEntity>> LATEXDRAGONFRUITWOLF = REGISTRY.register("form_latex_yun_xq_ice_dragon",
+	public static final RegistryObject<TransfurVariant<LatexDragonFruitWolfEntity>> LATEXDRAGONFRUITWOLF = REGISTRY.register("form_latex_dragon_fruit_wolf",
 	() -> TransfurVariant.Builder.of(GoodblockEntities.LATEXDRAGONFRUITWOLF)
 			.stepSize(0.7f)
 			.glide()
