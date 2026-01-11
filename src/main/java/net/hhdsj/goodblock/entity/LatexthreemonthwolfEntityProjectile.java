@@ -7,52 +7,26 @@ import net.ltxprogrammer.changed.entity.variant.TransfurVariant;
 import net.ltxprogrammer.changed.init.ChangedRegistry;
 import net.ltxprogrammer.changed.init.ChangedTabs;
 import net.ltxprogrammer.changed.process.ProcessTransfur;
-import net.ltxprogrammer.changed.util.TagUtil;
-import net.ltxprogrammer.changed.util.UniversalDist;
-import net.minecraft.core.NonNullList;
-import net.minecraft.core.Position;
-import net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.damagesource.IndirectEntityDamageSource;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.DispenserBlock;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.entity.living.LivingDamageEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import org.jetbrains.annotations.NotNull;
-
-import javax.annotation.Nullable;
-import java.util.List;
 
 import net.hhdsj.goodblock.registers.GoodblockEntities;
 
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.entity.projectile.ItemSupplier;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.network.protocol.Packet;
-import net.minecraft.resources.ResourceLocation;
 
-// 导入你的Mod相关类
-import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.ltxprogrammer.changed.init.ChangedItems;
-import net.ltxprogrammer.changed.item.LatexTippedArrowItem; // 根据实际路径修改
 
 //@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class LatexthreemonthwolfEntityProjectile extends Arrow {
@@ -92,9 +66,7 @@ public class LatexthreemonthwolfEntityProjectile extends Arrow {
             final var variant = ChangedRegistry.TRANSFUR_VARIANT.get().getValue(this.formVariant);
             
             if (variant != null) {
-                ProcessTransfur.progressTransfur(livingEntity, 10.0f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
-            } else {
-                System.err.println("Could not find TransfurVariant for: " + this.formVariant);
+                ProcessTransfur.progressTransfur(livingEntity, 0.5f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
             }
         } catch (Exception e) {
             System.err.println("Error during transfur process: " + e.getMessage());
@@ -118,19 +90,5 @@ public class LatexthreemonthwolfEntityProjectile extends Arrow {
     public ResourceLocation getFormVariant() {
         return this.formVariant;
     }
-    /*
-    // NBT持久化
-    @Override
-    public void addAdditionalSaveData(CompoundTag compound) {
-        super.addAdditionalSaveData(compound);
-        compound.putString("FormVariant", formVariant.toString());
-    }
 
-    @Override
-    public void readAdditionalSaveData(CompoundTag compound) {
-        super.readAdditionalSaveData(compound);
-        if (compound.contains("FormVariant")) {
-            this.formVariant = new ResourceLocation(compound.getString("FormVariant"));
-        }
-    }*/
 }

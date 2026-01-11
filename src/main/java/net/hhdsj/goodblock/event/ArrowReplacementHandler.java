@@ -39,7 +39,7 @@ public class ArrowReplacementHandler {
 
         if (variant == null) return;
 
-        // 修检查getFormId()返回是否为null
+        // 检查getFormId()返回是否为null
         ResourceLocation formId = variant.getFormId();
         if (formId == null) return;
 

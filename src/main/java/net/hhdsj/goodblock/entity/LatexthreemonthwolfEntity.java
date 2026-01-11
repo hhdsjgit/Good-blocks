@@ -1,6 +1,8 @@
 
 package net.hhdsj.goodblock.entity;
 
+import net.ltxprogrammer.changed.entity.variant.TransfurVariantInstance;
+import net.ltxprogrammer.changed.process.ProcessTransfur;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
@@ -39,7 +41,7 @@ import net.minecraft.network.protocol.Packet;
 
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 
-import java.util.Set;
+import java.util.*;
 
 
 import java.util.Set;
@@ -52,10 +54,9 @@ import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraftforge.common.ForgeMod;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-import java.util.Random;
 import net.ltxprogrammer.changed.entity.Gender;
 import net.ltxprogrammer.changed.entity.HairStyle;
 import net.ltxprogrammer.changed.entity.TransfurMode;
@@ -134,7 +135,14 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 	}
 
 	@Override
-	public void performRangedAttack(LivingEntity target, float flval) {
+	public void performRangedAttack(@NotNull LivingEntity target, float flval) {
+		// 检查是否为null
+		TransfurVariantInstance<?> variant = ProcessTransfur.getPlayerTransfurVariant((Player) target);
+		if (variant == null) return;
+		ResourceLocation formId = variant.getFormId();
+		if (formId == null) return;
+		if (!Objects.equals(formId, new ResourceLocation("goodblock", "form_latex_three_month_wolf"))) return;
+		//End
 		LatexthreemonthwolfEntityProjectile entityarrow = new LatexthreemonthwolfEntityProjectile(this.level, this);
 		double d0 = target.getY() + target.getEyeHeight() - 1.1;
 		double d1 = target.getX() - this.getX();
