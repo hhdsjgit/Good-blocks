@@ -5,7 +5,7 @@ import net.ltxprogrammer.changed.ability.SimpleAbility;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.function.Supplier;
-/*
+
 public class DragonFruitCreateItemAbility extends SimpleAbility {
     public DragonFruitCreateItemAbility(Supplier<ItemStack> itemSupplier, float exhaustion, float minimumHunger) {
         this.itemSupplier = itemSupplier;
@@ -48,4 +48,4 @@ public class DragonFruitCreateItemAbility extends SimpleAbility {
     public int getCoolDown(IAbstractChangedEntity entity) {
         return 20;
     }
-}*/
+}

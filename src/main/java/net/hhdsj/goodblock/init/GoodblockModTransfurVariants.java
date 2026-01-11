@@ -188,6 +188,7 @@ public class GoodblockModTransfurVariants {
 		.nightVision()
 		.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 		.jumpStrength(2f)
+		.addAbility(entityType -> GoodblockModAbilities.CREATE_DRAGON_FRUIT.get())
 	    .build());
 
 	public static final RegistryObject<TransfurVariant<LatexyunxqhotdragonEntity>> LATEXYUNXQHOTDRAGON = REGISTRY.register("form_latex_yunxq_hot_dragon",

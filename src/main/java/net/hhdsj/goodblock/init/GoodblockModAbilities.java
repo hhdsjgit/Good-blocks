@@ -17,8 +17,12 @@ public class GoodblockModAbilities{
     public static final DeferredRegister<AbstractAbility<?>> REGISTRY = ChangedRegistry.ABILITY.createDeferred(Changed.MODID);
 
     public static RegistryObject<SimpleCreateItemAbility> CREATE_DRAGON_FRUIT = REGISTRY.register("create_dragon_fruit",
-            () -> new SimpleCreateItemAbility(() -> new ItemStack(GoodblockModItems.DRAGONFRUIT.get()), 5.0f, 6.0f));
+            () -> new SimpleCreateItemAbility(() -> new ItemStack(GoodblockModItems.DRAGONFRUIT.get()), 1.0f, 1.0f));
 
+    /*
+    public static RegistryObject<SimpleCreateItemAbility> CREATE_ARROWS_FRUIT = REGISTRY.register("create_arrows_fruit",
+            () -> new SimpleCreateItemAbility(() -> new ItemStack(GoodblockModItems.DRAGONFRUIT.get()), 1.0f, 1.0f));
+*/
     public static AbstractAbility<?> getAbility(ResourceLocation location) {
         return ChangedRegistry.ABILITY.get().getValue(location);
     }
