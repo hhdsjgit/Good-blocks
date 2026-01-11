@@ -22,10 +22,6 @@ import java.util.Objects;
 @Mod.EventBusSubscriber
 public class ArrowReplacementHandler {
 
-
-
-    //ResourceLocation variantId = ChangedRegistry.TRANSFUR_VARIANT.get().getKey(variant);
-
     @SubscribeEvent
     public static void onArrowLoose(ArrowLooseEvent event) {
         Player player = (Player) event.getEntity();
