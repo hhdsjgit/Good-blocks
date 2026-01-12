@@ -136,13 +136,23 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 
 	@Override
 	public void performRangedAttack(@NotNull LivingEntity target, float flval) {
-		// 检查是否为null
+
+		//Fix #10 issues
+		if (target instanceof Player player) {
+			TransfurVariantInstance<?> variant = ProcessTransfur.getPlayerTransfurVariant(player);
+			if (variant != null) {
+				return;
+			}
+		}
+
+		/* Old code
 		TransfurVariantInstance<?> variant = ProcessTransfur.getPlayerTransfurVariant((Player) target);
 		if (variant == null) return;
 		ResourceLocation formId = variant.getFormId();
 		if (formId == null) return;
 		if (!Objects.equals(formId, new ResourceLocation("goodblock", "form_latex_three_month_wolf"))) return;
-		//End
+		*/
+
 		LatexthreemonthwolfEntityProjectile entityarrow = new LatexthreemonthwolfEntityProjectile(this.level, this);
 		double d0 = target.getY() + target.getEyeHeight() - 1.1;
 		double d1 = target.getX() - this.getX();

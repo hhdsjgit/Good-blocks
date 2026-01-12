@@ -20,6 +20,7 @@ import net.hhdsj.goodblock.entity.*;
 import net.hhdsj.goodblock.GoodblockMod;
 import net.hhdsj.goodblock.entity.LatexthreemonthwolfEntityProjectile;
 import net.hhdsj.goodblock.entity.LatexDragonFruitWolfEntity;
+import net.hhdsj.goodblock.entity.LatexPurplecoocwolfEntity;
 
 import static net.ltxprogrammer.changed.entity.variant.TransfurVariant.getNextEntId;
 
@@ -46,6 +47,14 @@ public class GoodblockEntities {
 					.setCustomClientFactory(LatexDragonFruitWolfEntity::new)
 					.sized(0.7f, 1.93f));
 
+	public static final RegistryObject<EntityType<LatexPurplecoocwolfEntity>> LATEXPRTPLECOOCWOLF = register("latex_purple_cooc_wolf",
+			EntityType.Builder.<LatexPurplecoocwolfEntity>of(LatexPurplecoocwolfEntity::new, ChangedMobCategories.CHANGED)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(LatexPurplecoocwolfEntity::new)
+					.sized(0.7f, 1.93f));
+
 	//////////////////else///////////////////
 	public static final RegistryObject<EntityType<LatexthreemonthwolfEntityProjectile>> LATEXTHREEMONTHWOLF_PROJECTILE = register("projectile_latexthreemonthwolf",
 			EntityType.Builder.<LatexthreemonthwolfEntityProjectile>of(LatexthreemonthwolfEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1)
@@ -61,6 +70,7 @@ public class GoodblockEntities {
 		event.enqueueWork(() -> {
 			LatexkamonaHSguydragonwolfEntity.init();
 			LatexDragonFruitWolfEntity.init();
+			LatexPurplecoocwolfEntity.init();
 		});
 	}
 
@@ -68,6 +78,7 @@ public class GoodblockEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(LATEX_KAMONA_HSGUY_DRAGON_WOLF.get(), LatexkamonaHSguydragonwolfEntity.createAttributes().build());
 		event.put(LATEXDRAGONFRUITWOLF.get(), LatexDragonFruitWolfEntity.createAttributes().build());
+		event.put(LATEXPRTPLECOOCWOLF.get(), LatexDragonFruitWolfEntity.createAttributes().build());
 	}
 }
 /*

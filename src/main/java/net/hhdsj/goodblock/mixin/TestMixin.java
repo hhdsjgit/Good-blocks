@@ -11,6 +11,6 @@ public class TestMixin {
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void onPlayerTick(CallbackInfo ci) {
-        System.out.println("Mixin Successfully executed");
+        //System.out.println("Mixin Successfully executed");
     }
 }
