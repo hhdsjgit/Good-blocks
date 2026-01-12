@@ -14,6 +14,7 @@
 
 package net.hhdsj.goodblock;
 
+import net.hhdsj.goodblock.init.*;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -27,26 +28,18 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
-import net.hhdsj.goodblock.init.GoodblockModTabs;
-import net.hhdsj.goodblock.init.GoodblockModMobEffects;
-import net.hhdsj.goodblock.init.GoodblockModItems;
-import net.hhdsj.goodblock.init.GoodblockModFluids;
-import net.hhdsj.goodblock.init.GoodblockModFeatures;
-import net.hhdsj.goodblock.init.GoodblockModEntities;
-import net.hhdsj.goodblock.init.GoodblockModBlocks;
 //java add
-import net.hhdsj.goodblock.init.GoodblockModTransfurVariants;
-import net.hhdsj.goodblock.init.GoodblockModParticleTypes;
 
-import net.hhdsj.goodblock.registers.GoodblocksModels;
 import net.hhdsj.goodblock.registers.GoodblockEntities;
 import net.hhdsj.goodblock.registers.GoodblockModRegisterItems;
-import net.hhdsj.goodblock.init.GoodblockModAbilities;
 //import net.hhdsj.goodblock.registers.GoodblockEntityRenderers;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
+
+// Enchant imports
+
 
 @Mod("goodblock")
 public class GoodblockMod {
@@ -60,9 +53,13 @@ public class GoodblockMod {
 		
 		GoodblockModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-		
+
+		GoodblockModEnchantmentInit.ENCHANTMENTS.register(bus);
+
 		GoodblockModBlocks.REGISTRY.register(bus);
+
 		GoodblockModItems.REGISTRY.register(bus);
+
 		GoodblockModEntities.REGISTRY.register(bus);
 
 		GoodblockEntities.REGISTRY.register(bus);
@@ -77,6 +74,7 @@ public class GoodblockMod {
 		//latex java register
         GoodblockModAbilities.REGISTRY.register(bus);
 		GoodblockModTransfurVariants.REGISTRY.register(bus);
+
 
 	}
 
