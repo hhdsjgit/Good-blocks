@@ -68,7 +68,7 @@ public class GoodblockModEntities {
 	public static final RegistryObject<EntityType<LatexthreemonthwolfEntity>> LATEXTHREEMONTHWOLF = register("latexthreemonthwolf",
 			EntityType.Builder.<LatexthreemonthwolfEntity>of(LatexthreemonthwolfEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexthreemonthwolfEntity::new)
 
-					.sized(0.6f, 1.95f));
+					.sized(0.9f, 2.15f));
 	public static final RegistryObject<EntityType<LatexyunxqhotdragonEntity>> LATEXYUNXQHOTDRAGON = register("latexyunxqhotdragon", EntityType.Builder.<LatexyunxqhotdragonEntity>of(LatexyunxqhotdragonEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexyunxqhotdragonEntity::new).fireImmune().sized(0.6f, 1.9f));
 	public static final RegistryObject<EntityType<LatexyunxqicedragonEntity>> LATEXYUNXQICEDRAGON = register("latexyunxqicedragon",
