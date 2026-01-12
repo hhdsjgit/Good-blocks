@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 0,
     "texture": "no_thing_test",
-    "customModelName": "Normal",
+    "customModelName": "elements/DragonFruitModel.json",
     "name": "Dragon fruit",
     "rarity": "COMMON",
     "creativeTab": {
