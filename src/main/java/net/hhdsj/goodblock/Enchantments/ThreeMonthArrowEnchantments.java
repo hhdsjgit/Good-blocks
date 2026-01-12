@@ -1,0 +1,61 @@
+package net.hhdsj.goodblock.Enchantments;
+
+import net.ltxprogrammer.changed.entity.TransfurCause;
+import net.ltxprogrammer.changed.entity.TransfurContext;
+import net.ltxprogrammer.changed.init.ChangedRegistry;
+import net.ltxprogrammer.changed.process.ProcessTransfur;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import org.jetbrains.annotations.NotNull;
+
+public class ThreeMonthArrowEnchantments extends Enchantment {
+
+    private final ResourceLocation formVariant = new ResourceLocation("goodblock", "form_latex_three_month_wolf");
+
+    public ThreeMonthArrowEnchantments() {
+        super(Enchantment.Rarity.VERY_RARE, EnchantmentCategory.BOW, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+    }
+
+    public void doPostAttack(@NotNull LivingEntity attacker, @NotNull Entity target, int level) {
+
+        // 攻击逻辑 Attack Logic
+        if (target instanceof LivingEntity livingTarget) {
+
+            final var variant = ChangedRegistry.TRANSFUR_VARIANT.get().getValue(this.formVariant);
+
+            if (variant != null && !livingTarget.level.isClientSide) {
+                // 触发变体转化（80%可能）Trigger transfur transformation (80% chance)
+                if (livingTarget.getRandom().nextFloat() < 0.8f) {
+                    ProcessTransfur.progressTransfur(livingTarget, 0.5f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
+                }
+            }
+        }
+
+
+        super.doPostAttack(attacker, target, level);
+    }
+
+    @Override
+    public int getMaxLevel() {
+        return 1;
+    }
+
+    @Override
+    public boolean isCurse() {
+        return true;
+    }
+
+    @Override
+    public boolean isAllowedOnBooks() {
+        return true;
+    }
+
+    @Override
+    public boolean isDiscoverable() {
+        return true;
+    }
+}

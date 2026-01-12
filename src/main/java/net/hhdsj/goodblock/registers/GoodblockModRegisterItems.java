@@ -22,15 +22,15 @@ public class GoodblockModRegisterItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, GoodblockMod.MODID);//Register
 	public static final RegistryObject<Item> LATEX_DRAGON_FRUIT_WOLF_SPAWN_EGG = REGISTRY.register("latex_dragon_fruit_wolf_spawn_egg",
 		() -> new ForgeSpawnEggItem(GoodblockEntities.LATEXDRAGONFRUITWOLF,
-				-39373,
-				-39424,
+				-16724788,
+				-16711681,
 				new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
 		));
 
 	public static final RegistryObject<Item> LATEX_KAMONA_HSGUY_DRAGON_WOLF_SPAWN_EGG = REGISTRY.register("latex_kamona_hsguy_dragon_wolf_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockEntities.LATEX_KAMONA_HSGUY_DRAGON_WOLF,
-					-39373,
-					-39424,
+					-16724788,
+					-16711681,
 					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
 			));
 
