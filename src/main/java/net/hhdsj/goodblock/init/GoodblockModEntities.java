@@ -4,6 +4,7 @@
  */
 package net.hhdsj.goodblock.init;
 
+import net.hhdsj.goodblock.entity.*;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,18 +17,6 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
-import net.hhdsj.goodblock.entity.WhitebluepupEntity;
-import net.hhdsj.goodblock.entity.LatexyunxqicedragonEntity;
-import net.hhdsj.goodblock.entity.LatexyunxqhotdragonEntity;
-import net.hhdsj.goodblock.entity.LatexthreemonthwolfEntity;
-import net.hhdsj.goodblock.entity.LatexpurplewswolfEntity;
-import net.hhdsj.goodblock.entity.LatexiceDragonEntity;
-import net.hhdsj.goodblock.entity.LatexbluedragonEntity;
-import net.hhdsj.goodblock.entity.LatexOrangeFoxEntity;
-import net.hhdsj.goodblock.entity.LatexKcahraSharkEntity;
-import net.hhdsj.goodblock.entity.InksugerEntity;
-import net.hhdsj.goodblock.entity.DarkfuLatexWolfMaleEntity;
-import net.hhdsj.goodblock.entity.BlackpupmaleEntity;
 import net.hhdsj.goodblock.GoodblockMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -79,10 +68,14 @@ public class GoodblockModEntities {
 			EntityType.Builder.<LatexbluedragonEntity>of(LatexbluedragonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexbluedragonEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<LatexPurplecoocwolfEntity>> LATEXPRTPLECOOCWOLF = register("latexpurplecoocwolf",
+			EntityType.Builder.<LatexPurplecoocwolfEntity>of(LatexPurplecoocwolfEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexPurplecoocwolfEntity::new)
 
+					.sized(0.6f, 1.8f));
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
 	}
+
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -99,6 +92,7 @@ public class GoodblockModEntities {
 			LatexyunxqhotdragonEntity.init();
 			LatexyunxqicedragonEntity.init();
 			LatexbluedragonEntity.init();
+			LatexPurplecoocwolfEntity.init();
 		});
 	}
 
@@ -116,5 +110,6 @@ public class GoodblockModEntities {
 		event.put(LATEXYUNXQHOTDRAGON.get(), LatexyunxqhotdragonEntity.createAttributes().build());
 		event.put(LATEXYUNXQICEDRAGON.get(), LatexyunxqicedragonEntity.createAttributes().build());
 		event.put(LATEXBLUEDRAGON.get(), LatexbluedragonEntity.createAttributes().build());
+		event.put(LATEXPRTPLECOOCWOLF.get(), LatexPurplecoocwolfEntity.createAttributes().build());
 	}
 }
