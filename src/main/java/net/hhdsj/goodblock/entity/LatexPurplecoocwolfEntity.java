@@ -52,7 +52,7 @@ public class LatexPurplecoocwolfEntity extends ChangedEntity {
     }
     /*
     public Color3 getDripColor() {
-        return Color3.getColor("#FF8001");
+        return Color3.getColor("#5D3FD3");
     }*/
 
 	@Override
@@ -61,7 +61,7 @@ public class LatexPurplecoocwolfEntity extends ChangedEntity {
     }
 
     public Color3 getTransfurColor(TransfurCause cause) {
-        return Color3.getColor("#FF8001");
+        return Color3.getColor("#5D3FD3");
     }
 
 	@SubscribeEvent
