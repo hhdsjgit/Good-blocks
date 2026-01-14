@@ -145,14 +145,6 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 			}
 		}
 
-		/* Old code
-		TransfurVariantInstance<?> variant = ProcessTransfur.getPlayerTransfurVariant((Player) target);
-		if (variant == null) return;
-		ResourceLocation formId = variant.getFormId();
-		if (formId == null) return;
-		if (!Objects.equals(formId, new ResourceLocation("goodblock", "form_latex_three_month_wolf"))) return;
-		*/
-
 		LatexthreemonthwolfEntityProjectile entityarrow = new LatexthreemonthwolfEntityProjectile(this.level, this);
 		double d0 = target.getY() + target.getEyeHeight() - 1.1;
 		double d1 = target.getX() - this.getX();

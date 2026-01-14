@@ -76,8 +76,10 @@ public class LatexthreemonthwolfEntityProjectile extends Arrow {
             if (variant != null) {
                 ProcessTransfur.progressTransfur(livingEntity, 0.5f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
             }
+        } catch (ClassCastException e) {
+            // 没有
         } catch (Exception e) {
-            System.err.println("Error during transfur process: " + e.getMessage());
+            System.err.println("Error during transfur: " + e.getMessage());
         }
         this.discard();
     }

@@ -68,6 +68,7 @@ dependencies {
 //    implementation files('/Changed-m1.18.2-v0.14b.jar')
 	implementation fg.deobf("curse.maven:slashblade-661527:6885809")//Changed-mc
 	implementation fg.deobf("curse.maven:slashblade-711303:7377803")//Changed-addon
+    implementation fg.deobf("curse.maven:slashblade-432059:3795789")//Changed-addon
 }
 
 jar {
