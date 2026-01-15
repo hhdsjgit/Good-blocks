@@ -18,7 +18,10 @@ import java.util.WeakHashMap;
 
 @Mod.EventBusSubscriber(modid = "goodblock")
 public class NotEnoughGamerulesFix {
-    
+    /*
+
+
+
     private static final Logger LOGGER = LogManager.getLogger("GoodBlock/NEGFix");
     private static final ThreadLocal<Boolean> PROCESSING_FIX = ThreadLocal.withInitial(() -> false);
     private static final WeakHashMap<LivingAttackEvent, Boolean> HANDLED_EVENTS = new WeakHashMap<>();
@@ -27,9 +30,7 @@ public class NotEnoughGamerulesFix {
     private static Object negEventHandler = null;
     private static boolean negHandlerDetected = false;
     
-    /**
-     * 在最高优先级拦截事件
-     */
+
     @SubscribeEvent(priority = EventPriority.HIGHEST) // 比 HIGHEST 更高
     public static void onLivingAttackEarly(LivingAttackEvent event) {
         // 已经处理过的事件跳过
@@ -60,17 +61,13 @@ public class NotEnoughGamerulesFix {
         }
     }
     
-    /**
-     * 在低优先级清理标记（确保最后执行）
-     */
+
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void onLivingAttackCleanup(LivingAttackEvent event) {
         HANDLED_EVENTS.remove(event);
     }
     
-    /**
-     * 检查是否是 NEG 会崩溃的情况
-     */
+
     private static boolean isProblematicForNEG(LivingAttackEvent event) {
         if (!isNEGLoaded()) {
             return false;
@@ -96,14 +93,14 @@ public class NotEnoughGamerulesFix {
         if (source instanceof Projectile && !(source instanceof LivingEntity)) {
             return true;
         }
-        
+
         return false;
     }
     
     private static void applyDamageSafely(LivingAttackEvent event) {
         PROCESSING_FIX.set(true);
         try {
-            LivingEntity target = (LivingEntity) event.getEntity();
+            Entity target = event.getEntity();
             float amount = event.getAmount();
             DamageSource originalSource = event.getSource();
             
@@ -126,9 +123,7 @@ public class NotEnoughGamerulesFix {
         }
     }
     
-    /**
-     * 创建安全的 DamageSource，避免类型转换问题
-     */
+
     private static DamageSource createSafeDamageSource(DamageSource original) {
         Entity source = original.getEntity();
         Entity directSource = original.getDirectEntity();
@@ -181,10 +176,7 @@ public class NotEnoughGamerulesFix {
         
         return original;
     }
-    
-    /**
-     * 尝试禁用 NEG 的问题事件处理器
-     */
+
     public static void disableNEGProblematicHandler() {
         if (!isNEGLoaded()) {
             return;
@@ -221,4 +213,5 @@ public class NotEnoughGamerulesFix {
             disableNEGProblematicHandler();
         }
     }
+    */
 }

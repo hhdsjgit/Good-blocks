@@ -1,6 +1,8 @@
 
 package net.hhdsj.goodblock.fluid;
 
+import net.ltxprogrammer.changed.entity.LatexType;
+import net.ltxprogrammer.changed.init.ChangedTransfurVariants;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.fluids.FluidAttributes;
 
@@ -19,6 +21,8 @@ import net.hhdsj.goodblock.init.GoodblockModParticleTypes;
 import net.hhdsj.goodblock.init.GoodblockModItems;
 import net.hhdsj.goodblock.init.GoodblockModFluids;
 import net.hhdsj.goodblock.init.GoodblockModBlocks;
+
+import java.util.List;
 
 public abstract class FluidhottestFluid extends ForgeFlowingFluid {
 	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(GoodblockModFluids.FLUIDHOTTEST, GoodblockModFluids.FLOWING_FLUIDHOTTEST,
@@ -76,4 +80,6 @@ public abstract class FluidhottestFluid extends ForgeFlowingFluid {
 			return false;
 		}
 	}
+
+
 }
