@@ -7,7 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class LatexArrowRenderer extends ArrowRenderer<LatexthreemonthwolfEntityProjectile> {
     private static final ResourceLocation TEXTURE = new ResourceLocation("textures/entity/projectiles/arrow.png");
-    
+
     public LatexArrowRenderer(EntityRendererProvider.Context context) {
         super(context);
     }
