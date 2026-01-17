@@ -67,6 +67,7 @@ public class GoodblockMod {
 		GoodblockModFeatures.REGISTRY.register(bus);
 		GoodblockModFluids.REGISTRY.register(bus);
 		GoodblockModParticleTypes.REGISTRY.register(bus);
+		GoodBlockModBiomes.BIOMES.register(bus);
 
 		GoodblockModRegisterItems.REGISTRY.register(bus);
 

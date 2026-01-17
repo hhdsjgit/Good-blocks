@@ -14,14 +14,14 @@
   "item.goodblock.the_fluffy_heartbeatinthe_cubiclemusic": "隔间音乐中柔软的心跳",
   "item.goodblock.armora_1_armor_boots": "Armora1 靴子",
   "item.goodblock.flutemusica_1records": "隔间音乐中柔软的心跳",
-  "block.goodblock.card_reader": "读卡器",
   "advancements.gha_1.descr": "获得一块铜锭",
+  "block.goodblock.card_reader": "读卡器",
   "item.goodblock.latex_orange_fox_spawn_egg": "橙色胶液狐狸刷怪蛋",
   "item.goodblock.painite_armor_chestplate": "硅硼钙铝石胸甲",
   "block.goodblock.blueblock": "铁网",
   "advancements.gha_3.title": "不一样的金属",
-  "advancements.goodblockuse.descr": "优质方块",
   "subtitles.the_fluffy_heartbeatinthe_cubiclemusic": "隔间音乐中柔软的心跳",
+  "advancements.goodblockuse.descr": "优质方块",
   "item.goodblock.fleececlothingtest_boots": "羊毛服装测试 靴子",
   "gamerule.initiateAchievements": "优质方块成就",
   "item.goodblock.inksans_4": "Ink Sans 4",
@@ -157,5 +157,7 @@
   "subtitles.ink_sans": "一个音乐",
   "block.goodblock.blue_crystalore": "Blue Crystalore",
   "block.goodblock.pale_wood_button": "苍白木按钮",
-  "item.goodblock.latexpurplewswolf_spawn_egg": "紫色WS胶液狼刷怪蛋"
+  "item.goodblock.latexpurplewswolf_spawn_egg": "紫色WS胶液狼刷怪蛋",
+  "item.goodblock.latex_dragon_fruit_wolf_spawn_egg": "Latex Dragon Fruit Wolf Spawn Egg",
+  "item.goodblock.latex_kamona_hsguy_dragon_wolf_spawn_egg": "Kamona HSguy Dragon Wolf Spawn Egg"
 }

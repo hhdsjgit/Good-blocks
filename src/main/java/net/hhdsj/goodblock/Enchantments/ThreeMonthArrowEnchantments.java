@@ -30,7 +30,7 @@ public class ThreeMonthArrowEnchantments extends Enchantment {
             if (variant != null && !livingTarget.level.isClientSide) {
                 // 触发变体转化（80%可能）Trigger transfur transformation (80% chance)
                 if (livingTarget.getRandom().nextFloat() < 0.8f) {
-                    ProcessTransfur.progressTransfur(livingTarget, 0.5f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
+                    ProcessTransfur.progressTransfur(livingTarget, 3f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
                 }
             }
         }

@@ -28,7 +28,14 @@ public class GoodblockModRegisterItems {
 		));
 
 	public static final RegistryObject<Item> LATEX_KAMONA_HSGUY_DRAGON_WOLF_SPAWN_EGG = REGISTRY.register("latex_kamona_hsguy_dragon_wolf_spawn_egg",
-			() -> new ForgeSpawnEggItem(GoodblockEntities.LATEX_KAMONA_HSGUY_DRAGON_WOLF,
+		() -> new ForgeSpawnEggItem(GoodblockEntities.LATEX_KAMONA_HSGUY_DRAGON_WOLF,
+				-16724788,
+				-16711681,
+				new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
+		));
+
+	public static final RegistryObject<Item> LATEX_PURPLE_COOC_WOLF_EGG = REGISTRY.register("latex_purple_cooc_wolf_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockEntities.LATEXPRTPLECOOCWOLF,
 					-16724788,
 					-16711681,
 					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)

@@ -162,7 +162,6 @@ public class GoodblockModTransfurVariants {
 	public static final RegistryObject<TransfurVariant<LatexPurplecoocwolfEntity>> LATEXPRTPLECOOCWOLF = REGISTRY.register("form_latex_purple_cooc_wolf",
     () -> TransfurVariant.Builder.of(GoodblockEntities.LATEXPRTPLECOOCWOLF)
             .stepSize(0.7f)
-            .glide()
             .transfurMode(TransfurMode.ABSORPTION)
             .replicating()
             .nightVision()

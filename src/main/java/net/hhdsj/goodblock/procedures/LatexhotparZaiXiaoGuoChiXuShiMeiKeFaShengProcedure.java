@@ -29,9 +29,7 @@ public class LatexhotparZaiXiaoGuoChiXuShiMeiKeFaShengProcedure {
             final var variant = ChangedRegistry.TRANSFUR_VARIANT.get().getValue(FORM_VARIANT);
             
             if (variant != null) {
-                GoodblockProcessTransfur.progressTransfur(livingEntity, 0.3f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
-            } else {
-                //System.err.println("Could not find TransfurVariant for: " + FORM_VARIANT);
+                GoodblockProcessTransfur.progressTransfur(livingEntity, 2.1f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
             }
         } catch (Exception e) {
             //System.err.println("Error during transfur process: " + e.getMessage());

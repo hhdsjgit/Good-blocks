@@ -1,78 +1,34 @@
 package net.hhdsj.goodblock.entity;
 
+import net.hhdsj.goodblock.registers.GoodblockEntities;
 import net.hhdsj.goodblock.event.GoodblockProcessTransfur;
+
 import net.ltxprogrammer.changed.entity.TransfurCause;
 import net.ltxprogrammer.changed.entity.TransfurContext;
 import net.ltxprogrammer.changed.init.ChangedRegistry;
+import net.ltxprogrammer.changed.init.ChangedItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.projectile.Arrow;
-import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
-
-import net.hhdsj.goodblock.registers.GoodblockEntities;
 
 import net.minecraft.world.phys.EntityHitResult;
-import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-
+import net.minecraftforge.network.PlayMessages;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.network.protocol.Packet;
-
-import net.ltxprogrammer.changed.init.ChangedItems;
-import org.jetbrains.annotations.NotNull;
-
-
-import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
-import net.hhdsj.goodblock.event.GoodblockProcessTransfur;
-import net.ltxprogrammer.changed.entity.TransfurCause;
-import net.ltxprogrammer.changed.entity.TransfurContext;
-import net.ltxprogrammer.changed.init.ChangedRegistry;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.level.Level;
-import net.hhdsj.goodblock.registers.GoodblockEntities;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.network.protocol.Packet;
-import net.ltxprogrammer.changed.init.ChangedItems;
-import org.jetbrains.annotations.NotNull;
-import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.EntityHitResult;
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import javax.annotation.Nullable;
 
 
 public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
@@ -154,7 +110,6 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
         Entity target = result.getEntity();
         
         if (!this.level.isClientSide && target instanceof LivingEntity livingTarget) {
-            // 检查是否是自己的投掷者
             if (target == this.getOwner()) {
                 return;
             }
@@ -174,7 +129,7 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
                 // 应用转化效果
                 this.applyTransfurEffect(livingTarget);
                 
-                // 播放音效
+                // 音效
                 this.playSound(SoundEvents.ARROW_HIT, 1.0F, 1.2F / (this.random.nextFloat() * 0.2F + 0.9F));
                 
                 // 设置箭矢为"射中实体"状态
@@ -206,7 +161,7 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
         this.inGround = true;
         this.inGroundTime = 0;
         
-        // 震动效果
+        // 震动
         this.shakeTime = 7;
         
         // 设置位置和运动
@@ -217,14 +172,14 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
     }
     
     protected void applyTransfurEffect(LivingEntity target) {
-        // 从数据中获取变体
+        // 从数据中获取"变体"
         String variantStr = this.entityData.get(FORM_VARIANT);
         ResourceLocation variantLoc = new ResourceLocation(variantStr);
         
         final var variant = ChangedRegistry.TRANSFUR_VARIANT.get().getValue(variantLoc);
         
         if (variant != null && target.canBeSeenAsEnemy()) {
-            GoodblockProcessTransfur.progressTransfur(target, 0.8f, variant,
+            GoodblockProcessTransfur.progressTransfur(target, 2f, variant,
                     TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
         }
     }
@@ -243,7 +198,7 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
         // 播放格挡音效
         this.playSound(SoundEvents.SHIELD_BLOCK, 1.0F, 1.0F);
         
-        // 添加粒子效果
+        // 粒子效果
         if (this.level instanceof ServerLevel serverLevel) {
             serverLevel.sendParticles(ParticleTypes.CRIT, 
                 this.getX(), this.getY(), this.getZ(), 
