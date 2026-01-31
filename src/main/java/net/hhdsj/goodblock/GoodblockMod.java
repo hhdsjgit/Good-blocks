@@ -29,9 +29,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 //java add
-
-//import net.hhdsj.goodblock.registers.GoodblockEntityRenderers;
-
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -57,8 +54,6 @@ public class GoodblockMod {
 		GoodblockModBlocks.REGISTRY.register(bus);
 
 		GoodblockModItems.REGISTRY.register(bus);
-
-		GoodblockModEntities.REGISTRY.register(bus);
 
 		GoodblockModEntities.REGISTRY.register(bus);
 

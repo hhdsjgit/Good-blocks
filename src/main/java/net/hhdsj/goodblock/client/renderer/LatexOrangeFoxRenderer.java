@@ -34,13 +34,6 @@ public class LatexOrangeFoxRenderer extends AdvancedHumanoidRenderer<LatexOrange
         this.addLayer(CustomEyesLayer.builder(this, context.getModelSet())
                 .withSclera(Color3.WHITE).withIris(Color3.fromInt(0x43b44e)).build());
         this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
-        /*
-         super(context, new FengQIWolfModel(context.bakeLayer(FengQIWolfModel.LAYER_LOCATION)), ArmorLatexMaleWolfModel::new, ArmorLatexMaleWolfModel.INNER_ARMOR, ArmorLatexMaleWolfModel.OUTER_ARMOR, 0.5F);
-		//this.addLayer(new LatexParticlesLayer<>(this, this.getModel()));
-		this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
-		this.addLayer(new CustomEyesLayer<>(this, context.getModelSet()));
-		this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
-         */
 	}
 
 	@Override
