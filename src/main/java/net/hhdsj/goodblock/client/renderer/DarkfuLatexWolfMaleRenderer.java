@@ -37,6 +37,6 @@ public class DarkfuLatexWolfMaleRenderer extends AdvancedHumanoidRenderer<Darkfu
 
 	@Override
 	public ResourceLocation getTextureLocation(DarkfuLatexWolfMaleEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/dark_latex_wolf_male.png");
+		return new ResourceLocation("goodblock:textures/entities/latex/dark_latex_wolf_male.png");
 	}
 }

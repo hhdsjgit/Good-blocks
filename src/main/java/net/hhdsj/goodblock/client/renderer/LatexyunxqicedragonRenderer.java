@@ -31,7 +31,7 @@ public class LatexyunxqicedragonRenderer extends AdvancedHumanoidRenderer<Latexy
 		this.addLayer(new EyesLayer<LatexyunxqicedragonEntity, ModelLatexiceredDragonUnified_bw>(this) {
 			@Override
 			public RenderType renderType() {
-				return RenderType.eyes(new ResourceLocation("goodblock:textures/entities/latex_blueice_dragon_light.png"));
+				return RenderType.eyes(new ResourceLocation("goodblock:textures/entities/latex/latex_blueice_dragon_light.png"));
 			}
 		});
         this.addLayer(new LatexParticlesLayer<>(this, getModel()));
@@ -44,6 +44,6 @@ public class LatexyunxqicedragonRenderer extends AdvancedHumanoidRenderer<Latexy
 
 	@Override
 	public ResourceLocation getTextureLocation(LatexyunxqicedragonEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/latex_blueice_dragon.png");
+		return new ResourceLocation("goodblock:textures/entities/latex/latex_blueice_dragon.png");
 	}
 }

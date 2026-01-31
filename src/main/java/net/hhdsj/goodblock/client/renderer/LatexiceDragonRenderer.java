@@ -8,7 +8,8 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.hhdsj.goodblock.entity.LatexiceDragonEntity;
 import net.hhdsj.goodblock.client.model.ModelLatexicedragon;
 
-import net.ltxprogrammer.changed.Changed;
+
+import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.layers.CustomEyesLayer;
 import net.ltxprogrammer.changed.client.renderer.layers.GasMaskLayer;
 import net.ltxprogrammer.changed.client.renderer.layers.LatexParticlesLayer;
@@ -37,6 +38,6 @@ public class LatexiceDragonRenderer extends AdvancedHumanoidRenderer<LatexiceDra
 
 	@Override
 	public ResourceLocation getTextureLocation(LatexiceDragonEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/latex_ice_dragon.png");
+		return new ResourceLocation("goodblock:textures/entities/latex/latex_ice_dragon.png");
 	}
 }

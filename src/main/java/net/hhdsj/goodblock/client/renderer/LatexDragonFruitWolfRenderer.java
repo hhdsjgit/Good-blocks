@@ -27,6 +27,6 @@ public class LatexDragonFruitWolfRenderer extends AdvancedHumanoidRenderer<Latex
 
 	@Override
 	public ResourceLocation getTextureLocation(LatexDragonFruitWolfEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/latex_ice_dragon.png");
+		return new ResourceLocation("goodblock:textures/entities/latex/latex_ice_dragon.png");
 	}
 }

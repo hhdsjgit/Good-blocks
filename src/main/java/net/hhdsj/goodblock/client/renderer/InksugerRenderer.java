@@ -5,7 +5,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
-import net.ltxprogrammer.changed.Changed;
+
+import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.layers.CustomEyesLayer;
 import net.ltxprogrammer.changed.client.renderer.layers.LatexParticlesLayer;
 import net.ltxprogrammer.changed.client.renderer.model.DarkLatexWolfPupModel;
@@ -52,6 +53,6 @@ public class InksugerRenderer extends AdvancedHumanoidRenderer<InksugerEntity, M
 
 	@Override
 	public ResourceLocation getTextureLocation(InksugerEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/ink_suger_pup.png");
+		return new ResourceLocation("goodblock:textures/entities/latex/ink_suger_pup.png");
 	}
 }

@@ -30,6 +30,6 @@ public class BlackpupmaleRenderer extends AdvancedHumanoidRenderer<BlackpupmaleE
 
 	@Override
 	public ResourceLocation getTextureLocation(BlackpupmaleEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/texture.png");
+		return new ResourceLocation("goodblock:textures/entities/latex/texture.png");
 	}
 }

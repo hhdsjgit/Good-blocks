@@ -30,7 +30,7 @@ public class LatexyunxqhotdragonRenderer extends AdvancedHumanoidRenderer<Latexy
 		this.addLayer(new EyesLayer<LatexyunxqhotdragonEntity, Modellatexyunxqhotdragon>(this) {
 			@Override
 			public RenderType renderType() {
-				return RenderType.eyes(new ResourceLocation("goodblock:textures/entities/latex_yunxq_hot_dragon_light.png"));
+				return RenderType.eyes(new ResourceLocation("goodblock:textures/entities/latex/latex_yunxq_hot_dragon_light.png"));
 			}
 		});
         this.addLayer(new LatexParticlesLayer<>(this, getModel()));
@@ -42,6 +42,6 @@ public class LatexyunxqhotdragonRenderer extends AdvancedHumanoidRenderer<Latexy
 
 	@Override
 	public ResourceLocation getTextureLocation(LatexyunxqhotdragonEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/latex_yunxq_hot_dragon.png");
+		return new ResourceLocation("goodblock:textures/entities/latex/latex_yunxq_hot_dragon.png");
 	}
 }

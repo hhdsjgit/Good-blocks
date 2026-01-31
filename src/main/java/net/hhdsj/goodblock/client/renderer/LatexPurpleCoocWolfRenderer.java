@@ -17,7 +17,7 @@ public class LatexPurpleCoocWolfRenderer extends AdvancedHumanoidRenderer<LatexP
             ArmorLatexMaleWolfModel.MODEL_SET,
             0.5f);
 
-		this.addLayer(new EmissiveBodyLayer<>(this, new ResourceLocation("goodblock", "textures/entities/latex_purple_cooc_wolf_light.png")));
+		this.addLayer(new EmissiveBodyLayer<>(this, new ResourceLocation("goodblock", "textures/entities/latex/latex_purple_cooc_wolf_light.png")));
 		this.addLayer(new LatexParticlesLayer<>(this, this.getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
 		this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor, CustomEyesLayer::glowingIrisColorLeft, CustomEyesLayer::glowingIrisColorRight, CustomEyesLayer::noRender, CustomEyesLayer::noRender));
@@ -27,6 +27,6 @@ public class LatexPurpleCoocWolfRenderer extends AdvancedHumanoidRenderer<LatexP
 
 	@Override
 	public @NotNull ResourceLocation getTextureLocation(@NotNull LatexPurplecoocwolfEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/latex_purple_cooc_wolf.png");
+		return new ResourceLocation("goodblock:textures/entities/latex/latex_purple_cooc_wolf.png");
 	}
 }

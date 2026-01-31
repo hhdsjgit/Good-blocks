@@ -64,14 +64,14 @@ ModelLatexthreemonthwolf, ArmorLatexMaleCatModel<LatexthreemonthwolfEntity>> {
 		this.addLayer(new EyesLayer<LatexthreemonthwolfEntity, ModelLatexthreemonthwolf>(this) {
 			@Override
 			public RenderType renderType() {
-				return RenderType.eyes(new ResourceLocation("goodblock:textures/entities/latex_purple_ws_wolf_light.png"));
+				return RenderType.eyes(new ResourceLocation("goodblock:textures/entities/latex/latex_purple_ws_wolf_light.png"));
 			}
 		});
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(LatexthreemonthwolfEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/latex_purple_ws_wolf1.png");
+		return new ResourceLocation("goodblock:textures/entities/latex/latex_purple_ws_wolf1.png");
 	}
 
 	@Override

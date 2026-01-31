@@ -42,13 +42,13 @@ public class LatexkamonaHSguydragonwolfRenderer extends AdvancedHumanoidRenderer
 		this.addLayer(new EyesLayer<LatexkamonaHSguydragonwolfEntity, ModelLatexkamonaHSguydragonwolf>(this) {
 			@Override
 			public RenderType renderType() {
-				return RenderType.eyes(new ResourceLocation("goodblock:textures/entities/latex_kamona_hsguy_dragonwolf_png_light.png"));
+				return RenderType.eyes(new ResourceLocation("goodblock:textures/entities/latex/latex_kamona_hsguy_dragonwolf_png_light.png"));
 			}
 		});
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(LatexkamonaHSguydragonwolfEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/latex_kamona_hsguy_dragonwolf_png1.png");
+		return new ResourceLocation("goodblock:textures/entities/latex/latex_kamona_hsguy_dragonwolf_png1.png");
 	}
 }
