@@ -40,20 +40,10 @@ import java.util.*;
 
 import java.util.Set;
 import net.ltxprogrammer.changed.entity.*;
-import net.ltxprogrammer.changed.util.Color3;
-import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.ai.attributes.AttributeMap;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.level.ServerLevelAccessor;
-import net.minecraftforge.common.ForgeMod;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
-import net.ltxprogrammer.changed.entity.Gender;
-import net.ltxprogrammer.changed.entity.HairStyle;
 import net.ltxprogrammer.changed.entity.TransfurMode;
-import net.ltxprogrammer.changed.entity.beast.*;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 
 @Mod.EventBusSubscriber
@@ -88,14 +78,14 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public @NotNull Packet<?> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true, true));
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true, true));
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(4, new FloatGoal(this));
@@ -108,17 +98,17 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 	}
 
 	@Override
-	public MobType getMobType() {
+	public @NotNull MobType getMobType() {
 		return MobType.UNDEFINED;
 	}
 
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
+	protected void dropCustomDeathLoot(@NotNull DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
 		this.spawnAtLocation(new ItemStack(Blocks.ALLIUM));
 	}
 
 	@Override
-	public SoundEvent getHurtSound(DamageSource ds) {
+	public SoundEvent getHurtSound(@NotNull DamageSource ds) {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
 	}
 
