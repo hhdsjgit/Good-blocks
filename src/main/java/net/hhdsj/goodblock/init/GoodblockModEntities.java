@@ -125,6 +125,7 @@ public class GoodblockModEntities {
 			LatexPurplecoocwolfEntity.init();
 			LatexkamonaHSguydragonwolfEntity.init();
 			LatexDragonFruitWolfEntity.init();
+			LatexYunQiIceDragonEntity.init();
 		});
 	}
 
@@ -145,5 +146,6 @@ public class GoodblockModEntities {
 		event.put(LATEXPRTPLECOOCWOLF.get(), LatexPurplecoocwolfEntity.createAttributes().build());
 		event.put(LATEX_KAMONA_HSGUY_DRAGON_WOLF.get(), LatexkamonaHSguydragonwolfEntity.createAttributes().build());
 		event.put(LATEXDRAGONFRUITWOLF.get(), LatexDragonFruitWolfEntity.createAttributes().build());
+		event.put(LATEXYUNQIICEDRAGON.get(), LatexYunQiIceDragonEntity.createAttributes().build());
 	}
 }

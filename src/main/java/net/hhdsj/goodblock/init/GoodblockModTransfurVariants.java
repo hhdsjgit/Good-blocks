@@ -157,17 +157,26 @@ public class GoodblockModTransfurVariants {
 			.build());
 
 	//火龙果狼>?
-	public static final RegistryObject<TransfurVariant<LatexDragonFruitWolfEntity>> LATEXDRAGONFRUITWOLF = 
+	public static final RegistryObject<TransfurVariant<LatexDragonFruitWolfEntity>> LATEXDRAGONFRUITWOLF =
 			REGISTRY.register("form_latex_dragon_fruit_wolf", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXDRAGONFRUITWOLF)
 			.stepSize(0.7f)
-			.glide()
 			.addAbility(entityType -> GoodblockModAbilities.CREATE_DRAGON_FRUIT.get())
 			.transfurMode(TransfurMode.ABSORPTION)
 			.replicating()
 			.nightVision()
 			.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 			.build());
-	    
+	//LATEXYUNQIICEDRAGON
+
+	public static final RegistryObject<TransfurVariant<LatexYunQiIceDragonEntity>> LATEXYUNQIICEDRAGON =
+			REGISTRY.register("form_latex_yun_qi_ice_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNQIICEDRAGON)
+					.stepSize(0.7f)
+					.glide()
+					.transfurMode(TransfurMode.ABSORPTION)
+					.replicating()
+					.nightVision()
+					.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+					.build());
 	public static void register(IEventBus bus) {
         REGISTRY.register(bus);
     }
