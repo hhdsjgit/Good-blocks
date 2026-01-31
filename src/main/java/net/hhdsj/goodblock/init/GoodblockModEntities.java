@@ -35,7 +35,7 @@ public class GoodblockModEntities {
 			EntityType.Builder.<DarkfuLatexWolfMaleEntity>of(DarkfuLatexWolfMaleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DarkfuLatexWolfMaleEntity::new)
 
 					.sized(0.6f, 1.99f));
-	public static final RegistryObject<EntityType<LatexiceDragonEntity>> LATEXICE_DRAGON = register("latexice_dragon",
+	public static final RegistryObject<EntityType<LatexiceDragonEntity>> LATEXICE_DRAGON = register("latex_ice_dragon",
 			EntityType.Builder.<LatexiceDragonEntity>of(LatexiceDragonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexiceDragonEntity::new)
 
 					.sized(0.6f, 1.8f));
@@ -69,7 +69,7 @@ public class GoodblockModEntities {
 			EntityType.Builder.<LatexbluedragonEntity>of(LatexbluedragonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexbluedragonEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<LatexPurplecoocwolfEntity>> LATEXPRTPLECOOCWOLF = register("latexpurplecoocwolf",
+	public static final RegistryObject<EntityType<LatexPurplecoocwolfEntity>> LATEXPRTPLECOOCWOLF = register("latex_purple_cooc_wolf",
 			EntityType.Builder.<LatexPurplecoocwolfEntity>of(LatexPurplecoocwolfEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexPurplecoocwolfEntity::new)
 
 					.sized(0.6f, 1.8f));
@@ -90,6 +90,13 @@ public class GoodblockModEntities {
 					.setCustomClientFactory(LatexDragonFruitWolfEntity::new)
 					.sized(0.7f, 1.93f));
 
+	public static final RegistryObject<EntityType<LatexYunQiIceDragonEntity>> LATEXYUNQIICEDRAGON = register("latex_yun_qi_ice_dragon",
+			EntityType.Builder.<LatexYunQiIceDragonEntity>of(LatexYunQiIceDragonEntity::new, ChangedMobCategories.CHANGED)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(LatexYunQiIceDragonEntity::new)
+					.sized(0.7f, 1.93f));
 	//////////////////else///////////////////
 	public static final RegistryObject<EntityType<LatexthreemonthwolfEntityProjectile>> LATEXTHREEMONTHWOLF_PROJECTILE = register("projectile_latexthreemonthwolf",
 			EntityType.Builder.<LatexthreemonthwolfEntityProjectile>of(LatexthreemonthwolfEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1)
