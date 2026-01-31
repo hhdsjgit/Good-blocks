@@ -9,7 +9,7 @@ public class GuihotpaXianShiYouXiNeiDieJiaCengProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(GoodblockModMobEffects.LATEXHOTPAR.get()) : false) {
+		if (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GoodblockModMobEffects.LATEXHOTPAR.get())) {
 			return true;
 		}
 		return false;

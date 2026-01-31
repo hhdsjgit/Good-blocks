@@ -1,10 +1,9 @@
 package net.hhdsj.goodblock.entity;
 
-import net.hhdsj.goodblock.registers.GoodblockEntities;
+import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
@@ -25,8 +24,6 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.hhdsj.goodblock.init.GoodblockModEntities;
-
 import java.util.Set;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
@@ -38,8 +35,6 @@ import java.util.List;
 import net.ltxprogrammer.changed.entity.HairStyle;
 import net.ltxprogrammer.changed.entity.TransfurMode;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
-import net.hhdsj.goodblock.registers.GoodblockEntities;
-
 public class LatexDragonFruitWolfEntity extends ChangedEntity {
 
     private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("snowy_plains"));
@@ -50,7 +45,7 @@ public class LatexDragonFruitWolfEntity extends ChangedEntity {
     }
 
     public LatexDragonFruitWolfEntity(PlayMessages.SpawnEntity packet, Level world) {
-        this(GoodblockEntities.LATEXDRAGONFRUITWOLF.get(), world);
+        this(GoodblockModEntities.LATEXDRAGONFRUITWOLF.get(), world);
     }
 
     @Override

@@ -1,6 +1,6 @@
 package net.hhdsj.goodblock.entity;
 
-import net.hhdsj.goodblock.registers.GoodblockEntities;
+import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.hhdsj.goodblock.event.GoodblockProcessTransfur;
 
 import net.ltxprogrammer.changed.entity.TransfurCause;
@@ -57,11 +57,11 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
     }
     
     public LatexthreemonthwolfEntityProjectile(PlayMessages.SpawnEntity packet, Level world) {
-        this(GoodblockEntities.LATEXTHREEMONTHWOLF_PROJECTILE.get(), world);
+        this(GoodblockModEntities.LATEXTHREEMONTHWOLF_PROJECTILE.get(), world);
     }
     
     public LatexthreemonthwolfEntityProjectile(Level world, LivingEntity shooter) {
-        this(GoodblockEntities.LATEXTHREEMONTHWOLF_PROJECTILE.get(), world);
+        this(GoodblockModEntities.LATEXTHREEMONTHWOLF_PROJECTILE.get(), world);
         this.setOwner(shooter);
         this.setPos(shooter.getX(), shooter.getEyeY() - 0.1, shooter.getZ());
         

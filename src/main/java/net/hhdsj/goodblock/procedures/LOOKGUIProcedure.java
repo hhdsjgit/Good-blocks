@@ -26,6 +26,7 @@ import net.hhdsj.goodblock.init.GoodblockModItems;
 import java.util.Iterator;
 
 import io.netty.buffer.Unpooled;
+import org.jetbrains.annotations.NotNull;
 
 public class LOOKGUIProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -36,18 +37,18 @@ public class LOOKGUIProcedure {
 				BlockPos _bpos = new BlockPos(x, y, z);
 				NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 					@Override
-					public Component getDisplayName() {
+					public @NotNull Component getDisplayName() {
 						return new TextComponent("FINDGUI");
 					}
 
 					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+					public AbstractContainerMenu createMenu(int id, @NotNull Inventory inventory, @NotNull Player player) {
 						return new FINDGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}
 		}
-		if (!(entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel ? _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("goodblock:usemod"))).isDone() : false)) {
+		if (!(entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel && _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("goodblock:usemod"))).isDone())) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(GoodblockModItems.INKSANS_4.get());
 				_setstack.setCount(1);

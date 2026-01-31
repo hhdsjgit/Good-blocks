@@ -1,26 +1,14 @@
 
 /*
- *    MCreator note: This file will be REGENERATED on each build.
+ *    这些为注册类,请将注册写在这里,而不是其它地方!
  */
 package net.hhdsj.goodblock.init;
 
+import net.hhdsj.goodblock.client.renderer.*;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
-
-import net.hhdsj.goodblock.client.renderer.WhitebluepupRenderer;
-import net.hhdsj.goodblock.client.renderer.LatexyunxqicedragonRenderer;
-import net.hhdsj.goodblock.client.renderer.LatexyunxqhotdragonRenderer;
-import net.hhdsj.goodblock.client.renderer.LatexthreemonthwolfRenderer;
-import net.hhdsj.goodblock.client.renderer.LatexpurplewswolfRenderer;
-import net.hhdsj.goodblock.client.renderer.LatexiceDragonRenderer;
-import net.hhdsj.goodblock.client.renderer.LatexbluedragonRenderer;
-import net.hhdsj.goodblock.client.renderer.LatexOrangeFoxRenderer;
-import net.hhdsj.goodblock.client.renderer.LatexKcahraSharkRenderer;
-import net.hhdsj.goodblock.client.renderer.InksugerRenderer;
-import net.hhdsj.goodblock.client.renderer.DarkfuLatexWolfMaleRenderer;
-import net.hhdsj.goodblock.client.renderer.BlackpupmaleRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class GoodblockModEntityRenderers {
@@ -38,5 +26,9 @@ public class GoodblockModEntityRenderers {
 		event.registerEntityRenderer(GoodblockModEntities.LATEXYUNXQHOTDRAGON.get(), LatexyunxqhotdragonRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXYUNXQICEDRAGON.get(), LatexyunxqicedragonRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXBLUEDRAGON.get(), LatexbluedragonRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.LATEX_KAMONA_HSGUY_DRAGON_WOLF.get(), LatexkamonaHSguydragonwolfRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.LATEXDRAGONFRUITWOLF.get(), LatexDragonFruitWolfRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.LATEXPRTPLECOOCWOLF.get(), LatexPurpleCoocWolfRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.LATEXTHREEMONTHWOLF_PROJECTILE.get(), LatexArrowRenderer::new);
 	}
 }

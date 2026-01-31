@@ -7,9 +7,6 @@ public class LatexthreemonthwolfZhanDouShiTiTiaoJianProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if (6 > (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) {
-			return true;
-		}
-		return false;
-	}
+        return 6 > (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1);
+    }
 }

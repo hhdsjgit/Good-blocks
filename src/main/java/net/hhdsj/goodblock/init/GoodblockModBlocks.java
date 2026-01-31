@@ -1,7 +1,3 @@
-
-/*
- *    MCreator note: This file will be REGENERATED on each build.
- */
 package net.hhdsj.goodblock.init;
 
 import net.minecraftforge.registries.RegistryObject;

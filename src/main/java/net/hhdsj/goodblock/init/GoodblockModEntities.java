@@ -1,10 +1,11 @@
 
 /*
- *    MCreator note: This file will be REGENERATED on each build.
+ *    这些为注册类,请将注册写在这里,而不是其它地方!
  */
 package net.hhdsj.goodblock.init;
 
 import net.hhdsj.goodblock.entity.*;
+import net.ltxprogrammer.changed.init.ChangedMobCategories;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
@@ -72,6 +73,28 @@ public class GoodblockModEntities {
 			EntityType.Builder.<LatexPurplecoocwolfEntity>of(LatexPurplecoocwolfEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexPurplecoocwolfEntity::new)
 
 					.sized(0.6f, 1.8f));
+
+	public static final RegistryObject<EntityType<LatexkamonaHSguydragonwolfEntity>> LATEX_KAMONA_HSGUY_DRAGON_WOLF = register("latex_kamona_hsguy_dragon_wolf",
+			EntityType.Builder.<LatexkamonaHSguydragonwolfEntity>of(LatexkamonaHSguydragonwolfEntity::new, ChangedMobCategories.CHANGED)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(LatexkamonaHSguydragonwolfEntity::new)
+					.sized(0.7f, 1.93f));
+
+	public static final RegistryObject<EntityType<LatexDragonFruitWolfEntity>> LATEXDRAGONFRUITWOLF = register("latex_dragon_fruit_wolf",
+			EntityType.Builder.<LatexDragonFruitWolfEntity>of(LatexDragonFruitWolfEntity::new, ChangedMobCategories.CHANGED)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(LatexDragonFruitWolfEntity::new)
+					.sized(0.7f, 1.93f));
+
+	//////////////////else///////////////////
+	public static final RegistryObject<EntityType<LatexthreemonthwolfEntityProjectile>> LATEXTHREEMONTHWOLF_PROJECTILE = register("projectile_latexthreemonthwolf",
+			EntityType.Builder.<LatexthreemonthwolfEntityProjectile>of(LatexthreemonthwolfEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1)
+					.setCustomClientFactory(LatexthreemonthwolfEntityProjectile::new).sized(0.5f, 0.5f));
+
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
 	}
@@ -93,6 +116,8 @@ public class GoodblockModEntities {
 			LatexyunxqicedragonEntity.init();
 			LatexbluedragonEntity.init();
 			LatexPurplecoocwolfEntity.init();
+			LatexkamonaHSguydragonwolfEntity.init();
+			LatexDragonFruitWolfEntity.init();
 		});
 	}
 
@@ -111,5 +136,7 @@ public class GoodblockModEntities {
 		event.put(LATEXYUNXQICEDRAGON.get(), LatexyunxqicedragonEntity.createAttributes().build());
 		event.put(LATEXBLUEDRAGON.get(), LatexbluedragonEntity.createAttributes().build());
 		event.put(LATEXPRTPLECOOCWOLF.get(), LatexPurplecoocwolfEntity.createAttributes().build());
+		event.put(LATEX_KAMONA_HSGUY_DRAGON_WOLF.get(), LatexkamonaHSguydragonwolfEntity.createAttributes().build());
+		event.put(LATEXDRAGONFRUITWOLF.get(), LatexDragonFruitWolfEntity.createAttributes().build());
 	}
 }

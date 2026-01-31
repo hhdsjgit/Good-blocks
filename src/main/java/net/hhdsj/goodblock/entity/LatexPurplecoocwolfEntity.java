@@ -2,7 +2,7 @@
 package net.hhdsj.goodblock.entity;
 
 
-import net.hhdsj.goodblock.registers.GoodblockEntities;
+import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 import net.ltxprogrammer.changed.util.Color3;
@@ -67,11 +67,11 @@ public class LatexPurplecoocwolfEntity extends ChangedEntity {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockEntities.LATEXPRTPLECOOCWOLF.get(), 20, 4, 4));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXPRTPLECOOCWOLF.get(), 20, 4, 4));
 	}
 
 	public LatexPurplecoocwolfEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(GoodblockEntities.LATEXPRTPLECOOCWOLF.get(), world);
+		this(GoodblockModEntities.LATEXPRTPLECOOCWOLF.get(), world);
 	}
 
 	public LatexPurplecoocwolfEntity(EntityType<LatexPurplecoocwolfEntity> type, Level world) {
@@ -107,7 +107,7 @@ public class LatexPurplecoocwolfEntity extends ChangedEntity {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(GoodblockEntities.LATEXPRTPLECOOCWOLF.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(GoodblockModEntities.LATEXPRTPLECOOCWOLF.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 

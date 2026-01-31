@@ -4,12 +4,12 @@ license="MIT License"
 
 [[mods]]
 modId="goodblock"
-version="0.7.2"
+version="1.0.0"
 displayName="goodblock"
-credits="逸云 , 缘来007 ,好好的时间2"
+credits="逸云 , 缘来007 ,Goodtimes2,"
 displayURL="https://github.com/hhdsjgit/Good-blocks"
 logoFile="logo.png"
-authors="好好的时间2"
+authors="Goodtimes2"
 description='''
 Some of the content additions to Changed addon plus
 '''
@@ -28,6 +28,7 @@ Some of the content additions to Changed addon plus
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
+
 [[dependencies.goodblock]]
     modId="changed"
     mandatory=true

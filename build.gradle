@@ -18,9 +18,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 
-version = '1.0'
+version = '1.0.0'
 group = 'com.yourname.modid'
-archivesBaseName = 'modid'
+archivesBaseName = 'goodblock'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 

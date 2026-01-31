@@ -30,8 +30,6 @@ import net.minecraft.network.FriendlyByteBuf;
 
 //java add
 
-import net.hhdsj.goodblock.registers.GoodblockEntities;
-import net.hhdsj.goodblock.registers.GoodblockModRegisterItems;
 //import net.hhdsj.goodblock.registers.GoodblockEntityRenderers;
 
 import java.util.function.Supplier;
@@ -50,8 +48,8 @@ public class GoodblockMod {
 	private static int messageID = 0;
 
 	public GoodblockMod() {
-		
 		GoodblockModTabs.load();
+
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		GoodblockModEnchantmentInit.ENCHANTMENTS.register(bus);
@@ -62,18 +60,20 @@ public class GoodblockMod {
 
 		GoodblockModEntities.REGISTRY.register(bus);
 
-		GoodblockEntities.REGISTRY.register(bus);
+		GoodblockModEntities.REGISTRY.register(bus);
 
 		GoodblockModFeatures.REGISTRY.register(bus);
+
 		GoodblockModFluids.REGISTRY.register(bus);
+
 		GoodblockModParticleTypes.REGISTRY.register(bus);
+
 		GoodBlockModBiomes.BIOMES.register(bus);
 
-		GoodblockModRegisterItems.REGISTRY.register(bus);
-
 		GoodblockModMobEffects.REGISTRY.register(bus);
-		//latex java register
+
         GoodblockModAbilities.REGISTRY.register(bus);
+
 		GoodblockModTransfurVariants.REGISTRY.register(bus);
 
 

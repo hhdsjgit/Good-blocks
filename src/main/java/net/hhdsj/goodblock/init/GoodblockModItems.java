@@ -1,6 +1,6 @@
 
 /*
- *    MCreator note: This file will be REGENERATED on each build.
+ *    这些为注册类,请将注册写在这里,而不是其它地方!
  */
 package net.hhdsj.goodblock.init;
 
@@ -50,7 +50,8 @@ public class GoodblockModItems {
 	public static final RegistryObject<Item> IRONHOT = block(GoodblockModBlocks.IRONHOT, GoodblockModTabs.TAB_WORLDBLOCK);
 	public static final RegistryObject<Item> PALE_WOOD_STAIRS = block(GoodblockModBlocks.PALE_WOOD_STAIRS, GoodblockModTabs.TAB_WORLDBLOCK);
 	public static final RegistryObject<Item> PALE_WOOD_SLAB = block(GoodblockModBlocks.PALE_WOOD_SLAB, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> SULPHUR = REGISTRY.register("sulphur", () -> new SulphurItem());
+
+	public static final RegistryObject<Item> SULPHUR = REGISTRY.register("sulphur", SulphurItem::new);
 	public static final RegistryObject<Item> NITRICACID = REGISTRY.register("nitricacid", () -> new NitricacidItem());
 	public static final RegistryObject<Item> IMPUREURANIUM = REGISTRY.register("impureuranium", () -> new ImpureuraniumItem());
 	public static final RegistryObject<Item> IMPUREURANIUMINGOT = REGISTRY.register("impureuraniumingot", () -> new ImpureuraniumingotItem());
@@ -110,6 +111,26 @@ public class GoodblockModItems {
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXBLUEDRAGON, -16750849, -16776961, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
 	public static final RegistryObject<Item> DRAGONFRUIT = REGISTRY.register("dragonfruit", () -> new DragonfruitItem());
 
+	public static final RegistryObject<Item> LATEX_DRAGON_FRUIT_WOLF_SPAWN_EGG = REGISTRY.register("latex_dragon_fruit_wolf_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXDRAGONFRUITWOLF,
+					-16724788,
+					-16711681,
+					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
+			));
+
+	public static final RegistryObject<Item> LATEX_KAMONA_HSGUY_DRAGON_WOLF_SPAWN_EGG = REGISTRY.register("latex_kamona_hsguy_dragon_wolf_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEX_KAMONA_HSGUY_DRAGON_WOLF,
+					-16724788,
+					-16711681,
+					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
+			));
+
+	public static final RegistryObject<Item> LATEX_PURPLE_COOC_WOLF_EGG = REGISTRY.register("latex_purple_cooc_wolf_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXPRTPLECOOCWOLF,
+					-16724788,
+					-16711681,
+					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
+			));
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
 	}

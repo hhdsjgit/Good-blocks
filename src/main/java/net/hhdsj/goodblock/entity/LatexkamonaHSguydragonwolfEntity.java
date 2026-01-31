@@ -18,7 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
 import net.hhdsj.goodblock.init.GoodblockModEntities;
-import net.hhdsj.goodblock.registers.GoodblockEntities;
+import net.hhdsj.goodblock.init.GoodblockModEntities;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -98,7 +98,7 @@ public class LatexkamonaHSguydragonwolfEntity extends ChangedEntity {
 
 	
 	public LatexkamonaHSguydragonwolfEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(GoodblockEntities.LATEX_KAMONA_HSGUY_DRAGON_WOLF.get(), world);
+		this(GoodblockModEntities.LATEX_KAMONA_HSGUY_DRAGON_WOLF.get(), world);
 	}
 
 

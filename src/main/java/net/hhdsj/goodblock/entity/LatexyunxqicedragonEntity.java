@@ -121,7 +121,7 @@ public class LatexyunxqicedragonEntity extends ChangedEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 0.1);
+		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 3);
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 16);
 		builder = builder.add(Attributes.ARMOR, 0);
