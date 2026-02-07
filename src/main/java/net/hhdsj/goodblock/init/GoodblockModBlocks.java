@@ -37,29 +37,29 @@ import net.hhdsj.goodblock.GoodblockMod;
 
 public class GoodblockModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, GoodblockMod.MODID);
-	public static final RegistryObject<Block> SULPHURBLOCK = REGISTRY.register("sulphurblock", () -> new SulphurblockBlock());
-	public static final RegistryObject<Block> NITREBLOCK = REGISTRY.register("nitreblock", () -> new NitreblockBlock());
-	public static final RegistryObject<Block> URANIUMMINERAL = REGISTRY.register("uraniummineral", () -> new UraniummineralBlock());
-	public static final RegistryObject<Block> PALE_WOOD_PLANKS = REGISTRY.register("pale_wood_planks", () -> new Pale_woodPlanksBlock());
-	public static final RegistryObject<Block> PALE_WOOD_LEAVES = REGISTRY.register("pale_wood_leaves", () -> new Pale_woodLeavesBlock());
-	public static final RegistryObject<Block> PALE_WOOD_LOG = REGISTRY.register("pale_wood_log", () -> new Pale_woodLogBlock());
-	public static final RegistryObject<Block> PALE_WOOD_WOOD = REGISTRY.register("pale_wood_wood", () -> new Pale_woodWoodBlock());
-	public static final RegistryObject<Block> URANIUMBLOCK = REGISTRY.register("uraniumblock", () -> new UraniumblockBlock());
-	public static final RegistryObject<Block> BLUEBLOCK = REGISTRY.register("blueblock", () -> new BlueblockBlock());
-	public static final RegistryObject<Block> IRONHOT = REGISTRY.register("ironhot", () -> new IronhotBlock());
-	public static final RegistryObject<Block> PALE_WOOD_STAIRS = REGISTRY.register("pale_wood_stairs", () -> new Pale_woodStairsBlock());
-	public static final RegistryObject<Block> PALE_WOOD_SLAB = REGISTRY.register("pale_wood_slab", () -> new Pale_woodSlabBlock());
-	public static final RegistryObject<Block> PALE_WOOD_BUTTON = REGISTRY.register("pale_wood_button", () -> new Pale_woodButtonBlock());
-	public static final RegistryObject<Block> PALETREESPA_1 = REGISTRY.register("paletreespa_1", () -> new Paletreespa1Block());
-	public static final RegistryObject<Block> BLACKBLOCK = REGISTRY.register("blackblock", () -> new BlackblockBlock());
-	public static final RegistryObject<Block> PALE_WOOD_FENCE = REGISTRY.register("pale_wood_fence", () -> new Pale_woodFenceBlock());
-	public static final RegistryObject<Block> PALE_WOOD_FENCE_GATE = REGISTRY.register("pale_wood_fence_gate", () -> new Pale_woodFenceGateBlock());
-	public static final RegistryObject<Block> PALE_WOOD_PRESSURE_PLATE = REGISTRY.register("pale_wood_pressure_plate", () -> new Pale_woodPressurePlateBlock());
-	public static final RegistryObject<Block> BLOCKBW_1 = REGISTRY.register("blockbw_1", () -> new Blockbw1Block());
-	public static final RegistryObject<Block> BLOCKBW_2 = REGISTRY.register("blockbw_2", () -> new Blockbw2Block());
-	public static final RegistryObject<Block> BLUE_CRYSTALORE = REGISTRY.register("blue_crystalore", () -> new BlueCrystaloreBlock());
-	public static final RegistryObject<Block> CATALYZER = REGISTRY.register("catalyzer", () -> new CatalyzerBlock());
-	public static final RegistryObject<Block> FLUIDHOTTEST = REGISTRY.register("fluidhottest", () -> new FluidhottestBlock());
+	public static final RegistryObject<Block> SULPHURBLOCK = REGISTRY.register("sulphurblock", SulphurblockBlock::new);
+	public static final RegistryObject<Block> NITREBLOCK = REGISTRY.register("nitreblock", NitreblockBlock::new);
+	public static final RegistryObject<Block> URANIUMMINERAL = REGISTRY.register("uraniummineral", UraniummineralBlock::new);
+	public static final RegistryObject<Block> PALE_WOOD_PLANKS = REGISTRY.register("pale_wood_planks", Pale_woodPlanksBlock::new);
+	public static final RegistryObject<Block> PALE_WOOD_LEAVES = REGISTRY.register("pale_wood_leaves", Pale_woodLeavesBlock::new);
+	public static final RegistryObject<Block> PALE_WOOD_LOG = REGISTRY.register("pale_wood_log", Pale_woodLogBlock::new);
+	public static final RegistryObject<Block> PALE_WOOD_WOOD = REGISTRY.register("pale_wood_wood", Pale_woodWoodBlock::new);
+	public static final RegistryObject<Block> URANIUMBLOCK = REGISTRY.register("uraniumblock", UraniumblockBlock::new);
+	public static final RegistryObject<Block> BLUEBLOCK = REGISTRY.register("blueblock", BlueblockBlock::new);
+	public static final RegistryObject<Block> IRONHOT = REGISTRY.register("ironhot", IronhotBlock::new);
+	public static final RegistryObject<Block> PALE_WOOD_STAIRS = REGISTRY.register("pale_wood_stairs", Pale_woodStairsBlock::new);
+	public static final RegistryObject<Block> PALE_WOOD_SLAB = REGISTRY.register("pale_wood_slab", Pale_woodSlabBlock::new);
+	public static final RegistryObject<Block> PALE_WOOD_BUTTON = REGISTRY.register("pale_wood_button", Pale_woodButtonBlock::new);
+	public static final RegistryObject<Block> PALETREESPA_1 = REGISTRY.register("paletreespa_1", Paletreespa1Block::new);
+	public static final RegistryObject<Block> BLACKBLOCK = REGISTRY.register("blackblock", BlackblockBlock::new);
+	public static final RegistryObject<Block> PALE_WOOD_FENCE = REGISTRY.register("pale_wood_fence", Pale_woodFenceBlock::new);
+	public static final RegistryObject<Block> PALE_WOOD_FENCE_GATE = REGISTRY.register("pale_wood_fence_gate", Pale_woodFenceGateBlock::new);
+	public static final RegistryObject<Block> PALE_WOOD_PRESSURE_PLATE = REGISTRY.register("pale_wood_pressure_plate", Pale_woodPressurePlateBlock::new);
+	public static final RegistryObject<Block> BLOCKBW_1 = REGISTRY.register("blockbw_1", Blockbw1Block::new);
+	public static final RegistryObject<Block> BLOCKBW_2 = REGISTRY.register("blockbw_2", Blockbw2Block::new);
+	public static final RegistryObject<Block> BLUE_CRYSTALORE = REGISTRY.register("blue_crystalore", BlueCrystaloreBlock::new);
+	public static final RegistryObject<Block> CATALYZER = REGISTRY.register("catalyzer", CatalyzerBlock::new);
+	public static final RegistryObject<Block> FLUIDHOTTEST = REGISTRY.register("fluidhottest", FluidhottestBlock::new);
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {

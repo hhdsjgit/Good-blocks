@@ -1,6 +1,7 @@
 
 package net.hhdsj.goodblock.client.gui;
 
+import net.minecraft.client.gui.GuiComponent;
 import org.checkerframework.checker.units.qual.h;
 
 import net.minecraftforge.fml.common.Mod;
@@ -45,10 +46,10 @@ public class GuihotpaOverlay {
 			RenderSystem.enableBlend();
 			RenderSystem.setShader(GameRenderer::getPositionTexShader);
 			RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
-			RenderSystem.setShaderColor(1, 1, 1, 1);
+			RenderSystem.setShaderColor(1, 1, 1, 0.4f);
 			if (GuihotpaXianShiYouXiNeiDieJiaCengProcedure.execute(entity)) {
 				RenderSystem.setShaderTexture(0, new ResourceLocation("goodblock:textures/screens/goo_outline.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), 0, 0, 0, 0, w, h, w, h);
+				GuiComponent.blit(event.getMatrixStack(), 0, 0, 0, 0, w, h, w, h);
 			}
 			RenderSystem.depthMask(true);
 			RenderSystem.defaultBlendFunc();

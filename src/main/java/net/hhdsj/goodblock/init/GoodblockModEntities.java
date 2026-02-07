@@ -74,12 +74,12 @@ public class GoodblockModEntities {
 
 					.sized(0.6f, 1.8f));
 
-	public static final RegistryObject<EntityType<LatexkamonaHSguydragonwolfEntity>> LATEX_KAMONA_HSGUY_DRAGON_WOLF = register("latex_kamona_hsguy_dragon_wolf",
-			EntityType.Builder.<LatexkamonaHSguydragonwolfEntity>of(LatexkamonaHSguydragonwolfEntity::new, ChangedMobCategories.CHANGED)
+	public static final RegistryObject<EntityType<LatexIceFieldWolfDragonEntity>> LATEX_ICE_FIELD_WOLF_DRAGON = register("latex_ice_field_wolf_dragon",
+			EntityType.Builder.<LatexIceFieldWolfDragonEntity>of(LatexIceFieldWolfDragonEntity::new, ChangedMobCategories.CHANGED)
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64)
 					.setUpdateInterval(3)
-					.setCustomClientFactory(LatexkamonaHSguydragonwolfEntity::new)
+					.setCustomClientFactory(LatexIceFieldWolfDragonEntity::new)
 					.sized(0.7f, 1.93f));
 
 	public static final RegistryObject<EntityType<LatexDragonFruitWolfEntity>> LATEXDRAGONFRUITWOLF = register("latex_dragon_fruit_wolf",
@@ -103,7 +103,7 @@ public class GoodblockModEntities {
 					.setCustomClientFactory(LatexthreemonthwolfEntityProjectile::new).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
-		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
+		return REGISTRY.register(registryname, () -> entityTypeBuilder.build(registryname));
 	}
 
 
@@ -123,7 +123,7 @@ public class GoodblockModEntities {
 			LatexyunxqicedragonEntity.init();
 			LatexbluedragonEntity.init();
 			LatexPurplecoocwolfEntity.init();
-			LatexkamonaHSguydragonwolfEntity.init();
+			LatexIceFieldWolfDragonEntity.init();
 			LatexDragonFruitWolfEntity.init();
 			LatexYunQiIceDragonEntity.init();
 		});
@@ -144,7 +144,7 @@ public class GoodblockModEntities {
 		event.put(LATEXYUNXQICEDRAGON.get(), LatexyunxqicedragonEntity.createAttributes().build());
 		event.put(LATEXBLUEDRAGON.get(), LatexbluedragonEntity.createAttributes().build());
 		event.put(LATEXPRTPLECOOCWOLF.get(), LatexPurplecoocwolfEntity.createAttributes().build());
-		event.put(LATEX_KAMONA_HSGUY_DRAGON_WOLF.get(), LatexkamonaHSguydragonwolfEntity.createAttributes().build());
+		event.put(LATEX_ICE_FIELD_WOLF_DRAGON.get(), LatexIceFieldWolfDragonEntity.createAttributes().build());
 		event.put(LATEXDRAGONFRUITWOLF.get(), LatexDragonFruitWolfEntity.createAttributes().build());
 		event.put(LATEXYUNQIICEDRAGON.get(), LatexYunQiIceDragonEntity.createAttributes().build());
 	}

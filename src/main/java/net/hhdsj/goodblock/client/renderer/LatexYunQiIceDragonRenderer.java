@@ -18,7 +18,6 @@ public class LatexYunQiIceDragonRenderer extends AdvancedHumanoidRenderer<LatexY
 	public LatexYunQiIceDragonRenderer(EntityRendererProvider.Context context) {
 		
 		super(context, new ModelLatexYunQiIceDragon(context.bakeLayer(ModelLatexYunQiIceDragon.LAYER_LOCATION)),
-		//ArmorLatexMaleWingedDragonModel::new,
 		ArmorLatexMaleWingedDragonModel.MODEL_SET, 
 		0.5f);
 		this.addLayer(new EyesLayer<LatexYunQiIceDragonEntity, ModelLatexYunQiIceDragon>(this) {

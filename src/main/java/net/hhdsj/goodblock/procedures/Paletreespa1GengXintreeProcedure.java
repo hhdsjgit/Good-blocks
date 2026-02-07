@@ -37,11 +37,11 @@ public class Paletreespa1GengXintreeProcedure {
 				tree_y_now = tree_y_now + 1;
 			}
 			tree_y_now = tree_higt - 5;
-			for (int index2 = 0; index2 < (int) (2); index2++) {
+			for (int index2 = 0; index2 < 2; index2++) {
 				tree_x_now = -2;
 				tree_z_now = -2;
-				for (int index3 = 0; index3 < (int) (5); index3++) {
-					for (int index4 = 0; index4 < (int) (5); index4++) {
+				for (int index3 = 0; index3 < 5; index3++) {
+					for (int index4 = 0; index4 < 5; index4++) {
 						final BlockPos p46860 = new BlockPos(x + tree_x_now, y + tree_y_now, z + tree_z_now);
 						if (world.isEmptyBlock(p46860)) {
 							world.setBlock(p46860, tree_levels_block, 3);

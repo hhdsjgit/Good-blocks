@@ -36,8 +36,10 @@ public class GoodblockModKeyMappings {
 				if (event.getKey() == KEYA.getKey().getValue()) {
 					if (event.getAction() == GLFW.GLFW_PRESS) {
 						GoodblockMod.PACKET_HANDLER.sendToServer(new KeyaMessage(0, 0));
-						KeyaMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-					}
+                        if (Minecraft.getInstance().player != null) {
+                            KeyaMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+                        }
+                    }
 				}
 			}
 		}

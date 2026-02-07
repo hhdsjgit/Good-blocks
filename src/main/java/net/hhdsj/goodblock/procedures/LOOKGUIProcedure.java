@@ -35,7 +35,7 @@ public class LOOKGUIProcedure {
 		{
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = new BlockPos(x, y, z);
-				NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+				NetworkHooks.openGui(_ent, new MenuProvider() {
 					@Override
 					public @NotNull Component getDisplayName() {
 						return new TextComponent("FINDGUI");

@@ -6,7 +6,6 @@ import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.MobType;
@@ -18,36 +17,17 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
 import net.hhdsj.goodblock.init.GoodblockModEntities;
-import net.hhdsj.goodblock.init.GoodblockModEntities;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
-
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.biome.MobSpawnSettings;
-
-import java.util.Set;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraftforge.common.ForgeMod;
-import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-import java.util.Random;
-import net.ltxprogrammer.changed.entity.Gender;
 import net.ltxprogrammer.changed.entity.HairStyle;
 import net.ltxprogrammer.changed.entity.TransfurMode;
-import net.ltxprogrammer.changed.entity.beast.*;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 
-public class LatexkamonaHSguydragonwolfEntity extends ChangedEntity {
+public class LatexIceFieldWolfDragonEntity extends ChangedEntity {
 
 	@Override
     protected void setAttributes(AttributeMap attributes) {
@@ -77,28 +57,19 @@ public class LatexkamonaHSguydragonwolfEntity extends ChangedEntity {
     }
 
     public Color3 getTransfurColor(TransfurCause cause) {
-        return Color3.getColor("#0095ff");
+        return Color3.getColor("#00ffff");
     }
 
 	
-	public LatexkamonaHSguydragonwolfEntity(EntityType<? extends LatexkamonaHSguydragonwolfEntity> p_19870_, Level p_19871_) {
+	public LatexIceFieldWolfDragonEntity(EntityType<? extends LatexIceFieldWolfDragonEntity> p_19870_, Level p_19871_) {
         super(p_19870_, p_19871_);
     }
 
 	@Override
     public int getTicksRequiredToFreeze() { return 480; }
 
-
-
-
-
-
-
-
-
-	
-	public LatexkamonaHSguydragonwolfEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(GoodblockModEntities.LATEX_KAMONA_HSGUY_DRAGON_WOLF.get(), world);
+	public LatexIceFieldWolfDragonEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(GoodblockModEntities.LATEX_ICE_FIELD_WOLF_DRAGON.get(), world);
 	}
 
 

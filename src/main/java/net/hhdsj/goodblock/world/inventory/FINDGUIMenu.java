@@ -23,9 +23,9 @@ public class FINDGUIMenu extends AbstractContainerMenu implements Supplier<Map<I
 	public final Level world;
 	public final Player entity;
 	public int x, y, z;
-	private IItemHandler internal;
+	private final IItemHandler internal;
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
-	private boolean bound = false;
+	private final boolean bound = false;
 
 	public FINDGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(GoodblockModMenus.FINDGUI, id);

@@ -24,7 +24,6 @@ import net.ltxprogrammer.changed.client.renderer.layers.*;
 public class LatexyunxqhotdragonRenderer extends AdvancedHumanoidRenderer<LatexyunxqhotdragonEntity, Modellatexyunxqhotdragon, ArmorLatexMaleWingedDragonModel<LatexyunxqhotdragonEntity>> {
 	public LatexyunxqhotdragonRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modellatexyunxqhotdragon(context.bakeLayer(Modellatexyunxqhotdragon.LAYER_LOCATION)),
-		//ArmorLatexMaleWingedDragonModel::new,
 		ArmorLatexMaleWingedDragonModel.MODEL_SET, 
 		0.5f);
 		this.addLayer(new EyesLayer<LatexyunxqhotdragonEntity, Modellatexyunxqhotdragon>(this) {
@@ -36,7 +35,8 @@ public class LatexyunxqhotdragonRenderer extends AdvancedHumanoidRenderer<Latexy
         this.addLayer(new LatexParticlesLayer<>(this, getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
         //this.addLayer(CustomEyesLayer.builder(this, context.getModelSet())
-        this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
+		this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor, CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#8dcfff")), CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#8dcfff")), CustomEyesLayer::noRender, CustomEyesLayer::noRender));
+		this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
 		
 	}
 

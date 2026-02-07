@@ -65,7 +65,7 @@
   "advancements.gha_8.title": "A Higher Tier Golden Apple!",
   "advancements.gha_3.descr": "Obtain a Copper Ingot",
   "item.goodblock.armora_1_armor_helmet": "Armora1 Helmet",
-  "entity.goodblock.latex_kamona_hsguy_dragon_wolf": "Latex Kamona Hsguy Dragon Wolf",
+  "entity.goodblock.latex_ice_field_wolf_dragon": "Latex Ice Field Wolf Dragon",
   "entity.goodblock.blackpupmale": "Black kcahra pup",
   "item.goodblock.flute.desc": "Gnusmas GM Soundfont 2.00",
   "item.goodblock.fleececlothingtest_chestplate": "Fleece Clothing Test Chestplate",
@@ -159,5 +159,5 @@
   "block.goodblock.pale_wood_button": "Pale Wood Button",
   "item.goodblock.latexpurplewswolf_spawn_egg": "Purple WS Latex Wolf Spawn Egg",
   "item.goodblock.latex_dragon_fruit_wolf_spawn_egg": "Latex Dragon Fruit Wolf Spawn Egg",
-  "item.goodblock.latex_kamona_hsguy_dragon_wolf_spawn_egg": "Kamona HSguy Dragon Wolf Spawn Egg"
+  "item.goodblock.latex_kamona_hsguy_dragon_wolf_spawn_egg": "Latex Ice Field Wolf Dragon Spawn Egg"
 }

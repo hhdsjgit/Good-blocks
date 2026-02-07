@@ -76,8 +76,8 @@ public class GoodblockModTransfurVariants {
 			.reducedFall()
 			.build());
 	
-	public static final RegistryObject<TransfurVariant<LatexkamonaHSguydragonwolfEntity>> LATEX_KAMONA_HSGUY_DRAGON_WOLF = 
-			REGISTRY.register("form_latex_kamona_hsguy_dragon_wolf", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEX_KAMONA_HSGUY_DRAGON_WOLF)
+	public static final RegistryObject<TransfurVariant<LatexIceFieldWolfDragonEntity>> LATEX_KAMONA_HSGUY_DRAGON_WOLF = 
+			REGISTRY.register("form_latex_ice_field_wolf_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEX_ICE_FIELD_WOLF_DRAGON)
 			.stepSize(0.7f)
 			.nightVision()
 			.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
@@ -166,7 +166,6 @@ public class GoodblockModTransfurVariants {
 			.nightVision()
 			.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 			.build());
-	//LATEXYUNQIICEDRAGON
 
 	public static final RegistryObject<TransfurVariant<LatexYunQiIceDragonEntity>> LATEXYUNQIICEDRAGON =
 			REGISTRY.register("form_latex_yun_qi_ice_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNQIICEDRAGON)
@@ -177,6 +176,7 @@ public class GoodblockModTransfurVariants {
 					.nightVision()
 					.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 					.build());
+
 	public static void register(IEventBus bus) {
         REGISTRY.register(bus);
     }

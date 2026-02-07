@@ -1,8 +1,6 @@
 package net.hhdsj.goodblock.client.model;
 
 
-import net.minecraft.world.entity.Entity;
-import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
@@ -12,39 +10,26 @@ import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.EntityModel;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 
-import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
-import net.ltxprogrammer.changed.entity.beast.LatexTrafficConeDragon;
 
-import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.geom.PartPose;
-import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.HumanoidArm;
 //Changed-mc mod import 我的世界转变MOD导入
-import net.ltxprogrammer.changed.Changed;
-import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
-import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
 
 //Goodblock mod import
 import net.hhdsj.goodblock.entity.*;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class ModelLatexkamonaHSguydragonwolf extends AdvancedHumanoidModel<LatexkamonaHSguydragonwolfEntity> implements AdvancedHumanoidModelInterface<LatexkamonaHSguydragonwolfEntity, ModelLatexkamonaHSguydragonwolf> {
+public class ModelIceFieldWolfDragon extends AdvancedHumanoidModel<LatexIceFieldWolfDragonEntity> implements AdvancedHumanoidModelInterface<LatexIceFieldWolfDragonEntity, ModelIceFieldWolfDragon> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latexnewfoxunified"), "main");
     private final ModelPart LeftLeg;
@@ -54,9 +39,9 @@ public class ModelLatexkamonaHSguydragonwolf extends AdvancedHumanoidModel<Latex
     private final ModelPart Head;
     private final ModelPart Torso;
     private final ModelPart Tail;
-    private final HumanoidAnimator<LatexkamonaHSguydragonwolfEntity, ModelLatexkamonaHSguydragonwolf> animator;
+    private final HumanoidAnimator<LatexIceFieldWolfDragonEntity, ModelIceFieldWolfDragon> animator;
 
-    public ModelLatexkamonaHSguydragonwolf(ModelPart root) {
+    public ModelIceFieldWolfDragon(ModelPart root) {
         super(root);
         this.RightLeg = root.getChild("RightLeg");
         this.LeftLeg = root.getChild("LeftLeg");
@@ -223,16 +208,16 @@ public class ModelLatexkamonaHSguydragonwolf extends AdvancedHumanoidModel<Latex
 		return LayerDefinition.create(meshdefinition, 96, 96);
     }
     @Override
-    public void prepareMobModel(LatexkamonaHSguydragonwolfEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
+    public void prepareMobModel(LatexIceFieldWolfDragonEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
         this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
-    public void setupHand(LatexkamonaHSguydragonwolfEntity entity) {
+    public void setupHand(LatexIceFieldWolfDragonEntity entity) {
         animator.setupHand();
     }
 
     @Override
-    public void setupAnim(@NotNull LatexkamonaHSguydragonwolfEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void setupAnim(@NotNull LatexIceFieldWolfDragonEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         animator.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
     }
@@ -264,7 +249,7 @@ public class ModelLatexkamonaHSguydragonwolf extends AdvancedHumanoidModel<Latex
     }
 
     @Override
-    public HumanoidAnimator<LatexkamonaHSguydragonwolfEntity, ModelLatexkamonaHSguydragonwolf> getAnimator(LatexkamonaHSguydragonwolfEntity entity) {
+    public HumanoidAnimator<LatexIceFieldWolfDragonEntity, ModelIceFieldWolfDragon> getAnimator(LatexIceFieldWolfDragonEntity entity) {
         return animator;
     }
 }
