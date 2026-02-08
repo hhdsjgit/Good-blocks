@@ -15,7 +15,7 @@ public class ProgressTransfurExt {
             final var variant = ChangedRegistry.TRANSFUR_VARIANT.get().getValue(FORM_VARIANT);
 
             if (variant != null) {
-                GoodblockProcessTransfur.progressTransfur(livingEntity, 2.1f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
+                GoodblockProcessTransfur.progressTransfur(livingEntity, 5f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
             }
         } catch (Exception e) {
             e.printStackTrace();
