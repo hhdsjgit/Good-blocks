@@ -55,8 +55,8 @@ public class LatexpurplewswolfRenderer extends AdvancedHumanoidRenderer<Latexpur
 		ArmorLatexMaleCatModel.MODEL_SET, 0.5f);
         this.addLayer(new LatexParticlesLayer<>(this, getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
-        this.addLayer(new CustomEyesLayer<>(this, context.getModelSet()));
-        this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
+		this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor, CustomEyesLayer::glowingIrisColorLeft, CustomEyesLayer::glowingIrisColorRight, CustomEyesLayer::noRender, CustomEyesLayer::noRender));
+		this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
 	}
 
 	@Override

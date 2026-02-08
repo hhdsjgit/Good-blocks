@@ -11,7 +11,7 @@ public class DIEProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity)
-			_entity.hurt(new DamageSource((entity.getDisplayName().getString() + " Killed by furry cat")).bypassArmor(), 80);
+			_entity.hurt(new DamageSource((entity.getDisplayName().getString() + " Killed by furry cat.")).bypassArmor(), 80);
 		GoodblockMod.LOGGER.info("The function cannot be called, and the permissions are insufficient");
 		GoodblockMod.LOGGER.info((entity.getDisplayName().getString()));
 	}

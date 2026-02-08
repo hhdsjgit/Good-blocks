@@ -15,7 +15,7 @@ public class LatexSlowInfectionMobProcedure {
         final var variant = ChangedRegistry.TRANSFUR_VARIANT.get().getValue(FORM_VARIANT);
 
         if (variant != null) {
-            ProcessTransfur.progressTransfur(livingEntity, 0.09f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
+            ProcessTransfur.progressTransfur(livingEntity, 5f, variant, TransfurContext.hazard(TransfurCause.GRAB_REPLICATE));
         }
 
     }

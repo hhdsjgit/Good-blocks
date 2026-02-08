@@ -19,6 +19,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.hhdsj.goodblock.GoodblockMod;
+import org.apache.logging.log4j.core.pattern.PlainTextRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GoodblockModEntities {
@@ -135,6 +136,7 @@ public class GoodblockModEntities {
 			LatexIceFieldWolfDragonEntity.init();
 			LatexDragonFruitWolfEntity.init();
 			LatexYunQiIceDragonEntity.init();
+			LatexRadiationFoxEntity.init();
 		});
 	}
 
@@ -156,5 +158,6 @@ public class GoodblockModEntities {
 		event.put(LATEX_ICE_FIELD_WOLF_DRAGON.get(), LatexIceFieldWolfDragonEntity.createAttributes().build());
 		event.put(LATEXDRAGONFRUITWOLF.get(), LatexDragonFruitWolfEntity.createAttributes().build());
 		event.put(LATEXYUNQIICEDRAGON.get(), LatexYunQiIceDragonEntity.createAttributes().build());
+		event.put(LATEXRADIATIONFOX.get(), LatexRadiationFoxEntity.createAttributes().build());
 	}
 }
