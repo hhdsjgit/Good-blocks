@@ -37,7 +37,7 @@ import net.hhdsj.goodblock.client.model.ModelInksuger;
 import net.hhdsj.goodblock.entity.InksugerEntity;
 import net.hhdsj.goodblock.client.model.ModelNoNameMob;
 
-public class InksugerRenderer extends AdvancedHumanoidRenderer<InksugerEntity, ModelInksuger, ArmorNoneModel<InksugerEntity>> {
+public class InksugerRenderer extends AdvancedHumanoidRenderer<InksugerEntity, ModelInksuger> {
 	public InksugerRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelInksuger(context.bakeLayer(ModelInksuger.LAYER_LOCATION)),
 				//ArmorNoneModel::new, 

@@ -14,7 +14,7 @@ import net.ltxprogrammer.changed.util.Color3;
 import net.ltxprogrammer.changed.client.renderer.AdvancedHumanoidRenderer;
 
 
-public class BlackpupmaleRenderer extends AdvancedHumanoidRenderer<BlackpupmaleEntity, Modelblackpupmale, ArmorNoneModel<BlackpupmaleEntity>> {
+public class BlackpupmaleRenderer extends AdvancedHumanoidRenderer<BlackpupmaleEntity, Modelblackpupmale> {
 	public BlackpupmaleRenderer (EntityRendererProvider.Context context) {
 		super(context, new Modelblackpupmale(context.bakeLayer(Modelblackpupmale.LAYER_LOCATION)),
 				//ArmorNoneModel::new, 

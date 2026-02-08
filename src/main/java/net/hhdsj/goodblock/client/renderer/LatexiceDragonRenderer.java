@@ -23,7 +23,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.ltxprogrammer.changed.client.renderer.AdvancedHumanoidRenderer;
 import net.ltxprogrammer.changed.client.renderer.layers.*;
 
-public class LatexiceDragonRenderer extends AdvancedHumanoidRenderer<LatexiceDragonEntity, ModelLatexicedragon, ArmorLatexBigTailDragonModel<LatexiceDragonEntity>> {
+public class LatexiceDragonRenderer extends AdvancedHumanoidRenderer<LatexiceDragonEntity, ModelLatexicedragon> {
 	public LatexiceDragonRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelLatexicedragon(context.bakeLayer(ModelLatexicedragon.LAYER_LOCATION)),
 			//ArmorLatexBigTailDragonModel::new,

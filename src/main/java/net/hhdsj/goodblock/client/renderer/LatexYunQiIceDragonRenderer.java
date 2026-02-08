@@ -14,7 +14,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.layers.EyesLayer;
 import net.minecraft.resources.ResourceLocation;
 
-public class LatexYunQiIceDragonRenderer extends AdvancedHumanoidRenderer<LatexYunQiIceDragonEntity, ModelLatexYunQiIceDragon, ArmorLatexMaleWingedDragonModel<LatexYunQiIceDragonEntity>> {
+public class LatexYunQiIceDragonRenderer extends AdvancedHumanoidRenderer<LatexYunQiIceDragonEntity, ModelLatexYunQiIceDragon> {
 	public LatexYunQiIceDragonRenderer(EntityRendererProvider.Context context) {
 		
 		super(context, new ModelLatexYunQiIceDragon(context.bakeLayer(ModelLatexYunQiIceDragon.LAYER_LOCATION)),

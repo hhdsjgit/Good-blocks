@@ -22,7 +22,7 @@ import net.ltxprogrammer.changed.client.renderer.layers.*;
 import net.hhdsj.goodblock.entity.LatexOrangeFoxEntity;
 import net.hhdsj.goodblock.client.model.ModelLatexOrangeFox;
 
-public class LatexOrangeFoxRenderer extends AdvancedHumanoidRenderer<LatexOrangeFoxEntity, ModelLatexOrangeFox, ArmorLatexMaleWolfModel<LatexOrangeFoxEntity>>  {//public class LatexOrangeFoxRenderer extends AdvancedHumanoidRenderer<LatexOrangeFoxEntity, ModelLatexOrangeFox, ArmorLatexMaleWolfModel<LatexOrangeFoxEntity>> { //extends MobRenderer<LatexOrangeFoxEntity, ModelLatexOrangeFox<LatexOrangeFoxEntity>> {
+public class LatexOrangeFoxRenderer extends AdvancedHumanoidRenderer<LatexOrangeFoxEntity, ModelLatexOrangeFox>  {//public class LatexOrangeFoxRenderer extends AdvancedHumanoidRenderer<LatexOrangeFoxEntity, ModelLatexOrangeFox, ArmorLatexMaleWolfModel<LatexOrangeFoxEntity>> { //extends MobRenderer<LatexOrangeFoxEntity, ModelLatexOrangeFox<LatexOrangeFoxEntity>> {
 	public LatexOrangeFoxRenderer(EntityRendererProvider.Context context) {
 	
 		super(context, new ModelLatexOrangeFox(context.bakeLayer(ModelLatexOrangeFox.LAYER_LOCATION)),

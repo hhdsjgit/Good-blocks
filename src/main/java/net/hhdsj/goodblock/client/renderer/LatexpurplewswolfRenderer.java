@@ -49,7 +49,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Pose;
 import org.jetbrains.annotations.NotNull;
 
-public class LatexpurplewswolfRenderer extends AdvancedHumanoidRenderer<LatexpurplewswolfEntity, ModelLatexpurplewswolf, ArmorLatexMaleCatModel<LatexpurplewswolfEntity>> {
+public class LatexpurplewswolfRenderer extends AdvancedHumanoidRenderer<LatexpurplewswolfEntity, ModelLatexpurplewswolf> {
 	public LatexpurplewswolfRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelLatexpurplewswolf(context.bakeLayer(ModelLatexpurplewswolf.LAYER_LOCATION)), 
 		ArmorLatexMaleCatModel.MODEL_SET, 0.5f);

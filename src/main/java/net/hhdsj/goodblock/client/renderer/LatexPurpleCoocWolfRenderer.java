@@ -10,7 +10,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
-public class LatexPurpleCoocWolfRenderer extends AdvancedHumanoidRenderer<LatexPurplecoocwolfEntity, ModelLatexPurpleCoocWolf, ArmorLatexMaleWolfModel<LatexPurplecoocwolfEntity>>  {//public class LatexOrangeFoxRenderer extends AdvancedHumanoidRenderer<LatexPurplecoocwolfEntity, ModelLatexPurpleCoocWolf, ArmorLatexMaleWolfModel<LatexPurplecoocwolfEntity>> { //extends MobRenderer<LatexPurplecoocwolfEntity, ModelLatexPurpleCoocWolf<LatexPurplecoocwolfEntity>> {
+public class LatexPurpleCoocWolfRenderer extends AdvancedHumanoidRenderer<LatexPurplecoocwolfEntity, ModelLatexPurpleCoocWolf>  {//public class LatexOrangeFoxRenderer extends AdvancedHumanoidRenderer<LatexPurplecoocwolfEntity, ModelLatexPurpleCoocWolf, ArmorLatexMaleWolfModel<LatexPurplecoocwolfEntity>> { //extends MobRenderer<LatexPurplecoocwolfEntity, ModelLatexPurpleCoocWolf<LatexPurplecoocwolfEntity>> {
 	public LatexPurpleCoocWolfRenderer(EntityRendererProvider.Context context) {
 	
 		super(context, new ModelLatexPurpleCoocWolf(context.bakeLayer(ModelLatexPurpleCoocWolf.LAYER_LOCATION)),

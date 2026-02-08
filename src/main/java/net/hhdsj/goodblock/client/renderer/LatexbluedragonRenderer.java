@@ -20,7 +20,7 @@ import net.ltxprogrammer.changed.client.renderer.layers.*;
 import net.hhdsj.goodblock.client.model.Modelbluedragon;
 import net.hhdsj.goodblock.entity.LatexbluedragonEntity;
 
-public class LatexbluedragonRenderer extends AdvancedHumanoidRenderer<LatexbluedragonEntity, Modelbluedragon, ArmorLatexMaleWingedDragonModel<LatexbluedragonEntity>> {
+public class LatexbluedragonRenderer extends AdvancedHumanoidRenderer<LatexbluedragonEntity, Modelbluedragon> {
 	public LatexbluedragonRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelbluedragon(context.bakeLayer(Modelbluedragon.LAYER_LOCATION)),
 		//ArmorLatexMaleWingedDragonModel::new,

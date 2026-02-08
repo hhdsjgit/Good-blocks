@@ -52,7 +52,7 @@ import net.hhdsj.goodblock.entity.WhitebluepupEntity;
 import net.hhdsj.goodblock.client.model.ModelNoNameMob;
 
 
-public class WhitebluepupRenderer extends AdvancedHumanoidRenderer<WhitebluepupEntity, Modelwhitebluepup, ArmorNoneModel<WhitebluepupEntity>> {
+public class WhitebluepupRenderer extends AdvancedHumanoidRenderer<WhitebluepupEntity, Modelwhitebluepup> {
 	public WhitebluepupRenderer (EntityRendererProvider.Context context) {
 		super(context, new Modelwhitebluepup(context.bakeLayer(Modelwhitebluepup.LAYER_LOCATION)),
 				//ArmorNoneModel::new, 
