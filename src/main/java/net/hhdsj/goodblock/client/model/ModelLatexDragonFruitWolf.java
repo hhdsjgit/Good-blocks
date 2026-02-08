@@ -7,7 +7,7 @@ import net.hhdsj.goodblock.entity.LatexDragonFruitWolfEntity;
 import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
+
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class ModelLatexDragonFruitWolf extends AdvancedHumanoidModel<LatexDragonFruitWolfEntity> implements AdvancedHumanoidModelInterface<LatexDragonFruitWolfEntity, ModelLatexDragonFruitWolf> {
+public class ModelLatexDragonFruitWolf extends AdvancedHumanoidModel<LatexDragonFruitWolfEntity>{
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "model_latex_dragon_fruit_wolf"), "main");
     private final ModelPart LeftLeg;
@@ -137,7 +137,7 @@ public class ModelLatexDragonFruitWolf extends AdvancedHumanoidModel<LatexDragon
 
     @Override
     public void prepareMobModel(LatexDragonFruitWolfEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
+        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
     public void setupHand(LatexDragonFruitWolfEntity entity) {
@@ -150,7 +150,7 @@ public class ModelLatexDragonFruitWolf extends AdvancedHumanoidModel<LatexDragon
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
     }
 
-    public ModelPart getArm(HumanoidArm p_102852_) {
+    public ModelPart m_102851_(HumanoidArm p_102852_) {
         return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
     }
 

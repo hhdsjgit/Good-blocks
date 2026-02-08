@@ -20,7 +20,7 @@ import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.minecraft.world.entity.HumanoidArm;
 //Changed-mc mod import 我的世界转变MOD导入
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
+
 
 //Goodblock mod import
 import net.hhdsj.goodblock.entity.*;
@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class ModelIceFieldWolfDragon extends AdvancedHumanoidModel<LatexIceFieldWolfDragonEntity> implements AdvancedHumanoidModelInterface<LatexIceFieldWolfDragonEntity, ModelIceFieldWolfDragon> {
+public class ModelIceFieldWolfDragon extends AdvancedHumanoidModel<LatexIceFieldWolfDragonEntity>{
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latexnewfoxunified"), "main");
     private final ModelPart LeftLeg;
@@ -209,7 +209,7 @@ public class ModelIceFieldWolfDragon extends AdvancedHumanoidModel<LatexIceField
     }
     @Override
     public void prepareMobModel(LatexIceFieldWolfDragonEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
+        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
     public void setupHand(LatexIceFieldWolfDragonEntity entity) {
@@ -222,9 +222,9 @@ public class ModelIceFieldWolfDragon extends AdvancedHumanoidModel<LatexIceField
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
     }
 
-    public ModelPart getArm(HumanoidArm p_102852_) {
-        return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
-    }
+	public ModelPart m_102851_(HumanoidArm p_102852_) {
+		return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
+	}
 
     public ModelPart getLeg(HumanoidArm p_102852_) {
         return p_102852_ == HumanoidArm.LEFT ? this.LeftLeg : this.RightLeg;

@@ -31,7 +31,7 @@ import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
+
 
 //Goodblock mod import
 import net.hhdsj.goodblock.entity.*;
@@ -149,7 +149,7 @@ public class ModelLatexOrangeFox extends AdvancedHumanoidModel<LatexOrangeFoxEnt
 
 	@Override
     public void prepareMobModel(LatexOrangeFoxEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
+        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
     public void setupHand(LatexOrangeFoxEntity entity) {
@@ -157,7 +157,7 @@ public class ModelLatexOrangeFox extends AdvancedHumanoidModel<LatexOrangeFoxEnt
     }
 
 
-    public ModelPart getArm(HumanoidArm p_102852_) {
+    public ModelPart m_102851_(HumanoidArm p_102852_) {
         return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
     }
 

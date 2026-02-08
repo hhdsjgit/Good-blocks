@@ -31,7 +31,7 @@ import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
+
 
 //Goodblock mod import
 import net.hhdsj.goodblock.entity.*;
@@ -46,7 +46,7 @@ import java.util.List;
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class ModelLatexiceredDragonUnified_bw extends AdvancedHumanoidModel<LatexyunxqicedragonEntity> implements AdvancedHumanoidModelInterface<LatexyunxqicedragonEntity, ModelLatexiceredDragonUnified_bw> {//<T extends Entity> extends EntityModel<T> {
+public class ModelLatexiceredDragonUnified_bw extends AdvancedHumanoidModel<LatexyunxqicedragonEntity>{//<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "latexyunqiicebluedragonunified-bigwind"), "main");
@@ -277,7 +277,7 @@ public class ModelLatexiceredDragonUnified_bw extends AdvancedHumanoidModel<Late
 
 	@Override
     public void prepareMobModel(LatexyunxqicedragonEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
+        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
     public void setupHand(LatexyunxqicedragonEntity entity) {
@@ -285,7 +285,7 @@ public class ModelLatexiceredDragonUnified_bw extends AdvancedHumanoidModel<Late
     }
 
 
-    public ModelPart getArm(HumanoidArm p_102852_) {
+    public ModelPart m_102851_(HumanoidArm p_102852_) {
         return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
     }
 

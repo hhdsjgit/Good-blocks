@@ -1,7 +1,5 @@
 package net.hhdsj.goodblock.client.model;
 
-import net.minecraft.world.entity.Entity;
-import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
@@ -11,21 +9,16 @@ import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.EntityModel;
-import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.HumanoidArm;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 
-import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
-import net.ltxprogrammer.changed.entity.beast.LatexPurpleFox;
 
-import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
+;
 
 import org.jetbrains.annotations.NotNull;
 import java.util.List;
@@ -34,9 +27,9 @@ import net.hhdsj.goodblock.entity.*;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
 @OnlyIn(Dist.CLIENT)
-//extends AdvancedHumanoidModel<LatexHuman> implements AdvancedHumanoidModelInterface<LatexHuman, LatexHumanModel> 
-public class DarkfuLatexWolfMale extends AdvancedHumanoidModel<DarkfuLatexWolfMaleEntity> implements AdvancedHumanoidModelInterface<DarkfuLatexWolfMaleEntity, DarkfuLatexWolfMale> {
+public class DarkfuLatexWolfMale extends AdvancedHumanoidModel<DarkfuLatexWolfMaleEntity>{
 public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "darkfulatexwolfmaleunified"), "main");
 
 public final ModelPart RightLeg;
@@ -165,8 +158,10 @@ public DarkfuLatexWolfMale(ModelPart root) {
 	}
 	
     public void prepareMobModel(DarkfuLatexWolfMaleEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
+        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
     }
+
+
 	@Override
     public HumanoidAnimator<DarkfuLatexWolfMaleEntity, DarkfuLatexWolfMale> getAnimator(DarkfuLatexWolfMaleEntity entity) {
         return this.animator;
@@ -177,15 +172,15 @@ public DarkfuLatexWolfMale(ModelPart root) {
     }
 
 
-    public ModelPart getArm(HumanoidArm p_102852_) {
-        return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
-    }
+	public @NotNull ModelPart m_102851_(@NotNull HumanoidArm p_102852) {
+		return p_102852 == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
+	}
 
-    public ModelPart getLeg(HumanoidArm p_102852_) {
+	public ModelPart getLeg(HumanoidArm p_102852_) {
         return p_102852_ == HumanoidArm.LEFT ? this.LeftLeg : this.RightLeg;
     }
 
-    public ModelPart getHead() {
+    public @NotNull ModelPart getHead() {
         return this.Head;
     }
 
@@ -193,12 +188,13 @@ public DarkfuLatexWolfMale(ModelPart root) {
         return Torso;
     }
 
-    
 
     public void setupAnim(@NotNull DarkfuLatexWolfMaleEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         this.animator.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
     }
+
+
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		RightLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
