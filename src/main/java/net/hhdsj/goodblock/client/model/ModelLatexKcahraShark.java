@@ -19,7 +19,7 @@ import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.minecraft.world.entity.HumanoidArm;
 //Changed-mc mod import 我的世界转变MOD导入
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
+
 
 //Goodblock mod import
 import net.hhdsj.goodblock.entity.*;
@@ -34,8 +34,7 @@ import java.util.List;
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class ModelLatexKcahraShark extends AdvancedHumanoidModel<LatexKcahraSharkEntity> implements AdvancedHumanoidModelInterface<LatexKcahraSharkEntity, ModelLatexKcahraShark> {//<T extends Entity> extends EntityModel<T> {
-	// This layer location should be baked with EntityRendererProvider.Context in
+public class ModelLatexKcahraShark extends AdvancedHumanoidModel<LatexKcahraSharkEntity>{// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "latex_kcahra_shark"), "main");
 	public final ModelPart RightLeg;
@@ -173,7 +172,7 @@ public class ModelLatexKcahraShark extends AdvancedHumanoidModel<LatexKcahraShar
 
 	@Override
     public void prepareMobModel(LatexKcahraSharkEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
+        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
 
@@ -182,7 +181,7 @@ public class ModelLatexKcahraShark extends AdvancedHumanoidModel<LatexKcahraShar
     }
 
 
-    public ModelPart getArm(HumanoidArm p_102852_) {
+    public ModelPart m_102851_(HumanoidArm p_102852_) {
         return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
     }
 

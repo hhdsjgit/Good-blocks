@@ -53,7 +53,7 @@ import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
+
 
 //Goodblock mod import
 import net.hhdsj.goodblock.entity.*;
@@ -65,7 +65,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class Modelwhitebluepup extends AdvancedHumanoidModel<WhitebluepupEntity> implements AdvancedHumanoidModelInterface<WhitebluepupEntity, Modelwhitebluepup> {
+public class Modelwhitebluepup extends AdvancedHumanoidModel<WhitebluepupEntity>{
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "whitebluepupunified"), "main");
     public final ModelPart RightLeg;
@@ -195,7 +195,7 @@ public class Modelwhitebluepup extends AdvancedHumanoidModel<WhitebluepupEntity>
 	/*
     @Override
     public void prepareMobModel(WhitebluepupEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
+        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
     }*/
 
     public void setupHand(WhitebluepupEntity entity) {
@@ -295,7 +295,7 @@ public class Modelwhitebluepup extends AdvancedHumanoidModel<WhitebluepupEntity>
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
 	
     }
-    public ModelPart getArm(HumanoidArm p_102852_) {
+    public ModelPart m_102851_(HumanoidArm p_102852_) {
         return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
     }
 

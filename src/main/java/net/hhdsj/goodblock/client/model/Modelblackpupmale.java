@@ -53,7 +53,7 @@ import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
+
 
 //Goodblock mod import
 import net.hhdsj.goodblock.entity.*;
@@ -65,7 +65,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class Modelblackpupmale extends AdvancedHumanoidModel<BlackpupmaleEntity> implements AdvancedHumanoidModelInterface<BlackpupmaleEntity, Modelblackpupmale> {
+public class Modelblackpupmale extends AdvancedHumanoidModel<BlackpupmaleEntity>{
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "blackpupunified"), "main");
     public final ModelPart RightLeg;
@@ -195,22 +195,13 @@ public class Modelblackpupmale extends AdvancedHumanoidModel<BlackpupmaleEntity>
 	/*
     @Override
     public void prepareMobModel(BlackpupmaleEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
+        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
     }*/
 
     public void setupHand(BlackpupmaleEntity entity) {
         animator.setupHand();
     }
 
-   
-
-
-
-
-
-    
-
-	
 	@Override
     public void prepareMobModel(BlackpupmaleEntity entity, float limbSwing, float limbSwingAmount, float partialTicks) {
 
@@ -295,8 +286,9 @@ public class Modelblackpupmale extends AdvancedHumanoidModel<BlackpupmaleEntity>
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
 	
     }
-    public ModelPart getArm(HumanoidArm p_102852_) {
-        return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
+
+    public @NotNull ModelPart m_102851_(@NotNull HumanoidArm p_102852) {
+        return p_102852 == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
     }
 
     public ModelPart getLeg(HumanoidArm p_102852_) {

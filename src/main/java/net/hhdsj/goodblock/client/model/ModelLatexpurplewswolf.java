@@ -31,7 +31,7 @@ import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
+
 
 //Goodblock mod import
 import net.hhdsj.goodblock.entity.*;
@@ -46,7 +46,7 @@ import java.util.List;
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class ModelLatexpurplewswolf extends AdvancedHumanoidModel<LatexpurplewswolfEntity> implements AdvancedHumanoidModelInterface<LatexpurplewswolfEntity, ModelLatexpurplewswolf> {//<T extends Entity> extends EntityModel<T> {
+public class ModelLatexpurplewswolf extends AdvancedHumanoidModel<LatexpurplewswolfEntity>{
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_orange_fox"), "main");
@@ -234,7 +234,7 @@ public class ModelLatexpurplewswolf extends AdvancedHumanoidModel<Latexpurplewsw
 
 	@Override
     public void prepareMobModel(LatexpurplewswolfEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
+        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
     public void setupHand(LatexpurplewswolfEntity entity) {
@@ -242,7 +242,7 @@ public class ModelLatexpurplewswolf extends AdvancedHumanoidModel<Latexpurplewsw
     }
 
 
-    public ModelPart getArm(HumanoidArm p_102852_) {
+    public ModelPart m_102851_(HumanoidArm p_102852_) {
         return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
     }
 
@@ -267,17 +267,6 @@ public class ModelLatexpurplewswolf extends AdvancedHumanoidModel<Latexpurplewsw
         this.animator.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
     }
-    /*
-	@Override
-	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-		this.LeftLeg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
-		this.RightArm.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
-		this.Head.yRot = netHeadYaw / (180F / (float) Math.PI);
-		this.Head.xRot = headPitch / (180F / (float) Math.PI);
-		this.RightLeg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
-		this.LeftArm.xRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
-	}
-*/
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
