@@ -1,6 +1,7 @@
 
 package net.hhdsj.goodblock.entity;
 
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
@@ -98,10 +99,7 @@ public class WhitebluepupEntity extends ChangedEntity {
         return Color3.DARK;
     }
     
-	@Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+	
 
 
 
@@ -112,7 +110,7 @@ public class WhitebluepupEntity extends ChangedEntity {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 

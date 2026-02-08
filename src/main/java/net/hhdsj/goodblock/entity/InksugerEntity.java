@@ -78,10 +78,7 @@ public class InksugerEntity extends ChangedEntity {
         return Color3.DARK;
     }
     
-	@Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+	
     
     
 	public InksugerEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -97,7 +94,7 @@ public class InksugerEntity extends ChangedEntity {
 */
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 

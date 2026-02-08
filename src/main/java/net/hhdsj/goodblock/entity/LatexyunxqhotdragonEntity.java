@@ -6,12 +6,12 @@ import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
+
 
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
@@ -53,21 +53,13 @@ public class LatexyunxqhotdragonEntity extends ChangedEntity {
         attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.93);
     }
     
-	@Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+	
 
     @Override
     public TransfurMode getTransfurMode() {
         return TransfurMode.REPLICATION;
     }
-    
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXYUNXQHOTDRAGON.get(), 20, 1, 2));
-	}
+
 
 
 	public LatexyunxqhotdragonEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -81,7 +73,7 @@ public class LatexyunxqhotdragonEntity extends ChangedEntity {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 

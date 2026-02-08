@@ -50,10 +50,7 @@ public class LatexbluedragonEntity extends ChangedEntity {
         attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.93);
     }
     
-	@Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+	
 
     @Override
     public TransfurMode getTransfurMode() {
@@ -90,7 +87,7 @@ public class LatexbluedragonEntity extends ChangedEntity {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 

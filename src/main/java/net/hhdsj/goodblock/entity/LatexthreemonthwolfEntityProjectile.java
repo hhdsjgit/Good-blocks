@@ -7,6 +7,7 @@ import net.ltxprogrammer.changed.entity.TransfurCause;
 import net.ltxprogrammer.changed.entity.TransfurContext;
 import net.ltxprogrammer.changed.init.ChangedRegistry;
 import net.ltxprogrammer.changed.init.ChangedItems;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -49,7 +50,8 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
     private int shakeTime = 0;
     private boolean inGround = false;
     private int inGroundTime = 0;
-    
+    private Level level;
+
     public LatexthreemonthwolfEntityProjectile(EntityType<? extends LatexthreemonthwolfEntityProjectile> type, Level level) {
         super(type, level);
         this.setNoGravity(false);
@@ -122,8 +124,7 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
             }
             
             // 伤害
-            DamageSource source = DamageSource.indirectMobAttack(this, (LivingEntity) this.getOwner());
-            source.setProjectile();
+            DamageSource source = this.damageSources().indirectMagic(this, (LivingEntity) this.getOwner());
             
             if (livingTarget.hurt(source, this.getProjectileDamage())) {
                 // 应用转化效果
@@ -273,7 +274,7 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
     }
     
     @Override
-    public Packet<?> getAddEntityPacket() {
+    public Packet<ClientGamePacketListener> getAddEntityPacket() {
         return NetworkHooks.getEntitySpawningPacket(this);
     }
     
