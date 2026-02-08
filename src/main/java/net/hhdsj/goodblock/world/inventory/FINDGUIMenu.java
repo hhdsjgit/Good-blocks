@@ -1,6 +1,7 @@
 
 package net.hhdsj.goodblock.world.inventory;
 
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
 
