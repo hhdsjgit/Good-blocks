@@ -5,7 +5,7 @@
 package net.hhdsj.goodblock.init;
 
 import net.hhdsj.goodblock.entity.*;
-import net.ltxprogrammer.changed.init.ChangedMobCategories;
+import net.ltxprogrammer.changed.init.*;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,7 +22,7 @@ import net.hhdsj.goodblock.GoodblockMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GoodblockModEntities {
-	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, GoodblockMod.MODID);
+	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, GoodblockMod.MODID);
 	public static final RegistryObject<EntityType<LatexOrangeFoxEntity>> LATEX_ORANGE_FOX = register("latex_orange_fox",
 			EntityType.Builder.<LatexOrangeFoxEntity>of(LatexOrangeFoxEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LatexOrangeFoxEntity::new)
 
@@ -75,7 +75,7 @@ public class GoodblockModEntities {
 					.sized(0.6f, 1.8f));
 
 	public static final RegistryObject<EntityType<LatexIceFieldWolfDragonEntity>> LATEX_ICE_FIELD_WOLF_DRAGON = register("latex_ice_field_wolf_dragon",
-			EntityType.Builder.<LatexIceFieldWolfDragonEntity>of(LatexIceFieldWolfDragonEntity::new, ChangedMobCategories.CHANGED)
+			EntityType.Builder.<LatexIceFieldWolfDragonEntity>of(LatexIceFieldWolfDragonEntity::new, MobCategory.MONSTER)
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64)
 					.setUpdateInterval(3)
@@ -83,7 +83,7 @@ public class GoodblockModEntities {
 					.sized(0.7f, 1.93f));
 
 	public static final RegistryObject<EntityType<LatexDragonFruitWolfEntity>> LATEXDRAGONFRUITWOLF = register("latex_dragon_fruit_wolf",
-			EntityType.Builder.<LatexDragonFruitWolfEntity>of(LatexDragonFruitWolfEntity::new, ChangedMobCategories.CHANGED)
+			EntityType.Builder.<LatexDragonFruitWolfEntity>of(LatexDragonFruitWolfEntity::new, MobCategory.MONSTER)
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64)
 					.setUpdateInterval(3)
@@ -91,7 +91,7 @@ public class GoodblockModEntities {
 					.sized(0.7f, 1.93f));
 
 	public static final RegistryObject<EntityType<LatexYunQiIceDragonEntity>> LATEXYUNQIICEDRAGON = register("latex_yun_qi_ice_dragon",
-			EntityType.Builder.<LatexYunQiIceDragonEntity>of(LatexYunQiIceDragonEntity::new, ChangedMobCategories.CHANGED)
+			EntityType.Builder.<LatexYunQiIceDragonEntity>of(LatexYunQiIceDragonEntity::new, MobCategory.MONSTER)
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64)
 					.setUpdateInterval(3)
