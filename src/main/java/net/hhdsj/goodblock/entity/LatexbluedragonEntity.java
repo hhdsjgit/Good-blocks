@@ -2,11 +2,12 @@
 package net.hhdsj.goodblock.entity;
 
 
-import net.ltxprogrammer.changed.*;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
@@ -70,11 +71,7 @@ public class LatexbluedragonEntity extends ChangedEntity {
         return Color3.getColor("#0095ff");
     }
     
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXBLUEDRAGON.get(), 20, 1, 2));
-	}
+
 
 	public LatexbluedragonEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(GoodblockModEntities.LATEXBLUEDRAGON.get(), world);
@@ -114,7 +111,7 @@ public class LatexbluedragonEntity extends ChangedEntity {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		if (source == DamageSource.FALL)
+		if (source.is(DamageTypes.FALL))
 			return false;
 		return super.hurt(source, amount);
 	}
