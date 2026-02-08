@@ -1,33 +1,40 @@
 buildscript {
     repositories {
+        // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
         maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
         mavenCentral()
-        maven {
-        name = "Changed"
-        url = "https://raw.githubusercontent.com/LtxProgrammer/Changed-Minecraft-Mod/master/mcmodsrepo/"
-    	}
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '[6.0,6.2)', changing: true
         classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
-        
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
+// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+/*
+plugins {
 
-version = '1.0.0'
+    id 'eclipse'
+    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+}
+
+*/
+version = '1.0'
 group = 'com.yourname.modid'
-archivesBaseName = 'goodblock'
+archivesBaseName = 'modid'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 minecraft {
-    mappings channel: 'official', version: '1.18.2'
+    mappings channel: 'official', version: '1.20.1'
 
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    copyIdeResources = true
 
     runs {
         client {
@@ -35,7 +42,7 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            arg '-mixin.config=goodblock.mixin.json'
+
             mods {
                 examplemod {
                     source sourceSets.main
@@ -57,26 +64,11 @@ minecraft {
         }
     }
 }
-repositories {
-	maven {
-		url "https://cursemaven.com"
-	}
-}
-dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.2.27'//mc-forege!
-    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-//    implementation files('/Changed-m1.18.2-v0.14b.jar')
-	implementation fg.deobf("curse.maven:slashblade-661527:6885809")//Changed-mc
-	implementation fg.deobf("curse.maven:slashblade-711303:7377803")//Changed-addon
-    implementation fg.deobf("curse.maven:slashblade-432059:3795789")//Changed-addon
-}
 
-jar {
-    manifest {
-        attributes([
-                "MixinConfigs": "goodblock.mixin.json"
-        ])
-    }
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.2.0'
+    implementation files('/Changed-Addon-Rework-2.0.0.jar')
+    implementation files('/Changed-m1.20.1-f47.4.0-v0.15.0.jar')
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -84,3 +76,4 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 apply from: 'mcreator.gradle'
+
