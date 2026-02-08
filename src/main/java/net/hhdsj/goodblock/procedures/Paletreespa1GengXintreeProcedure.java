@@ -11,14 +11,13 @@ import net.hhdsj.goodblock.init.GoodblockModBlocks;
 import java.util.Random;
 
 public class Paletreespa1GengXintreeProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, BlockState blockstate) {
+	public static void execute(LevelAccessor world, int x, int y, int z, BlockState blockstate) {
 		BlockState tree_levels_block = Blocks.AIR.defaultBlockState();
-		double tree_higt = 0;
-		double tree_hight_now = 0;
-		double tree_y_now = 0;
-		double tree_z_now = 0;
-		double tree_x_now = 0;
-		double a = 0;
+		int tree_higt = 0;
+		int tree_y_now = 0;
+		int tree_z_now = 0;
+		int tree_x_now = 0;
+		int a = 0;
 		tree_higt = 7;
 		tree_levels_block = GoodblockModBlocks.PALE_WOOD_LEAVES.get().defaultBlockState();
 		for (int index0 = 0; index0 < (int) (tree_higt); index0++) {
