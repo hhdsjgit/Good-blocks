@@ -23,7 +23,7 @@ public class LatexIceFieldWolfDragonRenderer extends AdvancedHumanoidRenderer<La
 		this.addLayer(new LatexParticlesLayer<>(this, this.model));
 		this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
 		//this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor, CustomEyesLayer::glowingIrisColorLeft, CustomEyesLayer::glowingIrisColorRight, CustomEyesLayer::noRender, CustomEyesLayer::noRender));
-		this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor, CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#00ff00")), CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#006400")), CustomEyesLayer::noRender, CustomEyesLayer::noRender));
+		this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor, CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#006400")), CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#00ff00")), CustomEyesLayer::noRender, CustomEyesLayer::noRender));
 		this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
 	}
 

@@ -97,6 +97,15 @@ public class GoodblockModEntities {
 					.setUpdateInterval(3)
 					.setCustomClientFactory(LatexYunQiIceDragonEntity::new)
 					.sized(0.7f, 1.93f));
+
+	//Radiation Fox
+	public static final RegistryObject<EntityType<LatexRadiationFoxEntity>> LATEXRADIATIONFOX = register("latex_radiation_fox",
+			EntityType.Builder.<LatexRadiationFoxEntity>of(LatexRadiationFoxEntity::new, ChangedMobCategories.CHANGED)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(LatexRadiationFoxEntity::new)
+					.sized(0.7f, 1.93f));
 	//////////////////else///////////////////
 	public static final RegistryObject<EntityType<LatexthreemonthwolfEntityProjectile>> LATEXTHREEMONTHWOLF_PROJECTILE = register("projectile_latexthreemonthwolf",
 			EntityType.Builder.<LatexthreemonthwolfEntityProjectile>of(LatexthreemonthwolfEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1)
