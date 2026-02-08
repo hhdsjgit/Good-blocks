@@ -23,7 +23,7 @@ import java.util.List;
 public class ModelLatexRadiationFox extends AdvancedHumanoidModel<LatexRadiationFoxEntity> implements AdvancedHumanoidModelInterface<LatexRadiationFoxEntity, ModelLatexRadiationFox> {//<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_orange_fox"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_radiation_fox"), "main");
 	public final ModelPart RightLeg;
 	public final ModelPart LeftLeg;
 	public final ModelPart Head;

@@ -11,7 +11,6 @@ import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.EntityModel;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -27,17 +26,11 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.HumanoidArm;
 //Changed-mc mod import 我的世界转变MOD导入
-import net.ltxprogrammer.changed.Changed;
-import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
-import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
 
 //Goodblock mod import
 import net.hhdsj.goodblock.entity.*;
-
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -49,7 +42,7 @@ import java.util.List;
 public class ModelLatexthreemonthwolf extends AdvancedHumanoidModel<LatexthreemonthwolfEntity> implements AdvancedHumanoidModelInterface<LatexthreemonthwolfEntity, ModelLatexthreemonthwolf> {//<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_orange_fox"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_three_month_wolf"), "main");
 	public final ModelPart RightLeg;
 	public final ModelPart LeftLeg;
 	public final ModelPart Head;
@@ -72,6 +65,7 @@ public class ModelLatexthreemonthwolf extends AdvancedHumanoidModel<Latexthreemo
 		var tailPrimary = Tail.getChild("TailPrimary");
         var tailSecondary = tailPrimary.getChild("TailSecondary");
         var tailTertiary = tailSecondary.getChild("TailTertiary");
+		var tailQuaternary = tailTertiary.getChild("TailQuaternary");
 
         var leftLowerLeg = LeftLeg.getChild("LeftLowerLeg");
         var leftFoot = leftLowerLeg.getChild("LeftFoot");
@@ -84,7 +78,7 @@ public class ModelLatexthreemonthwolf extends AdvancedHumanoidModel<Latexthreemo
                 .addPreset(AnimatorPresets.catLike(
                         Head, Head.getChild("LeftEar"), Head.getChild("RightEar"),
                         Torso, LeftArm, RightArm,
-                        Tail, List.of(tailPrimary, tailSecondary, tailTertiary, tailTertiary.getChild("TailQuaternary")),
+                        Tail, List.of(tailPrimary, tailSecondary, tailTertiary, tailQuaternary),
                         LeftLeg, leftLowerLeg, leftFoot, leftFoot.getChild("LeftPad"), RightLeg, rightLowerLeg, rightFoot, rightFoot.getChild("RightPad")));
 	}
 
@@ -211,7 +205,7 @@ public class ModelLatexthreemonthwolf extends AdvancedHumanoidModel<Latexthreemo
 
 		PartDefinition Base_r4 = TailQuaternary.addOrReplaceChild("Base_r4", CubeListBuilder.create().texOffs(78, 2).addBox(0.5F, 5.55F, -2.0F, 2.0F, 2.0F, 2.0F, new CubeDeformation(0.2F)), PartPose.offsetAndRotation(-1.5F, -0.35F, -4.3F, 1.9199F, 0.0F, 0.0F));
 
-		PartDefinition Base_r5 = TailQuaternary.addOrReplaceChild("Base_r5", CubeListBuilder.create().texOffs(47, 59).addBox(-2.0F, 5.5F, -3.8F, 4.0F, 3.0F, 4.0F, new CubeDeformation(0.1F)), PartPose.offsetAndRotation(0.0F, -2.0F, -6.9F, 1.7017F, 0.0F, 0.0F));
+		PartDefinition Base_r5 = TailQuaternary.addOrReplaceChild("Base_r5", CubeListBuilder.create().texOffs(30, 60).addBox(-2.0F, 5.5F, -3.8F, 4.0F, 3.0F, 4.0F, new CubeDeformation(0.1F)), PartPose.offsetAndRotation(0.0F, -2.0F, -6.9F, 1.7017F, 0.0F, 0.0F));
 
 		PartDefinition RightArm = partdefinition.addOrReplaceChild("RightArm", CubeListBuilder.create().texOffs(16, 40).addBox(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(-5.0F, 1.5F, 0.0F));
 

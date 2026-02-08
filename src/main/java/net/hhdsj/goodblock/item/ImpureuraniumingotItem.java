@@ -20,6 +20,6 @@ public class ImpureuraniumingotItem extends Item {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
-			ProgressTransfurExt.execute((LivingEntity) entity,"goodblock:form_latex_yunxq_hot_dragon");
+			ProgressTransfurExt.execute((LivingEntity) entity,"goodblock:form_latex_radiation_fox");
 	}
 }

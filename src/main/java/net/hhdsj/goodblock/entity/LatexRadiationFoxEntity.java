@@ -67,7 +67,7 @@ public class LatexRadiationFoxEntity extends ChangedEntity {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEX_ORANGE_FOX.get(), 20, 4, 4));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXRADIATIONFOX.get(), 20, 4, 4));
 	}
 
 	public LatexRadiationFoxEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -107,7 +107,7 @@ public class LatexRadiationFoxEntity extends ChangedEntity {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(GoodblockModEntities.LATEX_ORANGE_FOX.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(GoodblockModEntities.LATEXRADIATIONFOX.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 

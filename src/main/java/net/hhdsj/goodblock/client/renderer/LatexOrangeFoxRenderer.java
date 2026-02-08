@@ -12,10 +12,8 @@ import net.ltxprogrammer.changed.client.renderer.layers.LatexParticlesLayer;
 import net.ltxprogrammer.changed.client.renderer.layers.TransfurCapeLayer;
 import net.ltxprogrammer.changed.client.renderer.model.LatexPurpleFoxModel;
 import net.ltxprogrammer.changed.client.renderer.model.armor.ArmorLatexMaleWolfModel;
-import net.ltxprogrammer.changed.entity.beast.LatexPurpleFox;
 import net.ltxprogrammer.changed.util.Color3;
 import net.ltxprogrammer.changed.client.renderer.AdvancedHumanoidRenderer;
-import net.ltxprogrammer.changed.client.renderer.layers.*;
 
 
 

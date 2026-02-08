@@ -57,13 +57,6 @@ public class LatexpurplewswolfRenderer extends AdvancedHumanoidRenderer<Latexpur
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
         this.addLayer(new CustomEyesLayer<>(this, context.getModelSet()));
         this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
-
-		this.addLayer(new EyesLayer<LatexpurplewswolfEntity, ModelLatexpurplewswolf>(this) {
-			@Override
-			public RenderType renderType() {
-				return RenderType.eyes(new ResourceLocation("goodblock:textures/entities/latex/latex_kamona_hsguy_dragonwolf_png_light.png"));
-			}
-		});
 	}
 
 	@Override

@@ -23,7 +23,6 @@ import org.jetbrains.annotations.NotNull;
 import static java.lang.Math.random;
 
 public class ImpureuraniumItem extends Item {
-	private static final ResourceLocation FORM_VARIANT = new ResourceLocation("goodblock", "form_latex_yunxq_hot_dragon");
 
 	public ImpureuraniumItem() {
 		super(new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).stacksTo(64).rarity(Rarity.RARE));
@@ -47,9 +46,7 @@ public class ImpureuraniumItem extends Item {
 			if (entity instanceof LivingEntity _entity) {
 				_entity.addEffect(new MobEffectInstance(GoodblockModMobEffects.RADIATION.get(), 60, 1));
                 if (random() >= 0.5f) {
-
-					ProgressTransfurExt.execute(_entity,"goodblock:form_latex_yunxq_hot_dragon");
-
+					ProgressTransfurExt.execute(_entity,"goodblock:form_latex_radiation_fox");
                 }
             }
 		}

@@ -49,7 +49,7 @@ import java.util.List;
 public class ModelLatexpurplewswolf extends AdvancedHumanoidModel<LatexpurplewswolfEntity> implements AdvancedHumanoidModelInterface<LatexpurplewswolfEntity, ModelLatexpurplewswolf> {//<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_orange_fox"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_purple_ws_wolf"), "main");
 	public final ModelPart RightLeg;
 	public final ModelPart LeftLeg;
 	public final ModelPart Head;
@@ -84,7 +84,7 @@ public class ModelLatexpurplewswolf extends AdvancedHumanoidModel<Latexpurplewsw
                 .addPreset(AnimatorPresets.catLike(
                         Head, Head.getChild("LeftEar"), Head.getChild("RightEar"),
                         Torso, LeftArm, RightArm,
-                        Tail, List.of(tailPrimary, tailSecondary, tailTertiary, tailTertiary.getChild("TailQuaternary")),
+                        Tail, List.of(tailPrimary, tailSecondary, tailTertiary, tailTertiary.getChild("TailQuaternary")),//TailQuaternary
                         LeftLeg, leftLowerLeg, leftFoot, leftFoot.getChild("LeftPad"), RightLeg, rightLowerLeg, rightFoot, rightFoot.getChild("RightPad")));
 	}
 
