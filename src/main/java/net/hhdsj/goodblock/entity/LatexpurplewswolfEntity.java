@@ -90,7 +90,7 @@ public class LatexpurplewswolfEntity extends AbstractSnowLeopard {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		return;
+
 		//this.targetSelector.addGoal(1, new HurtByTargetGoal(this).setAlertOthers());
 	}
 
