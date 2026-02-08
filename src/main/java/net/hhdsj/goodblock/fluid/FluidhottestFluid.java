@@ -1,10 +1,8 @@
 
 package net.hhdsj.goodblock.fluid;
 
-import net.ltxprogrammer.changed.entity.LatexType;
-import net.ltxprogrammer.changed.init.ChangedTransfurVariants;
+
 import net.minecraftforge.fluids.ForgeFlowingFluid;
-import net.minecraftforge.fluids.FluidAttributes;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.material.FluidState;
