@@ -6,12 +6,14 @@ import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.common.ForgeMod;
 
 
@@ -61,10 +63,7 @@ public class LatexKcahraSharkEntity extends ChangedEntity {
         attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(28.0);
     }
     
-	@Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+	
 
     @Override
     public TransfurMode getTransfurMode() {
@@ -83,12 +82,6 @@ public class LatexKcahraSharkEntity extends ChangedEntity {
     public Color3 getTransfurColor(TransfurCause cause) {
         return Color3.getColor("#0793f7");
     }
-    
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEX_KCAHRA_SHARK.get(), 10, 1, 2));
-	}
 
 	public LatexKcahraSharkEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(GoodblockModEntities.LATEX_KCAHRA_SHARK.get(), world);
@@ -101,7 +94,7 @@ public class LatexKcahraSharkEntity extends ChangedEntity {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
@@ -128,7 +121,7 @@ public class LatexKcahraSharkEntity extends ChangedEntity {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		if (source == DamageSource.DROWN)
+		if (source.is(DamageTypes.DROWN))
 			return false;
 		return super.hurt(source, amount);
 	}

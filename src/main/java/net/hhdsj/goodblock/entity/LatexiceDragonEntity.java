@@ -1,12 +1,12 @@
 
 package net.hhdsj.goodblock.entity;
 
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.biome.MobSpawnSettings;
@@ -55,10 +55,7 @@ public class LatexiceDragonEntity extends ChangedEntity {
         attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.95);
     }
 
-    @Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+    
 
     @Override
     public TransfurMode getTransfurMode() {
@@ -89,18 +86,13 @@ public class LatexiceDragonEntity extends ChangedEntity {
     }
 
     ////////////////////////////////////////////////////////
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXICE_DRAGON.get(), 12, 1, 2));
-	}
 
 	public LatexiceDragonEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(GoodblockModEntities.LATEXICE_DRAGON.get(), world);
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 

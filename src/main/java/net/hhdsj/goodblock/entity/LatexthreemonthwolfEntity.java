@@ -3,14 +3,13 @@ package net.hhdsj.goodblock.entity;
 
 import net.ltxprogrammer.changed.entity.variant.TransfurVariantInstance;
 import net.ltxprogrammer.changed.process.ProcessTransfur;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.ltxprogrammer.changed.util.Color3;
 import net.minecraft.world.entity.*;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.Blocks;
@@ -36,8 +35,6 @@ import net.minecraft.network.protocol.Packet;
 
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 
-import java.util.*;
-
 
 import java.util.Set;
 import net.ltxprogrammer.changed.entity.*;
@@ -50,22 +47,12 @@ import net.ltxprogrammer.changed.init.ChangedAttributes;
 @Mod.EventBusSubscriber
 public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAttackMob {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("windswept_hills"), new ResourceLocation("snowy_plains"), new ResourceLocation("snowy_beach"));
+    public Level level;
 
     @Override
     public TransfurMode getTransfurMode() {
         return TransfurMode.REPLICATION;
     }
-
-	@Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
-	
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXTHREEMONTHWOLF.get(), 20, 2, 2));
-	}
 
 	public LatexthreemonthwolfEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(GoodblockModEntities.LATEXTHREEMONTHWOLF.get(), world);
@@ -83,7 +70,7 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 	}
 
 	@Override
-	public @NotNull Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
