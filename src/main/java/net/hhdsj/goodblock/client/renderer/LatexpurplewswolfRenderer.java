@@ -60,7 +60,7 @@ public class LatexpurplewswolfRenderer extends AdvancedHumanoidRenderer<Latexpur
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(LatexpurplewswolfEntity entity) {
+	public @NotNull ResourceLocation getTextureLocation(LatexpurplewswolfEntity entity) {
 		return new ResourceLocation("goodblock:textures/entities/latex/latex_purple_ws_wolf1.png");
 	}
 }

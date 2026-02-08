@@ -15,6 +15,8 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.HumanoidArm;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import net.hhdsj.goodblock.entity.*;
@@ -65,6 +67,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
+@OnlyIn(Dist.CLIENT)
 public class Modelblackpupmale extends AdvancedHumanoidModel<BlackpupmaleEntity> implements AdvancedHumanoidModelInterface<BlackpupmaleEntity, Modelblackpupmale> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "blackpupunified"), "main");

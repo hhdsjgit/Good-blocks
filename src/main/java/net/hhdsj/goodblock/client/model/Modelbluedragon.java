@@ -39,6 +39,8 @@ import net.hhdsj.goodblock.entity.*;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -46,6 +48,7 @@ import java.util.List;
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
+@OnlyIn(Dist.CLIENT)
 public class Modelbluedragon extends AdvancedHumanoidModel<LatexbluedragonEntity> implements AdvancedHumanoidModelInterface<LatexbluedragonEntity, Modelbluedragon> {//<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor

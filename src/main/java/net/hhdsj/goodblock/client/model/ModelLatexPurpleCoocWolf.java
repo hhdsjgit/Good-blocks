@@ -13,6 +13,8 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.HumanoidArm;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -20,6 +22,7 @@ import java.util.List;
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
+@OnlyIn(Dist.CLIENT)
 public class ModelLatexPurpleCoocWolf extends AdvancedHumanoidModel<LatexPurplecoocwolfEntity> implements AdvancedHumanoidModelInterface<LatexPurplecoocwolfEntity, ModelLatexPurpleCoocWolf> {//<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
