@@ -1,6 +1,7 @@
 
 package net.hhdsj.goodblock.entity;
 
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
