@@ -24,13 +24,12 @@ public class LatexRadiationFoxRenderer extends
             0.5f);	
 		this.addLayer(new LatexParticlesLayer<>(this, this.getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
-        this.addLayer(CustomEyesLayer.builder(this, context.getModelSet())
-                .withSclera(Color3.WHITE).withIris(Color3.fromInt(0x43b44e)).build());
-        this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
+		this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor, CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#8dcfff")), CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#8dcfff")), CustomEyesLayer::noRender, CustomEyesLayer::noRender));
+		this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(LatexRadiationFoxEntity entity) {
-		return new ResourceLocation("goodblock:textures/entities/latex/latex_orange_fox.png");
+		return new ResourceLocation("goodblock:textures/entities/latex/latex_radiation_fox.png");
 	}
 }
