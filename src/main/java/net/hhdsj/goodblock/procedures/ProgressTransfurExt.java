@@ -8,7 +8,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 
 public class ProgressTransfurExt {
-    private static final ResourceLocation FORM_VARIANT = new ResourceLocation("goodblock", "form_latex_yunxq_hot_dragon");
 
     public static void execute(LivingEntity livingEntity,String text) {
         final ResourceLocation FORM_VARIANT = new ResourceLocation(text);
@@ -20,7 +19,7 @@ public class ProgressTransfurExt {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            //QWQ
+            //QWQ AWA
         }
     }
 }
