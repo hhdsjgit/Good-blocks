@@ -22,7 +22,7 @@ import net.ltxprogrammer.changed.client.renderer.AdvancedHumanoidRenderer;
 import net.ltxprogrammer.changed.client.renderer.layers.*;
 import org.jetbrains.annotations.NotNull;
 
-public class LatexyunxqhotdragonRenderer extends AdvancedHumanoidRenderer<LatexyunxqhotdragonEntity, Modellatexyunxqhotdragon, ArmorLatexMaleWingedDragonModel<LatexyunxqhotdragonEntity>> {
+public class LatexyunxqhotdragonRenderer extends AdvancedHumanoidRenderer<LatexyunxqhotdragonEntity, Modellatexyunxqhotdragon> {
 	public LatexyunxqhotdragonRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modellatexyunxqhotdragon(context.bakeLayer(Modellatexyunxqhotdragon.LAYER_LOCATION)),
 				ArmorLatexMaleWingedDragonModel.MODEL_SET,

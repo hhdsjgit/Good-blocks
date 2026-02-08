@@ -21,7 +21,7 @@ import net.ltxprogrammer.changed.util.Color3;
 import net.ltxprogrammer.changed.client.renderer.AdvancedHumanoidRenderer;
 import net.ltxprogrammer.changed.client.renderer.layers.*;
 
-public class LatexyunxqicedragonRenderer extends AdvancedHumanoidRenderer<LatexyunxqicedragonEntity, ModelLatexiceredDragonUnified_bw, ArmorLatexMaleWingedDragonModel<LatexyunxqicedragonEntity>> {
+public class LatexyunxqicedragonRenderer extends AdvancedHumanoidRenderer<LatexyunxqicedragonEntity, ModelLatexiceredDragonUnified_bw> {
 	public LatexyunxqicedragonRenderer(EntityRendererProvider.Context context) {
 		
 		super(context, new ModelLatexiceredDragonUnified_bw(context.bakeLayer(ModelLatexiceredDragonUnified_bw.LAYER_LOCATION)),

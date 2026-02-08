@@ -51,8 +51,7 @@ import net.minecraft.world.entity.Pose;
 import org.jetbrains.annotations.NotNull;
 
 
-public class LatexthreemonthwolfRenderer extends AdvancedHumanoidRenderer<LatexthreemonthwolfEntity, 
-ModelLatexthreemonthwolf, ArmorLatexMaleCatModel<LatexthreemonthwolfEntity>> {
+public class LatexthreemonthwolfRenderer extends AdvancedHumanoidRenderer<LatexthreemonthwolfEntity, ModelLatexthreemonthwolf> {
 
 	public LatexthreemonthwolfRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelLatexthreemonthwolf(context.bakeLayer(ModelLatexthreemonthwolf.LAYER_LOCATION)), 

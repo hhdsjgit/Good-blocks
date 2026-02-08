@@ -21,7 +21,7 @@ import net.hhdsj.goodblock.entity.LatexKcahraSharkEntity;
 import net.hhdsj.goodblock.client.model.ModelLatexKcahraShark;
 
 //public class LatexKcahraSharkRenderer extends MobRenderer<LatexKcahraSharkEntity, ModelLatexKcahraShark> {
-public class LatexKcahraSharkRenderer extends AdvancedHumanoidRenderer<LatexKcahraSharkEntity, ModelLatexKcahraShark, ArmorLatexMaleSharkModel<LatexKcahraSharkEntity>>{
+public class LatexKcahraSharkRenderer extends AdvancedHumanoidRenderer<LatexKcahraSharkEntity, ModelLatexKcahraShark>{
 	public LatexKcahraSharkRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelLatexKcahraShark(context.bakeLayer(ModelLatexKcahraShark.LAYER_LOCATION)),
 			//ArmorLatexMaleSharkModel::new, 

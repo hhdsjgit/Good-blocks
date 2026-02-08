@@ -12,7 +12,7 @@ import net.hhdsj.goodblock.client.model.ModelIceFieldWolfDragon;
 import net.ltxprogrammer.changed.client.renderer.model.armor.ArmorLatexBigTailDragonModel;
 import net.ltxprogrammer.changed.client.renderer.AdvancedHumanoidRenderer;
 
-public class LatexIceFieldWolfDragonRenderer extends AdvancedHumanoidRenderer<LatexIceFieldWolfDragonEntity, ModelIceFieldWolfDragon, ArmorLatexBigTailDragonModel<LatexIceFieldWolfDragonEntity>> {
+public class LatexIceFieldWolfDragonRenderer extends AdvancedHumanoidRenderer<LatexIceFieldWolfDragonEntity, ModelIceFieldWolfDragon> {
 	public LatexIceFieldWolfDragonRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelIceFieldWolfDragon(context.bakeLayer(ModelIceFieldWolfDragon.LAYER_LOCATION)), 
 		ArmorLatexBigTailDragonModel.MODEL_SET,

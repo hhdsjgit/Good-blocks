@@ -13,7 +13,7 @@ import net.ltxprogrammer.changed.util.Color3;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 
-public class LatexDragonFruitWolfRenderer extends AdvancedHumanoidRenderer<LatexDragonFruitWolfEntity, ModelLatexDragonFruitWolf, ArmorLatexBigTailDragonModel<LatexDragonFruitWolfEntity>> {
+public class LatexDragonFruitWolfRenderer extends AdvancedHumanoidRenderer<LatexDragonFruitWolfEntity, ModelLatexDragonFruitWolf> {
 	public LatexDragonFruitWolfRenderer(EntityRendererProvider.Context context) {
 		super(context, new ModelLatexDragonFruitWolf(context.bakeLayer(ModelLatexDragonFruitWolf.LAYER_LOCATION)),
 			//ArmorLatexBigTailDragonModel::new,

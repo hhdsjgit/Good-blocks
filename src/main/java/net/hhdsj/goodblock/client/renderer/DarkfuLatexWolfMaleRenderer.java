@@ -21,7 +21,7 @@ import net.ltxprogrammer.changed.util.Color3;
 import net.ltxprogrammer.changed.client.renderer.AdvancedHumanoidRenderer;
 import net.ltxprogrammer.changed.client.renderer.layers.*;
 
-public class DarkfuLatexWolfMaleRenderer extends AdvancedHumanoidRenderer<DarkfuLatexWolfMaleEntity ,DarkfuLatexWolfMale , ArmorLatexMaleWolfModel<DarkfuLatexWolfMaleEntity>>{
+public class DarkfuLatexWolfMaleRenderer extends AdvancedHumanoidRenderer<DarkfuLatexWolfMaleEntity ,DarkfuLatexWolfMale>{
 	public DarkfuLatexWolfMaleRenderer(EntityRendererProvider.Context context) {
 	  //super(context, new LatexBeifengModel(context.bakeLayer(LatexBeifengModel.LAYER_LOCATION)), ArmorLatexMaleDragonModel.MODEL_SET, 0.5f);
 		super(context, new DarkfuLatexWolfMale(context.bakeLayer(DarkfuLatexWolfMale.LAYER_LOCATION)),
