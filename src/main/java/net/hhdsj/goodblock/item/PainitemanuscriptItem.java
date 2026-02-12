@@ -36,6 +36,6 @@ public class PainitemanuscriptItem extends PickaxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of(new ItemStack(Items.NETHERITE_INGOT));
 			}
-		}, 1, -3f, new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).fireResistant());
+		}, 1, -3f, new Item.Properties().fireResistant());
 	}
 }

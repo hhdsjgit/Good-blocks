@@ -8,9 +8,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
+
+import java.awt.*;
 
 public class DebugsProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

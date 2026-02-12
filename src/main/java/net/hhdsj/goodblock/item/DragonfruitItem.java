@@ -1,14 +1,16 @@
+package net.hhdsj.goodblock.item;
+
 import net.hhdsj.goodblock.init.GoodblockModMobEffects;
-import net.hhdsj.goodblock.init.GoodblockModTabs;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.food.FoodProperties;
+import net.hhdsj.goodblock.init.GoodblockModTabs;
+
 
 public class DragonfruitItem extends Item {
 	public DragonfruitItem() {
 		super(new Item.Properties()
-				.tab(GoodblockModTabs.TAB_WORLDBLOCK)
 				.stacksTo(64)
 				.rarity(Rarity.COMMON)
 				.food((new FoodProperties.Builder())
@@ -22,15 +24,6 @@ public class DragonfruitItem extends Item {
 
 						.build()));
 	}
-package net.hhdsj.goodblock.item;
 
-import net.hhdsj.goodblock.init.GoodblockModMobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.food.FoodProperties;
-
-import net.hhdsj.goodblock.init.GoodblockModTabs;
 
 }

@@ -15,7 +15,7 @@ import net.hhdsj.goodblock.init.GoodblockModSounds;
 
 public class NotlistenthisItem extends RecordItem {
 	public NotlistenthisItem() {
-		super(0, GoodblockModSounds.REGISTRY.get(new ResourceLocation("goodblock:no_stop")), new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).stacksTo(1).rarity(Rarity.RARE));
+		super(0, GoodblockModSounds.REGISTRY.get(new ResourceLocation("goodblock:no_stop")), new Item.Properties().stacksTo(1).rarity(Rarity.RARE),100);
 	}
 
 	@Override
