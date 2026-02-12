@@ -26,7 +26,7 @@ public class ImpureuraniumItem extends Item {
 	private static final ResourceLocation FORM_VARIANT = new ResourceLocation("goodblock", "form_latex_yunxq_hot_dragon");
 
 	public ImpureuraniumItem() {
-		super(new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).stacksTo(64).rarity(Rarity.RARE));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.RARE));
 	}
 
 	@Override

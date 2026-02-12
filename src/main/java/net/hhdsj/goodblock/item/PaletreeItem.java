@@ -10,7 +10,7 @@ import net.hhdsj.goodblock.procedures.PaletreeDangYouJianDianJiFangKuaiShiFangKu
 
 public class PaletreeItem extends Item {
 	public PaletreeItem() {
-		super(new Item.Properties().tab(null).stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
 	}
 
 	@Override

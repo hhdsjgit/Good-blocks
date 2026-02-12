@@ -15,7 +15,7 @@ import net.hhdsj.goodblock.init.GoodblockModSounds;
 
 public class FluteItem extends RecordItem {
 	public FluteItem() {
-		super(0, GoodblockModSounds.REGISTRY.get(new ResourceLocation("goodblock:gnusmas_gm_soundfont_2.00")), new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).stacksTo(1).rarity(Rarity.RARE));
+		super(0, GoodblockModSounds.REGISTRY.get(new ResourceLocation("goodblock:gnusmas_gm_soundfont_2.00")), new Item.Properties().stacksTo(1).stacksTo(1).rarity(Rarity.RARE),100);
 	}
 
 	@Override

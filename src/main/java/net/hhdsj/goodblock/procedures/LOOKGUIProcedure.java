@@ -13,7 +13,6 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
@@ -34,11 +33,11 @@ public class LOOKGUIProcedure {
 			return;
 		{
 			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = new BlockPos(x, y, z);
-				NetworkHooks.openGui(_ent, new MenuProvider() {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 					@Override
 					public @NotNull Component getDisplayName() {
-						return new TextComponent("FINDGUI");
+						return Component.literal("FINDGUI");
 					}
 
 					@Override
@@ -48,7 +47,7 @@ public class LOOKGUIProcedure {
 				}, _bpos);
 			}
 		}
-		if (!(entity instanceof ServerPlayer _plr && _plr.level instanceof ServerLevel && _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("goodblock:usemod"))).isDone())) {
+		if (!(entity instanceof ServerPlayer _plr && _plr.level() instanceof ServerLevel && _plr.getAdvancements().getOrStartProgress(_plr.server.getAdvancements().getAdvancement(new ResourceLocation("goodblock:usemod"))).isDone())) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(GoodblockModItems.INKSANS_4.get());
 				_setstack.setCount(1);

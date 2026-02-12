@@ -36,6 +36,6 @@ public class PainiteswordItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of(new ItemStack(Items.NETHERITE_INGOT));
 			}
-		}, 3, -2.7f, new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).fireResistant());
+		}, 3, -2.7f, new Item.Properties().fireResistant());
 	}
 }

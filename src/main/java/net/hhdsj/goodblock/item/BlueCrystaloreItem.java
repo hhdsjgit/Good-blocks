@@ -6,7 +6,7 @@ import net.minecraft.world.item.Rarity;
 
 public class BlueCrystaloreItem extends Item {
     public BlueCrystaloreItem() {
-        super(new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).stacksTo(64).rarity(Rarity.RARE));
+        super(new Item.Properties().stacksTo(64).rarity(Rarity.RARE));
     }
 
 }
