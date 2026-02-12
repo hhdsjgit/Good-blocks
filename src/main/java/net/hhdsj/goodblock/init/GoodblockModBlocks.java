@@ -61,13 +61,4 @@ public class GoodblockModBlocks {
 	public static final RegistryObject<Block> CATALYZER = REGISTRY.register("catalyzer", CatalyzerBlock::new);
 	public static final RegistryObject<Block> FLUIDHOTTEST = REGISTRY.register("fluidhottest", FluidhottestBlock::new);
 
-	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-	public static class ClientSideHandler {
-		@SubscribeEvent
-		public static void clientSetup(FMLClientSetupEvent event) {
-			BlueblockBlock.registerRenderLayer();
-			IronhotBlock.registerRenderLayer();
-			Paletreespa1Block.registerRenderLayer();
-		}
-	}
 }

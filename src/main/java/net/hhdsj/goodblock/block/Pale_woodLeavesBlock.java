@@ -1,7 +1,6 @@
 
 package net.hhdsj.goodblock.block;
 
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
@@ -12,7 +11,7 @@ import net.minecraft.core.BlockPos;
 
 public class Pale_woodLeavesBlock extends LeavesBlock {
 	public Pale_woodLeavesBlock() {
-		super(BlockBehaviour.Properties.of(Material.LEAVES).sound(SoundType.GRASS).strength(0.2f).noOcclusion());
+		super(BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.GRASS).strength(0.2f).noOcclusion());
 	}
 
 	@Override
