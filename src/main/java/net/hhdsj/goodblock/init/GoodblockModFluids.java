@@ -22,15 +22,15 @@ import net.hhdsj.goodblock.GoodblockMod;
 
 public class GoodblockModFluids {
 	public static final DeferredRegister<Fluid> REGISTRY = DeferredRegister.create(ForgeRegistries.FLUIDS, GoodblockMod.MODID);
-	public static final RegistryObject<Fluid> FLUIDHOTTEST = REGISTRY.register("fluidhottest", () -> new FluidhottestFluid.Source());
-	public static final RegistryObject<Fluid> FLOWING_FLUIDHOTTEST = REGISTRY.register("flowing_fluidhottest", () -> new FluidhottestFluid.Flowing());
+	public static final RegistryObject<Fluid> FLUIDHOTTEST = REGISTRY.register("fluidhottest", FluidhottestFluid.Source::new);
+	public static final RegistryObject<Fluid> FLOWING_FLUIDHOTTEST = REGISTRY.register("flowing_fluidhottest", FluidhottestFluid.Flowing::new);
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
-			ItemBlockRenderTypes.setRenderLayer(FLUIDHOTTEST.get(), renderType -> renderType == RenderType.translucent());
-			ItemBlockRenderTypes.setRenderLayer(FLOWING_FLUIDHOTTEST.get(), renderType -> renderType == RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLUIDHOTTEST.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(FLOWING_FLUIDHOTTEST.get(), RenderType.translucent());
 		}
 	}
 }
