@@ -170,5 +170,7 @@
   "entity.goodblock.latex_dark_purple_dragon_taur": "Latex Dark Purple Dragon Taur",
   "entity.goodblock.latex_dark_purple_dragon": "Latex Dark Purple Dragon",
   "item.goodblock.latex_nighe_owl_spawn_egg": "Latex Night Owl Dragon Spawn Egg",
-  "entity.goodblock.boss_heath.night_owl": "Night owl"
+  "entity.goodblock.boss_heath.night_owl": "Night owl",
+  "death.attack.goodblock.furry_cat_kill": "%1$s Was killed by a fluffy cat",
+  "death.attack.goodblock.furry_cat_kill.player": "%1$s Was killed by a fluffy cat"
 }

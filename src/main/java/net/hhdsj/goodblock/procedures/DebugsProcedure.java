@@ -14,6 +14,7 @@ import net.minecraft.commands.CommandSource;
 import java.awt.*;
 
 public class DebugsProcedure {
+	/*
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
@@ -22,5 +23,5 @@ public class DebugsProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
 					"tellraw @p [{\"text\":\"Sorry you did't use this.\"}]");
-	}
+	}*/
 }
