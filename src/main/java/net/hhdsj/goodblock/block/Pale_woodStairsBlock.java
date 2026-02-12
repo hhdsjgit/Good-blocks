@@ -1,8 +1,9 @@
 
 package net.hhdsj.goodblock.block;
 
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.material.Material;
+
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.StairBlock;
@@ -18,7 +19,7 @@ import java.util.Collections;
 
 public class Pale_woodStairsBlock extends StairBlock {
 	public Pale_woodStairsBlock() {
-		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(3f, 2f).dynamicShape());
+		super(() -> Blocks.AIR.defaultBlockState(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(3f, 2f).dynamicShape());
 	}
 
 	@Override
@@ -41,11 +42,4 @@ public class Pale_woodStairsBlock extends StairBlock {
 		return 5;
 	}
 
-	@Override
-	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
-	}
 }

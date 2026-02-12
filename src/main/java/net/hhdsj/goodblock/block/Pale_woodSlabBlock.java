@@ -1,8 +1,9 @@
 
 package net.hhdsj.goodblock.block;
 
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.material.Material;
+
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -18,7 +19,7 @@ import java.util.Collections;
 
 public class Pale_woodSlabBlock extends SlabBlock {
 	public Pale_woodSlabBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2f, 3f));
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f));
 	}
 
 	@Override
@@ -31,11 +32,5 @@ public class Pale_woodSlabBlock extends SlabBlock {
 		return 5;
 	}
 
-	@Override
-	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, state.getValue(TYPE) == SlabType.DOUBLE ? 2 : 1));
-	}
+
 }

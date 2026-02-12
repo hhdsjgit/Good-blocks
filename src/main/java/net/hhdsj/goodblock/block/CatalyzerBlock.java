@@ -1,11 +1,12 @@
 
 package net.hhdsj.goodblock.block;
 
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.material.Material;
+
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
@@ -27,7 +28,6 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.Direction;
@@ -44,7 +44,7 @@ public class CatalyzerBlock extends Block {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public CatalyzerBlock() {
-		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.STONE).strength(3f, 10f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(3f, 10f).requiresCorrectToolForDrops());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -78,6 +78,7 @@ public class CatalyzerBlock extends Block {
 		return false;
 	}
 
+	/*
 	@Override
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
@@ -103,5 +104,5 @@ public class CatalyzerBlock extends Block {
 			}, pos);
 		}
 		return InteractionResult.SUCCESS;
-	}
+	}*/
 }
