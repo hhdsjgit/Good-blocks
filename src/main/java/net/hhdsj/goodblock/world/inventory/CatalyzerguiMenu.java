@@ -1,10 +1,10 @@
 
 package net.hhdsj.goodblock.world.inventory;
 
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.CapabilityItemHandler;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.Level;
@@ -34,9 +34,9 @@ public class CatalyzerguiMenu extends AbstractContainerMenu implements Supplier<
 	private boolean bound = false;
 
 	public CatalyzerguiMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(GoodblockModMenus.CATALYZERGUI, id);
+		super(GoodblockModMenus.CATALYZERGUI.get(), id);
 		this.entity = inv.player;
-		this.world = inv.player.level;
+		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(3);
 		BlockPos pos = null;
 		if (extraData != null) {
@@ -53,23 +53,23 @@ public class CatalyzerguiMenu extends AbstractContainerMenu implements Supplier<
 					itemstack = this.entity.getMainHandItem();
 				else
 					itemstack = this.entity.getOffhandItem();
-				itemstack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-					this.internal = capability;
+				itemstack.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+					this.internal = (IItemHandler) capability;
 					this.bound = true;
 				});
 			} else if (extraData.readableBytes() > 1) {
 				extraData.readByte(); // drop padding
 				Entity entity = world.getEntity(extraData.readVarInt());
 				if (entity != null)
-					entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						this.internal = capability;
+					entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						this.internal = (IItemHandler) capability;
 						this.bound = true;
 					});
 			} else { // might be bound to block
-				BlockEntity ent = inv.player != null ? inv.player.level.getBlockEntity(pos) : null;
+				BlockEntity ent = inv.player != null ? inv.player.level().getBlockEntity(pos) : null;
 				if (ent != null) {
-					ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
-						this.internal = capability;
+					ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						this.internal = (IItemHandler) capability;
 						this.bound = true;
 					});
 				}
