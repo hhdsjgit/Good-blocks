@@ -61,16 +61,7 @@ public class NitreblockFeature extends OreFeature {
 	}
 
 	public boolean place(FeaturePlaceContext<OreConfiguration> context) {
-		WorldGenLevel world = context.level();
-		if (!generate_dimensions.contains(world.getLevel().dimension()))
-			return false;
-		return super.place(context);
-	}
-
-	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-	private static class NitreblockFeatureRuleTest extends RuleTest {
-		static final NitreblockFeatureRuleTest INSTANCE = new NitreblockFeatureRuleTest();
-		private static final com.mojang.serialization.Codec<NitreblockFeatureRuleTest> CODEC = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+		WorldGenLevel world = contextion.Codec<NitreblockFeatureRuleTest> CODEC = com.mojang.serialization.Codec.unit(() -> INSTANCE);
 		private static final RuleTestType<NitreblockFeatureRuleTest> CUSTOM_MATCH = () -> CODEC;
 
 		@SubscribeEvent
@@ -82,7 +73,16 @@ public class NitreblockFeature extends OreFeature {
 
 		public boolean test(BlockState blockAt, Random random) {
 			if (base_blocks == null) {
-				base_blocks = List.of(Blocks.STONE);
+				base_blocks = List.of(Blocks.STONE);t.level();
+				if (!generate_dimensions.contains(world.getLevel().dimension()))
+					return false;
+				return super.place(context);
+			}
+
+			@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+			private static class NitreblockFeatureRuleTest extends RuleTest {
+				static final NitreblockFeature.NitreblockFeatureRuleTest INSTANCE = new NitreblockFeature.NitreblockFeatureRuleTest();
+				private static final com.mojang.serializa
 			}
 			return base_blocks.contains(blockAt.getBlock());
 		}
