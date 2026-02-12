@@ -55,7 +55,7 @@ public class GoodblockMod {
 		GoodblockModMobEffects.REGISTRY.register(bus);
 
         GoodblockModAbilities.REGISTRY.register(bus);
-
+		GoodblockModMenus.REGISTRY.register(bus);
 		GoodblockModTransfurVariants.REGISTRY.register(bus);
 
 

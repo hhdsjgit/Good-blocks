@@ -64,7 +64,7 @@ public class FINDGUIButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			DIEProcedure.execute(entity);
+			DIEProcedure.execute(world,entity);
 		}
 	}
 

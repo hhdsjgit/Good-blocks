@@ -20,8 +20,8 @@ public class GoodblockModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-			MenuScreens.register(GoodblockModMenus.FINDGUI, FINDGUIScreen::new);
-			MenuScreens.register(GoodblockModMenus.CATALYZERGUI, CatalyzerguiScreen::new);
+			MenuScreens.register(GoodblockModMenus.FINDGUI.get(), FINDGUIScreen::new);
+			MenuScreens.register(GoodblockModMenus.CATALYZERGUI.get(), CatalyzerguiScreen::new);
 		});
 	}
 }
