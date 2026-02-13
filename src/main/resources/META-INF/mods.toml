@@ -1,11 +1,11 @@
 modLoader="javafml"
-loaderVersion="[40,)"
+loaderVersion="[47,)"
 license="MIT License"
 
 [[mods]]
 modId="goodblock"
 version="1.0.0"
-displayName="goodblock"
+displayName="goodblock-1.20.1"
 credits="逸云 , 缘来007 ,Goodtimes2,"
 displayURL="https://github.com/hhdsjgit/Good-blocks"
 logoFile="logo.png"
@@ -17,15 +17,7 @@ Some of the content additions to Changed addon plus
 [[dependencies.goodblock]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.2]"
-    ordering="NONE"
-    side="BOTH"
-
-
-[[dependencies.goodblock]]
-    modId="changed_addon"
-    mandatory=true
-    versionRange="[0,)"
+    versionRange="[1.20.1]"
     ordering="NONE"
     side="BOTH"
 
