@@ -1,4 +1,4 @@
-package net.hhdsj.goodblock.Biome;
+package net.hhdsj.goodblock.Biome;  // 注意：包名应该小写
 
 import net.hhdsj.goodblock.init.GoodblockModBlocks;
 import net.hhdsj.goodblock.init.GoodblockModFluids;
@@ -9,17 +9,25 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
-import net.minecraft.world.level.levelgen.placement.*;
+import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
+import net.minecraft.data.worldgen.placement.OrePlacements;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.world.level.block.Blocks;
+
 import java.util.List;
 
 public class LatexhotSwampBiome {
-    public static Biome createLatexhotSwamp() {
+
+    public static Biome createLatexhotSwamp(HolderGetter<ConfiguredWorldCarver<?>> featureGetter,
+                                            HolderGetter<PlacedFeature> placedFeatureGetter) {
         // 1. 生物生成设置 - 适应炎热沼泽的生物
         MobSpawnSettings.Builder spawnSettings = new MobSpawnSettings.Builder();
 
@@ -31,37 +39,35 @@ public class LatexhotSwampBiome {
         BiomeSpecialEffects.Builder effects = new BiomeSpecialEffects.Builder()
                 .skyColor(0xFF6A00)               // 深橙色天空
                 .fogColor(0xFF4500)              // 暗橙色雾
-                .waterColor(0xFF3300)             // 岩浆橙色（你的自定义液体）
+                .waterColor(0xFF3300)             // 热流体颜色
                 .waterFogColor(0xFF3300)          // 橙色水下雾
                 .foliageColorOverride(0x8B4513)   // 鞍棕色（枯萎的树叶）
                 .grassColorOverride(0x8B4513)     // 鞍棕色（枯萎的草地）
-                .ambientMoodSound(new AmbientMoodSettings(
-                        SoundEvents.AMBIENT_SOUL_SAND_VALLEY_MOOD, // 灵魂沙谷音效
-                        6000, 8, 2.0
-                ))
-                .ambientLoopSound(SoundEvents.AMBIENT_NETHER_WASTES_LOOP); // 下界循环音效
+                .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
+                .backgroundMusic(Musics.createGameMusic(SoundEvents.MUSIC_BIOME_SWAMP))
+                .ambientLoopSound(SoundEvents.AMBIENT_NETHER_WASTES_LOOP);
 
         // 3. 生物群系生成设置
-        BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder();
+        BiomeGenerationSettings.Builder generationSettings = new BiomeGenerationSettings.Builder(placedFeatureGetter, featureGetter);
 
-        // 添加基础特征（修改版）
+        // 添加基础特征
         addBaseFeatures(generationSettings);
 
         // 核心：替换方块和液体
-        replaceSurfaceAndLiquid(generationSettings);
+        addSurfaceAndLiquidReplacement(generationSettings);
 
-        // 4. 创建生物群系 - 主世界炎热沼泽
-        Biome.BiomeBuilder biomeBuilder = new Biome.BiomeBuilder();
+        // 添加自定义矿石生成
+        addCustomOres(generationSettings);
 
-        biomeBuilder.precipitation(Biome.Precipitation.RAIN)    // 有降水（但液体是你的自定义液体）
-                .biomeCategory(Biome.BiomeCategory.SWAMP)       // 沼泽分类
-                .temperature(2F)                              // 高温
-                .downfall(0F)                                 // 适度降雨
-                .specialEffects(effects.build())                // 特效
-                .mobSpawnSettings(spawnSettings.build())        // 生物生成
-                .generationSettings(generationSettings.build()); // 地形生成
-
-        return biomeBuilder.build();
+        // 4. 创建生物群系
+        return new Biome.BiomeBuilder()
+                .hasPrecipitation(true)           // 有降水
+                .temperature(2.0F)                // 高温
+                .downfall(0.0F)                  // 无降雨（但自定义液体会生成）
+                .specialEffects(effects.build())
+                .mobSpawnSettings(spawnSettings.build())
+                .generationSettings(generationSettings.build())
+                .build();
     }
 
     private static void addBaseFeatures(BiomeGenerationSettings.Builder builder) {
@@ -71,35 +77,17 @@ public class LatexhotSwampBiome {
         BiomeDefaultFeatures.addDefaultUndergroundVariety(builder);
         BiomeDefaultFeatures.addDefaultOres(builder);
         BiomeDefaultFeatures.addDefaultSoftDisks(builder);
+        BiomeDefaultFeatures.addSwampExtraVegetation(builder);  // 沼泽植被
+        BiomeDefaultFeatures.addSwampVegetation(builder);       // 沼泽植物
+        BiomeDefaultFeatures.addDefaultMushrooms(builder);      // 蘑菇
     }
 
-    private static void replaceSurfaceAndLiquid(BiomeGenerationSettings.Builder builder) {
+    private static void addSurfaceAndLiquidReplacement(BiomeGenerationSettings.Builder builder) {
 
-        // 1. 替换地表方块（假设你的自定义方块是 ModBlocks.HOT_SWAMP_BLOCK）
-        ReplaceBlockConfiguration surfaceReplace = new ReplaceBlockConfiguration(
-                net.minecraft.world.level.block.Blocks.GRASS_BLOCK.defaultBlockState(),
-                GoodblockModBlocks.CATALYZER.get().defaultBlockState()
-        );
+    }
 
-        // 1.5 替换泥土层（假设使用同种方块或不同变种）
-        ReplaceBlockConfiguration dirtReplace = new ReplaceBlockConfiguration(
-                net.minecraft.world.level.block.Blocks.DIRT.defaultBlockState(),
-                GoodblockModBlocks.CATALYZER.get().defaultBlockState()
-        );
-
-        // 2. 替换所有水体为你的自定义液体
-        // 假设你的自定义液体方块是 ModBlocks.LAVA_SWAMP_FLUID
-        ReplaceBlockConfiguration waterReplace = new ReplaceBlockConfiguration(
-                net.minecraft.world.level.block.Blocks.WATER.defaultBlockState(),
-                GoodblockModFluids.FLUIDHOTTEST.get().defaultFluidState().createLegacyBlock()
-        );
-
-
-        // 2.5 替换流动水
-        ReplaceBlockConfiguration flowingWaterReplace = new ReplaceBlockConfiguration(
-                net.minecraft.world.level.block.Blocks.WATER.defaultBlockState(),
-                GoodblockModFluids.FLUIDHOTTEST.get().defaultFluidState().createLegacyBlock()
-        );
+    private static void addCustomOres(BiomeGenerationSettings.Builder builder) {
+        // 添加自定义矿石生成
 
     }
 }

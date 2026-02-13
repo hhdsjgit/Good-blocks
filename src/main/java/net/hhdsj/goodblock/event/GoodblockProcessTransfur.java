@@ -42,7 +42,7 @@ public class GoodblockProcessTransfur {
 
             if (entity.getType().is(ChangedTags.EntityTypes.HUMANOIDS)) {
                 if (health <= amount * scale && health > 0.0F) {
-                    transfur(entity, entity.level, transfurVariant, false, context);
+                    transfur(entity, entity.level(), transfurVariant, false, context);
                     return true;
                 }
 
@@ -60,7 +60,7 @@ public class GoodblockProcessTransfur {
                     return false;
 
                 if (health <= amount * scale && health > 0.0F) {
-                    transfur(entity, entity.level, Util.getRandom(mobFusion, entity.getRandom()), false, context);
+                    transfur(entity, entity.level(), Util.getRandom(mobFusion, entity.getRandom()), false, context);
                     return true;
                 }
 
@@ -106,11 +106,8 @@ public class GoodblockProcessTransfur {
             float max = (float)ProcessTransfur.getEntityTransfurTolerance(player);
             setPlayerTransfurProgress(player, next);
             if (next >= max && old < max) {
-                if (TransfurVariant.getPublicTransfurVariants().anyMatch(transfurVariant::equals))
-                    transfur(player, player.level, transfurVariant, false, context);
-                else {
-                    var variant = PatreonBenefits.getPlayerSpecialVariant(player.getUUID());
-                    transfur(player, player.level, variant == null ? ChangedTransfurVariants.FALLBACK_VARIANT.get() : variant, false, context);
+                if (TransfurVariant.getPublicTransfurVariants().anyMatch(transfurVariant::equals)){
+                    transfur(player, player.level(), transfurVariant, false, context);
                 }
 
                 return true;
