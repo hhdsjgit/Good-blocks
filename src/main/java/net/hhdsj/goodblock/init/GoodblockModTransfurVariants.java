@@ -17,7 +17,7 @@ import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.init.*;
 import net.ltxprogrammer.changed.entity.variant.*;
 
-import net.foxyas.changedaddon.init.ChangedAddonAbilities;
+//import net.foxyas.changedaddon.init.ChangedAddonAbilities;
 
 import net.hhdsj.goodblock.entity.*;//推荐不要用*(来自hhdsj的话=))
 import net.hhdsj.goodblock.init.GoodblockModEntities;
@@ -49,7 +49,7 @@ public class GoodblockModTransfurVariants {
 			REGISTRY.register("form_blue_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXBLUEDRAGON)
 			//.stepSize(0.7f)
 			.glide()
-			.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+			//.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 			.transfurMode(TransfurMode.ABSORPTION)
 			.replicating()
 			.nightVision()
@@ -139,7 +139,7 @@ public class GoodblockModTransfurVariants {
 			REGISTRY.register("form_latex_yunxq_hot_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNXQHOTDRAGON)
 			//.stepSize(0.7f)
 			.glide()
-			.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+			//.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 			.transfurMode(TransfurMode.ABSORPTION)
 			.replicating()
 			.nightVision()
@@ -150,7 +150,7 @@ public class GoodblockModTransfurVariants {
 			REGISTRY.register("form_latex_yun_xq_ice_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNXQICEDRAGON)
 			//.stepSize(0.7f)
 			.glide()
-			.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+			//.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 			.transfurMode(TransfurMode.ABSORPTION)
 			.replicating()
 			.nightVision()
