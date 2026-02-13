@@ -27,7 +27,7 @@ public class ArrowReplacementHandler {
         TransfurVariantInstance<?> variant = ProcessTransfur.getPlayerTransfurVariant(player);
         ItemStack bow = event.getBow();
         int charge = event.getCharge();
-        Level level = player.level;
+        Level level = player.level();
 
         // 只在服务端处理
         if (level.isClientSide) return;
