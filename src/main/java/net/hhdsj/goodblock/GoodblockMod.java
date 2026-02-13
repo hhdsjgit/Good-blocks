@@ -32,11 +32,14 @@ public class GoodblockMod {
 	private static int messageID = 0;
 
 	public GoodblockMod() {
-		GoodblockModTabs.load();
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		GoodblockModEnchantmentInit.ENCHANTMENTS.register(bus);
+
+		GoodblockModTabs.REGISTRY.register(bus);
+
+		GoodblockModPaintings.REGISTRY.register(bus);
 
 		GoodblockModBlocks.REGISTRY.register(bus);
 

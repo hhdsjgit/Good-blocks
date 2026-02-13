@@ -161,5 +161,7 @@
   "item.goodblock.latex_dragon_fruit_wolf_spawn_egg": "Latex Dragon Fruit Wolf Spawn Egg",
   "item.goodblock.latex_kamona_hsguy_dragon_wolf_spawn_egg": "Latex Ice Field Wolf Dragon Spawn Egg",
   "death.attack.goodblock.furry_cat_kill": "%1$s Was killed by a fluffy cat",
-  "death.attack.goodblock.furry_cat_kill.player": "%1$s Was killed by a fluffy cat"
+  "death.attack.goodblock.furry_cat_kill.player": "%1$s Was killed by a fluffy cat",
+  "item_group.goodblock.goodblock_entity": "",
+  "item_group.goodblock.worldblock": ""
 }

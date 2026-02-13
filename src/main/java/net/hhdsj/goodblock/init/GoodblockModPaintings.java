@@ -4,18 +4,15 @@
  */
 package net.hhdsj.goodblock.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
+import net.hhdsj.goodblock.GoodblockMod;
+import net.minecraft.world.entity.decoration.PaintingVariant;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
-import net.minecraft.world.entity.decoration.Motive;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GoodblockModPaintings {
-	@SubscribeEvent
-	public static void registerMotives(RegistryEvent.Register<Motive> event) {
-		event.getRegistry().register(new Motive(64, 64).setRegistryName("home"));
-		event.getRegistry().register(new Motive(32, 32).setRegistryName("cityold"));
-		event.getRegistry().register(new Motive(32, 32).setRegistryName("paintinksuger"));
-	}
+	public static final DeferredRegister<PaintingVariant> REGISTRY = DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, GoodblockMod.MODID);
+	public static final RegistryObject<PaintingVariant> HOME = REGISTRY.register("home", () -> new PaintingVariant(64, 64));
+	public static final RegistryObject<PaintingVariant> CITYOLD = REGISTRY.register("cityold", () -> new PaintingVariant(32, 32));
+	public static final RegistryObject<PaintingVariant> PAINTINKSUGER = REGISTRY.register("paintinksuger", () -> new PaintingVariant(32, 32));
 }

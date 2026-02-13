@@ -1,4 +1,3 @@
-
 /*
  *    这些为物品注册类,请将注册写在这里,而不是其它地方!
  * 	        写的时候注意代码的美观qwp
@@ -12,8 +11,8 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 
 import net.hhdsj.goodblock.item.ThefluffyheartbeatinthecubiclemusicItem;
 import net.hhdsj.goodblock.item.SulphurItem;
@@ -41,30 +40,31 @@ import net.hhdsj.goodblock.GoodblockMod;
 public class GoodblockModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, GoodblockMod.MODID);
 
-	//各种物品的注册(block)//
-	public static final RegistryObject<Item> SULPHURBLOCK = block(GoodblockModBlocks.SULPHURBLOCK, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> NITREBLOCK = block(GoodblockModBlocks.NITREBLOCK, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> URANIUMMINERAL = block(GoodblockModBlocks.URANIUMMINERAL, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> PALE_WOOD_PLANKS = block(GoodblockModBlocks.PALE_WOOD_PLANKS, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> PALE_WOOD_LEAVES = block(GoodblockModBlocks.PALE_WOOD_LEAVES, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> PALE_WOOD_LOG = block(GoodblockModBlocks.PALE_WOOD_LOG, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> PALE_WOOD_WOOD = block(GoodblockModBlocks.PALE_WOOD_WOOD, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> URANIUMBLOCK = block(GoodblockModBlocks.URANIUMBLOCK, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> BLUEBLOCK = block(GoodblockModBlocks.BLUEBLOCK, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> IRONHOT = block(GoodblockModBlocks.IRONHOT, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> PALE_WOOD_STAIRS = block(GoodblockModBlocks.PALE_WOOD_STAIRS, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> PALE_WOOD_SLAB = block(GoodblockModBlocks.PALE_WOOD_SLAB, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> PALE_WOOD_BUTTON = block(GoodblockModBlocks.PALE_WOOD_BUTTON, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> PALETREESPA_1 = block(GoodblockModBlocks.PALETREESPA_1, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> BLACKBLOCK = block(GoodblockModBlocks.BLACKBLOCK, CreativeModeTab.TAB_BUILDING_BLOCKS);
-	public static final RegistryObject<Item> PALE_WOOD_FENCE = block(GoodblockModBlocks.PALE_WOOD_FENCE, CreativeModeTab.TAB_DECORATIONS);
-	public static final RegistryObject<Item> PALE_WOOD_FENCE_GATE = block(GoodblockModBlocks.PALE_WOOD_FENCE_GATE, CreativeModeTab.TAB_REDSTONE);
-	public static final RegistryObject<Item> PALE_WOOD_PRESSURE_PLATE = block(GoodblockModBlocks.PALE_WOOD_PRESSURE_PLATE, CreativeModeTab.TAB_REDSTONE);
-	public static final RegistryObject<Item> BLOCKBW_1 = block(GoodblockModBlocks.BLOCKBW_1, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> BLOCKBW_2 = block(GoodblockModBlocks.BLOCKBW_2, GoodblockModTabs.TAB_WORLDBLOCK);
-	public static final RegistryObject<Item> BLUE_CRYSTALORE = block(GoodblockModBlocks.BLUE_CRYSTALORE, null);
+	// 各种物品的注册(block) - 移除了tab参数，通过事件添加
+	public static final RegistryObject<Item> SULPHURBLOCK = block(GoodblockModBlocks.SULPHURBLOCK);
+	public static final RegistryObject<Item> NITREBLOCK = block(GoodblockModBlocks.NITREBLOCK);
+	public static final RegistryObject<Item> URANIUMMINERAL = block(GoodblockModBlocks.URANIUMMINERAL);
+	public static final RegistryObject<Item> PALE_WOOD_PLANKS = block(GoodblockModBlocks.PALE_WOOD_PLANKS);
+	public static final RegistryObject<Item> PALE_WOOD_LEAVES = block(GoodblockModBlocks.PALE_WOOD_LEAVES);
+	public static final RegistryObject<Item> PALE_WOOD_LOG = block(GoodblockModBlocks.PALE_WOOD_LOG);
+	public static final RegistryObject<Item> PALE_WOOD_WOOD = block(GoodblockModBlocks.PALE_WOOD_WOOD);
+	public static final RegistryObject<Item> URANIUMBLOCK = block(GoodblockModBlocks.URANIUMBLOCK);
+	public static final RegistryObject<Item> BLUEBLOCK = block(GoodblockModBlocks.BLUEBLOCK);
+	public static final RegistryObject<Item> IRONHOT = block(GoodblockModBlocks.IRONHOT);
+	public static final RegistryObject<Item> PALE_WOOD_STAIRS = block(GoodblockModBlocks.PALE_WOOD_STAIRS);
+	public static final RegistryObject<Item> PALE_WOOD_SLAB = block(GoodblockModBlocks.PALE_WOOD_SLAB);
+	public static final RegistryObject<Item> PALE_WOOD_BUTTON = block(GoodblockModBlocks.PALE_WOOD_BUTTON);
+	public static final RegistryObject<Item> PALETREESPA_1 = block(GoodblockModBlocks.PALETREESPA_1);
+	public static final RegistryObject<Item> BLACKBLOCK = block(GoodblockModBlocks.BLACKBLOCK);
+	public static final RegistryObject<Item> PALE_WOOD_FENCE = block(GoodblockModBlocks.PALE_WOOD_FENCE);
+	public static final RegistryObject<Item> PALE_WOOD_FENCE_GATE = block(GoodblockModBlocks.PALE_WOOD_FENCE_GATE);
+	public static final RegistryObject<Item> PALE_WOOD_PRESSURE_PLATE = block(GoodblockModBlocks.PALE_WOOD_PRESSURE_PLATE);
+	public static final RegistryObject<Item> BLOCKBW_1 = block(GoodblockModBlocks.BLOCKBW_1);
+	public static final RegistryObject<Item> BLOCKBW_2 = block(GoodblockModBlocks.BLOCKBW_2);
+	public static final RegistryObject<Item> BLUE_CRYSTALORE = block(GoodblockModBlocks.BLUE_CRYSTALORE);
+	public static final RegistryObject<Item> CATALYZER = block(GoodblockModBlocks.CATALYZER);
 
-	//各种物品的注册(item)//
+	// 各种物品的注册(item)
 	public static final RegistryObject<Item> SULPHUR = REGISTRY.register("sulphur", SulphurItem::new);
 	public static final RegistryObject<Item> PALETREE = REGISTRY.register("paletree", PaletreeItem::new);
 	public static final RegistryObject<Item> INKSANS_4 = REGISTRY.register("inksans_4", Inksans4Item::new);
@@ -81,117 +81,85 @@ public class GoodblockModItems {
 	public static final RegistryObject<Item> NOTLISTENTHIS = REGISTRY.register("notlistenthis", NotlistenthisItem::new);
 	public static final RegistryObject<Item> FLUTE = REGISTRY.register("flute", FluteItem::new);
 	public static final RegistryObject<Item> ANITFRRYMUSIC = REGISTRY.register("anitfrrymusic", AnitfrrymusicItem::new);
-	public static final RegistryObject<Item> CATALYZER = block(GoodblockModBlocks.CATALYZER, null);
 	public static final RegistryObject<Item> DRAGONFRUIT = REGISTRY.register("dragonfruit", DragonfruitItem::new);
 	public static final RegistryObject<Item> BlueCrystaloreItem = REGISTRY.register("blue_crystal", BlueCrystaloreItem::new);
 
-	//各种盔甲物品的注册
-	public static final RegistryObject<Item> ARMORA_1_ARMOR_HELMET = REGISTRY.register("armora_1_armor_helmet", () -> new Armora1ArmorItem.Helmet());
-	public static final RegistryObject<Item> ARMORA_1_ARMOR_CHESTPLATE = REGISTRY.register("armora_1_armor_chestplate", () -> new Armora1ArmorItem.Chestplate());
-	public static final RegistryObject<Item> ARMORA_1_ARMOR_LEGGINGS = REGISTRY.register("armora_1_armor_leggings", () -> new Armora1ArmorItem.Leggings());
-	public static final RegistryObject<Item> ARMORA_1_ARMOR_BOOTS = REGISTRY.register("armora_1_armor_boots", () -> new Armora1ArmorItem.Boots());
-	public static final RegistryObject<Item> PAINITE_ARMOR_HELMET = REGISTRY.register("painite_armor_helmet", () -> new PainiteArmorItem.Helmet());
-	public static final RegistryObject<Item> PAINITE_ARMOR_CHESTPLATE = REGISTRY.register("painite_armor_chestplate", () -> new PainiteArmorItem.Chestplate());
-	public static final RegistryObject<Item> PAINITE_ARMOR_LEGGINGS = REGISTRY.register("painite_armor_leggings", () -> new PainiteArmorItem.Leggings());
-	public static final RegistryObject<Item> PAINITE_ARMOR_BOOTS = REGISTRY.register("painite_armor_boots", () -> new PainiteArmorItem.Boots());
+	// 各种盔甲物品的注册
+	public static final RegistryObject<Item> ARMORA_1_ARMOR_HELMET = REGISTRY.register("armora_1_armor_helmet", Armora1ArmorItem.Helmet::new);
+	public static final RegistryObject<Item> ARMORA_1_ARMOR_CHESTPLATE = REGISTRY.register("armora_1_armor_chestplate", Armora1ArmorItem.Chestplate::new);
+	public static final RegistryObject<Item> ARMORA_1_ARMOR_LEGGINGS = REGISTRY.register("armora_1_armor_leggings", Armora1ArmorItem.Leggings::new);
+	public static final RegistryObject<Item> ARMORA_1_ARMOR_BOOTS = REGISTRY.register("armora_1_armor_boots", Armora1ArmorItem.Boots::new);
+	public static final RegistryObject<Item> PAINITE_ARMOR_HELMET = REGISTRY.register("painite_armor_helmet", PainiteArmorItem.Helmet::new);
+	public static final RegistryObject<Item> PAINITE_ARMOR_CHESTPLATE = REGISTRY.register("painite_armor_chestplate", PainiteArmorItem.Chestplate::new);
+	public static final RegistryObject<Item> PAINITE_ARMOR_LEGGINGS = REGISTRY.register("painite_armor_leggings", PainiteArmorItem.Leggings::new);
+	public static final RegistryObject<Item> PAINITE_ARMOR_BOOTS = REGISTRY.register("painite_armor_boots", PainiteArmorItem.Boots::new);
 
-	//液体桶物品的注册
-	public static final RegistryObject<Item> FLUIDHOTTEST_BUCKET = REGISTRY.register("fluidhottest_bucket", () -> new FluidhottestItem());
+	// 液体桶物品的注册
+	public static final RegistryObject<Item> FLUIDHOTTEST_BUCKET = REGISTRY.register("fluidhottest_bucket", FluidhottestItem::new);
 
-	//各种生物蛋的注册
+	// 各种生物蛋的注册 - 移除.tab()，通过事件添加
 	public static final RegistryObject<Item> LATEX_ORANGE_FOX_SPAWN_EGG = REGISTRY.register("latex_orange_fox_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEX_ORANGE_FOX,
-					-39373,
-					-39424, new Item.Properties().tab(CreativeModeTab.TAB_MISC)
-			));
+					-39373, -39424, new Item.Properties()));
 
 	public static final RegistryObject<Item> LATEX_KCAHRA_SHARK_SPAWN_EGG = REGISTRY.register("latex_kcahra_shark_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEX_KCAHRA_SHARK,
-					-16711681,
-					-16737793, new Item.Properties().tab(CreativeModeTab.TAB_MISC)
-			));
+					-16711681, -16737793, new Item.Properties()));
 
 	public static final RegistryObject<Item> DARKFU_LATEX_WOLF_MALE_SPAWN_EGG = REGISTRY.register("darkfu_latex_wolf_male_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.DARKFU_LATEX_WOLF_MALE,
-					-10066330,
-					-13421773, new Item.Properties().tab(CreativeModeTab.TAB_MISC)
-			));
+					-10066330, -13421773, new Item.Properties()));
 
 	public static final RegistryObject<Item> LATEXICE_DRAGON_SPAWN_EGG = REGISTRY.register("latexice_dragon_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXICE_DRAGON,
-					-16724788,
-					-16711681, new Item.Properties().tab(CreativeModeTab.TAB_MISC)
-			));
+					-16724788, -16711681, new Item.Properties()));
 
 	public static final RegistryObject<Item> INKSUGER_SPAWN_EGG = REGISTRY.register("inksuger_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.INKSUGER,
-					-1,
-					-13108, new Item.Properties().tab(CreativeModeTab.TAB_MISC)
-			));
+					-1, -13108, new Item.Properties()));
 
 	public static final RegistryObject<Item> BLACKPUPMALE_SPAWN_EGG = REGISTRY.register("blackpupmale_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.BLACKPUPMALE,
-					-16777216,
-					-13421773, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
-			));
+					-16777216, -13421773, new Item.Properties()));
 
 	public static final RegistryObject<Item> WHITEBLUEPUP_SPAWN_EGG = REGISTRY.register("whitebluepup_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.WHITEBLUEPUP,
-					-1,
-					-16711681, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)));
+					-1, -16711681, new Item.Properties()));
 
 	public static final RegistryObject<Item> LATEXPURPLEWSWOLF_SPAWN_EGG = REGISTRY.register("latexpurplewswolf_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXPURPLEWSWOLF,
-					-52276,
-					-6684673, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
-			));
+					-52276, -6684673, new Item.Properties()));
 
 	public static final RegistryObject<Item> LATEXTHREEMONTHWOLF_SPAWN_EGG = REGISTRY.register("latexthreemonthwolf_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXTHREEMONTHWOLF,
-					-52225,
-					-1, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
-			));
+					-52225, -1, new Item.Properties()));
 
 	public static final RegistryObject<Item> LATEXYUNXQHOTDRAGON_SPAWN_EGG = REGISTRY.register("latexyunxqhotdragon_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXYUNXQHOTDRAGON,
-					-5758720,
-					-49408, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
-			));
+					-5758720, -49408, new Item.Properties()));
 
 	public static final RegistryObject<Item> LATEXYUNXQICEDRAGON_SPAWN_EGG = REGISTRY.register("latexyunxqicedragon_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXYUNXQICEDRAGON,
-					-16711681,
-					-13369345, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
-			));
+					-16711681, -13369345, new Item.Properties()));
 
 	public static final RegistryObject<Item> LATEXBLUEDRAGON_SPAWN_EGG = REGISTRY.register("latexbluedragon_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXBLUEDRAGON,
-					-16750849,
-					-16776961,
-					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
-			));
+					-16750849, -16776961, new Item.Properties()));
 
 	public static final RegistryObject<Item> LATEX_DRAGON_FRUIT_WOLF_SPAWN_EGG = REGISTRY.register("latex_dragon_fruit_wolf_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXDRAGONFRUITWOLF,
-					-16724788,
-					-16711681, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
-			));
+					-16724788, -16711681, new Item.Properties()));
 
 	public static final RegistryObject<Item> LATEX_ICE_FIELD_WOLF_DRAGON_SPAWN_EGG = REGISTRY.register("latex_ice_field_wolf_dragon_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEX_ICE_FIELD_WOLF_DRAGON,
-					-16724788, -16711681,
-					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
-			));
+					-16724788, -16711681, new Item.Properties()));
 
 	public static final RegistryObject<Item> LATEX_PURPLE_COOC_WOLF_EGG = REGISTRY.register("latex_purple_cooc_wolf_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXPRTPLECOOCWOLF,
-					-16724788, -16711681,
-					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
-			));
+					-16724788, -16711681, new Item.Properties()));
 
-	/*************************************************************************/
-
-	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
-		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+	// 简化的block注册方法 - 移除tab参数
+	private static RegistryObject<Item> block(RegistryObject<Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
 	}
 }
