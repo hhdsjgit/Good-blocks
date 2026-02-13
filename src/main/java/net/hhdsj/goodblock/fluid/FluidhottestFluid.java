@@ -2,6 +2,7 @@
 package net.hhdsj.goodblock.fluid;
 
 
+import net.hhdsj.goodblock.init.*;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 
 import net.minecraft.world.phys.Vec3;
@@ -15,23 +16,20 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.BlockPos;
 
-import net.hhdsj.goodblock.init.GoodblockModParticleTypes;
-import net.hhdsj.goodblock.init.GoodblockModItems;
-import net.hhdsj.goodblock.init.GoodblockModFluids;
-import net.hhdsj.goodblock.init.GoodblockModBlocks;
-
 import java.util.List;
 
 public abstract class FluidhottestFluid extends ForgeFlowingFluid {
-	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(GoodblockModFluids.FLUIDHOTTEST, GoodblockModFluids.FLOWING_FLUIDHOTTEST,
-			FluidAttributes.builder(new ResourceLocation("goodblock:blocks/hot_fluid_0"), new ResourceLocation("goodblock:blocks/hot_fluid_1")).luminosity(15)
-
-	).explosionResistance(100f)
-
-			.tickRate(50).levelDecreasePerBlock(2)
-
-			.bucket(GoodblockModItems.FLUIDHOTTEST_BUCKET).block(() -> (LiquidBlock) GoodblockModBlocks.FLUIDHOTTEST.get());
-
+	public static final ForgeFlowingFluid.Properties PROPERTIES =
+			new ForgeFlowingFluid.Properties(
+					GoodblockModFluidTypes.FLUIDHOTTEST_TYPE,		// FluidType
+					GoodblockModFluids.FLUIDHOTTEST,				// 源流体
+					GoodblockModFluids.FLOWING_FLUIDHOTTEST			// 流动流体
+			)
+					.explosionResistance(100f)
+					.tickRate(50)
+					.levelDecreasePerBlock(2)
+					.bucket(GoodblockModItems.FLUIDHOTTEST_BUCKET)
+					.block(() -> (LiquidBlock) GoodblockModBlocks.FLUIDHOTTEST.get());
 	private FluidhottestFluid() {
 		super(PROPERTIES);
 	}

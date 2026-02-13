@@ -35,7 +35,7 @@ import net.hhdsj.goodblock.init.GoodblockModBlocks;
 import java.util.Set;
 import java.util.Random;
 import java.util.List;
-
+/*
 public class NitreblockFeature extends OreFeature {
 	public static NitreblockFeature FEATURE = null;
 	public static Holder<ConfiguredFeature<OreConfiguration, ?>> CONFIGURED_FEATURE = null;
@@ -92,3 +92,4 @@ public class NitreblockFeature extends OreFeature {
 		}
 	}
 }
+*/
