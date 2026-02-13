@@ -6,6 +6,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
 import net.hhdsj.goodblock.procedures.RadiationZaiXiaoGuoChiXuShiMeiKeFaShengProcedure;
+import net.minecraft.world.level.LevelAccessor;
 
 public class RadiationMobEffect extends MobEffect {
 	public RadiationMobEffect() {
@@ -18,8 +19,9 @@ public class RadiationMobEffect extends MobEffect {
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		RadiationZaiXiaoGuoChiXuShiMeiKeFaShengProcedure.execute(entity);
+	public void applyEffectTick( LivingEntity entity, int amplifier) {
+		LevelAccessor world = entity.level();
+		RadiationZaiXiaoGuoChiXuShiMeiKeFaShengProcedure.execute(world,entity);
 	}
 
 	@Override
