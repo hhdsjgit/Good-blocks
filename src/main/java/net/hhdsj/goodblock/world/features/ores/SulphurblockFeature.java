@@ -35,7 +35,7 @@ import net.hhdsj.goodblock.init.GoodblockModBlocks;
 import java.util.Set;
 import java.util.Random;
 import java.util.List;
-
+/*
 public class SulphurblockFeature extends OreFeature {
 	public static SulphurblockFeature FEATURE = null;
 	public static Holder<ConfiguredFeature<OreConfiguration, ?>> CONFIGURED_FEATURE = null;
@@ -92,3 +92,4 @@ public class SulphurblockFeature extends OreFeature {
 		}
 	}
 }
+*/

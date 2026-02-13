@@ -3,7 +3,7 @@
  *    这些为注册类,请将注册写在这里,而不是其它地方!
  */
 package net.hhdsj.goodblock.init;
-
+/*
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
@@ -53,4 +53,4 @@ public class GoodblockModFeatures {
 
 	private record FeatureRegistration(GenerationStep.Decoration stage, Set<ResourceLocation> biomes, Supplier<Holder<PlacedFeature>> placedFeature) {
 	}
-}
+}*/
