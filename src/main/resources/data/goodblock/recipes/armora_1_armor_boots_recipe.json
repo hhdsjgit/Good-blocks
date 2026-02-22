@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:copper_ingot"
+    },
+    "2": {
+      "item": "minecraft:copper_ingot"
+    },
+    "3": {
+      "item": "minecraft:copper_ingot"
+    },
+    "5": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "item": "goodblock:armora_1_armor_boots",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "goodblock:pale_wood_planks"
+    },
+    "1": {
+      "item": "goodblock:pale_wood_planks"
+    },
+    "2": {
+      "item": "goodblock:pale_wood_planks"
+    }
+  },
+  "result": {
+    "item": "goodblock:pale_wood_slab",
+    "count": 6
+  }
+}

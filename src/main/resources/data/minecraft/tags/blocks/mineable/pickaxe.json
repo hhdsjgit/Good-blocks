@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "goodblock:sulphurblock",
+    "goodblock:nitreblock",
+    "goodblock:uraniummineral",
+    "goodblock:blueblock",
+    "goodblock:ironhot",
+    "goodblock:blackblock",
+    "goodblock:catalyzer"
+  ]
+}

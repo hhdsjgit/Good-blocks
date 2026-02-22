@@ -1,0 +1,19 @@
+{
+  "group": "synthetic_powder_formula",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "goodblock:nitricacid"
+    },
+    {
+      "item": "goodblock:sulphur"
+    },
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "result": {
+    "item": "minecraft:gunpowder",
+    "count": 4
+  }
+}

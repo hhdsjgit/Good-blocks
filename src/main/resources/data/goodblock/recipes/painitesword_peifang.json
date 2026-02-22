@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "addition": {
+    "item": "changed_addon:painite_block"
+  },
+  "result": {
+    "item": "goodblock:painitesword"
+  }
+}

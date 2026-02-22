@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "goodblock:pale_wood_planks"
+    }
+  ],
+  "result": {
+    "item": "goodblock:pale_wood_button",
+    "count": 1
+  }
+}

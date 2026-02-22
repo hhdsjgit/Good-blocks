@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:copper_ingot"
+    },
+    "2": {
+      "item": "minecraft:copper_ingot"
+    },
+    "3": {
+      "item": "minecraft:copper_ingot"
+    },
+    "4": {
+      "item": "minecraft:copper_ingot"
+    },
+    "5": {
+      "item": "minecraft:copper_ingot"
+    },
+    "6": {
+      "item": "minecraft:copper_ingot"
+    },
+    "7": {
+      "item": "minecraft:copper_ingot"
+    },
+    "8": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "item": "goodblock:armora_1_armor_chestplate",
+    "count": 1
+  }
+}

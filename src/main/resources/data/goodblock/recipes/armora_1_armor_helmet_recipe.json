@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:copper_ingot"
+    },
+    "1": {
+      "item": "minecraft:copper_ingot"
+    },
+    "2": {
+      "item": "minecraft:copper_ingot"
+    },
+    "3": {
+      "item": "minecraft:copper_ingot"
+    },
+    "5": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "item": "goodblock:armora_1_armor_helmet",
+    "count": 1
+  }
+}
