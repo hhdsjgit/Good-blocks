@@ -159,5 +159,6 @@
   "block.goodblock.pale_wood_button": "Pale Wood Button",
   "item.goodblock.latexpurplewswolf_spawn_egg": "Purple WS Latex Wolf Spawn Egg",
   "item.goodblock.latex_dragon_fruit_wolf_spawn_egg": "Latex Dragon Fruit Wolf Spawn Egg",
-  "item.goodblock.latex_kamona_hsguy_dragon_wolf_spawn_egg": "Latex Ice Field Wolf Dragon Spawn Egg"
+  "item.goodblock.latex_kamona_hsguy_dragon_wolf_spawn_egg": "Latex Ice Field Wolf Dragon Spawn Egg",
+  "entity.goodblock.boss_heath.night_owl": "Night owl"
 }
