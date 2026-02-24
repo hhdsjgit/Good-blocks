@@ -5,6 +5,7 @@
 package net.hhdsj.goodblock.init;
 
 import net.hhdsj.goodblock.entity.*;
+import net.hhdsj.goodblock.entity.boss.LatexNightOwlBossEntity;
 import net.ltxprogrammer.changed.init.ChangedMobCategories;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -107,6 +108,18 @@ public class GoodblockModEntities {
 					.setUpdateInterval(3)
 					.setCustomClientFactory(LatexRadiationFoxEntity::new)
 					.sized(0.7f, 1.93f));
+
+	//---Night Owl Boss---//
+	public static final RegistryObject<EntityType<LatexNightOwlBossEntity>> LATEXNIGHTOWLDRAGONBOSS = register("latex_night_owl_dragon_boss",
+			EntityType.Builder.<LatexNightOwlBossEntity>of(LatexNightOwlBossEntity::new, ChangedMobCategories.CHANGED)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(LatexNightOwlBossEntity::new)
+					.sized(0.7f, 1.92f));
+
+
+
 	//////////////////else///////////////////
 	public static final RegistryObject<EntityType<LatexthreemonthwolfEntityProjectile>> LATEXTHREEMONTHWOLF_PROJECTILE = register("projectile_latexthreemonthwolf",
 			EntityType.Builder.<LatexthreemonthwolfEntityProjectile>of(LatexthreemonthwolfEntityProjectile::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1)

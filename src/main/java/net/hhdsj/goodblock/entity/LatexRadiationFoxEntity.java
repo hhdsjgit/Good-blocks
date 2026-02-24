@@ -67,7 +67,7 @@ public class LatexRadiationFoxEntity extends ChangedEntity {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXRADIATIONFOX.get(), 20, 4, 4));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXRADIATIONFOX.get(), 1, 4, 4));
 	}
 
 	public LatexRadiationFoxEntity(PlayMessages.SpawnEntity packet, Level world) {

@@ -77,7 +77,7 @@ public class LatexOrangeFoxEntity extends ChangedEntity {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEX_ORANGE_FOX.get(), 20, 4, 4));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEX_ORANGE_FOX.get(), 1, 4, 4));
 	}
 
 	public LatexOrangeFoxEntity(PlayMessages.SpawnEntity packet, Level world) {

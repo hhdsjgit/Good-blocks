@@ -66,7 +66,7 @@ public class LatexyunxqhotdragonEntity extends ChangedEntity {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXYUNXQHOTDRAGON.get(), 20, 1, 2));
+			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXYUNXQHOTDRAGON.get(), 2, 1, 2));
 	}
 
 

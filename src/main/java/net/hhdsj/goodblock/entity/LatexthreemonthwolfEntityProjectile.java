@@ -33,7 +33,7 @@ import net.minecraft.core.particles.ParticleTypes;
 
 public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
 
-        private static final EntityDataAccessor<String> FORM_VARIANT =
+    private static final EntityDataAccessor<String> FORM_VARIANT =
             SynchedEntityData.defineId(LatexthreemonthwolfEntityProjectile.class, EntityDataSerializers.STRING);
     
     private static final EntityDataAccessor<Boolean> PARRYABLE =
@@ -44,7 +44,6 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
     
     private int life = 1200; 
     private ResourceLocation formVariant = new ResourceLocation("goodblock", "form_latex_three_month_wolf");
-    private boolean parryable = false;
     private float projectileDamage = 1.0f;
     private int shakeTime = 0;
     private boolean inGround = false;
@@ -212,7 +211,6 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
     
     public void setParryable(boolean parryable) {
         this.entityData.set(PARRYABLE, parryable);
-        this.parryable = parryable;
     }
     
     public void setFormVariant(ResourceLocation variant) {

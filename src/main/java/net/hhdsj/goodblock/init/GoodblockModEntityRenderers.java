@@ -5,6 +5,8 @@
 package net.hhdsj.goodblock.init;
 
 import net.hhdsj.goodblock.client.renderer.*;
+import net.hhdsj.goodblock.client.renderer.boss.LatexNightOwlBossRenderer;
+import net.hhdsj.goodblock.entity.boss.LatexNightOwlBossEntity;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -32,5 +34,6 @@ public class GoodblockModEntityRenderers {
 		event.registerEntityRenderer(GoodblockModEntities.LATEXTHREEMONTHWOLF_PROJECTILE.get(), LatexArrowRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXYUNQIICEDRAGON.get(), LatexYunQiIceDragonRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXRADIATIONFOX.get(), LatexRadiationFoxRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.LATEXNIGHTOWLDRAGONBOSS.get(), LatexNightOwlBossRenderer::new);
 	}
 }

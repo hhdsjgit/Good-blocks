@@ -57,8 +57,7 @@ public class LatexyunxqicedragonEntity extends ChangedEntity {
         super.setAttributes(attributes);
         attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.1);
         attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.93);
-        //attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(30.0);
-   
+        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(30.0);
     }
     
 	@Override
