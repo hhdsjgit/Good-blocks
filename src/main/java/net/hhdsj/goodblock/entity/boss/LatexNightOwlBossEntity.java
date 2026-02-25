@@ -3,6 +3,8 @@ package net.hhdsj.goodblock.entity.boss;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.foxyas.changedaddon.client.renderer.layers.features.SonarOutlineLayer;
 import net.foxyas.changedaddon.client.renderer.renderTypes.ChangedAddonRenderTypes;
+import net.foxyas.changedaddon.entity.projectile.VoidFoxParticleProjectile;
+import net.foxyas.changedaddon.init.ChangedAddonEntities;
 import net.foxyas.changedaddon.init.ChangedAddonParticleTypes;
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.ltxprogrammer.changed.entity.ChangedEntity;
@@ -105,6 +107,8 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
             return false;
         if (source == DamageSource.IN_FIRE)
             return false;
+        if (source == DamageSource.HOT_FLOOR)
+            return false;
         if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
             return false;
         if (source == DamageSource.CACTUS)
@@ -131,7 +135,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         xpReward = 3000;
         setNoAi(false);
         this.bossEvent = new ServerBossEvent(
-                new TranslatableComponent("entity.goodblock.boss_heath.night_owl"), // 或者用
+                new TranslatableComponent("entity.goodblock.boss_heath.night_owl"),
                 BossEvent.BossBarColor.RED,
                 BossEvent.BossBarOverlay.NOTCHED_10 // 进度条样式
         );
@@ -140,20 +144,20 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     }
 
     public void CheckobsidianBreak() {
-        if (LatexNightOwlBossEntity.this.getHealth() <= LatexNightOwlBossEntity.this.getMaxHealth() * 0.1) {
+        if (LatexNightOwlBossEntity.this.getHealth() <= LatexNightOwlBossEntity.this.getMaxHealth() * 0.95) {
             LivingEntity target = LatexNightOwlBossEntity.this.getTarget();
             if (target != null) {
                 // 传送
                 LatexNightOwlBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
 
-                // 挖掘周围3x3x3区域的黑曜石
+                // 挖掘周围5x5x5区域的黑曜石
                 Level level = LatexNightOwlBossEntity.this.level;
                 BlockPos centerPos = LatexNightOwlBossEntity.this.blockPosition();
 
-                // 遍历3x3x3区域
-                for (int x = -1; x <= 1; x++) {
-                    for (int y = -1; y <= 1; y++) {
-                        for (int z = -1; z <= 1; z++) {
+                // 遍历5x5x5区域
+                for (int x = -2; x <= 2; x++) {
+                    for (int y = -2; y <= 2; y++) {
+                        for (int z = -2; z <= 2; z++) {
                             BlockPos checkPos = centerPos.offset(x, y, z);
                             BlockState blockState = level.getBlockState(checkPos);
 
@@ -204,9 +208,8 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         }
 
         if (obsidianBreakCooldown == 0) {
-            // 检查血量是否低于10%
             CheckobsidianBreak();
-            obsidianBreakCooldown = 200; // 10秒冷却
+            obsidianBreakCooldown = 100; // 5秒冷却
         }
 
         // 更新血条进度
@@ -223,7 +226,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         this.bossEvent.setDarkenScreen(true);      // 屏幕变暗
         this.bossEvent.setCreateWorldFog(true);    // 添加环境雾
         player.displayClientMessage(
-                new TextComponent("Test mess -- 3?").withStyle((style -> {
+                new TextComponent("You can't exit me!").withStyle((style -> {
                     Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
                     returnStyle = returnStyle.withItalic(true);
                     return returnStyle;
@@ -243,17 +246,25 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                     this.getY() + this.getBbHeight() / 2,
                     this.getZ(),
                     500,
-                    5, 5, 5,
+                    2, 2, 2,
                     0.6
             );
         }
+        player.displayClientMessage(
+                new TextComponent("You can't exit me!").withStyle((style -> {
+                    Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
+                    returnStyle = returnStyle.withItalic(true);
+                    return returnStyle;
+                })),
+                false
+        );
     }
 
     @Override
     public void aiStep() {
         super.aiStep();
 
-        if (this.getHealth() < this.getMaxHealth() * 0.3) {
+        if (this.getHealth() < this.getMaxHealth() * 0.5) {
             this.bossEvent.setName(
                     new TranslatableComponent("entity.goodblock.boss_heath.night_owl")
                             .withStyle(ChatFormatting.RED)
@@ -313,6 +324,40 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                 r, g, b, alpha
         );
         return true;
+    }
+
+    @Override
+    public void baseTick() {//Form changed-addon
+        super.baseTick();
+        double radius = 1.5;
+
+        for (int theta = 0; theta < 360; theta += 45) { // Ângulo horizontal (longitude)
+            double angleTheta = Math.toRadians(theta);
+            for (int phi = 0; phi <= 180; phi += 45) { // Ângulo vertical (latitude)
+                double anglePhi = Math.toRadians(phi);
+
+                // Direção do disparo (coordenadas cartesianas de uma esfera)
+                double dx = Math.sin(anglePhi) * Math.cos(angleTheta);
+                double dy = Math.cos(anglePhi);
+                double dz = Math.sin(anglePhi) * Math.sin(angleTheta);
+
+                // Posição inicial (esfera ao redor da entidade)
+                double px = this.getX() + dx * radius;
+                double py = this.getY() + dy * radius + 1.0; // leve ajuste de altura
+                double pz = this.getZ() + dz * radius;
+
+                VoidFoxParticleProjectile projectile = new VoidFoxParticleProjectile(ChangedAddonEntities.PARTICLE_PROJECTILE.get(), this.level);
+                projectile.setSmoothMotion(true);
+                projectile.setPos(px, py, pz);
+                projectile.shoot(dx, dy, dz, 1.0f, 0.0f); // dispara na direção da esfera
+                projectile.setOwner(this);
+                projectile.setTarget(this.getTarget());
+                projectile.setParryAble(true);
+
+                this.level.addFreshEntity(projectile);
+            }
+        }
+
     }
 
     @Override
@@ -429,9 +474,9 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                         target.getX(),                           // 目标X坐标（改为目标位置）
                         target.getY() + target.getBbHeight() / 2, // 目标中心高度
                         target.getZ(),                           // 目标Z坐标
-                        300,                                      // 粒子数量（减少一些）
+                        600,                                      // 粒子数量（减少一些）
                         2, 2, 2,                           // 扩散范围
-                        0.5                                      // 粒子速度
+                        0.4                                     // 粒子速度
                 );
 
                 // 添加攻击特效粒子（横扫粒子）
@@ -486,14 +531,14 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
         builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 1);
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
+        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
         builder = builder.add(Attributes.JUMP_STRENGTH, 1.5);
         builder = builder.add(Attributes.MAX_HEALTH, 500);
-        builder = builder.add(Attributes.ARMOR, 20);           // 提高护甲值
-        builder = builder.add(Attributes.ARMOR_TOUGHNESS, 10); // 添加护甲韧性
-        builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.8); // 添加击退抗性
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 15);   // Boss攻击力
-        builder = builder.add(Attributes.FOLLOW_RANGE, 32);
+        builder = builder.add(Attributes.ARMOR, 30);           // 提高护甲值
+        builder = builder.add(Attributes.ARMOR_TOUGHNESS, 15); // 添加护甲韧性
+        builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1); // 添加击退抗性
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 60);   // Boss攻击力
+        builder = builder.add(Attributes.FOLLOW_RANGE, 64);
         return builder;
     }
 }

@@ -3,6 +3,7 @@
  */
 package net.hhdsj.goodblock.init;
 //原版我的世界导入
+import net.hhdsj.goodblock.entity.boss.LatexNightOwlEntity;
 import net.minecraft.world.entity.monster.*;
 //FORGE导入
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,6 +19,8 @@ import net.foxyas.changedaddon.init.ChangedAddonAbilities;
 import net.hhdsj.goodblock.entity.*;//推荐不要用*(来自hhdsj的话=))
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 
+import java.util.List;
+
 public class GoodblockModTransfurVariants {
     public static final DeferredRegister<TransfurVariant<?>> REGISTRY = ChangedRegistry.TRANSFUR_VARIANT.createDeferred("goodblock");
 	
@@ -26,6 +29,7 @@ public class GoodblockModTransfurVariants {
 			.stepSize(0.7f)
 			.nightVision()
 			.transfurMode(TransfurMode.ABSORPTION)
+			.addAbility(ChangedAddonAbilities.CLAWS)
 			.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 			.build());
 
@@ -81,6 +85,7 @@ public class GoodblockModTransfurVariants {
 			.stepSize(0.7f)
 			.nightVision()
 			.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+			.addAbility(ChangedAddonAbilities.CLAWS)
 			.transfurMode(TransfurMode.ABSORPTION)
 			.replicating()
 			.build());	
@@ -107,6 +112,7 @@ public class GoodblockModTransfurVariants {
 			REGISTRY.register("form_latex_purplews_wolf", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXPURPLEWSWOLF)
 			.stepSize(0.7f)
 			.breatheMode(TransfurVariant.BreatheMode.WEAK)
+			.addAbility(ChangedAddonAbilities.CLAWS)
 			.reducedFall()
 			.scares(Creeper.class)
 			.nightVision()
@@ -118,6 +124,7 @@ public class GoodblockModTransfurVariants {
 			REGISTRY.register("form_latex_three_month_wolf", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXTHREEMONTHWOLF)
 			.stepSize(0.7f)
 			.breatheMode(TransfurVariant.BreatheMode.WEAK)
+			.addAbility(ChangedAddonAbilities.CLAWS)
 			.reducedFall()
 			.scares(Creeper.class)
 			.nightVision()
@@ -159,18 +166,20 @@ public class GoodblockModTransfurVariants {
 	//火龙果狼>?
 	public static final RegistryObject<TransfurVariant<LatexDragonFruitWolfEntity>> LATEXDRAGONFRUITWOLF =
 			REGISTRY.register("form_latex_dragon_fruit_wolf", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXDRAGONFRUITWOLF)
-			.stepSize(0.7f)
-			.addAbility(entityType -> GoodblockModAbilities.CREATE_DRAGON_FRUIT.get())
-			.transfurMode(TransfurMode.ABSORPTION)
-			.replicating()
-			.nightVision()
-			.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
-			.build());
+				.stepSize(0.7f)
+				.addAbility(entityType -> GoodblockModAbilities.CREATE_DRAGON_FRUIT.get())
+				.transfurMode(TransfurMode.ABSORPTION)
+				.replicating()
+				.nightVision()
+				.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+				.build());
 
 	public static final RegistryObject<TransfurVariant<LatexYunQiIceDragonEntity>> LATEXYUNQIICEDRAGON =
 			REGISTRY.register("form_latex_yun_qi_ice_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNQIICEDRAGON)
 					.stepSize(0.7f)
+					.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 					.glide()
+					.jumpStrength(1.1f)
 					.transfurMode(TransfurMode.ABSORPTION)
 					.replicating()
 					.nightVision()
@@ -185,6 +194,20 @@ public class GoodblockModTransfurVariants {
 					.replicating()
 					.nightVision()
 					.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+					.build());
+
+	public static final RegistryObject<TransfurVariant<LatexNightOwlEntity>> LATEXNIGHTOWL =
+			REGISTRY.register("form_latex_night_owl", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXNIGHTOWLDRAGON)
+					.stepSize(0.7f)
+					.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+					.addAbility(ChangedAddonAbilities.CLAWS)
+					.scares(List.of(Creeper.class))
+					.glide()
+					.transfurMode(TransfurMode.ABSORPTION)
+					.replicating()
+					.nightVision()
+					.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+					.jumpStrength(1.1f)
 					.build());
 
 	public static void register(IEventBus bus) {

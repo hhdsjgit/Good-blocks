@@ -38,7 +38,11 @@ public class ArrowReplacementHandler {
         ResourceLocation formId = variant.getFormId();
         if (formId == null) return;
 
-        if (!Objects.equals(formId, new ResourceLocation("goodblock", "form_latex_three_month_wolf"))) return;
+        if (!Objects.equals(formId, new ResourceLocation("goodblock", "form_latex_three_month_wolf"))) {
+            if (!Objects.equals(formId, new ResourceLocation("goodblock", "form_latex_ice_field_wolf_dragon"))) {
+                return;
+            }
+        }
 
         // 检查是否使用弓
         if (!(bow.getItem() instanceof BowItem)) return;
@@ -65,7 +69,13 @@ public class ArrowReplacementHandler {
         LatexthreemonthwolfEntityProjectile customArrow = new LatexthreemonthwolfEntityProjectile(level, player);
 
         // 设置变体
-        customArrow.setFormVariant(new ResourceLocation("goodblock", "form_latex_three_month_wolf"));
+        if (Objects.equals(formId, new ResourceLocation("goodblock", "form_latex_three_month_wolf"))) {
+            customArrow.setFormVariant(new ResourceLocation("goodblock", "form_latex_three_month_wolf"));
+        }
+        if (Objects.equals(formId, new ResourceLocation("goodblock", "form_latex_ice_field_wolf_dragon"))) {
+            customArrow.setFormVariant(new ResourceLocation("goodblock", "form_latex_ice_field_wolf_dragon"));
+        }
+
 
         // 设置箭矢属性
         customArrow.shootFromRotation(player, player.getXRot(), player.getYRot(),

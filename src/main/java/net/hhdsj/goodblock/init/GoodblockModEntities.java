@@ -118,6 +118,14 @@ public class GoodblockModEntities {
 					.setCustomClientFactory(LatexNightOwlBossEntity::new)
 					.sized(0.7f, 1.92f));
 
+	public static final RegistryObject<EntityType<LatexNightOwlEntity>> LATEXNIGHTOWLDRAGON = register("latex_night_owl_dragon",
+			EntityType.Builder.<LatexNightOwlEntity>of(LatexNightOwlEntity::new, ChangedMobCategories.CHANGED)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(LatexNightOwlEntity::new)
+					.sized(0.7f, 1.92f));
+
 
 
 	//////////////////else///////////////////
@@ -151,6 +159,7 @@ public class GoodblockModEntities {
 			LatexYunQiIceDragonEntity.init();
 			LatexRadiationFoxEntity.init();
 			LatexNightOwlBossEntity.init();
+			LatexNightOwlEntity.init();
 		});
 	}
 
@@ -174,5 +183,6 @@ public class GoodblockModEntities {
 		event.put(LATEXYUNQIICEDRAGON.get(), LatexYunQiIceDragonEntity.createAttributes().build());
 		event.put(LATEXRADIATIONFOX.get(), LatexRadiationFoxEntity.createAttributes().build());
 		event.put(LATEXNIGHTOWLDRAGONBOSS.get(), LatexNightOwlBossEntity.createAttributes().build());
+		event.put(LATEXNIGHTOWLDRAGON.get(), LatexNightOwlEntity.createAttributes().build());
 	}
 }
