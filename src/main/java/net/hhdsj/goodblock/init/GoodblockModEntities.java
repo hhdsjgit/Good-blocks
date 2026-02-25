@@ -5,7 +5,7 @@
 package net.hhdsj.goodblock.init;
 
 import net.hhdsj.goodblock.entity.*;
-import net.hhdsj.goodblock.entity.boss.LatexNightOwlBossEntity;
+import net.hhdsj.goodblock.entity.boss.*;
 import net.ltxprogrammer.changed.init.ChangedMobCategories;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -150,6 +150,7 @@ public class GoodblockModEntities {
 			LatexDragonFruitWolfEntity.init();
 			LatexYunQiIceDragonEntity.init();
 			LatexRadiationFoxEntity.init();
+			LatexNightOwlBossEntity.init();
 		});
 	}
 
@@ -172,5 +173,6 @@ public class GoodblockModEntities {
 		event.put(LATEXDRAGONFRUITWOLF.get(), LatexDragonFruitWolfEntity.createAttributes().build());
 		event.put(LATEXYUNQIICEDRAGON.get(), LatexYunQiIceDragonEntity.createAttributes().build());
 		event.put(LATEXRADIATIONFOX.get(), LatexRadiationFoxEntity.createAttributes().build());
+		event.put(LATEXNIGHTOWLDRAGONBOSS.get(), LatexNightOwlBossEntity.createAttributes().build());
 	}
 }
