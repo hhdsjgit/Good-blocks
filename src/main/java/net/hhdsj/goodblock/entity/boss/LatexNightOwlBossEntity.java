@@ -220,7 +220,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity implements RangedAtta
                 );
             }
 
-            // 添加减速效果（这里缺少一个右括号）
+            // 添加效果
             livingTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 30, 1));
             livingTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 10, 1));
             livingTarget.addEffect(new MobEffectInstance(MobEffects.GLOWING, 30, 1));
@@ -229,18 +229,18 @@ public class LatexNightOwlBossEntity extends ChangedEntity implements RangedAtta
 
             if (distance >= 15) {
                 Random random = new Random();
-                int randomIntBound = random.nextInt(20); // 0-9之间的随机整数
+                int randomIntBound = random.nextInt(20); // 0-20之间的随机整数
                 if (randomIntBound >= 10) {
                     this.teleportTo(target.getX(), target.getY(), target.getZ());
                     if (this.level instanceof ServerLevel serverLevel) {
                         serverLevel.sendParticles(
-                                ParticleTypes.LAVA,                    // 火焰粒子
-                                target.getX(),                           // 目标X坐标（改为目标位置）
-                                target.getY() + target.getBbHeight() / 2, // 目标中心高度
-                                target.getZ(),                           // 目标Z坐标
-                                100,                                      // 粒子数量（减少一些）
-                                5, 5, 5,                           // 扩散范围
-                                0.5                                      // 粒子速度
+                                ParticleTypes.LAVA,
+                                target.getX(),
+                                target.getY() + target.getBbHeight() / 2,
+                                target.getZ(),
+                                100,
+                                5, 5, 5,
+                                0.5
                         );
                     }
                 }else{
