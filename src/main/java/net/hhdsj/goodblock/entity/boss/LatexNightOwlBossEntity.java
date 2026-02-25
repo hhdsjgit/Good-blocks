@@ -1,18 +1,26 @@
 package net.hhdsj.goodblock.entity.boss;
 
-import net.foxyas.changedaddon.effect.particles.ThunderSparkOption;
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.foxyas.changedaddon.client.renderer.layers.features.SonarOutlineLayer;
+import net.foxyas.changedaddon.client.renderer.renderTypes.ChangedAddonRenderTypes;
 import net.foxyas.changedaddon.init.ChangedAddonParticleTypes;
-import net.hhdsj.goodblock.entity.LatexthreemonthwolfEntityProjectile;
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.ltxprogrammer.changed.entity.ChangedEntity;
 import net.ltxprogrammer.changed.entity.LatexType;
 import net.ltxprogrammer.changed.entity.TransfurMode;
-import net.ltxprogrammer.changed.entity.variant.TransfurVariantInstance;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
-import net.ltxprogrammer.changed.process.ProcessTransfur;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.resources.ResourceLocation;
@@ -20,31 +28,39 @@ import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
 import net.minecraft.world.BossEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Random;
+import java.util.List;
 
 public class LatexNightOwlBossEntity extends ChangedEntity{
+
+    private int obsidianBreakCooldown = 0;
 
     public LatexNightOwlBossEntity(PlayMessages.SpawnEntity packet, Level world) {
         this(GoodblockModEntities.LATEXNIGHTOWLDRAGONBOSS.get(), world);
@@ -55,7 +71,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         super.setAttributes(attributes);
         attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.2);
         attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(1.1);
-        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(100.0);
+        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(500.0);
     }
 
     @Override
@@ -87,14 +103,32 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     public boolean hurt(@NotNull DamageSource source, float amount) {
         if (source == DamageSource.FALL)
             return false;
-        if (source == DamageSource.ON_FIRE)
+        if (source == DamageSource.IN_FIRE)
+            return false;
+        if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+            return false;
+        if (source == DamageSource.CACTUS)
+            return false;
+        if (source == DamageSource.DROWN)
+            return false;
+        if (source == DamageSource.LIGHTNING_BOLT)
             return false;
         return super.hurt(source, amount);
+    }
+    public void doClawsAttackEffect() {// Efeito visual
+        double d0 = (double) (-Mth.sin(this.getYRot() * 0.017453292F)) * 1;
+        double d1 = (double) Mth.cos(this.getYRot() * 0.017453292F) * 1;
+        if (this.level instanceof ServerLevel serverLevel) {
+            serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK, this.getX() + d0, this.getY(0.5), this.getZ() + d1, 0, d0, 0.0, d1, 0.0);
+            serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK, this.getX() + d0, this.getY(0.6), this.getZ() + d1, 0, d0, 0.0, d1, 0.0);
+            serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK, this.getX() + d0, this.getY(0.7), this.getZ() + d1, 0, d0, 0.0, d1, 0.0);
+            this.level.playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.PLAYERS, 1f, 0.75f);
+        }
     }
 
     public LatexNightOwlBossEntity(EntityType<LatexNightOwlBossEntity> type, Level world) {
         super(type, world);
-        xpReward = 0;
+        xpReward = 3000;
         setNoAi(false);
         this.bossEvent = new ServerBossEvent(
                 new TranslatableComponent("entity.goodblock.boss_heath.night_owl"), // 或者用
@@ -105,9 +139,76 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         this.bossEvent.setVisible(true);
     }
 
+    public void CheckobsidianBreak() {
+        if (LatexNightOwlBossEntity.this.getHealth() <= LatexNightOwlBossEntity.this.getMaxHealth() * 0.1) {
+            LivingEntity target = LatexNightOwlBossEntity.this.getTarget();
+            if (target != null) {
+                // 传送
+                LatexNightOwlBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
+
+                // 挖掘周围3x3x3区域的黑曜石
+                Level level = LatexNightOwlBossEntity.this.level;
+                BlockPos centerPos = LatexNightOwlBossEntity.this.blockPosition();
+
+                // 遍历3x3x3区域
+                for (int x = -1; x <= 1; x++) {
+                    for (int y = -1; y <= 1; y++) {
+                        for (int z = -1; z <= 1; z++) {
+                            BlockPos checkPos = centerPos.offset(x, y, z);
+                            BlockState blockState = level.getBlockState(checkPos);
+
+                            // 判断是否为黑曜石
+                            if (blockState.is(Blocks.OBSIDIAN)) {
+                                if (!level.isClientSide) {
+                                    // 获取方块掉落物
+                                    Block block = blockState.getBlock();
+                                    List<ItemStack> drops = Block.getDrops(blockState, (ServerLevel) level, checkPos, null);
+
+                                    // 破坏方块（设置为空气）
+                                    level.setBlock(checkPos, Blocks.AIR.defaultBlockState(), 3);
+
+                                    // 生成掉落物
+                                    for (ItemStack drop : drops) {
+                                        Block.popResource(level, checkPos, drop);
+                                    }
+
+                                    // 添加粒子效果
+                                    if (level instanceof ServerLevel serverLevel) {
+                                        serverLevel.sendParticles(
+                                                ParticleTypes.EXPLOSION,
+                                                checkPos.getX() + 0.5,
+                                                checkPos.getY() + 0.5,
+                                                checkPos.getZ() + 0.5,
+                                                10, 0.2, 0.2, 0.2, 0.1
+                                        );
+                                    }
+
+                                    // 播放声音
+                                    level.playSound(null, checkPos,
+                                            SoundEvents.STONE_BREAK,
+                                            SoundSource.BLOCKS, 1.0F, 1.0F);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     @Override
     public void tick() {
         super.tick();
+        if (obsidianBreakCooldown > 0) {
+            obsidianBreakCooldown--;
+        }
+
+        if (obsidianBreakCooldown == 0) {
+            // 检查血量是否低于10%
+            CheckobsidianBreak();
+            obsidianBreakCooldown = 200; // 10秒冷却
+        }
+
         // 更新血条进度
         if (!this.level.isClientSide) {
             float healthPercent = this.getHealth() / this.getMaxHealth();
@@ -119,12 +220,33 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     public void startSeenByPlayer(@NotNull ServerPlayer player) {
         super.startSeenByPlayer(player);
         this.bossEvent.addPlayer(player);
+        this.bossEvent.setDarkenScreen(true);      // 屏幕变暗
+        this.bossEvent.setCreateWorldFog(true);    // 添加环境雾
+        player.displayClientMessage(
+                new TextComponent("Test mess -- 3?").withStyle((style -> {
+                    Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
+                    returnStyle = returnStyle.withItalic(true);
+                    return returnStyle;
+                })),
+                false
+        );
     }
 
     @Override
     public void stopSeenByPlayer(@NotNull ServerPlayer player) {
         super.stopSeenByPlayer(player);
         this.bossEvent.removePlayer(player);
+        if (LatexNightOwlBossEntity.this.level instanceof ServerLevel serverLevel) {
+            serverLevel.sendParticles(
+                    ParticleTypes.LAVA,
+                    this.getX(),
+                    this.getY() + this.getBbHeight() / 2,
+                    this.getZ(),
+                    500,
+                    5, 5, 5,
+                    0.6
+            );
+        }
     }
 
     @Override
@@ -137,6 +259,60 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                             .withStyle(ChatFormatting.RED)
             );
         }
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public boolean handleSonarRenderForCamera(
+            @NotNull SonarOutlineLayer<?, ?> sonarOutlineLayer,
+            @NotNull LivingEntity livingEntity,
+            @NotNull PoseStack poseStack,
+            @NotNull MultiBufferSource buffer,
+            int packedLight,
+            float limbSwing,
+            float limbSwingAmount,
+            float partialTicks,
+            float ageInTicks,
+            float netHeadYaw,
+            float headPitch
+    ) {
+        // 调用带 alpha 的版本，传入默认值
+        return handleSonarRenderForCamera(
+                sonarOutlineLayer, livingEntity, poseStack, buffer,
+                packedLight, limbSwing, limbSwingAmount, partialTicks,
+                ageInTicks, netHeadYaw, headPitch, 1.0f
+        );
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public boolean handleSonarRenderForCamera(
+            @NotNull SonarOutlineLayer<?, ?> sonarOutlineLayer,
+            @NotNull LivingEntity livingEntity,
+            @NotNull PoseStack poseStack,
+            @NotNull MultiBufferSource buffer,
+            int packedLight,
+            float limbSwing,
+            float limbSwingAmount,
+            float partialTicks,
+            float ageInTicks,
+            float netHeadYaw,
+            float headPitch,
+            float alpha
+    ) {
+        float r = 1.0f, g = 0.0f, b = 0.0f;
+
+        Minecraft minecraft = Minecraft.getInstance();
+        EntityRenderDispatcher entityRenderDispatcher = minecraft.getEntityRenderDispatcher();
+        EntityRenderer<? super LivingEntity> renderer = entityRenderDispatcher.getRenderer(livingEntity);
+        RenderType outline = ChangedAddonRenderTypes.outlineWithTranslucencyCull(renderer.getTextureLocation(livingEntity));
+
+        sonarOutlineLayer.getParentModel().renderToBuffer(
+                poseStack,
+                buffer.getBuffer(outline),
+                packedLight,
+                OverlayTexture.NO_OVERLAY,
+                r, g, b, alpha
+        );
+        return true;
     }
 
     @Override
@@ -165,23 +341,32 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
 
                 double distance = LatexNightOwlBossEntity.this.distanceTo(target);
 
-                if (distance >= 15) {
+                if (distance >= 8) {
                     int randomIntBound = LatexNightOwlBossEntity.this.random.nextInt(20); // 0-20之间的随机整数
                     if (randomIntBound >= 10) {
+                        if (getTarget() instanceof Player player) {
+                            player.displayClientMessage(new TextComponent("Can you think ....?").withStyle((style -> {
+                                Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
+                                returnStyle = returnStyle.withItalic(true);
+                                return returnStyle;
+                            })), true);
+                        }
                         double oldX = LatexNightOwlBossEntity.this.getX();
                         double oldY = LatexNightOwlBossEntity.this.getY();
                         double oldZ = LatexNightOwlBossEntity.this.getZ();
+
                         if (LatexNightOwlBossEntity.this.level instanceof ServerLevel serverLevel) {
                             serverLevel.sendParticles(
                                     ParticleTypes.SMOKE,
                                     oldX,
                                     oldY + 1,
                                     oldZ,
-                                    50,
+                                    200,
                                     1, 1, 1,
                                     0.3
                             );
                         }
+
                         LatexNightOwlBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
                         if (LatexNightOwlBossEntity.this.level instanceof ServerLevel serverLevel) {
                             serverLevel.sendParticles(
@@ -189,15 +374,33 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                                     target.getX(),
                                     target.getY() + target.getBbHeight() / 2,
                                     target.getZ(),
-                                    100,
+                                    300,
                                     5, 5, 5,
                                     0.5
                             );
                         }
                     } else {
-                        target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 30, 1));
-                        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 30, 2));
+
+                        if (getTarget() instanceof Player player) {
+                            player.displayClientMessage(new TextComponent("Test message--1?").withStyle((style -> {
+                                Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
+                                returnStyle = returnStyle.withItalic(true);
+                                return returnStyle;
+                            })), true);
+                        }
+
+                        target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 1));
+                        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 600, 2));
                     }
+                }
+            }
+            public void stop() {
+                if (getTarget() instanceof Player player) {
+                    player.displayClientMessage(new TextComponent("Test message--0?").withStyle((style -> {
+                        Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
+                        returnStyle = returnStyle.withItalic(true);
+                        return returnStyle;
+                    })), true);
                 }
             }
         });
@@ -226,12 +429,14 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                         target.getX(),                           // 目标X坐标（改为目标位置）
                         target.getY() + target.getBbHeight() / 2, // 目标中心高度
                         target.getZ(),                           // 目标Z坐标
-                        100,                                      // 粒子数量（减少一些）
-                        3, 3, 3,                           // 扩散范围
+                        300,                                      // 粒子数量（减少一些）
+                        2, 2, 2,                           // 扩散范围
                         0.5                                      // 粒子速度
                 );
 
                 // 添加攻击特效粒子（横扫粒子）
+                doClawsAttackEffect();
+                /*
                 serverLevel.sendParticles(
                         ParticleTypes.SWEEP_ATTACK,
                         target.getX(),
@@ -240,7 +445,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                         1,
                         0, 0, 0,
                         0
-                );
+                );*/
 
                 SimpleParticleType solventParticle = (SimpleParticleType) ChangedAddonParticleTypes.SOLVENT_PARTICLE.get();
 
@@ -249,16 +454,16 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                         this.getX(),
                         this.getY() + this.getEyeHeight(),
                         this.getZ(),
-                        100,  // 生成20个粒子
+                        200,
                         0.5, 0.5, 0.5,
                         0.2
                 );
             }
 
             // 添加效果
-            livingTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 30, 1));
-            livingTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 10, 1));
-            livingTarget.addEffect(new MobEffectInstance(MobEffects.GLOWING, 30, 1));
+            livingTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 600, 1));
+            livingTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 300, 1));
+            livingTarget.addEffect(new MobEffectInstance(MobEffects.GLOWING, 600, 1));
 
 
         }
@@ -267,12 +472,13 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     }
 
     @Override
-    public void remove(RemovalReason reason) {
+    public void remove(@NotNull RemovalReason reason) {
         this.bossEvent.setVisible(false);
         super.remove(reason);
     }
 
     public static void init() {
+
     }
 
     private final ServerBossEvent bossEvent;
@@ -280,11 +486,13 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     public static AttributeSupplier.Builder createAttributes() {
         AttributeSupplier.Builder builder = Mob.createMobAttributes();
         builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 1);
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
         builder = builder.add(Attributes.JUMP_STRENGTH, 1.5);
-        builder = builder.add(Attributes.MAX_HEALTH, 100);
-        builder = builder.add(Attributes.ARMOR, 10);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
+        builder = builder.add(Attributes.MAX_HEALTH, 500);
+        builder = builder.add(Attributes.ARMOR, 20);           // 提高护甲值
+        builder = builder.add(Attributes.ARMOR_TOUGHNESS, 10); // 添加护甲韧性
+        builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.8); // 添加击退抗性
+        builder = builder.add(Attributes.ATTACK_DAMAGE, 15);   // Boss攻击力
         builder = builder.add(Attributes.FOLLOW_RANGE, 32);
         return builder;
     }
