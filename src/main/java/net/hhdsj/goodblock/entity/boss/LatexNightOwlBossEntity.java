@@ -31,10 +31,7 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.player.Player;
@@ -47,7 +44,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
 
-public class LatexNightOwlBossEntity extends ChangedEntity implements RangedAttackMob {
+public class LatexNightOwlBossEntity extends ChangedEntity{
 
     public LatexNightOwlBossEntity(PlayMessages.SpawnEntity packet, Level world) {
         this(GoodblockModEntities.LATEXNIGHTOWLDRAGONBOSS.get(), world);
@@ -149,23 +146,61 @@ public class LatexNightOwlBossEntity extends ChangedEntity implements RangedAtta
         this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(4, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 20, 15f) {
+
+        // 添加远程技能目标
+        this.goalSelector.addGoal(1, new Goal() {
             @Override
-            public boolean canContinueToUse() {
-                return this.canUse();
+            public boolean canUse() {
+                LivingEntity target = LatexNightOwlBossEntity.this.getTarget();
+                if (target == null) return false;
+
+                double distance = LatexNightOwlBossEntity.this.distanceTo(target);
+                return distance >= 15;
+            }
+
+            @Override
+            public void start() {
+                LivingEntity target = LatexNightOwlBossEntity.this.getTarget();
+                if (target == null) return;
+
+                double distance = LatexNightOwlBossEntity.this.distanceTo(target);
+
+                if (distance >= 15) {
+                    int randomIntBound = LatexNightOwlBossEntity.this.random.nextInt(20); // 0-20之间的随机整数
+                    if (randomIntBound >= 10) {
+                        double oldX = LatexNightOwlBossEntity.this.getX();
+                        double oldY = LatexNightOwlBossEntity.this.getY();
+                        double oldZ = LatexNightOwlBossEntity.this.getZ();
+                        if (LatexNightOwlBossEntity.this.level instanceof ServerLevel serverLevel) {
+                            serverLevel.sendParticles(
+                                    ParticleTypes.SMOKE,
+                                    oldX,
+                                    oldY + 1,
+                                    oldZ,
+                                    50,
+                                    1, 1, 1,
+                                    0.3
+                            );
+                        }
+                        LatexNightOwlBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
+                        if (LatexNightOwlBossEntity.this.level instanceof ServerLevel serverLevel) {
+                            serverLevel.sendParticles(
+                                    ParticleTypes.LAVA,
+                                    target.getX(),
+                                    target.getY() + target.getBbHeight() / 2,
+                                    target.getZ(),
+                                    100,
+                                    5, 5, 5,
+                                    0.5
+                            );
+                        }
+                    } else {
+                        target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 30, 1));
+                        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 30, 2));
+                    }
+                }
             }
         });
-    }
-
-    @Override
-    public void performRangedAttack(@NotNull LivingEntity target, float flval) {
-        /*
-        var entityarrow = new LatexthreemonthwolfEntityProjectile(this.level, this);
-        double d0 = target.getY() + target.getEyeHeight() - 1.1;
-        double d1 = target.getX() - this.getX();
-        double d3 = target.getZ() - this.getZ();
-        entityarrow.shoot(d1, d0 - entityarrow.getY() + Math.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.6F, 12.0F);
-        level.addFreshEntity(entityarrow);*/
     }
 
     @Override
@@ -225,30 +260,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity implements RangedAtta
             livingTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 10, 1));
             livingTarget.addEffect(new MobEffectInstance(MobEffects.GLOWING, 30, 1));
 
-            double distance = this.distanceTo(livingTarget);
 
-            if (distance >= 15) {
-                Random random = new Random();
-                int randomIntBound = random.nextInt(20); // 0-20之间的随机整数
-                if (randomIntBound >= 10) {
-                    this.teleportTo(target.getX(), target.getY(), target.getZ());
-                    if (this.level instanceof ServerLevel serverLevel) {
-                        serverLevel.sendParticles(
-                                ParticleTypes.LAVA,
-                                target.getX(),
-                                target.getY() + target.getBbHeight() / 2,
-                                target.getZ(),
-                                100,
-                                5, 5, 5,
-                                0.5
-                        );
-                    }
-                }else{
-                    livingTarget.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 30, 1));
-                    livingTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 30, 2));
-
-                }
-            }
         }
 
         return hurt;
