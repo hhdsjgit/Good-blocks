@@ -59,10 +59,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
+import java.util.Objects;
 
 public class LatexNightOwlBossEntity extends ChangedEntity{
 
     private int obsidianBreakCooldown = 0;
+    private int AttackInUse = 1;
+    private int ticksInUse = 300;
 
     public LatexNightOwlBossEntity(PlayMessages.SpawnEntity packet, Level world) {
         this(GoodblockModEntities.LATEXNIGHTOWLDRAGONBOSS.get(), world);
@@ -117,6 +120,15 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
             return false;
         if (source == DamageSource.LIGHTNING_BOLT)
             return false;
+        int randomIntBound = LatexNightOwlBossEntity.this.random.nextInt(5); // 0-1之间的随机整数
+        Level var7 = Objects.requireNonNull(this.getTarget()).getLevel();
+
+        if (var7 instanceof ServerLevel serverLevel) {
+            if (randomIntBound == 2) {
+                serverLevel.playSound((Player) null, this.position().x, this.position().y, this.position().z, SoundEvents.SHIELD_BLOCK, SoundSource.MASTER, 1.0F, 1.0F);
+                return false;
+            }
+        }
         return super.hurt(source, amount);
     }
     public void doClawsAttackEffect() {// Efeito visual
@@ -326,9 +338,30 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         return true;
     }
 
+    public void tickAttackTicks() {
+        if (!this.isNoAi()) {
+
+                ticksInUse++;
+        }
+    }
+
     @Override
     public void baseTick() {//Form changed-addon
         super.baseTick();
+        // 获取当前目标
+        LivingEntity target = this.getTarget();
+
+        // 只有在有目标（找到玩家）时才执行以下代码
+        if (target == null) {
+            return;
+        }
+        tickAttackTicks();
+        if (ticksInUse > 260) {
+            AttackInUse = 0;
+            ticksInUse = 0;
+        }else{
+            return;
+        }
         double radius = 1.5;
 
         for (int theta = 0; theta < 360; theta += 45) { // Ângulo horizontal (longitude)
@@ -359,6 +392,11 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         }
 
     }
+
+    private void crawlingSystem(LatexNightOwlBossEntity latexNightOwlBossEntity, LivingEntity target) {
+    }
+
+
 
     @Override
     protected void registerGoals() {
@@ -481,16 +519,6 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
 
                 // 添加攻击特效粒子（横扫粒子）
                 doClawsAttackEffect();
-                /*
-                serverLevel.sendParticles(
-                        ParticleTypes.SWEEP_ATTACK,
-                        target.getX(),
-                        target.getY() + target.getBbHeight() / 2,
-                        target.getZ(),
-                        1,
-                        0, 0, 0,
-                        0
-                );*/
 
                 SimpleParticleType solventParticle = (SimpleParticleType) ChangedAddonParticleTypes.SOLVENT_PARTICLE.get();
 
@@ -534,7 +562,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
         builder = builder.add(Attributes.JUMP_STRENGTH, 1.5);
         builder = builder.add(Attributes.MAX_HEALTH, 500);
-        builder = builder.add(Attributes.ARMOR, 30);           // 提高护甲值
+        builder = builder.add(Attributes.ARMOR, 35);           // 提高护甲值
         builder = builder.add(Attributes.ARMOR_TOUGHNESS, 15); // 添加护甲韧性
         builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1); // 添加击退抗性
         builder = builder.add(Attributes.ATTACK_DAMAGE, 60);   // Boss攻击力

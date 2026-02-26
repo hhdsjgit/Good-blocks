@@ -14,6 +14,7 @@ import net.ltxprogrammer.changed.client.renderer.layers.GasMaskLayer;
 import net.ltxprogrammer.changed.client.renderer.layers.LatexParticlesLayer;
 import net.ltxprogrammer.changed.client.renderer.layers.TransfurCapeLayer;
 import net.ltxprogrammer.changed.client.renderer.model.armor.ArmorLatexMaleWingedDragonModel;
+import net.ltxprogrammer.changed.util.Color3;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
@@ -35,7 +36,9 @@ public class LatexNightOwlBossRenderer extends AdvancedHumanoidRenderer<LatexNig
         this.addLayer(new LatexParticlesLayer<>(this, getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
         this.addLayer(new CustomEyesLayer<>(this, context.getModelSet()));
-        this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor, CustomEyesLayer::glowingIrisColorLeft, CustomEyesLayer::glowingIrisColorRight, CustomEyesLayer::noRender, CustomEyesLayer::noRender));
+        this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor,
+                CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#aa00aa")), CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#aa00aa")),
+                CustomEyesLayer::noRender, CustomEyesLayer::noRender));
         this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
     }
 
@@ -44,7 +47,7 @@ public class LatexNightOwlBossRenderer extends AdvancedHumanoidRenderer<LatexNig
         return new ResourceLocation("goodblock:textures/entities/boss/latex_night_owl_boss_entity.png");
     }
 
-
+    /*
     @Override
     public void render(@NotNull LatexNightOwlBossEntity entity, float entityYaw, float partialTicks,
                        @NotNull PoseStack poseStack, @NotNull MultiBufferSource bufferSource, int packedLight) {
@@ -60,11 +63,11 @@ public class LatexNightOwlBossRenderer extends AdvancedHumanoidRenderer<LatexNig
 
         // 渲染后重置为默认颜色
         RenderSystem.setShaderFogColor(1.0f, 1.0f, 1.0f);
-    }
+    }*/
 
     @Override
     protected boolean isShaking(@NotNull LatexNightOwlBossEntity _ent) {
-        if (_ent.getHealth() < _ent.getMaxHealth() * 0.2)
+        if (_ent.getHealth() < _ent.getMaxHealth() * 0.3)
             return true;
         else
             return false;
