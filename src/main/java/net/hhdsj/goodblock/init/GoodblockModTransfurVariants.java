@@ -4,6 +4,7 @@
 package net.hhdsj.goodblock.init;
 //原版我的世界导入
 import net.hhdsj.goodblock.entity.boss.LatexNightOwlEntity;
+import net.hhdsj.goodblock.entity.simple.LatexIqGoldDragonEntity;
 import net.minecraft.world.entity.monster.*;
 //FORGE导入
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -197,7 +198,7 @@ public class GoodblockModTransfurVariants {
 					.build());
 
 	public static final RegistryObject<TransfurVariant<LatexNightOwlEntity>> LATEXNIGHTOWL =
-			REGISTRY.register("form_latex_night_owl", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXNIGHTOWLDRAGON)
+			REGISTRY.register("form_latex_night_owl_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXNIGHTOWLDRAGON)
 					.stepSize(0.7f)
 					.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 					.addAbility(ChangedAddonAbilities.CLAWS)
@@ -207,8 +208,40 @@ public class GoodblockModTransfurVariants {
 					.replicating()
 					.nightVision()
 					.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
-					.jumpStrength(1.1f)
+					.jumpStrength(1.15f)
 					.build());
+
+    public static final RegistryObject<TransfurVariant<LatexIqGoldDragonEntity>> LATEXIQGOLDDRAGON =
+            REGISTRY.register("form_latex_iq_gold_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXIQGOLDDRAGON)
+                    .stepSize(0.7f)
+                    .addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+                    .addAbility(ChangedAddonAbilities.CLAWS)
+                    .scares(List.of(Creeper.class))
+                    .glide()
+                    .transfurMode(TransfurMode.ABSORPTION)
+                    .replicating()
+                    .nightVision()
+                    .addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+                    .jumpStrength(1f)
+                    .build());
+
+	public static final RegistryObject<TransfurVariant<LatexDarkPurpleDragonTaurEntity>> LATEXDARKPURPLEDRAGONTAUR =
+			REGISTRY.register("form_latex_dark_purple_dragon_taur", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXDARKPURPLEDRAGONTAUR)
+					.stepSize(1.1f)
+					//.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+					.scares(List.of(Creeper.class))
+					.glide()
+					.replicating()
+					.nightVision()
+					.quadrupedal()
+					.cameraZOffset(7.0f / 16.0f)
+					.jumpStrength(1.25f)
+					.rideable()
+					.reducedFall()
+					.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+					.build());
+
+	//
 
 	public static void register(IEventBus bus) {
         REGISTRY.register(bus);

@@ -7,6 +7,7 @@ package net.hhdsj.goodblock.init;
 import net.hhdsj.goodblock.client.model.*;
 import net.hhdsj.goodblock.client.model.boss.ModelLatexNightOwl;
 import net.hhdsj.goodblock.client.model.boss.ModelLatexNightOwlBoss;
+import net.hhdsj.goodblock.client.model.taur.ModelLatexDarkPurpleDragonTaur;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -40,5 +41,7 @@ public class GoodblockModModels {
 		event.registerLayerDefinition(ModelLatexPurpleCoocWolf.LAYER_LOCATION, ModelLatexPurpleCoocWolf::createBodyLayer);
 		event.registerLayerDefinition(ModelLatexNightOwlBoss.LAYER_LOCATION, ModelLatexNightOwlBoss::createBodyLayer);
 		event.registerLayerDefinition(ModelLatexNightOwl.LAYER_LOCATION, ModelLatexNightOwl::createBodyLayer);
+		event.registerLayerDefinition(ModelLatexIqGoldDragon.LAYER_LOCATION, ModelLatexIqGoldDragon::createBodyLayer);
+		event.registerLayerDefinition(ModelLatexDarkPurpleDragonTaur.LAYER_LOCATION, ModelLatexDarkPurpleDragonTaur::createBodyLayer);
 	}
 }

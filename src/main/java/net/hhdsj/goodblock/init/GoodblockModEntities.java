@@ -6,6 +6,7 @@ package net.hhdsj.goodblock.init;
 
 import net.hhdsj.goodblock.entity.*;
 import net.hhdsj.goodblock.entity.boss.*;
+import net.hhdsj.goodblock.entity.simple.LatexIqGoldDragonEntity;
 import net.ltxprogrammer.changed.init.ChangedMobCategories;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -126,7 +127,18 @@ public class GoodblockModEntities {
 					.setCustomClientFactory(LatexNightOwlEntity::new)
 					.sized(0.7f, 1.92f));
 
+	public static final RegistryObject<EntityType<LatexIqGoldDragonEntity>> LATEXIQGOLDDRAGON = register("latex_iq_gold_dragon",
+			EntityType.Builder.<LatexIqGoldDragonEntity>of(LatexIqGoldDragonEntity::new, ChangedMobCategories.CHANGED)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(LatexIqGoldDragonEntity::new)
+					.sized(0.7f, 1.92f));
 
+	public static final RegistryObject<EntityType<LatexDarkPurpleDragonTaurEntity>> LATEXDARKPURPLEDRAGONTAUR = register("latex_dark_purple_dragon_taur",
+			EntityType.Builder.<LatexDarkPurpleDragonTaurEntity>of(LatexDarkPurpleDragonTaurEntity::new, ChangedMobCategories.CHANGED)
+					.clientTrackingRange(10)
+					.sized(1.25F, 2.0F));
 
 	//////////////////else///////////////////
 	public static final RegistryObject<EntityType<LatexthreemonthwolfEntityProjectile>> LATEXTHREEMONTHWOLF_PROJECTILE = register("projectile_latexthreemonthwolf",
@@ -160,6 +172,8 @@ public class GoodblockModEntities {
 			LatexRadiationFoxEntity.init();
 			LatexNightOwlBossEntity.init();
 			LatexNightOwlEntity.init();
+			LatexIqGoldDragonEntity.init();
+			LatexDarkPurpleDragonTaurEntity.init();
 		});
 	}
 
@@ -184,5 +198,7 @@ public class GoodblockModEntities {
 		event.put(LATEXRADIATIONFOX.get(), LatexRadiationFoxEntity.createAttributes().build());
 		event.put(LATEXNIGHTOWLDRAGONBOSS.get(), LatexNightOwlBossEntity.createAttributes().build());
 		event.put(LATEXNIGHTOWLDRAGON.get(), LatexNightOwlEntity.createAttributes().build());
+		event.put(LATEXIQGOLDDRAGON.get(), LatexIqGoldDragonEntity.createAttributes().build());
+		event.put(LATEXDARKPURPLEDRAGONTAUR.get(), LatexDarkPurpleDragonTaurEntity.createAttributes().build());
 	}
 }

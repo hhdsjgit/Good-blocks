@@ -37,7 +37,7 @@ public class LatexNightOwlBossRenderer extends AdvancedHumanoidRenderer<LatexNig
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
         this.addLayer(new CustomEyesLayer<>(this, context.getModelSet()));
         this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor,
-                CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#aa00aa")), CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#aa00aa")),
+                CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#ffed7c")), CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#ffed7c")),
                 CustomEyesLayer::noRender, CustomEyesLayer::noRender));
         this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
     }

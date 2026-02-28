@@ -1,6 +1,25 @@
 {
   "replace": false,
   "values": [
-
-  	]
+    "goodblock:latex_orange_fox",
+    "goodblock:latex_kcahra_shark",
+    "goodblock:latexbluedragon",
+    "goodblock:darkfu_latex_wolf_male",
+    "goodblock:latex_ice_dragon",
+    "goodblock:inksuger",
+    "goodblock:blackpupmale",
+    "goodblock:whitebluepup",
+    "goodblock:latexpurplewswolf",
+    "goodblock:latexyunxqhotdragon",
+    "goodblock:latexyunxqicedragon",
+    "goodblock:latex_ice_field_wolf_dragon",
+    "goodblock:latex_purple_cooc_wolf",
+    "goodblock:latex_dragon_fruit_wolf",
+    "goodblock:latexthreemonthwolf",
+    "goodblock:latex_yun_qi_ice_dragon",
+    "goodblock:latex_radiation_fox",
+    "goodblock:latex_night_owl_dragon",
+    "goodblock:latex_iq_gold_dragon",
+    "goodblock:latex_dark_purple_dragon_taur"
+  ]
 }

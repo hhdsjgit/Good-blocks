@@ -37,5 +37,6 @@ public class GoodblockModEntityRenderers {
 		event.registerEntityRenderer(GoodblockModEntities.LATEXRADIATIONFOX.get(), LatexRadiationFoxRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXNIGHTOWLDRAGONBOSS.get(), LatexNightOwlBossRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXNIGHTOWLDRAGON.get(), LatexNightOwlRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.LATEXIQGOLDDRAGON.get(), LatexIqGoldDragonRenderer::new);
 	}
 }

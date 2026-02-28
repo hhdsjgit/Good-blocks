@@ -120,13 +120,34 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
             return false;
         if (source == DamageSource.LIGHTNING_BOLT)
             return false;
-        int randomIntBound = LatexNightOwlBossEntity.this.random.nextInt(5); // 0-1之间的随机整数
-        Level var7 = Objects.requireNonNull(this.getTarget()).getLevel();
+        LivingEntity target = this.getTarget();
+        if (target != null) {
+            Level targetLevel = target.getLevel();
 
-        if (var7 instanceof ServerLevel serverLevel) {
-            if (randomIntBound == 2) {
-                serverLevel.playSound((Player) null, this.position().x, this.position().y, this.position().z, SoundEvents.SHIELD_BLOCK, SoundSource.MASTER, 1.0F, 1.0F);
-                return false;
+            if (targetLevel instanceof ServerLevel serverLevel) {
+                int randomValue = this.random.nextInt(11); // 0,1,2,3,4...,10 //
+                if (randomValue >= 7) {
+                    serverLevel.playSound(null,
+                            this.position().x, this.position().y, this.position().z,
+                            SoundEvents.SHIELD_BLOCK,
+                            SoundSource.MASTER, 1.0F, 1.0F);
+                    serverLevel.sendParticles(
+                            ParticleTypes.END_ROD,
+                            this.getX(),
+                            this.getY() + this.getBbHeight() / 2,
+                            this.getZ(),
+                            300,
+                            1, 1, 1,
+                            0.8
+                    );
+                    LatexNightOwlBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
+                    return false; // 免疫伤害
+                }
+            }
+        } else if (this.getTarget() == null){
+            Player nearestPlayer = this.level.getNearestPlayer(this, 16.0);
+            if (nearestPlayer != null) {
+                this.setTarget(nearestPlayer);
             }
         }
         return super.hurt(source, amount);
@@ -257,7 +278,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                     this.getX(),
                     this.getY() + this.getBbHeight() / 2,
                     this.getZ(),
-                    500,
+                    400,
                     2, 2, 2,
                     0.6
             );
@@ -362,7 +383,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         }else{
             return;
         }
-        double radius = 1.5;
+        double radius = 2.5;
 
         for (int theta = 0; theta < 360; theta += 45) { // Ângulo horizontal (longitude)
             double angleTheta = Math.toRadians(theta);
