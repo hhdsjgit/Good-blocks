@@ -38,5 +38,7 @@ public class GoodblockModEntityRenderers {
 		event.registerEntityRenderer(GoodblockModEntities.LATEXNIGHTOWLDRAGONBOSS.get(), LatexNightOwlBossRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXNIGHTOWLDRAGON.get(), LatexNightOwlRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXIQGOLDDRAGON.get(), LatexIqGoldDragonRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.LATEXDARKPURPLEDRAGONTAUR.get(), LatexDarkPurpleDragonTaurRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.LATEXDARKPURPLEDRAGON.get(), LatexDarkPurpleDragonRenderer::new);
 	}
 }

@@ -229,8 +229,8 @@ public class GoodblockModTransfurVariants {
 			REGISTRY.register("form_latex_dark_purple_dragon_taur", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXDARKPURPLEDRAGONTAUR)
 					.stepSize(1.1f)
 					//.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+					.addAbility(entityType -> GoodblockModAbilities.TURN_FERA_LATEX_DARK_PURPLE.get())
 					.scares(List.of(Creeper.class))
-					.glide()
 					.replicating()
 					.nightVision()
 					.quadrupedal()
@@ -239,6 +239,21 @@ public class GoodblockModTransfurVariants {
 					.rideable()
 					.reducedFall()
 					.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+					.build());
+
+	public static final RegistryObject<TransfurVariant<DarkPurpleLatexDragonEntity>> LATEXDARKPURPLEDRAGON =
+			REGISTRY.register("form_latex_dark_purple_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXDARKPURPLEDRAGON)
+					.stepSize(0.7f)
+					.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+					.addAbility(entityType -> GoodblockModAbilities.TURN_FERA_LATEX_DARK_PURPLE.get())
+					.addAbility(ChangedAddonAbilities.CLAWS)
+					.scares(List.of(Creeper.class))
+					.glide()
+					.transfurMode(TransfurMode.ABSORPTION)
+					.replicating()
+					.nightVision()
+					.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
+					.jumpStrength(1.25f)
 					.build());
 
 	//

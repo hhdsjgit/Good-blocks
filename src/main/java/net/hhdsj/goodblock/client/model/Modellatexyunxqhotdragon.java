@@ -11,33 +11,20 @@ import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.EntityModel;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 
-import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
-import net.ltxprogrammer.changed.entity.beast.LatexPurpleFox;
 
-import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.geom.PartPose;
-import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.HumanoidArm;
 //Changed-mc mod import 我的世界转变MOD导入
-import net.ltxprogrammer.changed.Changed;
-import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
-import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
 
 //Goodblock mod import
 import net.hhdsj.goodblock.entity.*;
-
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
 
 import org.jetbrains.annotations.NotNull;
 

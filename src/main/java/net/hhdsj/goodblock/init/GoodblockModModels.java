@@ -43,5 +43,6 @@ public class GoodblockModModels {
 		event.registerLayerDefinition(ModelLatexNightOwl.LAYER_LOCATION, ModelLatexNightOwl::createBodyLayer);
 		event.registerLayerDefinition(ModelLatexIqGoldDragon.LAYER_LOCATION, ModelLatexIqGoldDragon::createBodyLayer);
 		event.registerLayerDefinition(ModelLatexDarkPurpleDragonTaur.LAYER_LOCATION, ModelLatexDarkPurpleDragonTaur::createBodyLayer);
+		event.registerLayerDefinition(ModelDarkPurpleLatexDragon.LAYER_LOCATION, ModelDarkPurpleLatexDragon::createBodyLayer);
 	}
 }
