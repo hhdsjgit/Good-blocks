@@ -33,10 +33,12 @@ public class GoodBlockAnimatorPresets extends AnimatorPresets {
                    ModelPart leftWingBone1, ModelPart leftWingBone2, ModelPart rightWingRoot, ModelPart rightWingBone1, ModelPart rightWingBone2,
                    ModelPart tail, List<ModelPart> tailJoints) {
         return (animator) -> {
-            animator.addPreset(taurLegs(lowerTorso, frontLeftLeg, frontLeftLegLower, frontLeftFoot,
+            animator.addPreset(
+                    taurLegs(lowerTorso, frontLeftLeg, frontLeftLegLower, frontLeftFoot,
                     frontRightLeg, frontRightLegLower, frontRightFoot, backLeftLeg,
                     backLeftLegLower, backLeftFoot, backLeftPad, backRightLeg,
-                    backRightLegLower, backRightFoot, backRightPad))
+                    backRightLegLower, backRightFoot, backRightPad)
+                    )
                     .addPreset(taurUpperBody(head, torso, leftArm, rightArm))
                     .addPreset(dragonTail(tail, tailJoints))
                     .addPreset(dragonWinged(leftWingRoot, leftWingBone1, leftWingBone2, rightWingRoot, rightWingBone1, rightWingBone2))

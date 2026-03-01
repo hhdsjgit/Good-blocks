@@ -2,11 +2,13 @@ package net.hhdsj.goodblock.entity;
 
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.ltxprogrammer.changed.entity.LatexType;
+import net.ltxprogrammer.changed.entity.TransfurCause;
 import net.ltxprogrammer.changed.entity.TransfurMode;
 import net.ltxprogrammer.changed.entity.beast.LatexTaur;
 import net.ltxprogrammer.changed.entity.beast.WhiteLatexKnight;
 import net.ltxprogrammer.changed.entity.variant.EntityShape;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
+import net.ltxprogrammer.changed.util.Color3;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.InteractionHand;
@@ -37,6 +39,10 @@ public class LatexDarkPurpleDragonTaurEntity extends WhiteLatexKnight implements
         attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.2);
         attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.9);
         attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(30);
+    }
+
+    public Color3 getTransfurColor(TransfurCause cause) {
+        return Color3.getColor("#ca00ff");
     }
 
     @Override

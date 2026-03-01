@@ -246,7 +246,6 @@ public class GoodblockModTransfurVariants {
 					.stepSize(0.7f)
 					.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 					.addAbility(entityType -> GoodblockModAbilities.TURN_FERA_LATEX_DARK_PURPLE.get())
-					.addAbility(ChangedAddonAbilities.CLAWS)
 					.scares(List.of(Creeper.class))
 					.glide()
 					.transfurMode(TransfurMode.ABSORPTION)

@@ -23,7 +23,7 @@ public class LatexDarkPurpleDragonRenderer extends AdvancedHumanoidRenderer<Dark
                 ArmorLatexMaleWingedDragonModel.MODEL_SET,
                 0.5f);
         this.addLayer(new LatexParticlesLayer<>(this, getModel()));
-        this.addLayer(new EmissiveBodyLayer<>(this, new ResourceLocation("goodblock", "textures/entities/latex/taur/dark_purple_latex_dragon_taur_light.png")));
+        this.addLayer(new EmissiveBodyLayer<>(this, new ResourceLocation("goodblock", "textures/entities/latex/taur/dark_purple_latex_dragon_light.png")));
         this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor,
                 CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#ca00ff")), CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#ca00ff")),
                 CustomEyesLayer::noRender, CustomEyesLayer::noRender));
@@ -32,6 +32,6 @@ public class LatexDarkPurpleDragonRenderer extends AdvancedHumanoidRenderer<Dark
 
     @Override
     public @NotNull ResourceLocation getTextureLocation(@NotNull DarkPurpleLatexDragonEntity p_114482_) {
-        return new ResourceLocation("goodblock:textures/entities/latex/taur/dark_purple_latex_dragon_taur.png");
+        return new ResourceLocation("goodblock:textures/entities/latex/taur/dark_purple_latex_dragon.png");
     }
 }
