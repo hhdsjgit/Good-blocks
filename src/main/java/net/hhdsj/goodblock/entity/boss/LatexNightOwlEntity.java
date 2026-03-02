@@ -9,6 +9,7 @@ import net.foxyas.changedaddon.init.ChangedAddonParticleTypes;
 import net.hhdsj.goodblock.entity.LatexIceFieldWolfDragonEntity;
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.ltxprogrammer.changed.entity.*;
+import net.ltxprogrammer.changed.entity.latex.LatexType;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 import net.ltxprogrammer.changed.util.Color3;
 import net.minecraft.ChatFormatting;

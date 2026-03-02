@@ -8,7 +8,7 @@ import net.foxyas.changedaddon.init.ChangedAddonEntities;
 import net.foxyas.changedaddon.init.ChangedAddonParticleTypes;
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.ltxprogrammer.changed.entity.ChangedEntity;
-import net.ltxprogrammer.changed.entity.LatexType;
+//import net.ltxprogrammer.changed.entity.LatexType;
 import net.ltxprogrammer.changed.entity.TransfurMode;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 import net.minecraft.ChatFormatting;
@@ -22,8 +22,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
+//import net.minecraft.network.chat.TextComponent;
+//import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerBossEvent;
@@ -66,6 +66,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     private int obsidianBreakCooldown = 0;
     private int AttackInUse = 1;
     private int ticksInUse = 300;
+    private Level level;
 
     public LatexNightOwlBossEntity(PlayMessages.SpawnEntity packet, Level world) {
         this(GoodblockModEntities.LATEXNIGHTOWLDRAGONBOSS.get(), world);
@@ -84,10 +85,10 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         return NetworkHooks.getEntitySpawningPacket(this);
     }
 
-    @Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+    //@Override
+    //public LatexType getLatexType() {
+    //    return LatexType.NEUTRAL;
+    //}
 
     @Override
     public TransfurMode getTransfurMode() {

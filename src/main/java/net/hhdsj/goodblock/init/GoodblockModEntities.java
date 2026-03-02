@@ -5,7 +5,7 @@
 package net.hhdsj.goodblock.init;
 
 import net.hhdsj.goodblock.entity.*;
-import net.ltxprogrammer.changed.init.*;
+//import net.ltxprogrammer.MONSTER.init.*;
 import net.hhdsj.goodblock.entity.boss.*;
 import net.hhdsj.goodblock.entity.simple.LatexIqGoldDragonEntity;
 import net.minecraftforge.registries.RegistryObject;
@@ -86,7 +86,7 @@ public class GoodblockModEntities {
 					.sized(0.7f, 1.93f));
 
 	public static final RegistryObject<EntityType<LatexIceFieldWolfDragonBossEntity>> LATEX_ICE_FIELD_WOLF_DRAGON_BOSS = register("latex_ice_field_wolf_dragon_boss",
-			EntityType.Builder.<LatexIceFieldWolfDragonBossEntity>of(LatexIceFieldWolfDragonBossEntity::new, ChangedMobCategories.CHANGED)
+			EntityType.Builder.<LatexIceFieldWolfDragonBossEntity>of(LatexIceFieldWolfDragonBossEntity::new, MobCategory.MONSTER)
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64)
 					.setUpdateInterval(3)
@@ -111,7 +111,7 @@ public class GoodblockModEntities {
 
 	//Radiation Fox
 	public static final RegistryObject<EntityType<LatexRadiationFoxEntity>> LATEXRADIATIONFOX = register("latex_radiation_fox",
-			EntityType.Builder.<LatexRadiationFoxEntity>of(LatexRadiationFoxEntity::new, ChangedMobCategories.CHANGED)
+			EntityType.Builder.<LatexRadiationFoxEntity>of(LatexRadiationFoxEntity::new, MobCategory.MONSTER)
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64)
 					.setUpdateInterval(3)
@@ -120,7 +120,7 @@ public class GoodblockModEntities {
 
 	//---Night Owl Boss---//
 	public static final RegistryObject<EntityType<LatexNightOwlBossEntity>> LATEXNIGHTOWLDRAGONBOSS = register("latex_night_owl_dragon_boss",
-			EntityType.Builder.<LatexNightOwlBossEntity>of(LatexNightOwlBossEntity::new, ChangedMobCategories.CHANGED)
+			EntityType.Builder.<LatexNightOwlBossEntity>of(LatexNightOwlBossEntity::new, MobCategory.MONSTER)
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64)
 					.setUpdateInterval(3)
@@ -128,7 +128,7 @@ public class GoodblockModEntities {
 					.sized(0.7f, 1.92f));
 
 	public static final RegistryObject<EntityType<LatexNightOwlEntity>> LATEXNIGHTOWLDRAGON = register("latex_night_owl_dragon",
-			EntityType.Builder.<LatexNightOwlEntity>of(LatexNightOwlEntity::new, ChangedMobCategories.CHANGED)
+			EntityType.Builder.<LatexNightOwlEntity>of(LatexNightOwlEntity::new, MobCategory.MONSTER)
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64)
 					.setUpdateInterval(3)
@@ -136,7 +136,7 @@ public class GoodblockModEntities {
 					.sized(0.7f, 1.92f));
 
 	public static final RegistryObject<EntityType<LatexIqGoldDragonEntity>> LATEXIQGOLDDRAGON = register("latex_iq_gold_dragon",
-			EntityType.Builder.<LatexIqGoldDragonEntity>of(LatexIqGoldDragonEntity::new, ChangedMobCategories.CHANGED)
+			EntityType.Builder.<LatexIqGoldDragonEntity>of(LatexIqGoldDragonEntity::new, MobCategory.MONSTER)
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64)
 					.setUpdateInterval(3)
@@ -144,13 +144,13 @@ public class GoodblockModEntities {
 					.sized(0.7f, 1.92f));
 
 	public static final RegistryObject<EntityType<LatexDarkPurpleDragonTaurEntity>> LATEXDARKPURPLEDRAGONTAUR = register("latex_dark_purple_dragon_taur",
-			EntityType.Builder.<LatexDarkPurpleDragonTaurEntity>of(LatexDarkPurpleDragonTaurEntity::new, ChangedMobCategories.CHANGED)
+			EntityType.Builder.<LatexDarkPurpleDragonTaurEntity>of(LatexDarkPurpleDragonTaurEntity::new, MobCategory.MONSTER)
 					.clientTrackingRange(10)
 					//.sized(1.25F, 2.0F)
 					.sized(1.6f, 2.5f));
 
 	public static final RegistryObject<EntityType<DarkPurpleLatexDragonEntity>> LATEXDARKPURPLEDRAGON = register("latex_dark_purple_dragon",
-			EntityType.Builder.<DarkPurpleLatexDragonEntity>of(DarkPurpleLatexDragonEntity::new, ChangedMobCategories.CHANGED)
+			EntityType.Builder.<DarkPurpleLatexDragonEntity>of(DarkPurpleLatexDragonEntity::new, MobCategory.MONSTER)
 					.setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64)
 					.setUpdateInterval(3)
