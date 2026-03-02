@@ -1,5 +1,6 @@
 package net.hhdsj.goodblock.client.renderer;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.hhdsj.goodblock.client.model.taur.ModelLatexDarkPurpleDragonTaur;
 import net.hhdsj.goodblock.entity.LatexDarkPurpleDragonTaurEntity;
 import net.ltxprogrammer.changed.client.renderer.AdvancedHumanoidRenderer;
@@ -29,5 +30,12 @@ public class LatexDarkPurpleDragonTaurRenderer extends AdvancedHumanoidRenderer<
     @Override
     public @NotNull ResourceLocation getTextureLocation(@NotNull LatexDarkPurpleDragonTaurEntity p_114482_) {
         return new ResourceLocation("goodblock:textures/entities/latex/taur/dark_purple_latex_dragon_taur.png");
+    }
+
+    @Override
+    protected void scale(LatexDarkPurpleDragonTaurEntity entity, PoseStack poseStack, float partialTickTime) {
+        float scaleFactor = 1.3F;
+        poseStack.scale(scaleFactor, scaleFactor, scaleFactor);
+        super.scale(entity, poseStack, partialTickTime);
     }
 }

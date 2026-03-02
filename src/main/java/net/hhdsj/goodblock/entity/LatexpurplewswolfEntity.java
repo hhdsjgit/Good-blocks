@@ -71,6 +71,10 @@ public class LatexpurplewswolfEntity extends AbstractSnowLeopard {
         return Gender.MALE;
     }
 
+	public Color3 getTransfurColor(TransfurCause cause) {
+		return Color3.getColor("#8536ff");
+	}
+
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))

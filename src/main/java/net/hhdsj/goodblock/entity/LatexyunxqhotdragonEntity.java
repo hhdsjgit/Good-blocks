@@ -62,7 +62,11 @@ public class LatexyunxqhotdragonEntity extends ChangedEntity {
     public TransfurMode getTransfurMode() {
         return TransfurMode.REPLICATION;
     }
-    
+
+	public Color3 getTransfurColor(TransfurCause cause) {
+		return Color3.getColor("#ff3500");
+	}
+
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))

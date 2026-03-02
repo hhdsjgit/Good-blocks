@@ -65,6 +65,10 @@ public class LatexyunxqicedragonEntity extends ChangedEntity {
         return LatexType.NEUTRAL;
     }
 
+	public Color3 getTransfurColor(TransfurCause cause) {
+		return Color3.getColor("#0073ff");
+	}
+
     @Override
     public TransfurMode getTransfurMode() {
         return TransfurMode.REPLICATION;

@@ -138,7 +138,8 @@ public class GoodblockModEntities {
 	public static final RegistryObject<EntityType<LatexDarkPurpleDragonTaurEntity>> LATEXDARKPURPLEDRAGONTAUR = register("latex_dark_purple_dragon_taur",
 			EntityType.Builder.<LatexDarkPurpleDragonTaurEntity>of(LatexDarkPurpleDragonTaurEntity::new, ChangedMobCategories.CHANGED)
 					.clientTrackingRange(10)
-					.sized(1.25F, 2.0F));
+					//.sized(1.25F, 2.0F)
+					.sized(1.6f, 2.5f));
 
 	public static final RegistryObject<EntityType<DarkPurpleLatexDragonEntity>> LATEXDARKPURPLEDRAGON = register("latex_dark_purple_dragon",
 			EntityType.Builder.<DarkPurpleLatexDragonEntity>of(DarkPurpleLatexDragonEntity::new, ChangedMobCategories.CHANGED)

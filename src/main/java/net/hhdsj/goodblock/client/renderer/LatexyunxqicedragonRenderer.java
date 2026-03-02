@@ -25,10 +25,9 @@ public class LatexyunxqicedragonRenderer extends AdvancedHumanoidRenderer<Latexy
 	public LatexyunxqicedragonRenderer(EntityRendererProvider.Context context) {
 		
 		super(context, new ModelLatexiceredDragonUnified_bw(context.bakeLayer(ModelLatexiceredDragonUnified_bw.LAYER_LOCATION)),
-		//ArmorLatexMaleWingedDragonModel::new,
 		ArmorLatexMaleWingedDragonModel.MODEL_SET, 
 		0.5f);
-		this.addLayer(new EmissiveBodyLayer<>(this, new ResourceLocation("goodblock", "extures/entities/latex/latex_blueice_dragon_light.png")));
+		this.addLayer(new EmissiveBodyLayer<>(this, new ResourceLocation("goodblock", "textures/entities/latex/latex_blueice_dragon_light.png")));
         this.addLayer(new LatexParticlesLayer<>(this, getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
         this.addLayer(new CustomEyesLayer<>(this, context.getModelSet()));    

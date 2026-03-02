@@ -3,6 +3,7 @@ package net.hhdsj.goodblock.entity;
 
 import net.ltxprogrammer.changed.entity.variant.TransfurVariantInstance;
 import net.ltxprogrammer.changed.process.ProcessTransfur;
+import net.ltxprogrammer.changed.util.Color3;
 import net.minecraft.world.entity.*;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
@@ -68,6 +69,10 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 
 	public LatexthreemonthwolfEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(GoodblockModEntities.LATEXTHREEMONTHWOLF.get(), world);
+	}
+
+	public Color3 getTransfurColor(TransfurCause cause) {
+		return Color3.getColor("#8536ff");
 	}
 
 	public LatexthreemonthwolfEntity(EntityType<LatexthreemonthwolfEntity> type, Level world) {

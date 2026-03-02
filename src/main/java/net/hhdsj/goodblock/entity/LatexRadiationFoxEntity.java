@@ -60,9 +60,9 @@ public class LatexRadiationFoxEntity extends ChangedEntity {
         return HairStyle.SHORT_MESSY.get();
     }
 
-    public Color3 getTransfurColor(TransfurCause cause) {
-        return Color3.getColor("#FF8001");
-    }
+	public Color3 getTransfurColor(TransfurCause cause) {
+		return Color3.getColor("#ffda00");
+	}
 
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {

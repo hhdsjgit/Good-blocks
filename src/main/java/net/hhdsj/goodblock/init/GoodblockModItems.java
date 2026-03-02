@@ -189,6 +189,25 @@ public class GoodblockModItems {
 					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
 			));
 
+	public static final RegistryObject<Item> LATEXDARKPURPLEDRAGONTAUR = REGISTRY.register("latex_dark_purple_dragon_taur_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXDARKPURPLEDRAGONTAUR,
+					-11927297, -9109249,
+					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
+			));
+
+	public static final RegistryObject<Item> LATEXDARKPURPLEDRAGON = REGISTRY.register("latex_dark_purple_dragon_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXDARKPURPLEDRAGON,
+					-11927297, -9109249,
+					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
+			));
+
+	public static final RegistryObject<Item> LATEXIQGOLDDRAGON = REGISTRY.register("latex_iq_gold_dragon_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXIQGOLDDRAGON,
+					-12544, -5120,
+					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
+			));
+
+
 	/*************************************************************************/
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {

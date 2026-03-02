@@ -1,13 +1,14 @@
 package net.hhdsj.goodblock.entity;
 
 import net.hhdsj.goodblock.init.GoodblockModEntities;
-import net.ltxprogrammer.changed.entity.LatexType;
-import net.ltxprogrammer.changed.entity.TransfurCause;
-import net.ltxprogrammer.changed.entity.TransfurMode;
+import net.hhdsj.goodblock.init.GoodblockModTransfurVariants;
+import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.entity.beast.LatexTaur;
 import net.ltxprogrammer.changed.entity.beast.WhiteLatexKnight;
 import net.ltxprogrammer.changed.entity.variant.EntityShape;
+import net.ltxprogrammer.changed.entity.variant.TransfurVariant;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
+import net.ltxprogrammer.changed.init.ChangedTransfurVariants;
 import net.ltxprogrammer.changed.util.Color3;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Difficulty;
@@ -16,6 +17,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -28,17 +30,28 @@ import net.minecraftforge.network.PlayMessages;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class LatexDarkPurpleDragonTaurEntity extends WhiteLatexKnight implements LatexTaur<LatexDarkPurpleDragonTaurEntity> {
+public class LatexDarkPurpleDragonTaurEntity extends ChangedEntity implements LatexTaur<LatexDarkPurpleDragonTaurEntity> {
     public LatexDarkPurpleDragonTaurEntity(EntityType<? extends LatexDarkPurpleDragonTaurEntity> p_19870_, Level p_19871_) {
         super(p_19870_, p_19871_);
+    }
+
+    public static void taurLike(AttributeMap map) {
+        map.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.2);
+        map.getInstance((Attribute)ForgeMod.SWIM_SPEED.get()).setBaseValue(0.95);
+        map.getInstance(Attributes.MAX_HEALTH).setBaseValue(30.0);
     }
 
     @Override
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
         attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.2);
-        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.9);
-        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(30);
+        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.95);
+        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(30.0);
+        taurLike(attributes);
+    }
+
+    public TransfurVariant<?> getTransfurVariant() {
+        return (TransfurVariant) GoodblockModTransfurVariants.LATEXDARKPURPLEDRAGONTAUR.get();
     }
 
     public Color3 getTransfurColor(TransfurCause cause) {
