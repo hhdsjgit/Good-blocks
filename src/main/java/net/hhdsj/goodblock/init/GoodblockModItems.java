@@ -143,12 +143,12 @@ public class GoodblockModItems {
 	public static final RegistryObject<Item> LATEXPURPLEWSWOLF_SPAWN_EGG = REGISTRY.register("latexpurplewswolf_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXPURPLEWSWOLF,
 					-52276,
-					-6684673, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
+					-43009, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
 			));
 
 	public static final RegistryObject<Item> LATEXTHREEMONTHWOLF_SPAWN_EGG = REGISTRY.register("latexthreemonthwolf_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXTHREEMONTHWOLF,
-					-52225,
+					-43009,
 					-1, new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
 			));
 
@@ -204,6 +204,18 @@ public class GoodblockModItems {
 	public static final RegistryObject<Item> LATEXIQGOLDDRAGON = REGISTRY.register("latex_iq_gold_dragon_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXIQGOLDDRAGON,
 					-12544, -5120,
+					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
+			));
+
+	public static final RegistryObject<Item> LATEXYUNQIICEDRAGON = REGISTRY.register("latex_yun_qi_dragon_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXYUNQIICEDRAGON,
+					-10027019, -7995403,
+					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
+			));
+
+	public static final RegistryObject<Item> LATEXNIGHTOWLDRAGON = REGISTRY.register("latex_nighe_owl_spawn_egg",
+			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXNIGHTOWLDRAGON,
+					-8519680, -13631488,
 					new Item.Properties().tab(GoodblockModTabs.TAB_GOODBLOCK_ENTITY)
 			));
 

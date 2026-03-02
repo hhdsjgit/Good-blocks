@@ -41,7 +41,10 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.ThrownPotion;
@@ -59,16 +62,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-import java.util.Objects;
 
-public class LatexNightOwlBossEntity extends ChangedEntity{
+public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
 
     private int obsidianBreakCooldown = 0;
     private int AttackInUse = 1;
     private int ticksInUse = 300;
 
-    public LatexNightOwlBossEntity(PlayMessages.SpawnEntity packet, Level world) {
-        this(GoodblockModEntities.LATEXNIGHTOWLDRAGONBOSS.get(), world);
+    public LatexIceFieldWolfDragonBossEntity(PlayMessages.SpawnEntity packet, Level world) {
+        this(GoodblockModEntities.LATEX_ICE_FIELD_WOLF_DRAGON_BOSS.get(), world);
     }
 
     @Override
@@ -140,7 +142,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                             1, 1, 1,
                             0.8
                     );
-                    LatexNightOwlBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
+                    LatexIceFieldWolfDragonBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
                     return false; // 免疫伤害
                 }
             }
@@ -163,7 +165,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         }
     }
 
-    public LatexNightOwlBossEntity(EntityType<LatexNightOwlBossEntity> type, Level world) {
+    public LatexIceFieldWolfDragonBossEntity(EntityType<LatexIceFieldWolfDragonBossEntity> type, Level world) {
         super(type, world);
         xpReward = 3000;
         setNoAi(false);
@@ -177,15 +179,15 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     }
 
     public void CheckobsidianBreak() {
-        if (LatexNightOwlBossEntity.this.getHealth() <= LatexNightOwlBossEntity.this.getMaxHealth() * 0.95) {
-            LivingEntity target = LatexNightOwlBossEntity.this.getTarget();
+        if (LatexIceFieldWolfDragonBossEntity.this.getHealth() <= LatexIceFieldWolfDragonBossEntity.this.getMaxHealth() * 0.95) {
+            LivingEntity target = LatexIceFieldWolfDragonBossEntity.this.getTarget();
             if (target != null) {
                 // 传送
-                LatexNightOwlBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
+                LatexIceFieldWolfDragonBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
 
                 // 挖掘周围5x5x5区域的黑曜石
-                Level level = LatexNightOwlBossEntity.this.level;
-                BlockPos centerPos = LatexNightOwlBossEntity.this.blockPosition();
+                Level level = LatexIceFieldWolfDragonBossEntity.this.level;
+                BlockPos centerPos = LatexIceFieldWolfDragonBossEntity.this.blockPosition();
 
                 // 遍历5x5x5区域
                 for (int x = -2; x <= 2; x++) {
@@ -272,7 +274,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     public void stopSeenByPlayer(@NotNull ServerPlayer player) {
         super.stopSeenByPlayer(player);
         this.bossEvent.removePlayer(player);
-        if (LatexNightOwlBossEntity.this.level instanceof ServerLevel serverLevel) {
+        if (LatexIceFieldWolfDragonBossEntity.this.level instanceof ServerLevel serverLevel) {
             serverLevel.sendParticles(
                     ParticleTypes.LAVA,
                     this.getX(),
@@ -414,7 +416,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
 
     }
 
-    private void crawlingSystem(LatexNightOwlBossEntity latexNightOwlBossEntity, LivingEntity target) {
+    private void crawlingSystem(LatexIceFieldWolfDragonBossEntity latexNightOwlBossEntity, LivingEntity target) {
     }
 
 
@@ -431,22 +433,22 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         this.goalSelector.addGoal(1, new Goal() {
             @Override
             public boolean canUse() {
-                LivingEntity target = LatexNightOwlBossEntity.this.getTarget();
+                LivingEntity target = LatexIceFieldWolfDragonBossEntity.this.getTarget();
                 if (target == null) return false;
 
-                double distance = LatexNightOwlBossEntity.this.distanceTo(target);
+                double distance = LatexIceFieldWolfDragonBossEntity.this.distanceTo(target);
                 return distance >= 15;
             }
 
             @Override
             public void start() {
-                LivingEntity target = LatexNightOwlBossEntity.this.getTarget();
+                LivingEntity target = LatexIceFieldWolfDragonBossEntity.this.getTarget();
                 if (target == null) return;
 
-                double distance = LatexNightOwlBossEntity.this.distanceTo(target);
+                double distance = LatexIceFieldWolfDragonBossEntity.this.distanceTo(target);
 
                 if (distance >= 8) {
-                    int randomIntBound = LatexNightOwlBossEntity.this.random.nextInt(20); // 0-20之间的随机整数
+                    int randomIntBound = LatexIceFieldWolfDragonBossEntity.this.random.nextInt(20); // 0-20之间的随机整数
                     if (randomIntBound >= 10) {
                         if (getTarget() instanceof Player player) {
                             player.displayClientMessage(new TextComponent("Can you think ....?").withStyle((style -> {
@@ -455,11 +457,11 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                                 return returnStyle;
                             })), true);
                         }
-                        double oldX = LatexNightOwlBossEntity.this.getX();
-                        double oldY = LatexNightOwlBossEntity.this.getY();
-                        double oldZ = LatexNightOwlBossEntity.this.getZ();
+                        double oldX = LatexIceFieldWolfDragonBossEntity.this.getX();
+                        double oldY = LatexIceFieldWolfDragonBossEntity.this.getY();
+                        double oldZ = LatexIceFieldWolfDragonBossEntity.this.getZ();
 
-                        if (LatexNightOwlBossEntity.this.level instanceof ServerLevel serverLevel) {
+                        if (LatexIceFieldWolfDragonBossEntity.this.level instanceof ServerLevel serverLevel) {
                             serverLevel.sendParticles(
                                     ParticleTypes.SMOKE,
                                     oldX,
@@ -471,8 +473,8 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                             );
                         }
 
-                        LatexNightOwlBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
-                        if (LatexNightOwlBossEntity.this.level instanceof ServerLevel serverLevel) {
+                        LatexIceFieldWolfDragonBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
+                        if (LatexIceFieldWolfDragonBossEntity.this.level instanceof ServerLevel serverLevel) {
                             serverLevel.sendParticles(
                                     ParticleTypes.LAVA,
                                     target.getX(),

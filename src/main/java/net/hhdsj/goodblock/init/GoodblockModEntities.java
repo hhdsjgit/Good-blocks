@@ -85,6 +85,14 @@ public class GoodblockModEntities {
 					.setCustomClientFactory(LatexIceFieldWolfDragonEntity::new)
 					.sized(0.7f, 1.93f));
 
+	public static final RegistryObject<EntityType<LatexIceFieldWolfDragonBossEntity>> LATEX_ICE_FIELD_WOLF_DRAGON_BOSS = register("latex_ice_field_wolf_dragon_boss",
+			EntityType.Builder.<LatexIceFieldWolfDragonBossEntity>of(LatexIceFieldWolfDragonBossEntity::new, ChangedMobCategories.CHANGED)
+					.setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64)
+					.setUpdateInterval(3)
+					.setCustomClientFactory(LatexIceFieldWolfDragonBossEntity::new)
+					.sized(0.7f, 1.93f));
+
 	public static final RegistryObject<EntityType<LatexDragonFruitWolfEntity>> LATEXDRAGONFRUITWOLF = register("latex_dragon_fruit_wolf",
 			EntityType.Builder.<LatexDragonFruitWolfEntity>of(LatexDragonFruitWolfEntity::new, ChangedMobCategories.CHANGED)
 					.setShouldReceiveVelocityUpdates(true)
@@ -184,6 +192,7 @@ public class GoodblockModEntities {
 			LatexNightOwlEntity.init();
 			LatexIqGoldDragonEntity.init();
 			LatexDarkPurpleDragonTaurEntity.init();
+			LatexIceFieldWolfDragonBossEntity.init();
 		});
 	}
 
@@ -211,5 +220,6 @@ public class GoodblockModEntities {
 		event.put(LATEXIQGOLDDRAGON.get(), LatexIqGoldDragonEntity.createAttributes().build());
 		event.put(LATEXDARKPURPLEDRAGONTAUR.get(), LatexDarkPurpleDragonTaurEntity.createAttributes().build());
 		event.put(LATEXDARKPURPLEDRAGON.get(), DarkPurpleLatexDragonEntity.createAttributes().build());
+		event.put(LATEX_ICE_FIELD_WOLF_DRAGON_BOSS.get(), LatexIceFieldWolfDragonBossEntity.createAttributes().build());
 	}
 }

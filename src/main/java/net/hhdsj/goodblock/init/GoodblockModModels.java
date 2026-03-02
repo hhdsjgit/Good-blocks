@@ -5,6 +5,7 @@
 package net.hhdsj.goodblock.init;
 
 import net.hhdsj.goodblock.client.model.*;
+import net.hhdsj.goodblock.client.model.boss.ModelLatexIceFieldWolfDragonBoss;
 import net.hhdsj.goodblock.client.model.boss.ModelLatexNightOwl;
 import net.hhdsj.goodblock.client.model.boss.ModelLatexNightOwlBoss;
 import net.hhdsj.goodblock.client.model.taur.ModelLatexDarkPurpleDragonTaur;
@@ -44,5 +45,6 @@ public class GoodblockModModels {
 		event.registerLayerDefinition(ModelLatexIqGoldDragon.LAYER_LOCATION, ModelLatexIqGoldDragon::createBodyLayer);
 		event.registerLayerDefinition(ModelLatexDarkPurpleDragonTaur.LAYER_LOCATION, ModelLatexDarkPurpleDragonTaur::createBodyLayer);
 		event.registerLayerDefinition(ModelDarkPurpleLatexDragon.LAYER_LOCATION, ModelDarkPurpleLatexDragon::createBodyLayer);
+		event.registerLayerDefinition(ModelLatexIceFieldWolfDragonBoss.LAYER_LOCATION, ModelLatexIceFieldWolfDragonBoss::createBodyLayer);
 	}
 }
