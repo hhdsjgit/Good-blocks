@@ -38,7 +38,7 @@ public class BetterHypnosisAbility extends HypnosisAbility {
     @SubscribeEvent
     public void onLivingAttack(LivingAttackEvent event) {
         if (!BLOCK_PLAYER_DAMAGE) return;
-        if (isAbilityUser(event.getEntityLiving()) && event.getSource().getEntity() instanceof Player) {
+        if (isAbilityUser(event.getEntity()) && event.getSource().getEntity() instanceof Player) {
             event.setCanceled(true);
         }
     }
@@ -46,7 +46,7 @@ public class BetterHypnosisAbility extends HypnosisAbility {
     @SubscribeEvent
     public void onLivingHurt(LivingHurtEvent event) {
         if (!BLOCK_PLAYER_DAMAGE) return;
-        if (isAbilityUser(event.getEntityLiving()) && event.getSource().getEntity() instanceof Player) {
+        if (isAbilityUser(event.getEntity()) && event.getSource().getEntity() instanceof Player) {
             event.setCanceled(true);
         }
     }
@@ -65,14 +65,13 @@ public class BetterHypnosisAbility extends HypnosisAbility {
             if (entityResult.getEntity() instanceof LivingEntity target &&
                     isAbilityUser(target) &&
                     target.distanceTo(projectile) <= DAMAGE_BLOCK_RANGE) {
-                event.setCanceled(true);
             }
         }
     }
 
     private boolean isAbilityUser(LivingEntity entity) {
         if (!ACTIVE_USERS.containsKey(entity)) return false;
-        Level level = entity.getLevel();
+        Level level = entity.level();
         return level.getGameTime() - ACTIVE_USERS.get(entity) <= 5;
     }
 }

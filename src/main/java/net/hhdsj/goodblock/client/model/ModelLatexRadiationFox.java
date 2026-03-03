@@ -6,7 +6,6 @@ import net.hhdsj.goodblock.entity.LatexRadiationFoxEntity;
 import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -20,7 +19,7 @@ import java.util.List;
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class ModelLatexRadiationFox extends AdvancedHumanoidModel<LatexRadiationFoxEntity> implements AdvancedHumanoidModelInterface<LatexRadiationFoxEntity, ModelLatexRadiationFox> {//<T extends Entity> extends EntityModel<T> {
+public class ModelLatexRadiationFox extends AdvancedHumanoidModel<LatexRadiationFoxEntity> {//implements AdvancedHumanoidModelInterface<LatexRadiationFoxEntity, ModelLatexRadiationFox> {//<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_radiation_fox"), "main");
@@ -220,7 +219,7 @@ public class ModelLatexRadiationFox extends AdvancedHumanoidModel<LatexRadiation
 
 	@Override
     public void prepareMobModel(LatexRadiationFoxEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
+        this.prepareMobModel( p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
     public void setupHand(LatexRadiationFoxEntity entity) {
@@ -228,7 +227,7 @@ public class ModelLatexRadiationFox extends AdvancedHumanoidModel<LatexRadiation
     }
 
 
-    public ModelPart getArm(HumanoidArm p_102852_) {
+    public ModelPart m_102851_(HumanoidArm p_102852_) {
         return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
     }
 

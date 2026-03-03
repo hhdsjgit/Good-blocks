@@ -15,8 +15,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 
 public class LatexRadiationFoxRenderer extends
-		AdvancedHumanoidRenderer<LatexRadiationFoxEntity, ModelLatexRadiationFox,
-				ArmorLatexMaleWolfModel<LatexRadiationFoxEntity>> {
+		AdvancedHumanoidRenderer<LatexRadiationFoxEntity, ModelLatexRadiationFox> {
 	public LatexRadiationFoxRenderer(EntityRendererProvider.Context context) {
 	
 		super(context, new ModelLatexRadiationFox(context.bakeLayer(ModelLatexRadiationFox.LAYER_LOCATION)),
