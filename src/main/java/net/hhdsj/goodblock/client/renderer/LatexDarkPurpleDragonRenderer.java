@@ -17,7 +17,7 @@ import net.minecraft.client.renderer.entity.layers.SaddleLayer;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
-public class LatexDarkPurpleDragonRenderer extends AdvancedHumanoidRenderer<DarkPurpleLatexDragonEntity, ModelDarkPurpleLatexDragon, ArmorLatexMaleWingedDragonModel<DarkPurpleLatexDragonEntity>> {
+public class LatexDarkPurpleDragonRenderer extends AdvancedHumanoidRenderer<DarkPurpleLatexDragonEntity, ModelDarkPurpleLatexDragon> {
     public LatexDarkPurpleDragonRenderer(EntityRendererProvider.Context context) {
         super(context, new ModelDarkPurpleLatexDragon(context.bakeLayer(ModelDarkPurpleLatexDragon.LAYER_LOCATION)),
                 ArmorLatexMaleWingedDragonModel.MODEL_SET,

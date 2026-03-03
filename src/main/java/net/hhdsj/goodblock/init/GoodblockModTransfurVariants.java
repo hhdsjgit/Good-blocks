@@ -3,6 +3,7 @@
  */
 package net.hhdsj.goodblock.init;
 //原版我的世界导入
+import net.foxyas.changedaddon.init.ChangedAddonAbilities;
 import net.hhdsj.goodblock.entity.boss.LatexNightOwlEntity;
 import net.hhdsj.goodblock.entity.simple.LatexIqGoldDragonEntity;
 import net.hhdsj.goodblock.client.renderer.DarkfuLatexWolfMaleRenderer;
@@ -139,7 +140,7 @@ public class GoodblockModTransfurVariants {
 			REGISTRY.register("form_latex_yunxq_hot_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNXQHOTDRAGON)
 			//.stepSize(0.7f)
 			.glide()
-			//.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+			.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 			.transfurMode(TransfurMode.ABSORPTION)
 			.replicating()
 			.nightVision()
@@ -150,7 +151,7 @@ public class GoodblockModTransfurVariants {
 			REGISTRY.register("form_latex_yun_xq_ice_dragon", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXYUNXQICEDRAGON)
 			//.stepSize(0.7f)
 			.glide()
-			//.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
+			.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 			.transfurMode(TransfurMode.ABSORPTION)
 			.replicating()
 			.nightVision()
@@ -173,6 +174,7 @@ public class GoodblockModTransfurVariants {
 			.addAbility(entityType -> GoodblockModAbilities.CREATE_DRAGON_FRUIT.get())
 			.transfurMode(TransfurMode.ABSORPTION)
 			.replicating()
+			.scares(Creeper.class)
 			.nightVision()
 			.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 			.build());
@@ -240,6 +242,7 @@ public class GoodblockModTransfurVariants {
 					.cameraZOffset(7.0f / 16.0f)
 					.extraJumps(2)
 					.rideable()
+					.breatheMode(TransfurVariant.BreatheMode.ANY)
 					//.reducedFall()
 					.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 					.build());

@@ -15,7 +15,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.layers.EyesLayer;
 import net.minecraft.resources.ResourceLocation;
 
-public class LatexIqGoldDragonRenderer extends AdvancedHumanoidRenderer<LatexIqGoldDragonEntity, ModelLatexIqGoldDragon, ArmorLatexMaleWingedDragonModel<LatexIqGoldDragonEntity>> {
+public class LatexIqGoldDragonRenderer extends AdvancedHumanoidRenderer<LatexIqGoldDragonEntity, ModelLatexIqGoldDragon> {
     public LatexIqGoldDragonRenderer(EntityRendererProvider.Context context) {
         super(context, new ModelLatexIqGoldDragon(context.bakeLayer(ModelLatexIqGoldDragon.LAYER_LOCATION)),
                 ArmorLatexMaleWingedDragonModel.MODEL_SET,

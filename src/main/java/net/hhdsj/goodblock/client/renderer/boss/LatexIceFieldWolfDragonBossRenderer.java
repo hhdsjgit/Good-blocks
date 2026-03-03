@@ -16,7 +16,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
-public class LatexIceFieldWolfDragonBossRenderer extends AdvancedHumanoidRenderer<LatexIceFieldWolfDragonBossEntity, ModelLatexIceFieldWolfDragonBoss, ArmorLatexMaleWingedDragonModel<LatexIceFieldWolfDragonBossEntity>> {
+public class LatexIceFieldWolfDragonBossRenderer extends AdvancedHumanoidRenderer<LatexIceFieldWolfDragonBossEntity, ModelLatexIceFieldWolfDragonBoss> {
     public LatexIceFieldWolfDragonBossRenderer(EntityRendererProvider.Context context) {
 
         super(context, new ModelLatexIceFieldWolfDragonBoss(context.bakeLayer(ModelLatexIceFieldWolfDragonBoss.LAYER_LOCATION)),

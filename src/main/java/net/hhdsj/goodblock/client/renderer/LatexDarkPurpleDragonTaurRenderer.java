@@ -12,10 +12,10 @@ import net.minecraft.client.renderer.entity.layers.SaddleLayer;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
-public class LatexDarkPurpleDragonTaurRenderer extends AdvancedHumanoidRenderer<LatexDarkPurpleDragonTaurEntity, ModelLatexDarkPurpleDragonTaur, ArmorLatexMaleTaurUpperModel<LatexDarkPurpleDragonTaurEntity>> {
+public class LatexDarkPurpleDragonTaurRenderer extends AdvancedHumanoidRenderer<LatexDarkPurpleDragonTaurEntity, ModelLatexDarkPurpleDragonTaur> {
     public LatexDarkPurpleDragonTaurRenderer(EntityRendererProvider.Context context) {
         super(context, new ModelLatexDarkPurpleDragonTaur(context.bakeLayer(ModelLatexDarkPurpleDragonTaur.LAYER_LOCATION)),
-                ArmorModelPicker.centaur(context.getModelSet(), ArmorLatexMaleTaurUpperModel.MODEL_SET, ArmorLatexCentaurLowerModel.MODEL_SET), 0.7f);
+                ArmorModelPicker.centaur(context.getModelSet(), ArmorLatexMaleTaurUpperModel.MODEL_SET, ArmorLatexCentaurLowerModel.MODEL_SET_WITH_TORSO), 0.7f);
         this.addLayer(new LatexParticlesLayer<>(this, getModel()));
         this.addLayer(new EmissiveBodyLayer<>(this, new ResourceLocation("goodblock", "textures/entities/latex/taur/dark_purple_latex_dragon_taur_light.png")));
         this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor,

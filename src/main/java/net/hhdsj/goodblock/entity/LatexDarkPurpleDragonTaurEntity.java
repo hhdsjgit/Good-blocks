@@ -5,6 +5,7 @@ import net.hhdsj.goodblock.init.GoodblockModTransfurVariants;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.entity.beast.LatexTaur;
 import net.ltxprogrammer.changed.entity.beast.WhiteLatexKnight;
+import net.ltxprogrammer.changed.entity.latex.LatexType;
 import net.ltxprogrammer.changed.entity.variant.EntityShape;
 import net.ltxprogrammer.changed.entity.variant.TransfurVariant;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
@@ -31,23 +32,21 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class LatexDarkPurpleDragonTaurEntity extends ChangedEntity implements LatexTaur<LatexDarkPurpleDragonTaurEntity> {
+    private Object level;
+
     public LatexDarkPurpleDragonTaurEntity(EntityType<? extends LatexDarkPurpleDragonTaurEntity> p_19870_, Level p_19871_) {
         super(p_19870_, p_19871_);
-    }
-
-    public static void taurLike(AttributeMap map) {
-        map.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.2);
-        map.getInstance((Attribute)ForgeMod.SWIM_SPEED.get()).setBaseValue(0.95);
-        map.getInstance(Attributes.MAX_HEALTH).setBaseValue(30.0);
     }
 
     @Override
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
         attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.2);
-        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.95);
-        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(30.0);
-        taurLike(attributes);
+        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.9);
+        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(30);
+        attributes.getInstance(ForgeMod.STEP_HEIGHT_ADDITION.get()).setBaseValue(computeStepHeightOffset(1.1));
+        attributes.getInstance(ChangedAttributes.JUMP_STRENGTH.get()).setBaseValue(1.25);
+        attributes.getInstance(ChangedAttributes.FALL_RESISTANCE.get()).setBaseValue(2.5);
     }
 
     public TransfurVariant<?> getTransfurVariant() {
@@ -56,11 +55,6 @@ public class LatexDarkPurpleDragonTaurEntity extends ChangedEntity implements La
 
     public Color3 getTransfurColor(TransfurCause cause) {
         return Color3.getColor("#ca00ff");
-    }
-
-    @Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
     }
 
     @Override
@@ -94,7 +88,7 @@ public class LatexDarkPurpleDragonTaurEntity extends ChangedEntity implements La
     public InteractionResult mobInteract(Player p_30713_, InteractionHand p_30714_) {
         if (isSaddled()) {
             this.doPlayerRide(p_30713_);
-            return InteractionResult.sidedSuccess(this.level.isClientSide);
+            return InteractionResult.sidedSuccess(this.level().isClientSide);
         }
 
         return InteractionResult.PASS;

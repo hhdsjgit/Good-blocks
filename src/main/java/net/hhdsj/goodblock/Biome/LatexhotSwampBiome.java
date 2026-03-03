@@ -23,7 +23,7 @@ import net.minecraft.core.HolderGetter;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
-
+/*
 public class LatexhotSwampBiome {
 
     public static Biome createLatexhotSwamp(HolderGetter<ConfiguredWorldCarver<?>> featureGetter,
@@ -90,4 +90,4 @@ public class LatexhotSwampBiome {
         // 添加自定义矿石生成
 
     }
-}
+}*/

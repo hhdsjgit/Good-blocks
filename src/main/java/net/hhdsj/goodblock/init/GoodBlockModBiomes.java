@@ -11,7 +11,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.hhdsj.goodblock.Biome.LatexhotSwampBiome;
+//import net.hhdsj.goodblock.Biome.LatexhotSwampBiome;
 import net.hhdsj.goodblock.GoodblockMod;
 
 public class GoodBlockModBiomes {
@@ -19,7 +19,7 @@ public class GoodBlockModBiomes {
     // 创建DeferredRegister
     public static final DeferredRegister<Biome> BIOMES =
             DeferredRegister.create(ForgeRegistries.BIOMES, GoodblockMod.MODID);
-
+    /*
     // 注册热沼泽生物群系
     public static final ResourceKey<Biome> LATEX_HOT_SWAMP_KEY =
             ResourceKey.create(Registries.BIOME, new ResourceLocation(GoodblockMod.MODID, "latex_hot_swamp"));
@@ -30,7 +30,7 @@ public class GoodBlockModBiomes {
 
                 throw new IllegalStateException("Biome must be registered via datapack or events with proper HolderGetter");
             });
-
+    */
     public static void register(IEventBus eventBus) {
         BIOMES.register(eventBus);
     }

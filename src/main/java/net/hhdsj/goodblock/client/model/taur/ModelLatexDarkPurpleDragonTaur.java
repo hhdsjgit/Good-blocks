@@ -5,7 +5,6 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.hhdsj.goodblock.client.model.renderer.animate.GoodBlockAnimatorPresets;
 import net.hhdsj.goodblock.entity.LatexDarkPurpleDragonTaurEntity;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
 import net.ltxprogrammer.changed.client.renderer.model.CorrectorType;
 import net.ltxprogrammer.changed.client.renderer.model.LowerTorsoedModel;
 import net.ltxprogrammer.changed.client.tfanimations.HelperModel;
@@ -21,8 +20,8 @@ import net.minecraft.world.entity.HumanoidArm;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-
-public class ModelLatexDarkPurpleDragonTaur extends AdvancedHumanoidModel<LatexDarkPurpleDragonTaurEntity> implements AdvancedHumanoidModelInterface<LatexDarkPurpleDragonTaurEntity, ModelLatexDarkPurpleDragonTaur>, LowerTorsoedModel {
+//AdvancedHumanoidModelInterface<LatexDarkPurpleDragonTaurEntity, ModelLatexDarkPurpleDragonTaur>,
+public class ModelLatexDarkPurpleDragonTaur extends AdvancedHumanoidModel<LatexDarkPurpleDragonTaurEntity> implements LowerTorsoedModel {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock:drak_purple_dragon_taur"), "main");
     private final ModelPart FrontRightLeg;
@@ -253,7 +252,7 @@ public class ModelLatexDarkPurpleDragonTaur extends AdvancedHumanoidModel<LatexD
 
     @Override
     public void prepareMobModel(LatexDarkPurpleDragonTaurEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
+        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
     public void setupHand(LatexDarkPurpleDragonTaurEntity entity) {
@@ -266,16 +265,7 @@ public class ModelLatexDarkPurpleDragonTaur extends AdvancedHumanoidModel<LatexD
         super.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
     }
 
-    public PoseStack getPlacementCorrectors(CorrectorType type) {
-        PoseStack corrector = AdvancedHumanoidModelInterface.super.getPlacementCorrectors(type);
-        if (type == CorrectorType.HAIR)
-            corrector.translate(0.0f, -1.5f / 15.0f, 0.0f);
-        else if (type == CorrectorType.LOWER_HAIR)
-            corrector.translate(0.0f, -2.0f / 16.0f, 0.0f);
-        return corrector;
-    }
-
-    public ModelPart getArm(HumanoidArm p_102852_) {
+    public ModelPart m_102851_(HumanoidArm p_102852_) {
         return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
     }
 

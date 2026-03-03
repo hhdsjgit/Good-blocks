@@ -9,6 +9,7 @@ import net.foxyas.changedaddon.init.ChangedAddonParticleTypes;
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.ltxprogrammer.changed.entity.ChangedEntity;
 //import net.ltxprogrammer.changed.entity.LatexType;
+import net.minecraft.network.chat.Component;
 import net.ltxprogrammer.changed.entity.TransfurMode;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 import net.minecraft.ChatFormatting;
@@ -25,6 +26,7 @@ import net.minecraft.network.chat.Style;
 //import net.minecraft.network.chat.TextComponent;
 //import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
@@ -35,6 +37,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.BossEvent;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
@@ -59,7 +62,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-import java.util.Objects;
 
 public class LatexNightOwlBossEntity extends ChangedEntity{
 
@@ -81,7 +83,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     }
 
     @Override
-    public @NotNull Packet<?> getAddEntityPacket() {
+    public @NotNull Packet<ClientGamePacketListener> getAddEntityPacket() {
         return NetworkHooks.getEntitySpawningPacket(this);
     }
 
@@ -107,23 +109,23 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
 
     @Override
     public boolean hurt(@NotNull DamageSource source, float amount) {
-        if (source == DamageSource.FALL)
+        if (source.is(DamageTypes.FALL))
             return false;
-        if (source == DamageSource.IN_FIRE)
+        if (source.is(DamageTypes.IN_FIRE))
             return false;
-        if (source == DamageSource.HOT_FLOOR)
+        if (source.is(DamageTypes.HOT_FLOOR))
             return false;
         if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
             return false;
-        if (source == DamageSource.CACTUS)
+        if (source.is(DamageTypes.CACTUS))
             return false;
-        if (source == DamageSource.DROWN)
+        if (source.is(DamageTypes.DROWN))
             return false;
-        if (source == DamageSource.LIGHTNING_BOLT)
+        if (source.is(DamageTypes.LIGHTNING_BOLT))
             return false;
         LivingEntity target = this.getTarget();
         if (target != null) {
-            Level targetLevel = target.getLevel();
+            Level targetLevel = target.getCommandSenderWorld();
 
             if (targetLevel instanceof ServerLevel serverLevel) {
                 int randomValue = this.random.nextInt(11); // 0,1,2,3,4...,10 //
@@ -169,7 +171,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         xpReward = 3000;
         setNoAi(false);
         this.bossEvent = new ServerBossEvent(
-                new TranslatableComponent("entity.goodblock.boss_heath.night_owl"),
+                Component.translatable("entity.goodblock.boss_heath.night_owl"),
                 BossEvent.BossBarColor.RED,
                 BossEvent.BossBarOverlay.NOTCHED_10 // 进度条样式
         );
@@ -260,7 +262,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         this.bossEvent.setDarkenScreen(true);      // 屏幕变暗
         this.bossEvent.setCreateWorldFog(true);    // 添加环境雾
         player.displayClientMessage(
-                new TextComponent("You can't exit me!").withStyle((style -> {
+                Component.literal("You can't exit me!").withStyle((style -> {
                     Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
                     returnStyle = returnStyle.withItalic(true);
                     return returnStyle;
@@ -285,7 +287,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
             );
         }
         player.displayClientMessage(
-                new TextComponent("You can't exit me!").withStyle((style -> {
+                Component.literal("You can't exit me!").withStyle((style -> {
                     Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
                     returnStyle = returnStyle.withItalic(true);
                     return returnStyle;
@@ -300,7 +302,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
 
         if (this.getHealth() < this.getMaxHealth() * 0.5) {
             this.bossEvent.setName(
-                    new TranslatableComponent("entity.goodblock.boss_heath.night_owl")
+                    Component.translatable("entity.goodblock.boss_heath.night_owl")
                             .withStyle(ChatFormatting.RED)
             );
         }
@@ -450,7 +452,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                     int randomIntBound = LatexNightOwlBossEntity.this.random.nextInt(20); // 0-20之间的随机整数
                     if (randomIntBound >= 10) {
                         if (getTarget() instanceof Player player) {
-                            player.displayClientMessage(new TextComponent("Can you think ....?").withStyle((style -> {
+                            player.displayClientMessage(Component.literal("Can you think ....?").withStyle((style -> {
                                 Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
                                 returnStyle = returnStyle.withItalic(true);
                                 return returnStyle;
@@ -487,7 +489,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                     } else {
 
                         if (getTarget() instanceof Player player) {
-                            player.displayClientMessage(new TextComponent("Test message--1?").withStyle((style -> {
+                            player.displayClientMessage(Component.literal("Test message--1?").withStyle((style -> {
                                 Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
                                 returnStyle = returnStyle.withItalic(true);
                                 return returnStyle;
@@ -501,7 +503,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
             }
             public void stop() {
                 if (getTarget() instanceof Player player) {
-                    player.displayClientMessage(new TextComponent("Test message--0?").withStyle((style -> {
+                    player.displayClientMessage(Component.literal("Test message--0?").withStyle((style -> {
                         Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
                         returnStyle = returnStyle.withItalic(true);
                         return returnStyle;
