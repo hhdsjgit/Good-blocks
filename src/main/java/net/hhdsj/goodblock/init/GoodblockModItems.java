@@ -97,6 +97,7 @@ public class GoodblockModItems {
 	// 液体桶物品的注册
 	public static final RegistryObject<Item> FLUIDHOTTEST_BUCKET = REGISTRY.register("fluidhottest_bucket", FluidhottestItem::new);
 
+	/*
 	// 各种生物蛋的注册 - 移除.tab()，通过事件添加
 	public static final RegistryObject<Item> LATEX_ORANGE_FOX_SPAWN_EGG = REGISTRY.register("latex_orange_fox_spawn_egg",
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEX_ORANGE_FOX,
@@ -189,7 +190,7 @@ public class GoodblockModItems {
 			() -> new ForgeSpawnEggItem(GoodblockModEntities.LATEXNIGHTOWLDRAGON,
 					-8519680, -13631488,
 					new Item.Properties()
-			));
+			));*/
 
 
 	/*************************************************************************/

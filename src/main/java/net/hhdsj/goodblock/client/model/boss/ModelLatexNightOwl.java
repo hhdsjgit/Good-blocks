@@ -250,11 +250,6 @@ public class ModelLatexNightOwl extends AdvancedHumanoidModel<LatexNightOwlEntit
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 
-    @Override
-    public void prepareMobModel(LatexNightOwlEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
-    }
-
     public void setupHand(LatexNightOwlEntity entity) {
         animator.setupHand();
     }

@@ -2,6 +2,7 @@
 package net.hhdsj.goodblock.entity;
 
 
+import net.ltxprogrammer.changed.entity.ChangedEntity;
 import net.ltxprogrammer.changed.entity.latex.LatexType;
 import net.ltxprogrammer.changed.init.ChangedLatexTypes;
 import net.ltxprogrammer.changed.util.Color3;
@@ -32,6 +33,7 @@ import net.hhdsj.goodblock.init.GoodblockModEntities;
 
 
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 import org.jetbrains.annotations.Nullable; // 或 javax.annotation.Nullable
@@ -45,8 +47,8 @@ public class DarkfuLatexWolfMaleEntity extends AbstractDarkLatexEntity {
 	@Override
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
-        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.1);
-        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.93);
+        Objects.requireNonNull(attributes.getInstance(Attributes.MOVEMENT_SPEED)).setBaseValue(1.1);
+        Objects.requireNonNull(attributes.getInstance(ForgeMod.SWIM_SPEED.get())).setBaseValue(0.93);
     }
     
 	public DarkfuLatexWolfMaleEntity(EntityType<? extends DarkfuLatexWolfMaleEntity> p_19870_, Level p_19871_) {
@@ -123,16 +125,7 @@ public class DarkfuLatexWolfMaleEntity extends AbstractDarkLatexEntity {
 	public static void init() {
 	}
 
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 5);
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 12);
-		builder = builder.add(Attributes.ARMOR, 2);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		return builder;
-	}
+	//删除注册方法
 
 	@Nullable
 	@Override

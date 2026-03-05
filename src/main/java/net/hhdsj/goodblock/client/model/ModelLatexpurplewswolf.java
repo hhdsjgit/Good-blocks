@@ -232,10 +232,6 @@ public class ModelLatexpurplewswolf extends AdvancedHumanoidModel<Latexpurplewsw
 		return LayerDefinition.create(meshdefinition, 96, 96);
 	}
 
-	@Override
-    public void prepareMobModel(LatexpurplewswolfEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
-    }
 
     public void setupHand(LatexpurplewswolfEntity entity) {
         animator.setupHand();

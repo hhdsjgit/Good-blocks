@@ -48,6 +48,7 @@ import net.minecraft.world.entity.EntityType;
 
 import net.minecraftforge.common.ForgeMod;
 
+import java.util.Objects;
 import java.util.Set;
 
 @Mod.EventBusSubscriber
@@ -58,9 +59,9 @@ public class LatexKcahraSharkEntity extends ChangedEntity {
 	@Override
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
-        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(0.99);
-        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(1.24);
-        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(28.0);
+        Objects.requireNonNull(attributes.getInstance(Attributes.MOVEMENT_SPEED)).setBaseValue(0.99);
+        Objects.requireNonNull(attributes.getInstance(ForgeMod.SWIM_SPEED.get())).setBaseValue(1.24);
+        Objects.requireNonNull(attributes.getInstance(Attributes.MAX_HEALTH)).setBaseValue(28.0);
     }
     
 	
@@ -131,14 +132,5 @@ public class LatexKcahraSharkEntity extends ChangedEntity {
 				(entityType, world, reason, pos, random) -> (world.getBlockState(pos).is(Blocks.WATER) && world.getBlockState(pos.above()).is(Blocks.WATER)));
 	}
 
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 5);
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 12);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		return builder;
-	}
+	//删除注册方法
 }

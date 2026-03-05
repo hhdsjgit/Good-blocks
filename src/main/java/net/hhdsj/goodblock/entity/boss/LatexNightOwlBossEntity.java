@@ -62,6 +62,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
+import java.util.Objects;
 
 public class LatexNightOwlBossEntity extends ChangedEntity{
 
@@ -77,9 +78,16 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     @Override
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
-        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.2);
+        attributes.getInstance(ChangedAttributes.TRANSFUR_DAMAGE.get()).setBaseValue(1);
+        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(0.4);
+        attributes.getInstance(ChangedAttributes.JUMP_STRENGTH.get()).setBaseValue(1.5);
+        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(500);
+        attributes.getInstance(Attributes.ARMOR).setBaseValue(35);
+        attributes.getInstance(Attributes.ARMOR_TOUGHNESS).setBaseValue(15);
+        attributes.getInstance(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(1);
+        attributes.getInstance(Attributes.ATTACK_DAMAGE).setBaseValue(6.0);
+        attributes.getInstance(Attributes.FOLLOW_RANGE).setBaseValue(64);
         attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(1.1);
-        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(500.0);
     }
 
     @Override
@@ -579,18 +587,4 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     }
 
     private final ServerBossEvent bossEvent;
-
-    public static AttributeSupplier.Builder createAttributes() {
-        AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 1);
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
-        builder = builder.add(Attributes.JUMP_STRENGTH, 1.5);
-        builder = builder.add(Attributes.MAX_HEALTH, 500);
-        builder = builder.add(Attributes.ARMOR, 35);           // 提高护甲值
-        builder = builder.add(Attributes.ARMOR_TOUGHNESS, 15); // 添加护甲韧性
-        builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1); // 添加击退抗性
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 6.0);   // Boss攻击力
-        builder = builder.add(Attributes.FOLLOW_RANGE, 64);
-        return builder;
-    }
 }

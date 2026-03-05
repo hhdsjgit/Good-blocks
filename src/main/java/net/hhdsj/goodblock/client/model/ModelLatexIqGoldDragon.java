@@ -341,11 +341,6 @@ public class ModelLatexIqGoldDragon extends AdvancedHumanoidModel<LatexIqGoldDra
 		return LayerDefinition.create(meshdefinition, 128, 128);
     }
 
-    @Override
-    public void prepareMobModel(LatexIqGoldDragonEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
-    }
-
     public void setupHand(LatexIqGoldDragonEntity entity) {
         animator.setupHand();
     }

@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "goodblock:blocks/iron_hot",
-    "up": "goodblock:blocks/iron_hot",
-    "north": "goodblock:blocks/iron_hot",
-    "east": "goodblock:blocks/iron_hot",
-    "south": "goodblock:blocks/iron_hot",
-    "west": "goodblock:blocks/iron_hot",
-    "particle": "goodblock:blocks/iron_hot"
+    "down": "goodblock:block/iron_hot",
+    "up": "goodblock:block/iron_hot",
+    "north": "goodblock:block/iron_hot",
+    "east": "goodblock:block/iron_hot",
+    "south": "goodblock:block/iron_hot",
+    "west": "goodblock:block/iron_hot",
+    "particle": "goodblock:block/iron_hot"
   }
 }

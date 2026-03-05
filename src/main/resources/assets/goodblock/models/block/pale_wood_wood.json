@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "goodblock:blocks/pale_wood_log_side",
-    "particle": "goodblock:blocks/pale_wood_log_side"
+    "all": "goodblock:block/pale_wood_log_side",
+    "particle": "goodblock:block/pale_wood_log_side"
   }
 }

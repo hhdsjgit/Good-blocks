@@ -1,6 +1,6 @@
 {
   "parent": "block/template_fence_gate_open",
   "textures": {
-    "texture": "goodblock:blocks/pale_wood_planks"
+    "texture": "goodblock:block/pale_wood_planks"
   }
 }

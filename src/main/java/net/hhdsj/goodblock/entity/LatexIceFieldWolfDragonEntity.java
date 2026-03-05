@@ -28,14 +28,16 @@ import net.ltxprogrammer.changed.entity.HairStyle;
 import net.ltxprogrammer.changed.entity.TransfurMode;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 
+import java.util.Objects;
+
 public class LatexIceFieldWolfDragonEntity extends ChangedEntity {
 
 	@Override
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
-        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.2);
-        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.98);
-        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(30.0);
+        Objects.requireNonNull(attributes.getInstance(Attributes.MOVEMENT_SPEED)).setBaseValue(1.2);
+        Objects.requireNonNull(attributes.getInstance(ForgeMod.SWIM_SPEED.get())).setBaseValue(0.98);
+        Objects.requireNonNull(attributes.getInstance(Attributes.MAX_HEALTH)).setBaseValue(30.0);
     }
     
 	
@@ -100,14 +102,5 @@ public class LatexIceFieldWolfDragonEntity extends ChangedEntity {
 	public static void init() {
 	}
 
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 5);
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 12);
-		builder = builder.add(Attributes.ARMOR, 2);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		return builder;
-	}
+	//删除注册方法
 }

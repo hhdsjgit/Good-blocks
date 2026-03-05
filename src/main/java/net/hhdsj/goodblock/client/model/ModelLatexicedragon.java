@@ -46,7 +46,7 @@ import java.util.List;
 
 public class ModelLatexicedragon extends AdvancedHumanoidModel<LatexiceDragonEntity>{
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latexicedragonunified"), "main");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latexfruitdragonunified"), "main");
     private final ModelPart LeftLeg;
     public final ModelPart RightLeg;
     private final ModelPart RightArm;
@@ -185,11 +185,6 @@ public class ModelLatexicedragon extends AdvancedHumanoidModel<LatexiceDragonEnt
         PartDefinition TailBase_r5 = bb_main.addOrReplaceChild("TailBase_r5", CubeListBuilder.create().texOffs(64, 9).addBox(-1.5F, 17.3F, 7.1F, 3.0F, 6.0F, 3.0F, new CubeDeformation(-0.2F)), PartPose.offsetAndRotation(0.0F, 0.9F, 5.0F, 1.7017F, 0.0F, 0.0F));
 
         return LayerDefinition.create(meshdefinition, 96, 96);
-    }
-
-    @Override
-    public void prepareMobModel(LatexiceDragonEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(p_102861_, p_102862_, p_102863_, p_102864_);
     }
 
     public void setupHand(LatexiceDragonEntity entity) {
