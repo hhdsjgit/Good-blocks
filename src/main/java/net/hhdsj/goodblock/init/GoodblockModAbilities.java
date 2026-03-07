@@ -5,6 +5,7 @@
 package net.hhdsj.goodblock.init;
 
 import net.hhdsj.goodblock.GoodblockMod;
+import net.hhdsj.goodblock.abilities.BetterHypnosisAbility;
 import net.hhdsj.goodblock.abilities.TurnFeraLatexDarkPurpleAbility;
 import net.ltxprogrammer.changed.Changed;
 import net.ltxprogrammer.changed.ability.*;
@@ -16,17 +17,17 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class GoodblockModAbilities{
     public static final DeferredRegister<AbstractAbility<?>> REGISTRY = ChangedRegistry.ABILITY.createDeferred(GoodblockMod.MODID);
+    public static RegistryObject<TurnFeraLatexDarkPurpleAbility> TURN_FERA_LATEX_DARK_PURPLE;
+    public static RegistryObject<SimpleCreateItemAbility> CREATE_DRAGON_FRUIT;
+    public static RegistryObject<BetterHypnosisAbility> BERRER_HYPNOSIE;
 
-    public static RegistryObject<SimpleCreateItemAbility> CREATE_DRAGON_FRUIT = REGISTRY.register("create_dragon_fruit",
-            () -> new SimpleCreateItemAbility(() -> new ItemStack(GoodblockModItems.DRAGONFRUIT.get()), 1.0f, 1.0f));
 
-    public static RegistryObject<TurnFeraLatexDarkPurpleAbility> TURN_FERA_LATEX_DARK_PURPLE = REGISTRY.register("turn_fera_latex_dark_purple",
-            TurnFeraLatexDarkPurpleAbility::new);
+    static {
+        BERRER_HYPNOSIE = REGISTRY.register("better_hypnosie", BetterHypnosisAbility::new);
+        TURN_FERA_LATEX_DARK_PURPLE = REGISTRY.register("turn_fera_latex_dark_purple", TurnFeraLatexDarkPurpleAbility::new);
+        CREATE_DRAGON_FRUIT = REGISTRY.register("create_dragon_fruit", () -> new SimpleCreateItemAbility(() -> new ItemStack(GoodblockModItems.DRAGONFRUIT.get()), 1.0f, 1.0f));
+    }
 
-    /*
-    public static RegistryObject<SimpleCreateItemAbility> CREATE_ARROWS_FRUIT = REGISTRY.register("create_arrows_fruit",
-            () -> new SimpleCreateItemAbility(() -> new ItemStack(GoodblockModItems.DRAGONFRUIT.get()), 1.0f, 1.0f));
-*/
     public static AbstractAbility<?> getAbility(ResourceLocation location) {
         return ChangedRegistry.ABILITY.get().getValue(location);
     }

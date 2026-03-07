@@ -6,7 +6,6 @@ import net.hhdsj.goodblock.entity.boss.LatexNightOwlEntity;
 import net.ltxprogrammer.changed.client.renderer.animate.AnimatorPresets;
 import net.ltxprogrammer.changed.client.renderer.animate.HumanoidAnimator;
 import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModel;
-import net.ltxprogrammer.changed.client.renderer.model.AdvancedHumanoidModelInterface;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -18,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 
-public class ModelLatexNightOwl extends AdvancedHumanoidModel<LatexNightOwlEntity> implements AdvancedHumanoidModelInterface<LatexNightOwlEntity, ModelLatexNightOwl> {
+public class ModelLatexNightOwl extends AdvancedHumanoidModel<LatexNightOwlEntity> {//implements AdvancedHumanoidModelInterface<LatexNightOwlEntity, ModelLatexNightOwl> {
 
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_nighe_owl_model"), "main");
     public final ModelPart RightLeg;
@@ -251,17 +250,12 @@ public class ModelLatexNightOwl extends AdvancedHumanoidModel<LatexNightOwlEntit
         return LayerDefinition.create(meshdefinition, 128, 128);
     }
 
-    @Override
-    public void prepareMobModel(LatexNightOwlEntity p_102861_, float p_102862_, float p_102863_, float p_102864_) {
-        this.prepareMobModel(animator, p_102861_, p_102862_, p_102863_, p_102864_);
-    }
-
     public void setupHand(LatexNightOwlEntity entity) {
         animator.setupHand();
     }
 
 
-    public ModelPart getArm(HumanoidArm p_102852_) {
+    public ModelPart m_102851_(HumanoidArm p_102852_) {
         return p_102852_ == HumanoidArm.LEFT ? this.LeftArm : this.RightArm;
     }
 

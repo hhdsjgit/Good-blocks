@@ -1,0 +1,29 @@
+{
+  "entities": [
+    "goodblock:latex_orange_fox",
+    "goodblock:latex_kcahra_shark",
+    "goodblock:latexbluedragon",
+    "goodblock:darkfu_latex_wolf_male",
+    "goodblock:latex_ko_qi_ice_dragon",
+    "goodblock:latexpurplewswolf",
+    "goodblock:latexyunxqhotdragon",
+    "goodblock:latexyunxqicedragon",
+    "goodblock:latex_ice_field_wolf_dragon",
+    "goodblock:latex_purple_cooc_wolf",
+    "goodblock:latex_dragon_fruit_wolf",
+    "goodblock:latexthreemonthwolf",
+    "goodblock:latex_yun_qi_ice_dragon",
+    "goodblock:latex_radiation_fox",
+    "goodblock:latex_night_owl_dragon",
+    "goodblock:latex_iq_gold_dragon",
+    "goodblock:latex_dark_purple_dragon"
+  ],
+  "slots": [
+    "changed:body",
+    "changed:full_body",
+    "changed:legs",
+    "changed:head",
+    "changed:hands",
+    "changed:neck"
+  ]
+}

@@ -36,6 +36,6 @@ public class PainitehoeItem extends HoeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of(new ItemStack(Items.NETHERITE_INGOT));
 			}
-		}, 0, -3f, new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).fireResistant());
+		}, 0, -3f, new Item.Properties().fireResistant());
 	}
 }

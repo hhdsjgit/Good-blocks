@@ -2,17 +2,15 @@
 package net.hhdsj.goodblock.entity;
 
 
-import net.ltxprogrammer.changed.*;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.biome.MobSpawnSettings;
@@ -31,10 +29,10 @@ import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
-import net.minecraft.world.entity.EntityType;
 
 import net.minecraftforge.common.ForgeMod;
 
+import java.util.Objects;
 import java.util.Set;
 
 import net.hhdsj.goodblock.init.GoodblockModEntities;
@@ -47,14 +45,11 @@ public class LatexOrangeFoxEntity extends ChangedEntity {
 	@Override
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
-        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.1);
-        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.93);
+        Objects.requireNonNull(attributes.getInstance(Attributes.MOVEMENT_SPEED)).setBaseValue(1.1);
+        Objects.requireNonNull(attributes.getInstance(ForgeMod.SWIM_SPEED.get())).setBaseValue(0.93);
     }
     
-	@Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+
 
     @Override
     public TransfurMode getTransfurMode() {
@@ -73,12 +68,6 @@ public class LatexOrangeFoxEntity extends ChangedEntity {
     public Color3 getTransfurColor(TransfurCause cause) {
         return Color3.getColor("#FF8001");
     }
-	
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEX_ORANGE_FOX.get(), 1, 4, 4));
-	}
 
 	public LatexOrangeFoxEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(GoodblockModEntities.LATEX_ORANGE_FOX.get(), world);
@@ -91,7 +80,7 @@ public class LatexOrangeFoxEntity extends ChangedEntity {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
@@ -121,14 +110,5 @@ public class LatexOrangeFoxEntity extends ChangedEntity {
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 5);
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 11);
-		builder = builder.add(Attributes.ARMOR, 2);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		return builder;
-	}
+	//删除注册方法
 }

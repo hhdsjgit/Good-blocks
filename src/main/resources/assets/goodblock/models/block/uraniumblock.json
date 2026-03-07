@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "goodblock:blocks/uranium_block",
-    "up": "goodblock:blocks/uranium_block",
-    "north": "goodblock:blocks/uranium_block",
-    "east": "goodblock:blocks/uranium_block",
-    "south": "goodblock:blocks/uranium_block",
-    "west": "goodblock:blocks/uranium_block",
-    "particle": "goodblock:blocks/uranium_block"
+    "down": "goodblock:block/uranium_block",
+    "up": "goodblock:block/uranium_block",
+    "north": "goodblock:block/uranium_block",
+    "east": "goodblock:block/uranium_block",
+    "south": "goodblock:block/uranium_block",
+    "west": "goodblock:block/uranium_block",
+    "particle": "goodblock:block/uranium_block"
   }
 }

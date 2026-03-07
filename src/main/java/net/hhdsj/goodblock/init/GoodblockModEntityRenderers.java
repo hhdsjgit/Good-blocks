@@ -4,10 +4,22 @@
  */
 package net.hhdsj.goodblock.init;
 
-import net.hhdsj.goodblock.client.renderer.*;
 import net.hhdsj.goodblock.client.renderer.boss.LatexNightOwlBossRenderer;
 import net.hhdsj.goodblock.client.renderer.boss.LatexNightOwlRenderer;
-import net.hhdsj.goodblock.entity.boss.LatexNightOwlBossEntity;
+import net.hhdsj.goodblock.client.renderer.boss.LatexIceFieldWolfDragonBossRenderer;
+import net.hhdsj.goodblock.client.renderer.latex_dragon.*;
+import net.hhdsj.goodblock.client.renderer.latex_fox.LatexOrangeFoxRenderer;
+import net.hhdsj.goodblock.client.renderer.latex_fox.LatexRadiationFoxRenderer;
+import net.hhdsj.goodblock.client.renderer.latex_pup.BlackpupmaleRenderer;
+import net.hhdsj.goodblock.client.renderer.latex_pup.InksugerRenderer;
+import net.hhdsj.goodblock.client.renderer.latex_pup.WhitebluepupRenderer;
+import net.hhdsj.goodblock.client.renderer.latex_shark.LatexKcahraSharkRenderer;
+import net.hhdsj.goodblock.client.renderer.latex_taur.LatexDarkPurpleDragonTaurRenderer;
+import net.hhdsj.goodblock.client.renderer.latex_wolf.DarkfuLatexWolfMaleRenderer;
+import net.hhdsj.goodblock.client.renderer.latex_wolf.LatexPurpleCoocWolfRenderer;
+import net.hhdsj.goodblock.client.renderer.latex_wolf.LatexpurplewswolfRenderer;
+import net.hhdsj.goodblock.client.renderer.latex_wolf.LatexthreemonthwolfRenderer;
+import net.hhdsj.goodblock.client.renderer.projectile.LatexArrowRenderer;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -40,5 +52,6 @@ public class GoodblockModEntityRenderers {
 		event.registerEntityRenderer(GoodblockModEntities.LATEXIQGOLDDRAGON.get(), LatexIqGoldDragonRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXDARKPURPLEDRAGONTAUR.get(), LatexDarkPurpleDragonTaurRenderer::new);
 		event.registerEntityRenderer(GoodblockModEntities.LATEXDARKPURPLEDRAGON.get(), LatexDarkPurpleDragonRenderer::new);
+		event.registerEntityRenderer(GoodblockModEntities.LATEX_ICE_FIELD_WOLF_DRAGON_BOSS.get(), LatexIceFieldWolfDragonBossRenderer::new);
 	}
 }

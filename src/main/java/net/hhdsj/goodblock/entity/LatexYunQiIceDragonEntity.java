@@ -3,15 +3,17 @@ package net.hhdsj.goodblock.entity;
 
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 import net.ltxprogrammer.changed.entity.ChangedEntity;
-import net.ltxprogrammer.changed.entity.LatexType;
 import net.ltxprogrammer.changed.entity.TransfurCause;
 import net.ltxprogrammer.changed.entity.TransfurMode;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 import net.ltxprogrammer.changed.util.Color3;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
@@ -37,10 +39,7 @@ public class LatexYunQiIceDragonEntity extends ChangedEntity {
 	public Color3 getTransfurColor(TransfurCause cause) {
 		return Color3.getColor("#00ffff");
 	}
-	@Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+	
 
     @Override
     public TransfurMode getTransfurMode() {
@@ -58,7 +57,7 @@ public class LatexYunQiIceDragonEntity extends ChangedEntity {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
@@ -74,7 +73,7 @@ public class LatexYunQiIceDragonEntity extends ChangedEntity {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		if (source == DamageSource.FALL)
+		if (source.is((DamageTypes.FALL)))
 			return false;
 		return super.hurt(source, amount);
 	}
@@ -82,14 +81,5 @@ public class LatexYunQiIceDragonEntity extends ChangedEntity {
 	public static void init() {
 	}
 
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 2);
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 16);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		return builder;
-	}
+	//删除注册方法
 }

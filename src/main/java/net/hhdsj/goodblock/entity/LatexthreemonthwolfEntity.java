@@ -3,13 +3,14 @@ package net.hhdsj.goodblock.entity;
 
 import net.ltxprogrammer.changed.entity.variant.TransfurVariantInstance;
 import net.ltxprogrammer.changed.process.ProcessTransfur;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.ltxprogrammer.changed.util.Color3;
 import net.minecraft.world.entity.*;
+import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.Blocks;
@@ -35,8 +36,6 @@ import net.minecraft.network.protocol.Packet;
 
 import net.hhdsj.goodblock.init.GoodblockModEntities;
 
-import java.util.*;
-
 
 import java.util.Set;
 import net.ltxprogrammer.changed.entity.*;
@@ -49,25 +48,19 @@ import net.ltxprogrammer.changed.init.ChangedAttributes;
 @Mod.EventBusSubscriber
 public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAttackMob {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("windswept_hills"), new ResourceLocation("snowy_plains"), new ResourceLocation("snowy_beach"));
+    //public Level level;
 
     @Override
     public TransfurMode getTransfurMode() {
         return TransfurMode.REPLICATION;
     }
 
-	@Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
-	
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXTHREEMONTHWOLF.get(), 20, 2, 2));
-	}
-
 	public LatexthreemonthwolfEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(GoodblockModEntities.LATEXTHREEMONTHWOLF.get(), world);
+	}
+
+	public Color3 getTransfurColor(TransfurCause cause) {
+		return Color3.getColor("#8536ff");
 	}
 
 	public LatexthreemonthwolfEntity(EntityType<LatexthreemonthwolfEntity> type, Level world) {
@@ -78,7 +71,7 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 	}
 
 	@Override
-	public @NotNull Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
@@ -118,8 +111,7 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 	}
 
 	@Override
-	public void performRangedAttack(@NotNull LivingEntity target, float flval) {
-
+    public void performRangedAttack(@NotNull LivingEntity target, float flval) {
 		//Fix #10 issues
 		if (target instanceof Player player) {
 			TransfurVariantInstance<?> variant = ProcessTransfur.getPlayerTransfurVariant(player);
@@ -128,12 +120,15 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 			}
 		}
 
-        var entityarrow = new LatexthreemonthwolfEntityProjectile(this.level, this);
+		var entityarrow = new LatexthreemonthwolfEntityProjectile(this.level(), this);
 		double d0 = target.getY() + target.getEyeHeight() - 1.1;
 		double d1 = target.getX() - this.getX();
 		double d3 = target.getZ() - this.getZ();
 		entityarrow.shoot(d1, d0 - entityarrow.getY() + Math.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.6F, 12.0F);
-		level.addFreshEntity(entityarrow);
+
+		if (this.level() != null) {
+			this.level().addFreshEntity(entityarrow);
+		}
 	}
 
 	public static void init() {
@@ -141,14 +136,5 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 1);
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 20);
-		builder = builder.add(Attributes.ARMOR, 2);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 2);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		return builder;
-	}
+	//删除注册方法
 }

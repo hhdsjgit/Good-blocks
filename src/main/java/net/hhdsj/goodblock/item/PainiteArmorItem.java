@@ -14,19 +14,17 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 
-import net.hhdsj.goodblock.init.GoodblockModTabs;
-
 public abstract class PainiteArmorItem extends ArmorItem {
-	public PainiteArmorItem(EquipmentSlot slot, Item.Properties properties) {
+	public PainiteArmorItem(ArmorItem.Type type, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
-			public int getDurabilityForSlot(EquipmentSlot slot) {
-				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 45;
+			public int getDurabilityForType(ArmorItem.Type type) {
+				return new int[]{13, 15, 16, 11}[type.getSlot().getIndex()] * 45;
 			}
 
 			@Override
-			public int getDefenseForSlot(EquipmentSlot slot) {
-				return new int[]{3, 6, 8, 3}[slot.getIndex()];
+			public int getDefenseForType(ArmorItem.Type type) {
+				return new int[]{3, 6, 8, 3}[type.getSlot().getIndex()];
 			}
 
 			@Override
@@ -58,12 +56,12 @@ public abstract class PainiteArmorItem extends ArmorItem {
 			public float getKnockbackResistance() {
 				return 0.1f;
 			}
-		}, slot, properties);
+		}, type, properties);
 	}
 
 	public static class Helmet extends PainiteArmorItem {
 		public Helmet() {
-			super(EquipmentSlot.HEAD, new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).fireResistant());
+			super(ArmorItem.Type.HELMET, new Item.Properties().fireResistant());
 		}
 
 		@Override
@@ -74,7 +72,7 @@ public abstract class PainiteArmorItem extends ArmorItem {
 
 	public static class Chestplate extends PainiteArmorItem {
 		public Chestplate() {
-			super(EquipmentSlot.CHEST, new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).fireResistant());
+			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().fireResistant());
 		}
 
 		@Override
@@ -85,7 +83,7 @@ public abstract class PainiteArmorItem extends ArmorItem {
 
 	public static class Leggings extends PainiteArmorItem {
 		public Leggings() {
-			super(EquipmentSlot.LEGS, new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).fireResistant());
+			super(ArmorItem.Type.LEGGINGS, new Item.Properties().fireResistant());
 		}
 
 		@Override
@@ -96,7 +94,7 @@ public abstract class PainiteArmorItem extends ArmorItem {
 
 	public static class Boots extends PainiteArmorItem {
 		public Boots() {
-			super(EquipmentSlot.FEET, new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).fireResistant());
+			super(ArmorItem.Type.BOOTS, new Item.Properties().fireResistant());
 		}
 
 		@Override

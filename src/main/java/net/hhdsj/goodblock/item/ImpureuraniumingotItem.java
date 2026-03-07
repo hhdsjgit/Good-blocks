@@ -13,7 +13,7 @@ import net.hhdsj.goodblock.init.GoodblockModTabs;
 
 public class ImpureuraniumingotItem extends Item {
 	public ImpureuraniumingotItem() {
-		super(new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
 	}
 
 	@Override

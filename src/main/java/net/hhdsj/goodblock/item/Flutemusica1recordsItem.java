@@ -8,9 +8,10 @@ import net.minecraft.resources.ResourceLocation;
 
 import net.hhdsj.goodblock.init.GoodblockModTabs;
 import net.hhdsj.goodblock.init.GoodblockModSounds;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class Flutemusica1recordsItem extends RecordItem {
 	public Flutemusica1recordsItem() {
-		super(0, GoodblockModSounds.REGISTRY.get(new ResourceLocation("goodblock:flutemusica_1records")), new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).stacksTo(1).rarity(Rarity.RARE));
+		super(0, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("goodblock:flutemusica_1records")), new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 100);
 	}
 }
