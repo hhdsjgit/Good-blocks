@@ -15,15 +15,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
 import net.ltxprogrammer.changed.client.renderer.layers.*;
-import net.ltxprogrammer.changed.util.Color3;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-
-import net.hhdsj.goodblock.entity.LatexIceFieldWolfDragonEntity;
-import net.hhdsj.goodblock.client.model.ModelIceFieldWolfDragon;
-
-import net.ltxprogrammer.changed.client.renderer.model.armor.ArmorLatexBigTailDragonModel;
-import net.ltxprogrammer.changed.client.renderer.AdvancedHumanoidRenderer;
 
 @OnlyIn(Dist.CLIENT)
 public class LatexIceFieldWolfDragonBossRenderer extends AdvancedHumanoidRenderer<LatexIceFieldWolfDragonBossEntity, ModelLatexIceFieldWolfDragonBoss> {

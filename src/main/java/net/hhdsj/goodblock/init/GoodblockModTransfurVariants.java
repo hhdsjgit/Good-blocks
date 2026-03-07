@@ -6,8 +6,6 @@ package net.hhdsj.goodblock.init;
 import net.foxyas.changedaddon.init.ChangedAddonAbilities;
 import net.hhdsj.goodblock.entity.boss.LatexNightOwlEntity;
 import net.hhdsj.goodblock.entity.simple.LatexIqGoldDragonEntity;
-import net.hhdsj.goodblock.client.renderer.DarkfuLatexWolfMaleRenderer;
-import net.ltxprogrammer.changed.entity.latex.LatexType;
 import net.minecraft.world.entity.monster.*;
 //FORGE导入
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,7 +19,6 @@ import net.ltxprogrammer.changed.entity.variant.*;
 //import net.foxyas.changedaddon.init.ChangedAddonAbilities;
 
 import net.hhdsj.goodblock.entity.*;//推荐不要用*(来自hhdsj的话=))
-import net.hhdsj.goodblock.init.GoodblockModEntities;
 
 import java.util.List;
 
@@ -231,8 +228,6 @@ public class GoodblockModTransfurVariants {
 
 	public static final RegistryObject<TransfurVariant<LatexDarkPurpleDragonTaurEntity>> LATEXDARKPURPLEDRAGONTAUR =
 			REGISTRY.register("form_latex_dark_purple_dragon_taur", () -> TransfurVariant.Builder.of(GoodblockModEntities.LATEXDARKPURPLEDRAGONTAUR)
-					//.stepSize(1.1f)
-					//.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 					.addAbility(entityType -> GoodblockModAbilities.TURN_FERA_LATEX_DARK_PURPLE.get())
 					.addAbility(GoodblockModAbilities.BERRER_HYPNOSIE)
 					.scares(List.of(Creeper.class))

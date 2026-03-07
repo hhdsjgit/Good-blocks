@@ -4,6 +4,7 @@
 package net.hhdsj.goodblock.init;
 
 import net.hhdsj.goodblock.GoodblockMod;
+import net.ltxprogrammer.changed.init.ChangedItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -34,7 +35,7 @@ public class GoodblockModTabs {
 	public static final RegistryObject<CreativeModeTab> GOODBLOCK_ENTITY = REGISTRY.register("goodblock_entity",
 			() -> CreativeModeTab.builder()
 					.title(Component.translatable("item_group.goodblock.goodblock_entity"))
-					.icon(() -> new ItemStack(GoodblockModBlocks.BLOCKBW_1.get()))
+					.icon(() -> new ItemStack(ChangedItems.DARK_LATEX_MASK.get()))
 					.build());
 
 	// 所有物品通过事件添加到对应的标签页

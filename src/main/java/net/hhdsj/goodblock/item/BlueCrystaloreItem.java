@@ -1,6 +1,5 @@
 package net.hhdsj.goodblock.item;
 
-import net.hhdsj.goodblock.init.GoodblockModTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 
