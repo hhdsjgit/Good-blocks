@@ -93,7 +93,7 @@ public class GoodblockModTabs {
 			tabData.accept(GoodblockModItems.PAINITE_ARMOR_BOOTS.get());
 
 			// 液体桶
-			tabData.accept(GoodblockModItems.FLUIDHOTTEST_BUCKET.get());
+			//tabData.accept(GoodblockModItems.FLUIDHOTTEST_BUCKET.get());
 		}
 
 		// 自定义标签页：GOODBLOCK_ENTITY

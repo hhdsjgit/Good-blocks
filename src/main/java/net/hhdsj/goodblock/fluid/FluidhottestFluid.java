@@ -28,7 +28,7 @@ public abstract class FluidhottestFluid extends ForgeFlowingFluid {
 					.explosionResistance(100f)
 					.tickRate(50)
 					.levelDecreasePerBlock(2)
-					.bucket(GoodblockModItems.FLUIDHOTTEST_BUCKET)
+					//.bucket(GoodblockModItems.FLUIDHOTTEST_BUCKET)
 					.block(() -> (LiquidBlock) GoodblockModBlocks.FLUIDHOTTEST.get());
 	private FluidhottestFluid() {
 		super(PROPERTIES);
