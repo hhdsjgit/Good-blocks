@@ -48,7 +48,7 @@ import net.ltxprogrammer.changed.init.ChangedAttributes;
 @Mod.EventBusSubscriber
 public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAttackMob {
 	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("windswept_hills"), new ResourceLocation("snowy_plains"), new ResourceLocation("snowy_beach"));
-    public Level level;
+    //public Level level;
 
     @Override
     public TransfurMode getTransfurMode() {
@@ -111,8 +111,7 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 	}
 
 	@Override
-	public void performRangedAttack(@NotNull LivingEntity target, float flval) {
-
+    public void performRangedAttack(@NotNull LivingEntity target, float flval) {
 		//Fix #10 issues
 		if (target instanceof Player player) {
 			TransfurVariantInstance<?> variant = ProcessTransfur.getPlayerTransfurVariant(player);
@@ -121,12 +120,15 @@ public class LatexthreemonthwolfEntity extends ChangedEntity implements RangedAt
 			}
 		}
 
-        var entityarrow = new LatexthreemonthwolfEntityProjectile(this.level, this);
+		var entityarrow = new LatexthreemonthwolfEntityProjectile(this.level(), this);
 		double d0 = target.getY() + target.getEyeHeight() - 1.1;
 		double d1 = target.getX() - this.getX();
 		double d3 = target.getZ() - this.getZ();
 		entityarrow.shoot(d1, d0 - entityarrow.getY() + Math.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1.6F, 12.0F);
-		level.addFreshEntity(entityarrow);
+
+		if (this.level() != null) {
+			this.level().addFreshEntity(entityarrow);
+		}
 	}
 
 	public static void init() {

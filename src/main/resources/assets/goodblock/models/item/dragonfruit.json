@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "goodblock:items/no_thing_test"
+    "layer0": "goodblock:item/no_thing_test"
   }
 }

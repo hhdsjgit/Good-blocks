@@ -12,7 +12,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.level.Level;
-
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.network.PlayMessages;
@@ -49,7 +48,6 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
     private int shakeTime = 0;
     private boolean inGround = false;
     private int inGroundTime = 0;
-    private Level level;
 
     public LatexthreemonthwolfEntityProjectile(EntityType<? extends LatexthreemonthwolfEntityProjectile> type, Level level) {
         super(type, level);
@@ -99,8 +97,8 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
         }
         
         // 粒子效果
-        if (!this.inGround && this.level.isClientSide && this.tickCount % 2 == 0) {
-            this.level.addParticle(ParticleTypes.ENCHANT, 
+        if (!this.inGround && this.level().isClientSide && this.tickCount % 2 == 0) {
+            this.level().addParticle(ParticleTypes.ENCHANT, 
                 this.getX(), this.getY(), this.getZ(), 
                 0.0D, 0.0D, 0.0D);
         }
@@ -110,7 +108,7 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
     protected void onHitEntity(EntityHitResult result) {
         Entity target = result.getEntity();
         
-        if (!this.level.isClientSide && target instanceof LivingEntity livingTarget) {
+        if (!this.level().isClientSide && target instanceof LivingEntity livingTarget) {
             if (target == this.getOwner()) {
                 return;
             }
@@ -144,7 +142,7 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
                 this.setDeltaMovement(this.getDeltaMovement().scale(-0.1D));
                 this.setYRot(this.getYRot() + 180.0F);
                 this.yRotO += 180.0F;
-                if (!this.level.isClientSide && this.getDeltaMovement().lengthSqr() < 1.0E-7D) {
+                if (!this.level().isClientSide && this.getDeltaMovement().lengthSqr() < 1.0E-7D) {
                     this.discard();
                 }
             }
@@ -199,7 +197,7 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
         this.playSound(SoundEvents.SHIELD_BLOCK, 1.0F, 1.0F);
         
         // 粒子效果
-        if (this.level instanceof ServerLevel serverLevel) {
+        if (this.level() instanceof ServerLevel serverLevel) {
             serverLevel.sendParticles(ParticleTypes.CRIT, 
                 this.getX(), this.getY(), this.getZ(), 
                 10, 0.5, 0.5, 0.5, 0.1);
@@ -286,7 +284,7 @@ public class LatexthreemonthwolfEntityProjectile extends AbstractArrow {
     
     @Override
     public void playerTouch(net.minecraft.world.entity.player.Player player) {
-        if (!this.level.isClientSide && (this.inGround || this.isNoPhysics()) && 
+        if (!this.level().isClientSide && (this.inGround || this.isNoPhysics()) && 
             this.shakeTime <= 0 && player.getInventory().add(this.getPickupItem())) {
             player.take(this, 1);
             this.discard();

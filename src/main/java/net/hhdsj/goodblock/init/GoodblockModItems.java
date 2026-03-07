@@ -95,7 +95,7 @@ public class GoodblockModItems {
 	public static final RegistryObject<Item> PAINITE_ARMOR_BOOTS = REGISTRY.register("painite_armor_boots", PainiteArmorItem.Boots::new);
 
 	// 液体桶物品的注册
-	public static final RegistryObject<Item> FLUIDHOTTEST_BUCKET = REGISTRY.register("fluidhottest_bucket", FluidhottestItem::new);
+	//public static final RegistryObject<Item> FLUIDHOTTEST_BUCKET = REGISTRY.register("fluidhottest_bucket", FluidhottestItem::new);
 
 	/*
 	// 各种生物蛋的注册 - 移除.tab()，通过事件添加

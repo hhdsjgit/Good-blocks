@@ -68,7 +68,7 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
     private int obsidianBreakCooldown = 0;
     private int AttackInUse = 1;
     private int ticksInUse = 300;
-    private Level level;
+    // 删除这行: private Level level;  // 不需要，使用父类的 level()
 
     public LatexIceFieldWolfDragonBossEntity(PlayMessages.SpawnEntity packet, Level world) {
         this(GoodblockModEntities.LATEX_ICE_FIELD_WOLF_DRAGON_BOSS.get(), world);
@@ -78,7 +78,7 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
         attributes.getInstance(ChangedAttributes.TRANSFUR_DAMAGE.get()).setBaseValue(1);
-        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(0.4);
+        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.1);
         attributes.getInstance(ChangedAttributes.JUMP_STRENGTH.get()).setBaseValue(1.5);
         attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(500);
         attributes.getInstance(Attributes.ARMOR).setBaseValue(35);
@@ -127,7 +127,7 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
             return false;
         LivingEntity target = this.getTarget();
         if (target != null) {
-            Level targetLevel = target.getCommandSenderWorld();
+            Level targetLevel = target.level();
 
             if (targetLevel instanceof ServerLevel serverLevel) {
                 int randomValue = this.random.nextInt(11); // 0,1,2,3,4...,10 //
@@ -150,21 +150,25 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
                 }
             }
         } else if (this.getTarget() == null){
-            Player nearestPlayer = this.level.getNearestPlayer(this, 16.0);
+            // 修复：使用 level()
+            if (this.level() == null) return false;
+            Player nearestPlayer = this.level().getNearestPlayer(this, 16.0);
             if (nearestPlayer != null) {
                 this.setTarget(nearestPlayer);
             }
         }
         return super.hurt(source, amount);
     }
+
     public void doClawsAttackEffect() {// Efeito visual
         double d0 = (double) (-Mth.sin(this.getYRot() * 0.017453292F)) * 1;
         double d1 = (double) Mth.cos(this.getYRot() * 0.017453292F) * 1;
-        if (this.level instanceof ServerLevel serverLevel) {
+        // 修复：使用 level()
+        if (this.level() instanceof ServerLevel serverLevel) {
             serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK, this.getX() + d0, this.getY(0.5), this.getZ() + d1, 0, d0, 0.0, d1, 0.0);
             serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK, this.getX() + d0, this.getY(0.6), this.getZ() + d1, 0, d0, 0.0, d1, 0.0);
             serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK, this.getX() + d0, this.getY(0.7), this.getZ() + d1, 0, d0, 0.0, d1, 0.0);
-            this.level.playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.PLAYERS, 1f, 0.75f);
+            this.level().playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.PLAYERS, 1f, 0.75f);
         }
     }
 
@@ -173,15 +177,17 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
         xpReward = 3000;
         setNoAi(false);
         this.bossEvent = new ServerBossEvent(
-                Component.translatable("entity.goodblock.boss_heath.night_owl"),
-                BossEvent.BossBarColor.RED,
-                BossEvent.BossBarOverlay.NOTCHED_10 // 进度条样式
+                Component.translatable("entity.goodblock.boss_heath.ice_field_wolf_dragon"),
+                BossEvent.BossBarColor.BLUE,
+                BossEvent.BossBarOverlay.NOTCHED_10
         );
         // 默认设置为可见
         this.bossEvent.setVisible(true);
     }
 
     public void CheckobsidianBreak() {
+        if (this.level() == null) return;
+
         if (LatexIceFieldWolfDragonBossEntity.this.getHealth() <= LatexIceFieldWolfDragonBossEntity.this.getMaxHealth() * 0.95) {
             LivingEntity target = LatexIceFieldWolfDragonBossEntity.this.getTarget();
             if (target != null) {
@@ -189,7 +195,7 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
                 LatexIceFieldWolfDragonBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
 
                 // 挖掘周围5x5x5区域的黑曜石
-                Level level = LatexIceFieldWolfDragonBossEntity.this.level;
+                Level level = LatexIceFieldWolfDragonBossEntity.this.level();  // 修复
                 BlockPos centerPos = LatexIceFieldWolfDragonBossEntity.this.blockPosition();
 
                 // 遍历5x5x5区域
@@ -241,6 +247,10 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
     @Override
     public void tick() {
         super.tick();
+        // 修复：使用 level()
+        if (this.level() == null) {
+            return;
+        }
         if (obsidianBreakCooldown > 0) {
             obsidianBreakCooldown--;
         }
@@ -251,7 +261,7 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
         }
 
         // 更新血条进度
-        if (!this.level.isClientSide) {
+        if (!this.level().isClientSide) {
             float healthPercent = this.getHealth() / this.getMaxHealth();
             this.bossEvent.setProgress(healthPercent);
         }
@@ -264,8 +274,8 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
         this.bossEvent.setDarkenScreen(true);      // 屏幕变暗
         this.bossEvent.setCreateWorldFog(true);    // 添加环境雾
         player.displayClientMessage(
-                Component.literal("You can't exit me!").withStyle((style -> {
-                    Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
+                Component.literal("You can't escape the ice field!").withStyle((style -> {
+                    Style returnStyle = style.withColor(ChatFormatting.AQUA);
                     returnStyle = returnStyle.withItalic(true);
                     return returnStyle;
                 })),
@@ -277,9 +287,13 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
     public void stopSeenByPlayer(@NotNull ServerPlayer player) {
         super.stopSeenByPlayer(player);
         this.bossEvent.removePlayer(player);
-        if (LatexIceFieldWolfDragonBossEntity.this.level instanceof ServerLevel serverLevel) {
+        // 修复：使用 level()
+        if (this.level() == null) {
+            return;
+        }
+        if (this.level() instanceof ServerLevel serverLevel) {
             serverLevel.sendParticles(
-                    ParticleTypes.LAVA,
+                    ParticleTypes.SNOWFLAKE,
                     this.getX(),
                     this.getY() + this.getBbHeight() / 2,
                     this.getZ(),
@@ -289,8 +303,8 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
             );
         }
         player.displayClientMessage(
-                Component.literal("You can't exit me!").withStyle((style -> {
-                    Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
+                Component.literal("The ice field retreats...").withStyle((style -> {
+                    Style returnStyle = style.withColor(ChatFormatting.AQUA);
                     returnStyle = returnStyle.withItalic(true);
                     return returnStyle;
                 })),
@@ -304,7 +318,7 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
 
         if (this.getHealth() < this.getMaxHealth() * 0.5) {
             this.bossEvent.setName(
-                    Component.translatable("entity.goodblock.boss_heath.night_owl")
+                    Component.translatable("entity.goodblock.boss_heath.ice_field_wolf_dragon")
                             .withStyle(ChatFormatting.RED)
             );
         }
@@ -347,7 +361,7 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
             float headPitch,
             float alpha
     ) {
-        float r = 1.0f, g = 0.0f, b = 0.0f;
+        float r = 0.0f, g = 0.5f, b = 1.0f; // 冰蓝色
 
         Minecraft minecraft = Minecraft.getInstance();
         EntityRenderDispatcher entityRenderDispatcher = minecraft.getEntityRenderDispatcher();
@@ -366,8 +380,7 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
 
     public void tickAttackTicks() {
         if (!this.isNoAi()) {
-
-                ticksInUse++;
+            ticksInUse++;
         }
     }
 
@@ -381,48 +394,45 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
         if (target == null) {
             return;
         }
+
         tickAttackTicks();
         if (ticksInUse > 260) {
             AttackInUse = 0;
             ticksInUse = 0;
-        }else{
+        } else {
             return;
         }
+
+        if (this.level() == null) return;
+
         double radius = 2.5;
 
-        for (int theta = 0; theta < 360; theta += 45) { // Ângulo horizontal (longitude)
+        for (int theta = 0; theta < 360; theta += 45) {
             double angleTheta = Math.toRadians(theta);
-            for (int phi = 0; phi <= 180; phi += 45) { // Ângulo vertical (latitude)
+            for (int phi = 0; phi <= 180; phi += 45) {
                 double anglePhi = Math.toRadians(phi);
 
-                // Direção do disparo (coordenadas cartesianas de uma esfera)
                 double dx = Math.sin(anglePhi) * Math.cos(angleTheta);
                 double dy = Math.cos(anglePhi);
                 double dz = Math.sin(anglePhi) * Math.sin(angleTheta);
 
-                // Posição inicial (esfera ao redor da entidade)
                 double px = this.getX() + dx * radius;
-                double py = this.getY() + dy * radius + 1.0; // leve ajuste de altura
+                double py = this.getY() + dy * radius + 1.0;
                 double pz = this.getZ() + dz * radius;
 
-                VoidFoxParticleProjectile projectile = new VoidFoxParticleProjectile(ChangedAddonEntities.PARTICLE_PROJECTILE.get(), this.level);
+                // 修复：使用 level()
+                VoidFoxParticleProjectile projectile = new VoidFoxParticleProjectile(ChangedAddonEntities.PARTICLE_PROJECTILE.get(), this.level());
                 projectile.setSmoothMotion(true);
                 projectile.setPos(px, py, pz);
-                projectile.shoot(dx, dy, dz, 1.0f, 0.0f); // dispara na direção da esfera
+                projectile.shoot(dx, dy, dz, 1.0f, 0.0f);
                 projectile.setOwner(this);
                 projectile.setTarget(this.getTarget());
                 projectile.setParryAble(true);
 
-                this.level.addFreshEntity(projectile);
+                this.level().addFreshEntity(projectile);
             }
         }
-
     }
-
-    private void crawlingSystem(LatexIceFieldWolfDragonBossEntity latexNightOwlBossEntity, LivingEntity target) {
-    }
-
-
 
     @Override
     protected void registerGoals() {
@@ -451,11 +461,11 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
                 double distance = LatexIceFieldWolfDragonBossEntity.this.distanceTo(target);
 
                 if (distance >= 8) {
-                    int randomIntBound = LatexIceFieldWolfDragonBossEntity.this.random.nextInt(20); // 0-20之间的随机整数
+                    int randomIntBound = LatexIceFieldWolfDragonBossEntity.this.random.nextInt(20);
                     if (randomIntBound >= 10) {
                         if (getTarget() instanceof Player player) {
-                            player.displayClientMessage(Component.literal("Can you think ....?").withStyle((style -> {
-                                Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
+                            player.displayClientMessage(Component.literal("Feel the ice!").withStyle((style -> {
+                                Style returnStyle = style.withColor(ChatFormatting.AQUA);
                                 returnStyle = returnStyle.withItalic(true);
                                 return returnStyle;
                             })), true);
@@ -464,9 +474,13 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
                         double oldY = LatexIceFieldWolfDragonBossEntity.this.getY();
                         double oldZ = LatexIceFieldWolfDragonBossEntity.this.getZ();
 
-                        if (LatexIceFieldWolfDragonBossEntity.this.level instanceof ServerLevel serverLevel) {
+                        // 修复：使用 level()
+                        if (LatexIceFieldWolfDragonBossEntity.this.level() == null) {
+                            return;
+                        }
+                        if (LatexIceFieldWolfDragonBossEntity.this.level() instanceof ServerLevel serverLevel) {
                             serverLevel.sendParticles(
-                                    ParticleTypes.SMOKE,
+                                    ParticleTypes.SNOWFLAKE,
                                     oldX,
                                     oldY + 1,
                                     oldZ,
@@ -477,9 +491,10 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
                         }
 
                         LatexIceFieldWolfDragonBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
-                        if (LatexIceFieldWolfDragonBossEntity.this.level instanceof ServerLevel serverLevel) {
+
+                        if (LatexIceFieldWolfDragonBossEntity.this.level() instanceof ServerLevel serverLevel) {
                             serverLevel.sendParticles(
-                                    ParticleTypes.LAVA,
+                                    ParticleTypes.ITEM_SNOWBALL,
                                     target.getX(),
                                     target.getY() + target.getBbHeight() / 2,
                                     target.getZ(),
@@ -488,25 +503,27 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
                                     0.5
                             );
                         }
-                    } else {
 
+                        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 3));
+                    } else {
                         if (getTarget() instanceof Player player) {
-                            player.displayClientMessage(Component.literal("Test message--1?").withStyle((style -> {
-                                Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
+                            player.displayClientMessage(Component.literal("Freeze!").withStyle((style -> {
+                                Style returnStyle = style.withColor(ChatFormatting.AQUA);
                                 returnStyle = returnStyle.withItalic(true);
                                 return returnStyle;
                             })), true);
                         }
 
-                        target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 1));
-                        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 600, 2));
+                        target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 1));
+                        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 2));
                     }
                 }
             }
+
             public void stop() {
                 if (getTarget() instanceof Player player) {
-                    player.displayClientMessage(Component.literal("Test message--0?").withStyle((style -> {
-                        Style returnStyle = style.withColor(ChatFormatting.DARK_RED);
+                    player.displayClientMessage(Component.literal("...").withStyle((style -> {
+                        Style returnStyle = style.withColor(ChatFormatting.AQUA);
                         returnStyle = returnStyle.withItalic(true);
                         return returnStyle;
                     })), true);
@@ -517,11 +534,9 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
 
     @Override
     public boolean doHurtTarget(@NotNull Entity target) {
-        // 先执行原版的近战攻击逻辑
         boolean hurt = super.doHurtTarget(target);
 
         if (hurt && target instanceof LivingEntity livingTarget) {
-            // 添加击退效果
             double knockback = 0.5;
             livingTarget.setDeltaMovement(
                     livingTarget.getDeltaMovement().add(
@@ -531,19 +546,18 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
                     )
             );
 
-            // 添加粒子效果
-            if (this.level instanceof ServerLevel serverLevel) {
+            // 修复：使用 level()
+            if (this.level() instanceof ServerLevel serverLevel) {
                 serverLevel.sendParticles(
-                        ParticleTypes.FLAME,                    // 火焰粒子
-                        target.getX(),                           // 目标X坐标（改为目标位置）
-                        target.getY() + target.getBbHeight() / 2, // 目标中心高度
-                        target.getZ(),                           // 目标Z坐标
-                        600,                                      // 粒子数量（减少一些）
-                        2, 2, 2,                           // 扩散范围
-                        0.4                                     // 粒子速度
+                        ParticleTypes.SNOWFLAKE,
+                        target.getX(),
+                        target.getY() + target.getBbHeight() / 2,
+                        target.getZ(),
+                        600,
+                        2, 2, 2,
+                        0.4
                 );
 
-                // 添加攻击特效粒子（横扫粒子）
                 doClawsAttackEffect();
 
                 SimpleParticleType solventParticle = (SimpleParticleType) ChangedAddonParticleTypes.SOLVENT_PARTICLE.get();
@@ -559,12 +573,8 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
                 );
             }
 
-            // 添加效果
-            livingTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 600, 1));
-            livingTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 300, 1));
-            livingTarget.addEffect(new MobEffectInstance(MobEffects.GLOWING, 600, 1));
-
-
+            livingTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 600, 2));
+            livingTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 200, 1));
         }
 
         return hurt;
@@ -577,9 +587,7 @@ public class LatexIceFieldWolfDragonBossEntity extends ChangedEntity{
     }
 
     public static void init() {
-
     }
 
     private final ServerBossEvent bossEvent;
-
 }

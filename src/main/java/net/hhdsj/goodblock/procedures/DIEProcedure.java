@@ -10,17 +10,22 @@ import net.minecraft.resources.ResourceLocation;
 
 public class DIEProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
-		if (entity == null) return;
+		try {
+			if (entity == null || world == null) return;
 
-		ResourceKey<DamageType> customDamageType = ResourceKey.create(
-				Registries.DAMAGE_TYPE,
-				new ResourceLocation("goodblock", "furry_cat_kill")
-		);
+			ResourceKey<DamageType> customDamageType = ResourceKey.create(
+					Registries.DAMAGE_TYPE,
+					new ResourceLocation("goodblock", "furry_cat_kill")
+			);
 
-		var damageType = world.registryAccess()
-				.registryOrThrow(Registries.DAMAGE_TYPE)
-				.getHolderOrThrow(customDamageType);
+			var damageType = world.registryAccess()
+					.registryOrThrow(Registries.DAMAGE_TYPE)
+					.getHolderOrThrow(customDamageType);
 
-		entity.hurt(new DamageSource(damageType), 80);
+			entity.hurt(new DamageSource(damageType), 80);
+		} catch (Exception e) {
+			System.err.println("Goodblock Error: " + e.getMessage());
+			//e.printStackTrace();
+		}
 	}
 }

@@ -70,7 +70,7 @@ public class LatexthreemonthwolfRenderer extends AdvancedHumanoidRenderer<Latext
 	@Override
 	protected boolean isShaking(LatexthreemonthwolfEntity _ent) {
 		Entity entity = _ent;
-		Level world = ((LatexthreemonthwolfEntity) entity).level;
+		Level world = ((LatexthreemonthwolfEntity) entity).level();
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();

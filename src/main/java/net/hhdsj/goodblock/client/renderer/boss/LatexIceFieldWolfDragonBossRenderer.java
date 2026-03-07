@@ -14,6 +14,16 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
+import net.ltxprogrammer.changed.client.renderer.layers.*;
+import net.ltxprogrammer.changed.util.Color3;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+
+import net.hhdsj.goodblock.entity.LatexIceFieldWolfDragonEntity;
+import net.hhdsj.goodblock.client.model.ModelIceFieldWolfDragon;
+
+import net.ltxprogrammer.changed.client.renderer.model.armor.ArmorLatexBigTailDragonModel;
+import net.ltxprogrammer.changed.client.renderer.AdvancedHumanoidRenderer;
 
 @OnlyIn(Dist.CLIENT)
 public class LatexIceFieldWolfDragonBossRenderer extends AdvancedHumanoidRenderer<LatexIceFieldWolfDragonBossEntity, ModelLatexIceFieldWolfDragonBoss> {
@@ -25,15 +35,16 @@ public class LatexIceFieldWolfDragonBossRenderer extends AdvancedHumanoidRendere
         this.addLayer(new LatexParticlesLayer<>(this, getModel()));
         this.addLayer(TransfurCapeLayer.normalCape(this, context.getModelSet()));
         this.addLayer(new CustomEyesLayer<>(this, context.getModelSet()));
+		this.addLayer(new EmissiveBodyLayer<>(this, new ResourceLocation("goodblock", "textures/entities/latex/latex_kamona_hsguy_dragonwolf_png_light.png")));
         this.addLayer(new CustomEyesLayer<>(this, context.getModelSet(), CustomEyesLayer::scleraColor,
-                CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#ffed7c")), CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#ffed7c")),
-                CustomEyesLayer::noRender, CustomEyesLayer::noRender));
+				CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#006400")), CustomEyesLayer.fixedColorGlowing(Color3.parseHex("#006400")),
+				CustomEyesLayer::noRender, CustomEyesLayer::noRender));
         this.addLayer(GasMaskLayer.forSnouted(this, context.getModelSet()));
     }
 
     @Override
     public ResourceLocation getTextureLocation(LatexIceFieldWolfDragonBossEntity entity) {
-        return new ResourceLocation("goodblock:textures/entities/boss/latex_night_owl_boss_entity.png");
+        return new ResourceLocation("goodblock:textures/entities/latex/latex_kamona_hsguy_dragonwolf_png1.png");
     }
 
     /*

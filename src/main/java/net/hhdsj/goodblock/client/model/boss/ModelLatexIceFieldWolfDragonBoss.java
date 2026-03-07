@@ -19,7 +19,7 @@ import java.util.List;
 
 public class ModelLatexIceFieldWolfDragonBoss extends AdvancedHumanoidModel<LatexIceFieldWolfDragonBossEntity> {//implements AdvancedHumanoidModelInterface<LatexIceFieldWolfDragonBossEntity, ModelLatexIceFieldWolfDragonBoss> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latexnewfoxunified"), "main");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latexicefieldwolfboss"), "main");
     private final ModelPart LeftLeg;
     public final ModelPart RightLeg;
     private final ModelPart RightArm;

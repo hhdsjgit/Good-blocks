@@ -69,7 +69,6 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     private int obsidianBreakCooldown = 0;
     private int AttackInUse = 1;
     private int ticksInUse = 300;
-    private Level level;
 
     public LatexNightOwlBossEntity(PlayMessages.SpawnEntity packet, Level world) {
         this(GoodblockModEntities.LATEXNIGHTOWLDRAGONBOSS.get(), world);
@@ -79,7 +78,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
         attributes.getInstance(ChangedAttributes.TRANSFUR_DAMAGE.get()).setBaseValue(1);
-        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(0.4);
+        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.1);
         attributes.getInstance(ChangedAttributes.JUMP_STRENGTH.get()).setBaseValue(1.5);
         attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(500);
         attributes.getInstance(Attributes.ARMOR).setBaseValue(35);
@@ -133,7 +132,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
             return false;
         LivingEntity target = this.getTarget();
         if (target != null) {
-            Level targetLevel = target.getCommandSenderWorld();
+            Level targetLevel = target.level();
 
             if (targetLevel instanceof ServerLevel serverLevel) {
                 int randomValue = this.random.nextInt(11); // 0,1,2,3,4...,10 //
@@ -156,7 +155,8 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                 }
             }
         } else if (this.getTarget() == null){
-            Player nearestPlayer = this.level.getNearestPlayer(this, 16.0);
+            // 修复：使用 level()
+            Player nearestPlayer = this.level().getNearestPlayer(this, 16.0);
             if (nearestPlayer != null) {
                 this.setTarget(nearestPlayer);
             }
@@ -166,11 +166,13 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     public void doClawsAttackEffect() {// Efeito visual
         double d0 = (double) (-Mth.sin(this.getYRot() * 0.017453292F)) * 1;
         double d1 = (double) Mth.cos(this.getYRot() * 0.017453292F) * 1;
-        if (this.level instanceof ServerLevel serverLevel) {
+        // 修复：使用 level()
+        if (this.level() instanceof ServerLevel serverLevel) {
             serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK, this.getX() + d0, this.getY(0.5), this.getZ() + d1, 0, d0, 0.0, d1, 0.0);
             serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK, this.getX() + d0, this.getY(0.6), this.getZ() + d1, 0, d0, 0.0, d1, 0.0);
             serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK, this.getX() + d0, this.getY(0.7), this.getZ() + d1, 0, d0, 0.0, d1, 0.0);
-            this.level.playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.PLAYERS, 1f, 0.75f);
+            // 修复：使用 level()
+            this.level().playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.PLAYERS, 1f, 0.75f);
         }
     }
 
@@ -188,6 +190,9 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     }
 
     public void CheckobsidianBreak() {
+        // 修复：使用 level()
+        if (this.level() == null) return;
+        
         if (LatexNightOwlBossEntity.this.getHealth() <= LatexNightOwlBossEntity.this.getMaxHealth() * 0.95) {
             LivingEntity target = LatexNightOwlBossEntity.this.getTarget();
             if (target != null) {
@@ -195,7 +200,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                 LatexNightOwlBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
 
                 // 挖掘周围5x5x5区域的黑曜石
-                Level level = LatexNightOwlBossEntity.this.level;
+                Level level = LatexNightOwlBossEntity.this.level();  // 修复
                 BlockPos centerPos = LatexNightOwlBossEntity.this.blockPosition();
 
                 // 遍历5x5x5区域
@@ -247,6 +252,10 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     @Override
     public void tick() {
         super.tick();
+        // 修复：使用 level()
+        if (this.level() == null) {
+            return;
+        }
         if (obsidianBreakCooldown > 0) {
             obsidianBreakCooldown--;
         }
@@ -257,7 +266,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
         }
 
         // 更新血条进度
-        if (!this.level.isClientSide) {
+        if (!this.level().isClientSide) {
             float healthPercent = this.getHealth() / this.getMaxHealth();
             this.bossEvent.setProgress(healthPercent);
         }
@@ -283,7 +292,11 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     public void stopSeenByPlayer(@NotNull ServerPlayer player) {
         super.stopSeenByPlayer(player);
         this.bossEvent.removePlayer(player);
-        if (LatexNightOwlBossEntity.this.level instanceof ServerLevel serverLevel) {
+        // 修复：使用 level()
+        if (this.level() == null) {
+            return;
+        }
+        if (LatexNightOwlBossEntity.this.level() instanceof ServerLevel serverLevel) {
             serverLevel.sendParticles(
                     ParticleTypes.LAVA,
                     this.getX(),
@@ -411,7 +424,8 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                 double py = this.getY() + dy * radius + 1.0; // leve ajuste de altura
                 double pz = this.getZ() + dz * radius;
 
-                VoidFoxParticleProjectile projectile = new VoidFoxParticleProjectile(ChangedAddonEntities.PARTICLE_PROJECTILE.get(), this.level);
+                // 修复：使用 level()
+                VoidFoxParticleProjectile projectile = new VoidFoxParticleProjectile(ChangedAddonEntities.PARTICLE_PROJECTILE.get(), this.level());
                 projectile.setSmoothMotion(true);
                 projectile.setPos(px, py, pz);
                 projectile.shoot(dx, dy, dz, 1.0f, 0.0f); // dispara na direção da esfera
@@ -419,7 +433,7 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                 projectile.setTarget(this.getTarget());
                 projectile.setParryAble(true);
 
-                this.level.addFreshEntity(projectile);
+                this.level().addFreshEntity(projectile);
             }
         }
 
@@ -469,8 +483,11 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                         double oldX = LatexNightOwlBossEntity.this.getX();
                         double oldY = LatexNightOwlBossEntity.this.getY();
                         double oldZ = LatexNightOwlBossEntity.this.getZ();
-
-                        if (LatexNightOwlBossEntity.this.level instanceof ServerLevel serverLevel) {
+                        // 修复：使用 level()
+                        if (LatexNightOwlBossEntity.this.level() == null) {
+                            return;
+                        }
+                        if (LatexNightOwlBossEntity.this.level() instanceof ServerLevel serverLevel) {
                             serverLevel.sendParticles(
                                     ParticleTypes.SMOKE,
                                     oldX,
@@ -483,7 +500,8 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
                         }
 
                         LatexNightOwlBossEntity.this.teleportTo(target.getX(), target.getY(), target.getZ());
-                        if (LatexNightOwlBossEntity.this.level instanceof ServerLevel serverLevel) {
+                        // 修复：使用 level()
+                        if (LatexNightOwlBossEntity.this.level() instanceof ServerLevel serverLevel) {
                             serverLevel.sendParticles(
                                     ParticleTypes.LAVA,
                                     target.getX(),
@@ -525,7 +543,6 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
     public boolean doHurtTarget(@NotNull Entity target) {
         // 先执行原版的近战攻击逻辑
         boolean hurt = super.doHurtTarget(target);
-
         if (hurt && target instanceof LivingEntity livingTarget) {
             // 添加击退效果
             double knockback = 0.5;
@@ -538,7 +555,8 @@ public class LatexNightOwlBossEntity extends ChangedEntity{
             );
 
             // 添加粒子效果
-            if (this.level instanceof ServerLevel serverLevel) {
+            // 修复：使用 level()
+            if (this.level() instanceof ServerLevel serverLevel) {
                 serverLevel.sendParticles(
                         ParticleTypes.FLAME,                    // 火焰粒子
                         target.getX(),                           // 目标X坐标（改为目标位置）

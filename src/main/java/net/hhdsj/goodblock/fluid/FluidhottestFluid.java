@@ -34,10 +34,10 @@ public abstract class FluidhottestFluid extends ForgeFlowingFluid {
 		super(PROPERTIES);
 	}
 
-	@Override
-	public ParticleOptions getDripParticle() {
-		return (SimpleParticleType) (GoodblockModParticleTypes.PARHOTX.get());
-	}
+	//@Override
+	//public ParticleOptions getDripParticle() {
+	//	return (SimpleParticleType) (GoodblockModParticleTypes.PARHOTX.get());
+	//}
 
 	@Override
 	public Vec3 getFlow(BlockGetter world, BlockPos pos, FluidState fluidstate) {

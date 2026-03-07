@@ -366,14 +366,15 @@ public class GoodblockModEntities {
 
     // 在同一个类中添加事件监听器
     @SubscribeEvent
-    public static void addSpawnEggsToCreativeTab(BuildCreativeModeTabContentsEvent event) {
+    public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
+    //public static void addSpawnEggsToCreativeTab(BuildCreativeModeTabContentsEvent event) {
         // 检查是否是自定义的实体Tab
-        if (event.getTab() == GoodblockModTabs.GOODBLOCK_ENTITY.get()) {
+        if (tabData.getTabKey() == GoodblockModTabs.GOODBLOCK_ENTITY.getKey()) {
             // 添加所有刷怪蛋，并检查是否存在
             SPAWN_EGGS.values().forEach(egg -> {
                 try {
                     if (egg != null && egg.isPresent()) {
-                        event.accept(egg.get());
+                        tabData.accept(egg.get());
                     } else {
                         System.out.println("警告: 刷怪蛋不存在 - " + egg);
                     }

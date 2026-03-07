@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "goodblock:items/painite_picaxe_v2"
+    "layer0": "goodblock:item/painite_picaxe_v2"
   }
 }

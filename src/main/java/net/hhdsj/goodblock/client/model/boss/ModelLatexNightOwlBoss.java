@@ -20,7 +20,7 @@ import java.util.List;
 
 public class ModelLatexNightOwlBoss extends AdvancedHumanoidModel<LatexNightOwlBossEntity> {//implements AdvancedHumanoidModelInterface<LatexNightOwlBossEntity, ModelLatexNightOwlBoss> {
 
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_nighe_owl_model"), "main");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("goodblock", "latex_nighe_owl_boss_model"), "main");
     public final ModelPart RightLeg;
     public final ModelPart LeftLeg;
     public final ModelPart Head;

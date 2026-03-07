@@ -30,7 +30,10 @@ public class GoodblockModFluidTypes {
                         .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL_LAVA)
                         .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY_LAVA)
 
+
+
                 );
+
                 return type;
             }
     );

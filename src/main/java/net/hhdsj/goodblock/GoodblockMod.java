@@ -35,9 +35,11 @@ public class GoodblockMod {
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-		GoodblockModEnchantmentInit.ENCHANTMENTS.register(bus);
+		GoodblockModFluidTypes.REGISTRY.register(bus);
 
-		GoodblockModTabs.REGISTRY.register(bus);
+		GoodblockModFluids.REGISTRY.register(bus);
+
+		GoodblockModEnchantmentInit.ENCHANTMENTS.register(bus);
 
 		GoodblockModPaintings.REGISTRY.register(bus);
 
@@ -47,9 +49,12 @@ public class GoodblockMod {
 
 		GoodblockModEntities.REGISTRY.register(bus);
 
+		GoodblockModEntities.ITEMS.register(bus);
+
+		GoodblockModTabs.REGISTRY.register(bus);
+
 		//GoodblockModFeatures.REGISTRY.register(bus);
 
-		GoodblockModFluids.REGISTRY.register(bus);
 
 		GoodblockModParticleTypes.REGISTRY.register(bus);
 
