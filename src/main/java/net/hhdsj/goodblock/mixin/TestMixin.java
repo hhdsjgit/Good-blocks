@@ -9,8 +9,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Player.class)
 public class TestMixin {
 
-    @Inject(method = "tick", at = @At("HEAD"))
-    private void onPlayerTick(CallbackInfo ci) {
+    @Inject(method = "die", at = @At("HEAD"))
+    private void onPlayerDie(CallbackInfo ci) {
         //System.out.println("Mixin Successfully executed");
     }
 }

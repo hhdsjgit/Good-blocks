@@ -68,6 +68,7 @@
   "effect.goodblock.latexhotpar": "orange_latex",
   "effect.goodblock.radiation": "Radiation",
   "effect.goodblock.slowinfection": "Slow Infection",
+  "effect.goodblock.radiation.tf": "You feel a dull ache in your head...",
   "entity.goodblock.blackpupmale": "Black kcahra pup",
   "entity.goodblock.boss_heath.night_owl": "Night owl",
   "entity.goodblock.darkfu_latex_wolf_male": "Darkfu Male Latex Wolf",
@@ -177,4 +178,5 @@
   "subtitles.srening_ogg1": "Music",
   "subtitles.the_fluffy_heartbeat_in_the_cubicle": "Play The Fluffy Heartbeat in the Cubicle Music",
   "subtitles.the_fluffy_heartbeatinthe_cubiclemusic": "The Fluffy Heartbeat in the Cubicle Music"
+
 }

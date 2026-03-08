@@ -1,4 +1,4 @@
-package net.hhdsj.goodblock.procedures;
+package net.hhdsj.goodblock.procedures.api;
 
 import net.hhdsj.goodblock.event.GoodblockProcessTransfur;
 import net.ltxprogrammer.changed.entity.TransfurCause;
@@ -20,6 +20,19 @@ public class ProgressTransfurExt {
         } catch (Exception e) {
             e.printStackTrace();
             //QWQ AWA
+        }
+    }
+
+    public static void tf(LivingEntity livingEntity,float progress_speed,String text,TransfurCause transfurCause) {
+        final ResourceLocation FORM_VARIANT = new ResourceLocation(text);
+        try {
+            final var variant = ChangedRegistry.TRANSFUR_VARIANT.get().getValue(FORM_VARIANT);
+
+            if (variant != null) {
+                GoodblockProcessTransfur.progressTransfur(livingEntity, progress_speed, variant, TransfurContext.hazard(transfurCause));
+            }
+        } catch (Exception ignored) {
+            //无效果
         }
     }
 }

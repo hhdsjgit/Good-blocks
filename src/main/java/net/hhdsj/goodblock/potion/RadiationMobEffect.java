@@ -5,8 +5,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
-import net.hhdsj.goodblock.procedures.RadiationZaiXiaoGuoChiXuShiMeiKeFaShengProcedure;
+import net.hhdsj.goodblock.procedures.RadiationProcedure;
 import net.minecraft.world.level.LevelAccessor;
+import org.jetbrains.annotations.NotNull;
 
 public class RadiationMobEffect extends MobEffect {
 	public RadiationMobEffect() {
@@ -14,14 +15,14 @@ public class RadiationMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
+	public @NotNull String getDescriptionId() {
 		return "effect.goodblock.radiation";
 	}
 
 	@Override
 	public void applyEffectTick( LivingEntity entity, int amplifier) {
 		LevelAccessor world = entity.level();
-		RadiationZaiXiaoGuoChiXuShiMeiKeFaShengProcedure.execute(world,entity);
+		RadiationProcedure.execute(world,entity);
 	}
 
 	@Override

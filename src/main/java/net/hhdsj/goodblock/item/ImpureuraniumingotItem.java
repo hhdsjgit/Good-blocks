@@ -1,15 +1,13 @@
 
 package net.hhdsj.goodblock.item;
 
-import net.hhdsj.goodblock.procedures.ProgressTransfurExt;
+import net.hhdsj.goodblock.procedures.api.ProgressTransfurExt;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.Entity;
-
-import net.hhdsj.goodblock.init.GoodblockModTabs;
 
 public class ImpureuraniumingotItem extends Item {
 	public ImpureuraniumingotItem() {

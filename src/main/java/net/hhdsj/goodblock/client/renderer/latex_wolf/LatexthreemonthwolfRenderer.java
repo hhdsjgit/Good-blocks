@@ -1,12 +1,9 @@
 
 package net.hhdsj.goodblock.client.renderer.latex_wolf;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
-import net.hhdsj.goodblock.procedures.LatexthreemonthwolfZhanDouShiTiTiaoJianProcedure;
 import net.hhdsj.goodblock.entity.LatexthreemonthwolfEntity;
 import net.hhdsj.goodblock.client.model.latex_wolf.ModelLatexthreemonthwolf;
 
@@ -38,11 +35,6 @@ public class LatexthreemonthwolfRenderer extends AdvancedHumanoidRenderer<Latext
 
 	@Override
 	protected boolean isShaking(LatexthreemonthwolfEntity _ent) {
-		Entity entity = _ent;
-		Level world = ((LatexthreemonthwolfEntity) entity).level();
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
-		return LatexthreemonthwolfZhanDouShiTiTiaoJianProcedure.execute(entity);
+        return 6 > _ent.getHealth();
 	}
 }
