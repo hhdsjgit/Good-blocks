@@ -19,7 +19,6 @@ import net.ltxprogrammer.changed.entity.*;
 
 import java.util.List;
 
-import static net.hhdsj.goodblock.fluid.FluidhottestFluid.PROPERTIES;
 
 public class LatexhotparZaiXiaoGuoChiXuShiMeiKeFaShengProcedure {
     private static final ResourceLocation FORM_VARIANT = new ResourceLocation("goodblock", "form_latex_yunxq_hot_dragon");

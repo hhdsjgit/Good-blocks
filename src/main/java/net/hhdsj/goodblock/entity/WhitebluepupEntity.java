@@ -1,6 +1,7 @@
 
 package net.hhdsj.goodblock.entity;
 
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
@@ -98,10 +99,7 @@ public class WhitebluepupEntity extends ChangedEntity {
         return Color3.DARK;
     }
     
-	@Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+	
 
 
 
@@ -112,7 +110,7 @@ public class WhitebluepupEntity extends ChangedEntity {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
@@ -140,14 +138,5 @@ public class WhitebluepupEntity extends ChangedEntity {
 	public static void init() {
 	}
 
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 20);
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 10);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		return builder;
-	}
+	//删除注册方法
 }

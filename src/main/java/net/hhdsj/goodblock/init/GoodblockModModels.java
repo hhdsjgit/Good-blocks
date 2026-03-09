@@ -4,10 +4,21 @@
  */
 package net.hhdsj.goodblock.init;
 
-import net.hhdsj.goodblock.client.model.*;
+import net.hhdsj.goodblock.client.model.boss.ModelLatexIceFieldWolfDragonBoss;
 import net.hhdsj.goodblock.client.model.boss.ModelLatexNightOwl;
 import net.hhdsj.goodblock.client.model.boss.ModelLatexNightOwlBoss;
-import net.hhdsj.goodblock.client.model.taur.ModelLatexDarkPurpleDragonTaur;
+import net.hhdsj.goodblock.client.model.latex_dragon.*;
+import net.hhdsj.goodblock.client.model.latex_fox.ModelLatexOrangeFox;
+import net.hhdsj.goodblock.client.model.latex_fox.ModelLatexRadiationFox;
+import net.hhdsj.goodblock.client.model.latex_pup.ModelInksuger;
+import net.hhdsj.goodblock.client.model.latex_pup.Modelblackpupmale;
+import net.hhdsj.goodblock.client.model.latex_pup.Modelwhitebluepup;
+import net.hhdsj.goodblock.client.model.latex_shark.ModelLatexKcahraShark;
+import net.hhdsj.goodblock.client.model.latex_taur.ModelLatexDarkPurpleDragonTaur;
+import net.hhdsj.goodblock.client.model.latex_wolf.DarkfuLatexWolfMale;
+import net.hhdsj.goodblock.client.model.latex_wolf.ModelLatexPurpleCoocWolf;
+import net.hhdsj.goodblock.client.model.latex_wolf.ModelLatexpurplewswolf;
+import net.hhdsj.goodblock.client.model.latex_wolf.ModelLatexthreemonthwolf;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -17,11 +28,6 @@ import net.minecraftforge.api.distmarker.Dist;
 public class GoodblockModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
-		event.registerLayerDefinition(ModelDarkLatexYufengUnified.LAYER_LOCATION, ModelDarkLatexYufengUnified::createBodyLayer);
-		event.registerLayerDefinition(ModelProtoTypeMob.LAYER_LOCATION, ModelProtoTypeMob::createBodyLayer);
-		event.registerLayerDefinition(ModelNoNameMob.LAYER_LOCATION, ModelNoNameMob::createBodyLayer);
-		event.registerLayerDefinition(ModelLatexPurpleFoxUnified.LAYER_LOCATION, ModelLatexPurpleFoxUnified::createBodyLayer);
-
 		event.registerLayerDefinition(ModelLatexOrangeFox.LAYER_LOCATION, ModelLatexOrangeFox::createBodyLayer);
 		event.registerLayerDefinition(Modelbluedragon.LAYER_LOCATION, Modelbluedragon::createBodyLayer);
 		event.registerLayerDefinition(ModelLatexKcahraShark.LAYER_LOCATION, ModelLatexKcahraShark::createBodyLayer);
@@ -44,5 +50,6 @@ public class GoodblockModModels {
 		event.registerLayerDefinition(ModelLatexIqGoldDragon.LAYER_LOCATION, ModelLatexIqGoldDragon::createBodyLayer);
 		event.registerLayerDefinition(ModelLatexDarkPurpleDragonTaur.LAYER_LOCATION, ModelLatexDarkPurpleDragonTaur::createBodyLayer);
 		event.registerLayerDefinition(ModelDarkPurpleLatexDragon.LAYER_LOCATION, ModelDarkPurpleLatexDragon::createBodyLayer);
+		event.registerLayerDefinition(ModelLatexIceFieldWolfDragonBoss.LAYER_LOCATION, ModelLatexIceFieldWolfDragonBoss::createBodyLayer);
 	}
 }

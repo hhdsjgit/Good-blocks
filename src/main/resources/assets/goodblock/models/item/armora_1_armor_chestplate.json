@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "goodblock:items/armora1_body"
+    "layer0": "goodblock:item/armora1_body"
   }
 }

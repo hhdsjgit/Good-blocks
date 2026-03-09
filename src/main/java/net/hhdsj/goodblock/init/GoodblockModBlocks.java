@@ -3,27 +3,23 @@ package net.hhdsj.goodblock.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
 import net.hhdsj.goodblock.block.UraniummineralBlock;
 import net.hhdsj.goodblock.block.UraniumblockBlock;
 import net.hhdsj.goodblock.block.SulphurblockBlock;
-import net.hhdsj.goodblock.block.Paletreespa1Block;
-import net.hhdsj.goodblock.block.Pale_woodWoodBlock;
-import net.hhdsj.goodblock.block.Pale_woodStairsBlock;
-import net.hhdsj.goodblock.block.Pale_woodSlabBlock;
-import net.hhdsj.goodblock.block.Pale_woodPressurePlateBlock;
-import net.hhdsj.goodblock.block.Pale_woodPlanksBlock;
-import net.hhdsj.goodblock.block.Pale_woodLogBlock;
-import net.hhdsj.goodblock.block.Pale_woodLeavesBlock;
-import net.hhdsj.goodblock.block.Pale_woodFenceGateBlock;
-import net.hhdsj.goodblock.block.Pale_woodFenceBlock;
-import net.hhdsj.goodblock.block.Pale_woodButtonBlock;
+import net.hhdsj.goodblock.block.pale_blocks.Paletreespa1Block;
+import net.hhdsj.goodblock.block.pale_blocks.Pale_woodWoodBlock;
+import net.hhdsj.goodblock.block.pale_blocks.Pale_woodStairsBlock;
+import net.hhdsj.goodblock.block.pale_blocks.Pale_woodSlabBlock;
+import net.hhdsj.goodblock.block.pale_blocks.Pale_woodPressurePlateBlock;
+import net.hhdsj.goodblock.block.pale_blocks.Pale_woodPlanksBlock;
+import net.hhdsj.goodblock.block.pale_blocks.Pale_woodLogBlock;
+import net.hhdsj.goodblock.block.pale_blocks.Pale_woodLeavesBlock;
+import net.hhdsj.goodblock.block.pale_blocks.Pale_woodFenceGateBlock;
+import net.hhdsj.goodblock.block.pale_blocks.Pale_woodFenceBlock;
+import net.hhdsj.goodblock.block.pale_blocks.Pale_woodButtonBlock;
 import net.hhdsj.goodblock.block.NitreblockBlock;
 import net.hhdsj.goodblock.block.IronhotBlock;
 import net.hhdsj.goodblock.block.FluidhottestBlock;
@@ -61,13 +57,4 @@ public class GoodblockModBlocks {
 	public static final RegistryObject<Block> CATALYZER = REGISTRY.register("catalyzer", CatalyzerBlock::new);
 	public static final RegistryObject<Block> FLUIDHOTTEST = REGISTRY.register("fluidhottest", FluidhottestBlock::new);
 
-	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-	public static class ClientSideHandler {
-		@SubscribeEvent
-		public static void clientSetup(FMLClientSetupEvent event) {
-			BlueblockBlock.registerRenderLayer();
-			IronhotBlock.registerRenderLayer();
-			Paletreespa1Block.registerRenderLayer();
-		}
-	}
 }

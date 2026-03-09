@@ -1,12 +1,12 @@
 {
-  "parent": "block/cube",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "down": "goodblock:blocks/black_block",
-    "up": "goodblock:blocks/black_block",
-    "north": "goodblock:blocks/black_block",
-    "east": "goodblock:blocks/black_block",
-    "south": "goodblock:blocks/black_block",
-    "west": "goodblock:blocks/black_block",
-    "particle": "goodblock:blocks/black_block"
+    "down": "goodblock:block/black_block",
+    "up": "goodblock:block/black_block",
+    "north": "goodblock:block/black_block",
+    "east": "goodblock:block/black_block",
+    "south": "goodblock:block/black_block",
+    "west": "goodblock:block/black_block",
+    "particle": "goodblock:block/black_block"
   }
 }

@@ -19,7 +19,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import org.jetbrains.annotations.NotNull;
 
 @OnlyIn(Dist.CLIENT)
-public class LatexNightOwlRenderer extends AdvancedHumanoidRenderer<LatexNightOwlEntity, ModelLatexNightOwl, ArmorLatexMaleWingedDragonModel<LatexNightOwlEntity>> {
+public class LatexNightOwlRenderer extends AdvancedHumanoidRenderer<LatexNightOwlEntity, ModelLatexNightOwl> {
     public LatexNightOwlRenderer(EntityRendererProvider.Context context) {
 
         super(context, new ModelLatexNightOwl(context.bakeLayer(ModelLatexNightOwl.LAYER_LOCATION)),

@@ -1,0 +1,47 @@
+package net.hhdsj.goodblock.abilities;
+
+import net.foxyas.changedaddon.entity.advanced.LatexSnepEntity;
+import net.ltxprogrammer.changed.ability.AbstractAbility;
+import net.ltxprogrammer.changed.ability.IAbstractChangedEntity;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import org.jetbrains.annotations.Nullable;
+
+public class TurnFeraLatexDarkPurpleAbility extends AbstractAbility<TurnFeralLatexDarkpurpleAbilityInstance> {
+    public TurnFeraLatexDarkPurpleAbility() {
+        super(TurnFeralLatexDarkpurpleAbilityInstance::new);
+    }
+
+    @Override
+    public Component getAbilityName(IAbstractChangedEntity entity) {
+        return Component.translatable("changed_addon.ability.turn_feral");
+    }
+
+    public ResourceLocation getTextureLocation(IAbstractChangedEntity entity) {
+        return new ResourceLocation("goodblock:textures/screens/ability/normal_paw.png");
+    }
+
+    @Nullable
+    @Override
+    public Component getSelectedDisplayText(IAbstractChangedEntity entity) {
+        if (entity.getChangedEntity() instanceof LatexSnepEntity) {
+            return Component.translatable("changed_addon.ability.turn_feral.can");
+        }
+        return super.getSelectedDisplayText(entity);
+    }
+
+    @Override
+    public int getChargeTime(IAbstractChangedEntity entity) {
+        return 32;
+    }
+
+    @Override
+    public int getCoolDown(IAbstractChangedEntity entity) {
+        return 30;
+    }
+
+    @Override
+    public UseType getUseType(IAbstractChangedEntity entity) {
+        return UseType.CHARGE_TIME;
+    }
+}

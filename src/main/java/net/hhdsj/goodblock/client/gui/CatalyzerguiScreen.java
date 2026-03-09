@@ -1,6 +1,6 @@
 
 package net.hhdsj.goodblock.client.gui;
-
+/*
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -83,3 +83,4 @@ public class CatalyzerguiScreen extends AbstractContainerScreen<CatalyzerguiMenu
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 	}
 }
+*/

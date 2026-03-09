@@ -1,7 +1,7 @@
 
 package net.hhdsj.goodblock.item;
 
-import net.hhdsj.goodblock.procedures.ProgressTransfurExt;
+import net.hhdsj.goodblock.procedures.api.ProgressTransfurExt;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Rarity;
@@ -9,11 +9,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.Entity;
 
-import net.hhdsj.goodblock.init.GoodblockModTabs;
-
 public class ImpureuraniumingotItem extends Item {
 	public ImpureuraniumingotItem() {
-		super(new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
 	}
 
 	@Override

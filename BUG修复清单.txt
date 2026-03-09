@@ -1,0 +1,14 @@
+1.Latex Dark Purple Dragon Taur 脚错位！《《《
+2.Latex Dark Purple Dragon 的发光图层错位
+3.Latex Dark Purple Dragon Taur 和Latex Dark Purple Dragon 的变体切换没图标
+4.语言键没完善,没写完
+5.大翅膀的胶液蓝色龙,的翅膀模型贴图重叠闪烁
+6.变体转换无颜色
+[
+latex_radiation_fox yellow
+latex_iq_gold_dragon yellow
+latex_yunxq_hot_dragon red
+form_latex_yun_xq_ice_dragon blue
+latex_three_month_wolf purple
+]
+7.latex_ice_field_wolf_dragon的发光图层太亮了

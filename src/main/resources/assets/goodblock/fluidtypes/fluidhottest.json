@@ -1,0 +1,12 @@
+{
+  "textures": {
+    "still": "minecraft:block/lava_still",
+    "flowing": "minecraft:block/lava_flow"
+  },
+  "color": "0xffff8800",
+  "density": 3000,
+  "viscosity": 6000,
+  "temperature": 1000,
+  "lightLevel": 15,
+  "rarity": "epic"
+}

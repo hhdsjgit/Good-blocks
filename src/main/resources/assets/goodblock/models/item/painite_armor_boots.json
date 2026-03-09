@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "goodblock:items/new_painite_boots"
+    "layer0": "goodblock:item/new_painite_boots"
   }
 }

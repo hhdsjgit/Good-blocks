@@ -1,6 +1,9 @@
 
 package net.hhdsj.goodblock.item;
 
+import net.hhdsj.goodblock.init.GoodblockModSounds;
+import net.hhdsj.goodblock.init.GoodblockModTabs;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -10,9 +13,18 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.resources.ResourceLocation;
 
-import net.hhdsj.goodblock.init.GoodblockModTabs;
-import net.hhdsj.goodblock.init.GoodblockModSounds;
+public class AnitfrrymusicItem extends RecordItem {
+	public AnitfrrymusicItem() {
+		super(15, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("goodblock:anit_furry_music")), new Item.Properties().stacksTo(1).rarity(Rarity.RARE), 100);
+	}
 
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public boolean isFoil(ItemStack itemstack) {
+		return true;
+	}
+}
+/*
 public class AnitfrrymusicItem extends RecordItem {
 	public AnitfrrymusicItem() {
 		super(15, GoodblockModSounds.REGISTRY.get(new ResourceLocation("goodblock:anit_furry_music")), new Item.Properties().tab(GoodblockModTabs.TAB_WORLDBLOCK).stacksTo(1).rarity(Rarity.RARE));
@@ -24,3 +36,4 @@ public class AnitfrrymusicItem extends RecordItem {
 		return true;
 	}
 }
+*/

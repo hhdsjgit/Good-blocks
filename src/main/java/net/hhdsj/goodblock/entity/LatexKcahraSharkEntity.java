@@ -6,12 +6,14 @@ import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
 import net.ltxprogrammer.changed.init.ChangedAttributes;
 
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.common.ForgeMod;
 
 
@@ -46,6 +48,7 @@ import net.minecraft.world.entity.EntityType;
 
 import net.minecraftforge.common.ForgeMod;
 
+import java.util.Objects;
 import java.util.Set;
 
 @Mod.EventBusSubscriber
@@ -56,15 +59,12 @@ public class LatexKcahraSharkEntity extends ChangedEntity {
 	@Override
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
-        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(0.99);
-        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(1.24);
-        attributes.getInstance(Attributes.MAX_HEALTH).setBaseValue(28.0);
+        Objects.requireNonNull(attributes.getInstance(Attributes.MOVEMENT_SPEED)).setBaseValue(0.99);
+        Objects.requireNonNull(attributes.getInstance(ForgeMod.SWIM_SPEED.get())).setBaseValue(1.24);
+        Objects.requireNonNull(attributes.getInstance(Attributes.MAX_HEALTH)).setBaseValue(28.0);
     }
     
-	@Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+	
 
     @Override
     public TransfurMode getTransfurMode() {
@@ -83,12 +83,6 @@ public class LatexKcahraSharkEntity extends ChangedEntity {
     public Color3 getTransfurColor(TransfurCause cause) {
         return Color3.getColor("#0793f7");
     }
-    
-	@SubscribeEvent
-	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.WATER_CREATURE).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEX_KCAHRA_SHARK.get(), 10, 1, 2));
-	}
 
 	public LatexKcahraSharkEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(GoodblockModEntities.LATEX_KCAHRA_SHARK.get(), world);
@@ -101,7 +95,7 @@ public class LatexKcahraSharkEntity extends ChangedEntity {
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
@@ -128,7 +122,7 @@ public class LatexKcahraSharkEntity extends ChangedEntity {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		if (source == DamageSource.DROWN)
+		if (source.is(DamageTypes.DROWN))
 			return false;
 		return super.hurt(source, amount);
 	}
@@ -138,14 +132,5 @@ public class LatexKcahraSharkEntity extends ChangedEntity {
 				(entityType, world, reason, pos, random) -> (world.getBlockState(pos).is(Blocks.WATER) && world.getBlockState(pos.above()).is(Blocks.WATER)));
 	}
 
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 5);
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 12);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		return builder;
-	}
+	//删除注册方法
 }

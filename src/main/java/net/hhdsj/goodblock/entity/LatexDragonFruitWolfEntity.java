@@ -1,11 +1,17 @@
 package net.hhdsj.goodblock.entity;
 
 import net.hhdsj.goodblock.init.GoodblockModEntities;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.level.biome.MobSpawnSettings;
+import net.minecraftforge.event.level.LevelEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.biome.MobSpawnSettings;
@@ -24,6 +30,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
+import java.util.Objects;
 import java.util.Set;
 import net.ltxprogrammer.changed.entity.*;
 import net.ltxprogrammer.changed.util.Color3;
@@ -51,14 +58,11 @@ public class LatexDragonFruitWolfEntity extends ChangedEntity {
     @Override
     protected void setAttributes(AttributeMap attributes) {
         super.setAttributes(attributes);
-        attributes.getInstance(Attributes.MOVEMENT_SPEED).setBaseValue(1.1);
-        attributes.getInstance(ForgeMod.SWIM_SPEED.get()).setBaseValue(0.95);
+        Objects.requireNonNull(attributes.getInstance(Attributes.MOVEMENT_SPEED)).setBaseValue(1.1);
+        Objects.requireNonNull(attributes.getInstance(ForgeMod.SWIM_SPEED.get())).setBaseValue(0.95);
     }
 
-    @Override
-    public LatexType getLatexType() {
-        return LatexType.NEUTRAL;
-    }
+    
 
     @Override
     public TransfurMode getTransfurMode() {
@@ -84,19 +88,10 @@ public class LatexDragonFruitWolfEntity extends ChangedEntity {
     }
 
     ////////////////////////////////////////////////////////
-    @SubscribeEvent
-    public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-        if (SPAWN_BIOMES.contains(event.getName()))
-            event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(GoodblockModEntities.LATEXICE_DRAGON.get(), 12, 1, 2));
-    }
-
-    /*
-    public LatexDragonFruitWolfEntity(PlayMessages.SpawnEntity packet, Level world) {
-        this(GoodblockModEntities.LATEXICE_DRAGON.get(), world);
-    }*/
+	
 
     @Override
-    public Packet<?> getAddEntityPacket() {
+    public Packet<ClientGamePacketListener> getAddEntityPacket() {
         return NetworkHooks.getEntitySpawningPacket(this);
     }
 
@@ -122,19 +117,12 @@ public class LatexDragonFruitWolfEntity extends ChangedEntity {
     }
 
     public static void init() {
-        SpawnPlacements.register(GoodblockModEntities.LATEXICE_DRAGON.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+        SpawnPlacements.register(GoodblockModEntities.LATEXDRAGONFRUITWOLF.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(ChangedAttributes.TRANSFUR_DAMAGE.get(), 1);
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-        builder = builder.add(Attributes.MAX_HEALTH, 12);
-        builder = builder.add(Attributes.ARMOR, 4);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-        builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-        return builder;
+        return ChangedEntity.createLatexAttributes();  // 返回父类的默认属性
     }
 }
 
