@@ -179,14 +179,14 @@ public class LatexFilledAllMugItem extends FilledMug {
                     Component.translatable("item.changed_creatures.latex_mug.show2",variantId), true
                     //Component.literal("§a舀取胶液: §e" + variantId), true
             );
-            System.out.print("添加入 : true\n");
+            //System.out.print("添加入 : true\n");
         } else {
             player.displayClientMessage(
                     Component.translatable("item.changed_creatures.latex_mug.show1"), true
                     //Component.literal("§c你舀取的对象不是胶液"), true
             );
         }
-        System.out.print("Debug Get ok : " + variantId + "\n");
+        //System.out.print("Debug Get ok : " + variantId + "\n");
         return InteractionResult.SUCCESS;
     }
 
@@ -217,7 +217,7 @@ public class LatexFilledAllMugItem extends FilledMug {
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player,
                                                            @NotNull InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
-        System.out.print("Get latex : "+hasVariant(stack) + "\n");
+        //System.out.print("Get latex : "+hasVariant(stack) + "\n");
         if (!hasVariant(stack)) {
             if (!level.isClientSide) {
 

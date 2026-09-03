@@ -664,7 +664,16 @@ public class ChangedCreatureModEntities {
                         if (level instanceof Level serverLevel) {
                             int brightness = serverLevel.getMaxLocalRawBrightness(pos);
                             return brightness <= 3; // 亮度小于4
+
+                            // 降低生成在矿洞的可能性.(同时会减少刷怪塔刷出的概率)
+                            if (!serverLevel.canSeeSky(pos)) {
+                                if (random.nextFloat() > 0.7f) {
+                                    return false;
+                                }
+                            }
                         }
+
+
                         return true;
                     });
         });

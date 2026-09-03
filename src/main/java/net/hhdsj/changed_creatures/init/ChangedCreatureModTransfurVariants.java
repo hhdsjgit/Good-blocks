@@ -247,7 +247,6 @@ public class ChangedCreatureModTransfurVariants {
 	public static final RegistryObject<TransfurVariant<LatexFruitDragonEntity>> LATEX_FRUIT_DRAGON_WOLF =
 			REGISTRY.register("form_latex_fruit_dragon_wolf", () -> TransfurVariant.Builder.of(ChangedCreatureModEntities.LATEXFRUITDRAGONWOLF)
 					.scares(List.of(Creeper.class))
-					.addAbility(entityType -> ChangedAddonAbilities.WING_FLAP_ABILITY.get())
 					.transfurMode(TransfurMode.ABSORPTION)
 					.replicating()
 					.nightVision()
