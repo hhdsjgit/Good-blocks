@@ -67,6 +67,7 @@ public class ChangedCreatureModTransfurVariants {
 	public static final RegistryObject<TransfurVariant<ProtogenNyxarixEntity>> PROTOGEN_NYXARIX =
 			REGISTRY.register("form_protogen_nyxarix", () -> TransfurVariant.Builder.of(ChangedCreatureModEntities.PROTOGEN_NYXARIX)
 					.gills()
+					.extraHands() // The creature has two (pairs of) arms.
 					.addAbility(ChangedAbilities.TOGGLE_NIGHT_VISION)
 					.addAbility(ChangedCreatureModAbilities.BERRER_HYPNOSIE)
 					.addAbility(ChangedCreatureModAbilities.LATEX_CONFUSED_ABILITY)

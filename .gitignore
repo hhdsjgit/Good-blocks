@@ -5,6 +5,8 @@ build/
 # Other IDE related folders
 .idea/
 .settings/
+.vscode/
+/bin/
 
 # MCreator workspace
 .mcreator/
